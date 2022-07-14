@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "64f848d00f846d25",
+        "id": "6b4a5d4bdaa03f3b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ideas/renamed.md",
+            "file": "ideas/Untitled.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ideas/renamed.md",
+                "file": "ideas/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ideas/renamed.md",
+                "file": "ideas/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ideas/renamed.md"
+                "file": "ideas/Untitled.md"
               }
             }
           },
@@ -136,8 +136,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "64f848d00f846d25",
+  "active": "6b4a5d4bdaa03f3b",
   "lastOpenFiles": [
+    "ideas/renamed.md",
     "ideas/idea.md"
   ]
 }
