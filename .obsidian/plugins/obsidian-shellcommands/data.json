@@ -19,8 +19,8 @@
         "default": "./remote.sh"
       },
       "shells": {},
-      "alias": "remotegithub",
-      "confirm_execution": false,
+      "alias": "Gitbackup",
+      "confirm_execution": true,
       "ignore_error_codes": [],
       "output_channels": {
         "stdout": "ignore",
