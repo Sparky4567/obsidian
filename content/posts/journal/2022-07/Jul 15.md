@@ -1,5 +1,5 @@
 ---
-Published: 222022-07-15T18:58:39+03:00
+date: 2022-07-15T18:58:39+03:00
 Author: Artefaktas
 Tags: ["new_post"]
 draft: false

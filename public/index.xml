@@ -5,34 +5,12 @@
     <link>/</link>
     <description>Recent content on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Showcase</title>
-      <link>/showcase/</link>
-      <pubDate>Fri, 15 Jul 2022 18:32:37 +0300</pubDate>
-      
-      <guid>/showcase/</guid>
-      <description>I have nothing to show here (yet)</description>
-      <content>&lt;p&gt;I have nothing to show here (yet)&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Fri, 15 Jul 2022 18:31:39 +0300</pubDate>
-      
-      <guid>/about/</guid>
-      <description>About content This is a simple website generated purely from my personal Obsidian notes</description>
-      <content>&lt;h1 id=&#34;about-content&#34;&gt;About content&lt;/h1&gt;
-&lt;p&gt;This is a simple website generated purely from my personal Obsidian notes&lt;/p&gt;
-</content>
-    </item>
-    
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Jul 2022 18:58:39 +0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>/posts/journal/2022-07/jul-15/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
       
       <guid>/posts/journal/2022-07/jul-15/</guid>
       <description>Jul 15 [!tldr] Jul 15 There is nothing to read yet. This is a test post.
@@ -60,6 +38,29 @@ git push
 &lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;Internal links if exists:&lt;/p&gt;
 &lt;p&gt;External links if exist:&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Showcase</title>
+      <link>/showcase/</link>
+      <pubDate>Fri, 15 Jul 2022 18:32:37 +0300</pubDate>
+      
+      <guid>/showcase/</guid>
+      <description>I have nothing to show here (yet)</description>
+      <content>&lt;p&gt;I have nothing to show here (yet)&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Fri, 15 Jul 2022 18:31:39 +0300</pubDate>
+      
+      <guid>/about/</guid>
+      <description>About content This is a simple website generated purely from my personal Obsidian notes</description>
+      <content>&lt;h1 id=&#34;about-content&#34;&gt;About content&lt;/h1&gt;
+&lt;p&gt;This is a simple website generated purely from my personal Obsidian notes&lt;/p&gt;
 </content>
     </item>
     

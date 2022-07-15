@@ -1,5 +1,5 @@
 ---
-Published: {{date:YYY-MM-DD}}T{{time}}
+date: {{date:YYY-MM-DD}}T{{time}}
 Author: Artefaktas
 Tags: ["new_post"]
 draft: false

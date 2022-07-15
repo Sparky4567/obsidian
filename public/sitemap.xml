@@ -2,24 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/posts/journal/2022-07/jul-15/</loc>
+    <lastmod>2022-07-15T18:58:39+03:00</lastmod>
+  </url><url>
+    <loc>/tags/new_post/</loc>
+    <lastmod>2022-07-15T18:58:39+03:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2022-07-15T18:58:39+03:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-07-15T18:58:39+03:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2022-07-15T18:58:39+03:00</lastmod>
+  </url><url>
     <loc>/showcase/</loc>
     <lastmod>2022-07-15T18:32:37+03:00</lastmod>
   </url><url>
     <loc>/about/</loc>
     <lastmod>2022-07-15T18:31:39+03:00</lastmod>
   </url><url>
-    <loc>/posts/journal/2022-07/jul-15/</loc>
-  </url><url>
     <loc>/posts/kanban/kanban-board/</loc>
   </url><url>
     <loc>/categories/</loc>
-  </url><url>
-    <loc>/tags/new_post/</loc>
-  </url><url>
-    <loc>/posts/</loc>
-  </url><url>
-    <loc>/tags/</loc>
-  </url><url>
-    <loc>/</loc>
   </url>
 </urlset>
