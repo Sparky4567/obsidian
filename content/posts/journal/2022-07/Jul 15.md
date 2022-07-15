@@ -34,3 +34,4 @@ External links if exist:
 
 
 [[obsidian://shell-commands/?vault=posts&execute=0]]
+
