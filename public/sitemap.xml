@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/</loc>
+  </url><url>
     <loc>/posts/kanban/my-kanban-board/</loc>
   </url><url>
     <loc>/categories/</loc>
@@ -9,7 +11,5 @@
     <loc>/posts/</loc>
   </url><url>
     <loc>/tags/</loc>
-  </url><url>
-    <loc>/</loc>
   </url>
 </urlset>
