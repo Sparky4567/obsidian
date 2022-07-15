@@ -9,6 +9,7 @@ Tags:
 > [!tldr] {{Title}}
 > TLDR
 
-Reference if exists:
+Internal links if exists:
 
-Links if exist:
+External links if exist:
+
