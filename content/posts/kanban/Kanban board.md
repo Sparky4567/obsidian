@@ -10,7 +10,6 @@ kanban-plugin: basic
 
 ## Doing
 
-- [ ] Add more templates
 
 
 ## Done
@@ -19,6 +18,7 @@ kanban-plugin: basic
 
 ## Archive
 
+**Complete**
 
 
 
