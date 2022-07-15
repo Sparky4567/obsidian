@@ -16,7 +16,7 @@
   "shell_commands": {
     "0": {
       "platform_specific_commands": {
-        "default": "cd ../../ &&  ./remote.sh"
+        "default": "cd ../../ &&  /bin/bash remote.sh"
       },
       "shells": {},
       "alias": "BackupAndSync",
