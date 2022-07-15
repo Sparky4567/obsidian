@@ -92,6 +92,6 @@ obsidianbuild
 
 ```
 
-Internal links if exists:
+Internal links if exist:
 
 External links if exist:
