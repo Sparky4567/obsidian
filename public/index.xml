@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
+    <title>Terminal</title>
     <link>/</link>
-    <description>Recent content on </description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content on Terminal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>/posts/kanban/my-kanban-board/</link>
@@ -13,6 +14,17 @@
       <guid>/posts/kanban/my-kanban-board/</guid>
       <description>Preparing Doing  Add more templates  Done Archive %% kanban:settings
 {&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;} %%</description>
+      <content>&lt;h2 id=&#34;preparing&#34;&gt;Preparing&lt;/h2&gt;
+&lt;h2 id=&#34;doing&#34;&gt;Doing&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add more templates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;done&#34;&gt;Done&lt;/h2&gt;
+&lt;h2 id=&#34;archive&#34;&gt;Archive&lt;/h2&gt;
+&lt;p&gt;%% kanban:settings&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;
+</content>
     </item>
     
   </channel>

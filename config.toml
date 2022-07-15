@@ -3,6 +3,8 @@ languageCode = "en-us"
 theme = "terminal"
 paginate = 5
 
+ignoreFiles = "/content/posts/templates.*"
+
 [params]
   # dir name of your main content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
@@ -71,4 +73,3 @@ paginate = 5
         name = "Showcase"
         url = "/showcase"
 
-ignorefiles = [ "content/posts/templates.*" ]
