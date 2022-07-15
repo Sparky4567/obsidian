@@ -54,16 +54,18 @@ git push
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</guid>
-      <description>Preparing Doing Add more posts Test rebuilds ! Done Archive Complete
+      <description>Preparing Doing Add more posts Done Test rebuilds ! Archive Complete
 %% kanban:settings
 {&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>
       <content>&lt;h2 id=&#34;preparing&#34;&gt;Preparing&lt;/h2&gt;
 &lt;h2 id=&#34;doing&#34;&gt;Doing&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add more posts&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Test rebuilds !&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;done&#34;&gt;Done&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Test rebuilds !&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;archive&#34;&gt;Archive&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Complete&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;%% kanban:settings&lt;/p&gt;

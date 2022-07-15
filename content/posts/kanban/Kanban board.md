@@ -11,11 +11,11 @@ kanban-plugin: basic
 ## Doing
 
 - [ ] Add more posts
-- [ ] Test rebuilds !
 
 
 ## Done
 
+- [ ] Test rebuilds !
 
 
 ## Archive
