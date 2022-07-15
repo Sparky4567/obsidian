@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://obsidiannotes.artefaktas.eu/"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 5
