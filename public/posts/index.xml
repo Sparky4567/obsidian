@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Obsidian notes</title>
-    <link>/posts/</link>
+    <link>https://obsidiannotes.artefaktas.eu/posts/</link>
     <description>Recent content in Posts on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Fri, 15 Jul 2022 18:58:39 +0300</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jul 2022 18:58:39 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jul 15</title>
-      <link>/posts/journal/2022-07/jul-15/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</link>
       <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
       
-      <guid>/posts/journal/2022-07/jul-15/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</guid>
       <description>Jul 15 [!tldr] Jul 15 There is nothing to read yet. This is a test post.
 Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
 Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
@@ -50,10 +50,10 @@ git push
     
     <item>
       <title></title>
-      <link>/posts/kanban/kanban-board/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/posts/kanban/kanban-board/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</guid>
       <description>Preparing Doing Add more posts Test rebuilds ! Done Archive Complete
 %% kanban:settings
 {&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>

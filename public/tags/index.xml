@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Obsidian notes</title>
-    <link>/tags/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/</link>
     <description>Recent content in Tags on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Fri, 15 Jul 2022 18:58:39 +0300</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jul 2022 18:58:39 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>new_post</title>
-      <link>/tags/new_post/</link>
+      <link>https://obsidiannotes.artefaktas.eu/tags/new_post/</link>
       <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
       
-      <guid>/tags/new_post/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/tags/new_post/</guid>
       <description></description>
       <content></content>
     </item>
