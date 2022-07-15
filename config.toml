@@ -14,7 +14,7 @@ ignoreFiles = "/content/posts/templates.*"
   themeColor = "green"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 3
 
   # show selector to switch language
   showLanguageSelector = false
@@ -65,11 +65,15 @@ ignoreFiles = "/content/posts/templates.*"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.en.menu.main]]
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "All posts"
+        url = "/posts"
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
 
