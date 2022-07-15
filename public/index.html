@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.92.2" />
+	<meta name="generator" content="Hugo 0.101.0" />
   
     <title>Terminal</title>
   
@@ -174,10 +174,11 @@
 
         <div class="post-content">
           
-            Jul 15  [!tldr] Jul 15 There is nothing to read yet. This is a test post.
+            Jul 15 [!tldr] Jul 15 There is nothing to read yet. This is a test post.
 Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
 Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
 [!hint] Hint
+#!/bin/bash CURRENTDATE=date +&quot;%Y-%m-%d %T&quot; hugo git add * -f message=“Obsidian update: “$CURRENTDATE git commit -m “$message” git push
           
         </div>
 
