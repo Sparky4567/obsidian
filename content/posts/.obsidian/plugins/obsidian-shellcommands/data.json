@@ -19,9 +19,7 @@
         "default": "",
         "linux": "cd ../../ && ./remote.sh"
       },
-      "shells": {
-        "linux": "/bin/bash"
-      },
+      "shells": {},
       "alias": "BackupAndSync",
       "confirm_execution": false,
       "ignore_error_codes": [],
@@ -36,6 +34,15 @@
       "variable_default_values": {}
     }
   },
-  "prompts": [],
+  "prompts": [
+    {
+      "id": "bk78c1lkqn",
+      "title": "",
+      "description": "",
+      "preview_shell_command": false,
+      "fields": [],
+      "execute_button_text": "Execute"
+    }
+  ],
   "custom_variables": []
 }
