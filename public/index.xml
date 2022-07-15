@@ -31,19 +31,53 @@
     
     <item>
       <title></title>
-      <link>/posts/kanban/my-kanban-board/</link>
+      <link>/posts/journal/2022-07/jul-15/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/posts/kanban/my-kanban-board/</guid>
-      <description>Preparing Doing  Add more templates  Done Archive %% kanban:settings
+      <guid>/posts/journal/2022-07/jul-15/</guid>
+      <description>Jul 15  [!tldr] Jul 15 There is nothing to read yet. This is a test post.
+ Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
+Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
+ [!hint] Hint</description>
+      <content>&lt;h1 id=&#34;jul-15&#34;&gt;Jul 15&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Jul 15
+There is nothing to read yet. This is a test post.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;testing-my-new-toolkit&#34;&gt;Testing my new toolkit&lt;/h2&gt;
+&lt;p&gt;I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.&lt;/p&gt;
+&lt;p&gt;Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!hint] Hint&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;#!/bin/bash
+CURRENTDATE=&lt;code&gt;date +&amp;quot;%Y-%m-%d %T&amp;quot;&lt;/code&gt;
+hugo
+git add * -f
+message=&amp;ldquo;Obsidian update: &amp;ldquo;$CURRENTDATE
+git commit -m &amp;ldquo;$message&amp;rdquo;
+git push&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;Internal links if exists:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/kanban/kanban-board/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/kanban/kanban-board/</guid>
+      <description>Preparing Doing Done Archive Complete
+%% kanban:settings
 {&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;} %%</description>
       <content>&lt;h2 id=&#34;preparing&#34;&gt;Preparing&lt;/h2&gt;
 &lt;h2 id=&#34;doing&#34;&gt;Doing&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add more templates&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&#34;done&#34;&gt;Done&lt;/h2&gt;
 &lt;h2 id=&#34;archive&#34;&gt;Archive&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Complete&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;%% kanban:settings&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;
