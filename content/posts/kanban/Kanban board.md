@@ -6,10 +6,12 @@ kanban-plugin: basic
 
 ## Preparing
 
+- [ ] Test rebuilds !
 
 
 ## Doing
 
+- [ ] Add more posts
 
 
 ## Done

@@ -21,12 +21,19 @@ Everytime I run a shell command to sync latest posts, with the help of Hugo, Git
 >
 > ```
 > #!/bin/bash
+> 
 > CURRENTDATE=`date +"%Y-%m-%d %T"`
+> 
 > hugo
+> 
 > git add * -f
+> 
 > message="Obsidian update: "$CURRENTDATE
+> 
 > git commit -m "$message"
+> 
 > git push
+> 
 > ```
 
 Internal links if exists:
