@@ -3,6 +3,7 @@ date: 2022-07-15T18:58:39+03:00
 Author: Artefaktas
 Tags: ["new_post"]
 draft: false
+title: Jul 15
 ---
 
 # Jul 15

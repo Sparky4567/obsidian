@@ -3,6 +3,7 @@ date: {{date:YYY-MM-DD}}T{{time:HH:mm:ss:Z}}
 Author: Artefaktas
 Tags: ["new_post"]
 draft: false
+title: {{Title}}
 ---
 
 # {{title}}
