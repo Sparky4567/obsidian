@@ -10,6 +10,7 @@ kanban-plugin: basic
 
 ## Doing
 
+- [ ] Add more templates
 
 
 ## Done

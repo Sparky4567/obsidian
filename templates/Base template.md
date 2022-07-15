@@ -1,7 +1,7 @@
 ---
 Published: {{date:YYY-MM-DD}} {{time:HH:mm}}
 Author: Artefaktas
-Tags: 
+Tags: ["new_post"]
 ---
 
 # {{title}}
