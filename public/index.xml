@@ -39,7 +39,7 @@
 Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
 Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
 [!hint] Hint
-#!/bin/bash CURRENTDATE=date +&amp;quot;%Y-%m-%d %T&amp;quot; hugo git add * -f message=&amp;ldquo;Obsidian update: &amp;ldquo;$CURRENTDATE git commit -m &amp;ldquo;$message&amp;rdquo; git push</description>
+#!/bin/bash CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;` hugo git add * -f message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE git commit -m &amp;#34;$message&amp;#34; git push Internal links if exists:</description>
       <content>&lt;h1 id=&#34;jul-15&#34;&gt;Jul 15&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!tldr] Jul 15
@@ -50,16 +50,14 @@ There is nothing to read yet. This is a test post.&lt;/p&gt;
 &lt;p&gt;Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!hint] Hint&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-&lt;p&gt;#!/bin/bash
-CURRENTDATE=&lt;code&gt;date +&amp;quot;%Y-%m-%d %T&amp;quot;&lt;/code&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash
+CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;`
 hugo
 git add * -f
-message=&amp;ldquo;Obsidian update: &amp;ldquo;$CURRENTDATE
-git commit -m &amp;ldquo;$message&amp;rdquo;
-git push&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE
+git commit -m &amp;#34;$message&amp;#34;
+git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;Internal links if exists:&lt;/p&gt;
 &lt;p&gt;External links if exist:&lt;/p&gt;
 </content>

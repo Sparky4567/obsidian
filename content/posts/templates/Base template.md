@@ -1,7 +1,8 @@
 ---
-Published: {{date:YYY-MM-DD}} {{time:HH:mm}}
+Published: {{date:YYY-MM-DD}}T{{time}}
 Author: Artefaktas
 Tags: ["new_post"]
+draft: false
 ---
 
 # {{title}}
@@ -12,4 +13,3 @@ Tags: ["new_post"]
 Internal links if exists:
 
 External links if exist:
-
