@@ -49,7 +49,7 @@ ignoreFiles = "/content/posts/templates.*"
   [languages.en]
     languageName = "English"
     title = "Obsidian notes"
-    subtitle = "What would happen if you decide to rebuild your notes with hugo?"
+    subtitle = "What would happen if you decided to rebuild your notes with hugo?"
     owner = "Artefaktas admin"
     keywords = "Atefaktas,obsidian,notes,hugo,obsidiannotes.artefaktas.eu"
     copyright = "All rights belong to artefaktas.eu"
@@ -60,7 +60,7 @@ ignoreFiles = "/content/posts/templates.*"
     missingBackButtonLabel = "Back to home page"
 
     [languages.en.params.logo]
-      logoText = "Terminal"
+      logoText = "Artefaktas Obsidian"
       logoHomeLink = "/"
 
     [languages.en.menu]
