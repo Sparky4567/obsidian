@@ -4,6 +4,8 @@
 # OR only to exclude workspace cache
 .obsidian/workspace
 
+content/posts/templates
+
 # Add below lines to exclude OS settings and caches
 .trash/
 .DS_Store
