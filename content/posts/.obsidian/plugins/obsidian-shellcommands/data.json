@@ -16,7 +16,7 @@
   "shell_commands": {
     "0": {
       "platform_specific_commands": {
-        "default": "cd /home/artefaktas_eu/Desktop/vaults/interconnection/ && ./remote.sh"
+        "default": "obsidianbuild"
       },
       "shells": {},
       "alias": "BackupAndSync",
