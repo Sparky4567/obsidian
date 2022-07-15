@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/showcase/</loc>
+    <lastmod>2022-07-15T18:32:37+03:00</lastmod>
+  </url><url>
+    <loc>/about/</loc>
+    <lastmod>2022-07-15T18:31:39+03:00</lastmod>
+  </url><url>
     <loc>/posts/kanban/my-kanban-board/</loc>
   </url><url>
     <loc>/categories/</loc>
