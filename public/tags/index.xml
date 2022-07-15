@@ -9,11 +9,31 @@
     <copyright>All rights belong to artefaktas.eu</copyright>
     <lastBuildDate>Fri, 15 Jul 2022 18:58:39 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>first</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/first/</link>
+      <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/first/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
       <title>new_post</title>
       <link>https://obsidiannotes.artefaktas.eu/tags/new_post/</link>
       <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/new_post/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>post</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/post/</link>
+      <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/post/</guid>
       <description></description>
       <content></content>
     </item>

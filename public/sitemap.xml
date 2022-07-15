@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/first/</loc>
+    <lastmod>2022-07-15T18:58:39+03:00</lastmod>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</loc>
     <lastmod>2022-07-15T18:58:39+03:00</lastmod>
   </url><url>
@@ -9,6 +12,9 @@
     <lastmod>2022-07-15T18:58:39+03:00</lastmod>
   </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/</loc>
+    <lastmod>2022-07-15T18:58:39+03:00</lastmod>
+  </url><url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/post/</loc>
     <lastmod>2022-07-15T18:58:39+03:00</lastmod>
   </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/posts/</loc>

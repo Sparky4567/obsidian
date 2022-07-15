@@ -10,7 +10,7 @@
 Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
 Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
 [!hint] Hint
-#!/bin/bash CURRENTDATE=`date &#43;&amp;#34;%Y-%m-%d %T&amp;#34;` hugo git add * -f message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE git commit -m &amp;#34;$message&amp;#34; git push Internal links if exists:" />
+#!/bin/bash CURRENTDATE=`date &#43;&amp;#34;%Y-%m-%d %T&amp;#34;` hugo git add * -f message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE git commit -m &amp;#34;$message&amp;#34; git push Final solution If you want to replicate this" />
 <meta name="keywords" content="Atefaktas,obsidian,notes,hugo,obsidiannotes.artefaktas.eu" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/" />
@@ -49,7 +49,7 @@ Everytime I run a shell command to sync latest posts, with the help of Hugo, Git
 Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
 Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
 [!hint] Hint
-#!/bin/bash CURRENTDATE=`date &#43;&amp;#34;%Y-%m-%d %T&amp;#34;` hugo git add * -f message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE git commit -m &amp;#34;$message&amp;#34; git push Internal links if exists:" />
+#!/bin/bash CURRENTDATE=`date &#43;&amp;#34;%Y-%m-%d %T&amp;#34;` hugo git add * -f message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE git commit -m &amp;#34;$message&amp;#34; git push Final solution If you want to replicate this" />
 <meta property="og:url" content="https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/" />
 <meta property="og:site_name" content="Obsidian notes" />
 
@@ -170,6 +170,10 @@ Everytime I run a shell command to sync latest posts, with the help of Hugo, Git
     
     #<a href="https://obsidiannotes.artefaktas.eu/tags/new_post/">new_post</a>&nbsp;
     
+    #<a href="https://obsidiannotes.artefaktas.eu/tags/first/">first</a>&nbsp;
+    
+    #<a href="https://obsidiannotes.artefaktas.eu/tags/post/">post</a>&nbsp;
+    
   </span>
   
   
@@ -202,7 +206,36 @@ git commit -m &#34;$message&#34;
 
 git push
 </code></pre></blockquote>
-<p>Internal links if exists:</p>
+<h2 id="final-solution">Final solution<a href="#final-solution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>If you want to replicate this</p>
+<p>Create a file called remote.sh</p>
+<p>Insert this code inside</p>
+<pre tabindex="0"><code>
+#!/bin/bash
+
+CURRENTDATE=`date +&#34;%Y-%m-%d %T&#34;`
+
+git add content -f
+
+git add public -f
+
+message=&#34;Obsidian update: &#34;$CURRENTDATE
+
+git commit -m &#34;$message&#34;
+
+git push
+</code></pre><p><strong>Create a good-named alias in your ~/.bashrc file</strong></p>
+<p>For example:</p>
+<pre tabindex="0"><code>
+alias obsidianbuild=&#34;cd /home/yourusername/Desktop/vaults/interconnection/ &amp;&amp; hugo &amp;&amp; ./remote.sh&#34;
+</code></pre><p><strong>Source your ~/.bashrc</strong></p>
+<pre tabindex="0"><code>
+source ~/.bashrc
+</code></pre><h2 id="open-your-terminal">Open your terminal<a href="#open-your-terminal" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><strong>And run a command</strong></p>
+<pre tabindex="0"><code>
+obsidianbuild
+</code></pre><p>Internal links if exists:</p>
 <p>External links if exist:</p>
 
       </div></div>
