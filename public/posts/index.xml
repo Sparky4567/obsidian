@@ -30,11 +30,17 @@ There is nothing to read yet. This is a test post.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!hint] Hint&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash
+
 CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;`
+
 hugo
+
 git add * -f
+
 message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE
+
 git commit -m &amp;#34;$message&amp;#34;
+
 git push
 &lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;Internal links if exists:&lt;/p&gt;
@@ -48,11 +54,14 @@ git push
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/posts/kanban/kanban-board/</guid>
-      <description>Preparing Doing Done Archive Complete
+      <description>Preparing Doing Add more posts Done Archive Complete
 %% kanban:settings
 {&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>
       <content>&lt;h2 id=&#34;preparing&#34;&gt;Preparing&lt;/h2&gt;
 &lt;h2 id=&#34;doing&#34;&gt;Doing&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add more posts&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;done&#34;&gt;Done&lt;/h2&gt;
 &lt;h2 id=&#34;archive&#34;&gt;Archive&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Complete&lt;/strong&gt;&lt;/p&gt;

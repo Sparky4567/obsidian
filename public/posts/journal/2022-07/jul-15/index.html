@@ -181,11 +181,17 @@ There is nothing to read yet. This is a test post.</p>
 <blockquote>
 <p>[!hint] Hint</p>
 <pre tabindex="0"><code>#!/bin/bash
+
 CURRENTDATE=`date +&#34;%Y-%m-%d %T&#34;`
+
 hugo
+
 git add * -f
+
 message=&#34;Obsidian update: &#34;$CURRENTDATE
+
 git commit -m &#34;$message&#34;
+
 git push
 </code></pre></blockquote>
 <p>Internal links if exists:</p>

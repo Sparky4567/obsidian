@@ -30,11 +30,17 @@ There is nothing to read yet. This is a test post.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!hint] Hint&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash
+
 CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;`
+
 hugo
+
 git add * -f
+
 message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE
+
 git commit -m &amp;#34;$message&amp;#34;
+
 git push
 &lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;Internal links if exists:&lt;/p&gt;
