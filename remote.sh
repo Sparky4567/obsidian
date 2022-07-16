@@ -1,5 +1,6 @@
 #!/bin/bash
 CURRENTDATE=`date +"%Y-%m-%d %T"`
+git add themes -f
 git add content/posts/ideas -f
 git add content/posts/journal -f
 git add content/posts/kanban -f
