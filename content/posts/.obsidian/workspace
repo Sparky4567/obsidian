@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#systems",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -136,7 +137,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "3fab9341b504142f",
+  "active": "df0ae989f3e08660",
   "lastOpenFiles": [
     "journal/2022-07/Jul 15.md",
     "journal/2022-07/Jul 16.md",
