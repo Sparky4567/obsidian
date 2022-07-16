@@ -1,6 +1,6 @@
 baseurl = "https://obsidiannotes.artefaktas.eu/"
 languageCode = "en-us"
-theme = "termux"
+theme = "terminal"
 paginate = 5
 
 ignoreFiles = "/content/posts/templates.*"
