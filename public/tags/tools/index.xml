@@ -1,108 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Obsidian notes</title>
-    <link>https://obsidiannotes.artefaktas.eu/posts/</link>
-    <description>Recent content in Posts on Obsidian notes</description>
+    <title>tools on Obsidian notes</title>
+    <link>https://obsidiannotes.artefaktas.eu/tags/tools/</link>
+    <description>Recent content in tools on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Fri, 15 Jul 2022 18:58:39 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Jul 15</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</link>
-      <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</guid>
-      <description>Jul 15 [!tldr] Jul 15 There is nothing to read yet. This is a test post.
-Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
-Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
-[!hint] Hint
-#!/bin/bash CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;` hugo git add * -f message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE git commit -m &amp;#34;$message&amp;#34; git push Final solution If you want to replicate this</description>
-      <content>&lt;h1 id=&#34;jul-15&#34;&gt;Jul 15&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[!tldr] Jul 15
-There is nothing to read yet. This is a test post.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;testing-my-new-toolkit&#34;&gt;Testing my new toolkit&lt;/h2&gt;
-&lt;p&gt;I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.&lt;/p&gt;
-&lt;p&gt;Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[!hint] Hint&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash
-
-CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;`
-
-hugo
-
-git add * -f
-
-message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE
-
-git commit -m &amp;#34;$message&amp;#34;
-
-git push
-&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;final-solution&#34;&gt;Final solution&lt;/h2&gt;
-&lt;p&gt;If you want to replicate this&lt;/p&gt;
-&lt;p&gt;Create a file called remote.sh&lt;/p&gt;
-&lt;p&gt;Insert this code inside&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
-#!/bin/bash
-
-CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;`
-
-git add content -f
-
-git add public -f
-
-message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE
-
-git commit -m &amp;#34;$message&amp;#34;
-
-git push
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Create a good-named alias in your ~/.bashrc file&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;For example:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
-alias obsidianbuild=&amp;#34;cd /home/yourusername/Desktop/vaults/interconnection/ &amp;amp;&amp;amp; hugo &amp;amp;&amp;amp; ./remote.sh&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Source your ~/.bashrc&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
-source ~/.bashrc
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;open-your-terminal&#34;&gt;Open your terminal&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;And run a command&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
-obsidianbuild
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Internal links if exist:&lt;/p&gt;
-&lt;p&gt;External links if exist:&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</guid>
-      <description>Preparing Doing Add more posts Done Test rebuilds ! Archive Complete
-%% kanban:settings
-{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>
-      <content>&lt;h2 id=&#34;preparing&#34;&gt;Preparing&lt;/h2&gt;
-&lt;h2 id=&#34;doing&#34;&gt;Doing&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add more posts&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;done&#34;&gt;Done&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Test rebuilds !&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;archive&#34;&gt;Archive&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Complete&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;%% kanban:settings&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;
-</content>
-    </item>
-    
+    <copyright>All rights belong to artefaktas.eu</copyright><atom:link href="https://obsidiannotes.artefaktas.eu/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jul 16</title>
       <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-16/</link>

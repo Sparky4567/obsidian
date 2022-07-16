@@ -1,39 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Obsidian notes</title>
-    <link>https://obsidiannotes.artefaktas.eu/</link>
-    <description>Recent content on Obsidian notes</description>
+    <title>2022 on Obsidian notes</title>
+    <link>https://obsidiannotes.artefaktas.eu/tags/2022/</link>
+    <description>Recent content in 2022 on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Fri, 15 Jul 2022 18:58:39 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Comments Policy</title>
-      <link>https://obsidiannotes.artefaktas.eu/comments-policy/</link>
-      <pubDate>Sat, 16 Jul 2022 11:50:05 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/comments-policy/</guid>
-      <description>All Rights Reserved: The blog owner reserves the right to edit, delete, move, or mark as spam any and all comments. Blog owner has the right to block access to any one or group from commenting or from the entire blog. Comment Form Guidelines: The comment form must be filled in with a proper or legitimate sounding name and URL. Comments using keywords, spam or splog-like URLs, or suspicious information in the comment form will be deleted.</description>
-      <content>&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;All Rights Reserved:&lt;/strong&gt; The blog owner reserves the right to edit, delete, move, or mark as spam any and all comments. Blog owner has the right to block access to any one or group from commenting or from the entire blog.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Comment Form Guidelines:&lt;/strong&gt; The comment form must be filled in with a proper or legitimate sounding name and URL. Comments using keywords, spam or splog-like URLs, or suspicious information in the comment form will be deleted. Your comment will not be edited, it will simply be deleted in its entirety.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; If you are leaving a comment and want to point to a link on your own or someone else’s site that is relevant to the topic, please feel free to do so. Keep in mind, however, the link &lt;strong&gt;must&lt;/strong&gt; be relevant and add value to the blog and its readers. This blog is set up to automatically hold any comment with more than one link in moderation, which may delay your comment from appearing.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Thank You Comments:&lt;/strong&gt; Superficial comments that appear to be an attempt to get a backlink or get past comment moderation will be deleted.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Copyright/Plagiarism:&lt;/strong&gt; If notice is received that a comment contains proprietary, copyrighted or plagiarized information, that comment will be deleted and the commenter may be blocked from further commenting.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Email Privacy:&lt;/strong&gt; Email addresses are required for commenting, and they are not published on the blog, nor shared. They may be used by the blog owner to privately contact the commenter.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Commenter Privacy and Protection:&lt;/strong&gt; Comments containing email addresses, physical mail addresses, phone numbers, and any private and personal information will be deleted as soon as possible to protect the privacy of the affected party. To prevent such editing, never share private information within blog comments.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Language and Manners:&lt;/strong&gt; Comments which include offensive or inappropriate language, or considered by the blog owner to be rude and offensive, will be deleted. Especially irritating are comments that disparage Microsoft (while asking for help with a Microsoft product). In the interest of fair play, no personal attacks are permitted in this blog&amp;rsquo;s comments. You may question or argue the content, but not attack the blogger, nor any other commenters. Failure to respect fellow participants on this blog could result in removal and blocked access.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;What To Do If Your Comment Does Not Appear:&lt;/strong&gt; Please be patient. Comments cannot always be approved right away. Please do not submit the same comment unless you think your original comment was not submitted correctly the first time.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multiple Comments on the same Post:&lt;/strong&gt; Multiple related comments on the same blog post (usually one after the other) may be combined into a single comment.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Irrelevant Comments:&lt;/strong&gt; If a comment is irrelevant to a specific post, it may be moved to another post to which it is relevant, if possible. If no suitable post can be found, it may be deleted.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Comment Spam:&lt;/strong&gt; Any comment assumed to be possible comment spam will be deleted and marked as comment spam. In addition, it will be reported to services such as Project Honeypot, Botscout and/or Stop Forum Spam.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Liability:&lt;/strong&gt; All comments within this blog are the responsibility of the individual commenter. By submitting a comment on this blog, you agree that the comment content is your own, and to hold this site, Jimmy Peña, and all subsidiaries and representatives harmless from any and all repercussions, damages, or liability.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Trackbacks Are Comments:&lt;/strong&gt; All trackbacks will be treated inline with our Comments Policy.&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    </item>
-    
+    <lastBuildDate>Fri, 15 Jul 2022 18:58:39 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/2022/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jul 15</title>
       <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</link>
@@ -100,55 +74,6 @@ source ~/.bashrc
 obsidianbuild
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Internal links if exist:&lt;/p&gt;
 &lt;p&gt;External links if exist:&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>Showcase</title>
-      <link>https://obsidiannotes.artefaktas.eu/showcase/</link>
-      <pubDate>Fri, 15 Jul 2022 18:32:37 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/showcase/</guid>
-      <description>I have nothing to show here (yet)</description>
-      <content>&lt;p&gt;I have nothing to show here (yet)&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://obsidiannotes.artefaktas.eu/about/</link>
-      <pubDate>Fri, 15 Jul 2022 18:31:39 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/about/</guid>
-      <description>About content This is a simple website generated purely from my personal Obsidian notes</description>
-      <content>&lt;h1 id=&#34;about-content&#34;&gt;About content&lt;/h1&gt;
-&lt;p&gt;This is a simple website generated purely from my personal Obsidian notes&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</guid>
-      <description>Preparing Doing Add more posts Done Test rebuilds ! Archive Complete
-%% kanban:settings
-{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>
-      <content>&lt;h2 id=&#34;preparing&#34;&gt;Preparing&lt;/h2&gt;
-&lt;h2 id=&#34;doing&#34;&gt;Doing&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add more posts&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;done&#34;&gt;Done&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Test rebuilds !&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;archive&#34;&gt;Archive&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Complete&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;%% kanban:settings&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;
 </content>
     </item>
     

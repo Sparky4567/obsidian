@@ -1,7 +1,7 @@
 ---
 date: 2022-07-15T18:58:39+03:00
 Author: Artefaktas
-Tags: ["new_post","first","post"]
+Tags: ["new_post","first","post","jul","2022"]
 draft: false
 title: Jul 15
 ---
