@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jekyll on Obsidian notes</title>
+    <link>https://obsidiannotes.artefaktas.eu/tags/jekyll/</link>
+    <description>Recent content in jekyll on Obsidian notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights belong to artefaktas.eu</copyright><atom:link href="https://obsidiannotes.artefaktas.eu/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jul 16</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-16/</guid>
+      <description>Jul 16 [!tldr] Jul 16 Just another post. This one is about the best blogging system around. To sum up, it does not exist.
+Is there a perfect content management system for blogging? I still doubt it.
+You see, I tried almost every possible tool that I could find all over the internet.
+Joomla, WordPress, Jekyll, Hugo, Blogger - you name it. I even constructed a blogging tool myself a long time ago to prove that it is possible to usae almost any web tool you like to create a website you will enjoy using.</description>
+      <content>&lt;h1 id=&#34;jul-16&#34;&gt;Jul 16&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Jul 16
+Just another post. This one is about the best blogging system around. To sum up, it does not exist.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Is there a perfect content management system for blogging? I still doubt it.&lt;/p&gt;
+&lt;p&gt;You see, I tried almost every possible tool that I could find all over the internet.&lt;/p&gt;
+&lt;p&gt;Joomla, WordPress, Jekyll, Hugo, Blogger - you name it. I even constructed a blogging tool myself a long time ago to prove that it is possible to usae almost any web tool you like to create a website you will enjoy using. Well, as long as it is formatted in a suitable manner according to WEB guidelines.&lt;/p&gt;
+&lt;p&gt;A few important key points are only valid HTML structure, well-formatted RSS feed, easy-to-use graphical user interface, safety and appealing looks to your visitors.&lt;/p&gt;
+&lt;p&gt;How do you differ a good CMS from a bad one? How should you choose the one you trully need? I think you need some more information to decide. &lt;/p&gt;
+&lt;h1 id=&#34;let-us-talk-about-flat-file-content-management-systems&#34;&gt;Let us talk about Flat File Content Management Systems&lt;/h1&gt;
+&lt;p&gt;What is a &amp;ldquo;Flat File CMS&amp;rdquo;? What is a website generator? Could you tell me? I am sure that I can provide you with some information about those thingies.&lt;/p&gt;
+&lt;h2 id=&#34;flat-file-cms&#34;&gt;Flat File CMS&lt;/h2&gt;
+&lt;p&gt;How does a system like that even works? Hm, that is not as complicated, as you might think. &lt;/p&gt;
+&lt;p&gt;First things first, a flat file content management system is able to store and edit files. The main important thing is that such a system does not use a database atll. It stores data in the files and use them to generate webpages. &lt;/p&gt;
+&lt;p&gt;Second, most of the Flat file Systems have an admin panel to manage all of the recordings. &lt;/p&gt;
+&lt;p&gt;A perfect example of a FFCMS could be Grav: &lt;a href=&#34;https://getgrav.org/&#34;&gt;https://getgrav.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fast building times&lt;/li&gt;
+&lt;li&gt;Admin panel&lt;/li&gt;
+&lt;li&gt;Multiple users support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;website-generators&#34;&gt;Website generators&lt;/h2&gt;
+&lt;p&gt;Website generators are sets of specific tools dedicated to generate websites. Simple as that. Website generators can use almost any text files, such as JSON, markdown, html, text or even something else. One of the drawbacks of using such systems could be a lack of editing tools. &lt;/p&gt;
+&lt;p&gt;On the other hand, there are plenty of text editing tools you could find online or on your computer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Typora&lt;/li&gt;
+&lt;li&gt;Gedit&lt;/li&gt;
+&lt;li&gt;Kchem&amp;hellip; Notepad&lt;/li&gt;
+&lt;li&gt;Obsidian &lt;/li&gt;
+&lt;li&gt;Sublime Text&lt;/li&gt;
+&lt;li&gt;Visual Studio Code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Almost any code or text editor should do the job.&lt;/p&gt;
+&lt;p&gt;The main difference between WG and FFCMS is that in order to publish your work, you will have to write some basic commands into the command line.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;p&gt;Let us use some imagination. Here are two steps after you finish writing your breathtaking blog post:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;hugo (Builds/Rebuilds your project)&lt;/li&gt;
+&lt;li&gt;firebase deploy (Puts the files of public directory into a firebase)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Some website generator examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo (&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Jekyll (&lt;a href=&#34;https://jekyllrb.com/&#34;&gt;https://jekyllrb.com/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Gatsby (&lt;a href=&#34;https://www.gatsbyjs.com/&#34;&gt;https://www.gatsbyjs.com/&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fast building times !&lt;/li&gt;
+&lt;li&gt;The freedom to create templates by yourselves&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Almost everytime you need to include an extra functionality into your pages you will have to &amp;ldquo;google around&amp;rdquo; the solutions yourselves&lt;/li&gt;
+&lt;li&gt;Building configuration&amp;hellip; You will have to put your hands into the dirt sooner or later&lt;/li&gt;
+&lt;li&gt;Lack of editing tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;blogger-wordpress-joomla-and-other-similar-products&#34;&gt;Blogger, Wordpress, Joomla and other similar products&lt;/h2&gt;
+&lt;p&gt;So, could you tell me how these ones differ from FFCMS or a simple website generator? In case you could not, I can assure you that it is particulary easy to grasp the basic concepts.&lt;/p&gt;
+&lt;p&gt;Each one of the mentioned CMS use SQL databases to store the information. They use a special programmed steps to get this information on command (press of a button) and build the pages.&lt;/p&gt;
+&lt;p&gt;Advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The functionality can be improved by installing various plugins&lt;/li&gt;
+&lt;li&gt;Multiple user support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;They tend to be a bit slow sometimes depending on your service provider and use-case scenarios&lt;/li&gt;
+&lt;li&gt;They tend to have some bugggggggs and security holes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Despite all of those things I mentioned above, the overall approach to create a stylish website depends totally on the user and the knowledge of tools.&lt;/p&gt;
+&lt;p&gt;You can make a perfect website with almost every content management system or generator. I admit that the most straightforward solution for a novice could be Wordpress or Blogger. In some cases, when a person has a bit more understanding how to operate computer systems, there is nothing that could not be done with a generator and some extra effort.&lt;/p&gt;
+&lt;p&gt;If I could give you an advice, here it is. If you are a novice user, just choose the best option based on your personal knowledge and watch a few youtube videos to make the final decision.&lt;/p&gt;
+&lt;p&gt;Personally, I do not think that there is a perfect tool around to solve all of your WEB issues. Web standards change frequently, so you might need to modify a couple of things here and there later. Choose wisely.&lt;/p&gt;
+&lt;p&gt;Internal links if exists:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
