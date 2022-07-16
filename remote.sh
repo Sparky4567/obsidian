@@ -1,7 +1,6 @@
 #!/bin/bash
 CURRENTDATE=`date +"%Y-%m-%d %T"`
-git add content -f
-git add public -f
+git add * -f
 message="Obsidian update: "$CURRENTDATE
 git commit -m "$message"
 git push
