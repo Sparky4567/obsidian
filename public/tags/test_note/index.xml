@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>test_note on Obsidian notes</title>
+    <link>https://obsidiannotes.artefaktas.eu/tags/test_note/</link>
+    <description>Recent content in test_note on Obsidian notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights belong to artefaktas.eu</copyright>
+    <lastBuildDate>Sun, 17 Jul 2022 18:49:05 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/test_note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test note</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/test-note/</link>
+      <pubDate>Sun, 17 Jul 2022 18:49:05 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/test-note/</guid>
+      <description>Test note [!quote] Test note This is a test note
+Internal links if exists:
+External links if exist:</description>
+      <content>&lt;h1 id=&#34;test-note&#34;&gt;Test note&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!quote] Test note
+This is a test note&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Internal links if exists:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
