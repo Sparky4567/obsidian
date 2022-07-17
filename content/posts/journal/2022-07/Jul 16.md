@@ -1,21 +1,7 @@
 ---
 date: 2022-07-16T14:19:32:+03:00
 Author: Artefaktas
-Tags:
-  [
-    "new_post",
-    "jul",
-    "2022",
-    "generators",
-    "cms",
-    "blogger",
-    "wordpress",
-    "tool",
-    "management",
-    "web",
-    "systems",
-    "flat",
-  ]
+Tags: ["new_post","jul","2022","generators","cms","blogger","wordpress","tool","management","web","systems","flat"]
 draft: false
 title: Jul 16
 ---

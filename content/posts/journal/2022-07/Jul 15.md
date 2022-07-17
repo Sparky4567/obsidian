@@ -1,7 +1,7 @@
 ---
 date: 2022-07-15T18:58:39+03:00
 Author: Artefaktas
-Tags: ["new_post","first","post","jul","2022"]
+Tags: ["new_post", "first", "post", "jul", "2022"]
 draft: false
 title: Jul 15
 ---
@@ -15,27 +15,26 @@ title: Jul 15
 
 I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
 
-Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort. 
+Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
 
 > [!hint] Hint
 >
 > ```
 > #!/bin/bash
-> 
+>
 > CURRENTDATE=`date +"%Y-%m-%d %T"`
-> 
+>
 > hugo
-> 
+>
 > git add * -f
-> 
+>
 > message="Obsidian update: "$CURRENTDATE
-> 
+>
 > git commit -m "$message"
-> 
+>
 > git push
-> 
+>
 > ```
-
 
 ## Final solution
 
@@ -43,7 +42,7 @@ If you want to replicate this
 
 Create a file called remote.sh
 
-Insert this code inside 
+Insert this code inside
 
 ```
 
@@ -66,7 +65,7 @@ git push
 
 **Create a good-named alias in your ~/.bashrc file**
 
-For example: 
+For example:
 
 ```
 
@@ -84,7 +83,7 @@ source ~/.bashrc
 
 ## Open your terminal
 
-**And run a command** 
+**And run a command**
 
 ```
 

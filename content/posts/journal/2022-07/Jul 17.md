@@ -1,5 +1,5 @@
 ---
-date: 222022-07-17T11:43:33:+03:00
+date: 2022-07-17T11:43:33:+03:00
 Author: Artefaktas
 Tags: ["new_post","write","publish","test","blog","posts","jul","2022"]
 draft: false
