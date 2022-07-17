@@ -79,6 +79,16 @@
     </item>
     
     <item>
+      <title>blog</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/blog/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
       <title>blogger</title>
       <link>https://obsidiannotes.artefaktas.eu/tags/blogger/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -129,11 +139,41 @@
     </item>
     
     <item>
+      <title>posts</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/posts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/posts/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>publish</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/publish/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/publish/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
       <title>systems</title>
       <link>https://obsidiannotes.artefaktas.eu/tags/systems/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/systems/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/test/</guid>
       <description></description>
       <content></content>
     </item>
@@ -164,6 +204,16 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/wordpress/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>write</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/write/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/write/</guid>
       <description></description>
       <content></content>
     </item>

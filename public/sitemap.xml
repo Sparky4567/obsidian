@@ -78,6 +78,10 @@
   </url>
   
   <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/blog/</loc>
+  </url>
+  
+  <url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/blogger/</loc>
   </url>
   
@@ -102,11 +106,27 @@
   </url>
   
   <url>
+    <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-17/</loc>
+  </url>
+  
+  <url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/management/</loc>
   </url>
   
   <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/posts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/publish/</loc>
+  </url>
+  
+  <url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/systems/</loc>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/test/</loc>
   </url>
   
   <url>
@@ -119,6 +139,10 @@
   
   <url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/wordpress/</loc>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/write/</loc>
   </url>
   
 </urlset>

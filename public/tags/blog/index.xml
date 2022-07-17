@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Obsidian notes</title>
+    <link>https://obsidiannotes.artefaktas.eu/tags/blog/</link>
+    <description>Recent content in blog on Obsidian notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights belong to artefaktas.eu</copyright><atom:link href="https://obsidiannotes.artefaktas.eu/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jul 17</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-17/</guid>
+      <description>Jul 17  [!tldr] Jul 17 Did not read again? This is a shor post about how I use the information I find to create some of my blog posts.
+ Some of you might be interested in the information I use in writing my newest blog posts. I can tell you one thing. I use multiple sources from different places all around the internet and even some of my old notebooks.</description>
+      <content>&lt;h1 id=&#34;jul-17&#34;&gt;Jul 17&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Jul 17
+Did not read again? This is a shor post about how I use the information I find to create some of my blog posts.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Some of you might be interested in the information I use in writing my newest blog posts. &lt;/p&gt;
+&lt;p&gt;I can tell you one thing. I use multiple sources from different places all around the internet and even some of my old notebooks.&lt;/p&gt;
+&lt;p&gt;Almost every time I need to write something about the code or tools I use, I read lots of documentation and test a few things before writing. I want to make correct assumptions based on my personal experience, so that is why I investigate a bunch of functionalities myself. &lt;/p&gt;
+&lt;p&gt;That is helpful when you want to write some lengthy technical texts, but what about something else?&lt;/p&gt;
+&lt;p&gt;Would it be possible to use any of the TikTok videos as a base material for a start? Well, of course, it would. Though, you would need to view the material as sceptically as possible. Not everything you find on the internet is the truth. You may need to make the conclusions yourselves. &lt;/p&gt;
+&lt;p&gt;So my recipe is:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Watch the video.&lt;/li&gt;
+&lt;li&gt;Identify which parts of it are accurate and which are not.&lt;/li&gt;
+&lt;li&gt;Recheck the information.&lt;/li&gt;
+&lt;li&gt;Read some documentation or research papers if it is possible.&lt;/li&gt;
+&lt;li&gt;Is there a chance that you could test the theory? Test it!&lt;/li&gt;
+&lt;li&gt;Write down your conclusions.&lt;/li&gt;
+&lt;li&gt;Write your post and publish it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Internal links if exists:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
