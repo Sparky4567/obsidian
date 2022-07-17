@@ -14,9 +14,9 @@
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</guid>
-      <description>Preparing Doing  Add more posts  Done  Test rebuilds !  Archive Complete
+      <description>Preparing Doing Add more posts Done Test rebuilds ! Archive Complete
 %% kanban:settings
-{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;}%%</description>
+{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>
       <content>&lt;h2 id=&#34;preparing&#34;&gt;Preparing&lt;/h2&gt;
 &lt;h2 id=&#34;doing&#34;&gt;Doing&lt;/h2&gt;
 &lt;ul&gt;
@@ -29,7 +29,7 @@
 &lt;h2 id=&#34;archive&#34;&gt;Archive&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Complete&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;%% kanban:settings&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;}
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;}
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;
 </content>
     </item>

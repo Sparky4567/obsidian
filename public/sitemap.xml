@@ -1,184 +1,112 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/interconnected/</loc>
-    <lastmod>2022-07-17T17:01:05+03:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-07-17T14:01:05+03:00</lastmod>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/interconnected-notetaking/</loc>
-    <lastmod>2022-07-17T17:01:05+03:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-07-17T14:01:05+03:00</lastmod>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/new_note/</loc>
-    <lastmod>2022-07-17T17:01:05+03:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-07-17T14:01:05+03:00</lastmod>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/notetaking/</loc>
-    <lastmod>2022-07-17T17:01:05+03:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-07-17T14:01:05+03:00</lastmod>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/</loc>
-    <lastmod>2022-07-17T17:01:05+03:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-07-17T14:01:05+03:00</lastmod>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/posts/</loc>
-    <lastmod>2022-07-17T17:01:05+03:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-07-17T14:01:05+03:00</lastmod>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/</loc>
-    <lastmod>2022-07-17T17:01:05+03:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-07-17T14:01:05+03:00</lastmod>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/2022/</loc>
     <lastmod>2022-07-17T11:43:33+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/blog/</loc>
     <lastmod>2022-07-17T11:43:33+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/jul/</loc>
     <lastmod>2022-07-17T11:43:33+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-17/</loc>
     <lastmod>2022-07-17T11:43:33+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/new_post/</loc>
     <lastmod>2022-07-17T11:43:33+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/posts/</loc>
     <lastmod>2022-07-17T11:43:33+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/publish/</loc>
     <lastmod>2022-07-17T11:43:33+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/test/</loc>
     <lastmod>2022-07-17T11:43:33+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/write/</loc>
     <lastmod>2022-07-17T11:43:33+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/blogger/</loc>
     <lastmod>2022-07-16T14:19:32+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/cms/</loc>
     <lastmod>2022-07-16T14:19:32+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/flat/</loc>
     <lastmod>2022-07-16T14:19:32+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/generators/</loc>
     <lastmod>2022-07-16T14:19:32+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-16/</loc>
     <lastmod>2022-07-16T14:19:32+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/management/</loc>
     <lastmod>2022-07-16T14:19:32+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/systems/</loc>
     <lastmod>2022-07-16T14:19:32+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/tool/</loc>
     <lastmod>2022-07-16T14:19:32+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/web/</loc>
     <lastmod>2022-07-16T14:19:32+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/wordpress/</loc>
     <lastmod>2022-07-16T14:19:32+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/comments-policy/</loc>
     <lastmod>2022-07-16T11:50:05+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/first/</loc>
     <lastmod>2022-07-15T18:58:39+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</loc>
     <lastmod>2022-07-15T18:58:39+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/post/</loc>
     <lastmod>2022-07-15T18:58:39+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/contacts/</loc>
     <lastmod>2022-07-15T18:32:37+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/about/</loc>
     <lastmod>2022-07-15T18:31:39+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/bard/</loc>
     <lastmod>2022-07-15T13:58:39+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/kanban/</loc>
     <lastmod>2022-07-15T13:58:39+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</loc>
     <lastmod>2022-07-15T13:58:39+03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/categories/</loc>
   </url>
-  
 </urlset>
