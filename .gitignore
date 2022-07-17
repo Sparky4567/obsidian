@@ -1,6 +1,6 @@
 # to exclude Obsidian's settings (including plugin and hotkey configurations)
 .obsidian/
-
+content/posts/.obsidian
 # OR only to exclude workspace cache
 .obsidian/workspace
 
