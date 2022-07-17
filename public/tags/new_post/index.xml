@@ -14,11 +14,10 @@
       <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</guid>
-      <description>Jul 15 [!tldr] Jul 15 There is nothing to read yet. This is a test post.
-Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
+      <description>Jul 15  [!tldr] Jul 15 There is nothing to read yet. This is a test post.
+ Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
 Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
-[!hint] Hint
-#!/bin/bash CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;` hugo git add * -f message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE git commit -m &amp;#34;$message&amp;#34; git push Final solution If you want to replicate this</description>
+ [!hint] Hint</description>
       <content>&lt;h1 id=&#34;jul-15&#34;&gt;Jul 15&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!tldr] Jul 15
@@ -29,49 +28,55 @@ There is nothing to read yet. This is a test post.&lt;/p&gt;
 &lt;p&gt;Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!hint] Hint&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
 
-CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;`
+CURRENTDATE=`date +&amp;quot;%Y-%m-%d %T&amp;quot;`
 
 hugo
 
 git add * -f
 
-message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE
+message=&amp;quot;Obsidian update: &amp;quot;$CURRENTDATE
 
-git commit -m &amp;#34;$message&amp;#34;
+git commit -m &amp;quot;$message&amp;quot;
 
 git push
+
 &lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;final-solution&#34;&gt;Final solution&lt;/h2&gt;
 &lt;p&gt;If you want to replicate this&lt;/p&gt;
 &lt;p&gt;Create a file called remote.sh&lt;/p&gt;
 &lt;p&gt;Insert this code inside&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+&lt;pre&gt;&lt;code&gt;
 #!/bin/bash
 
-CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;`
+CURRENTDATE=`date +&amp;quot;%Y-%m-%d %T&amp;quot;`
 
 git add content -f
 
 git add public -f
 
-message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE
+message=&amp;quot;Obsidian update: &amp;quot;$CURRENTDATE
 
-git commit -m &amp;#34;$message&amp;#34;
+git commit -m &amp;quot;$message&amp;quot;
 
 git push
+
+
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Create a good-named alias in your ~/.bashrc file&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;For example:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
-alias obsidianbuild=&amp;#34;cd /home/yourusername/Desktop/vaults/interconnection/ &amp;amp;&amp;amp; hugo &amp;amp;&amp;amp; ./remote.sh&amp;#34;
+&lt;pre&gt;&lt;code&gt;
+alias obsidianbuild=&amp;quot;cd /home/yourusername/Desktop/vaults/interconnection/ &amp;amp;&amp;amp; hugo &amp;amp;&amp;amp; ./remote.sh&amp;quot;
+
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Source your ~/.bashrc&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+&lt;pre&gt;&lt;code&gt;
 source ~/.bashrc
+
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;open-your-terminal&#34;&gt;Open your terminal&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;And run a command&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+&lt;pre&gt;&lt;code&gt;
 obsidianbuild
+
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Internal links if exist:&lt;/p&gt;
 &lt;p&gt;External links if exist:&lt;/p&gt;
 </content>
@@ -83,9 +88,9 @@ obsidianbuild
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</guid>
-      <description>Preparing Doing Add more posts Done Test rebuilds ! Archive Complete
+      <description>Preparing Doing  Add more posts  Done  Test rebuilds !  Archive Complete
 %% kanban:settings
-{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>
+{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;}%%</description>
       <content>&lt;h2 id=&#34;preparing&#34;&gt;Preparing&lt;/h2&gt;
 &lt;h2 id=&#34;doing&#34;&gt;Doing&lt;/h2&gt;
 &lt;ul&gt;
@@ -98,7 +103,7 @@ obsidianbuild
 &lt;h2 id=&#34;archive&#34;&gt;Archive&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Complete&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;%% kanban:settings&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;}
+&lt;pre&gt;&lt;code&gt;{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;
 </content>
     </item>
@@ -109,8 +114,8 @@ obsidianbuild
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-16/</guid>
-      <description>Jul 16 [!tldr] Jul 16 Just another post. This one is about the best blogging system around. To sum up, it does not exist.
-Is there a perfect content management system for blogging? I still doubt it.
+      <description>Jul 16  [!tldr] Jul 16 Just another post. This one is about the best blogging system around. To sum up, it does not exist.
+ Is there a perfect content management system for blogging? I still doubt it.
 You see, I tried almost every possible tool that I could find all over the internet.
 Joomla, WordPress, Jekyll, Hugo, Blogger - you name it. I even constructed a blogging tool myself a long time ago to prove that it is possible to usae almost any web tool you like to create a website you will enjoy using.</description>
       <content>&lt;h1 id=&#34;jul-16&#34;&gt;Jul 16&lt;/h1&gt;
