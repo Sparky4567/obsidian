@@ -5,5 +5,7 @@ draft: false
 ---
 
 Email: admin@artefaktas.eu
+
 Main website: artefaktas.eu
+
 Phone number: will be added
