@@ -9,7 +9,7 @@ content/posts/
 
 # Building 
 
-Run a script depemding on the operating system you use (Or modify one according to your own needs)
+Run a script depending on the operating system you use (Or modify one according to your own needs)
 
 ## Linux distros
 
@@ -18,3 +18,8 @@ Run a script depemding on the operating system you use (Or modify one according 
 ## Windows
 
 .\hremote.bat
+
+## Contacts
+
+- Email: admin@artefaktas.eu
+- Facebook: https://www.facebook.com/artefaktasblog
