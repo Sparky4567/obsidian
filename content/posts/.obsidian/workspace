@@ -7,11 +7,9 @@
         "id": "3fab9341b504142f",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "kanban",
           "state": {
-            "file": "journal/2022-07/notes/Test note.md",
-            "mode": "source",
-            "source": false
+            "file": "kanban/Kanban board.md"
           }
         }
       }
@@ -77,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/2022-07/notes/Test note.md",
+                "file": "kanban/Kanban board.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +92,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/2022-07/notes/Test note.md",
+                "file": "kanban/Kanban board.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/2022-07/notes/Test note.md"
+                "file": "kanban/Kanban board.md"
               }
             }
           },
@@ -134,19 +132,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "3fab9341b504142f",
   "lastOpenFiles": [
-    "journal/2022-07/notes/Interconnected notetaking.md",
     "journal/2022-07/Jul 17.md",
+    "journal/2022-07/notes/Test note.md",
+    "journal/2022-07/notes/Interconnected notetaking.md",
+    "journal/2022-07/notes/Image test.md",
+    "templates/Markdown link.md",
+    "templates/Theme image.md",
     "journal/2022-07/Jul 16.md",
     "journal/2022-07/Jul 15.md",
-    "journal/2022-07/notes/Test note.md",
     "kanban/Kanban board.md",
-    "journal/2022-07/new note.md",
-    "new note.md",
-    "Kanban.md",
-    "kanban/My Kanban Board.md"
+    "journal/2022-07/new note.md"
   ]
 }
