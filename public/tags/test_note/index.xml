@@ -17,14 +17,6 @@
       <description>Test note [!quote] Test note This is a test note
 Internal links if exists:
 External links if exist:</description>
-      <content>&lt;h1 id=&#34;test-note&#34;&gt;Test note&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[!quote] Test note
-This is a test note&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Internal links if exists:&lt;/p&gt;
-&lt;p&gt;External links if exist:&lt;/p&gt;
-</content>
     </item>
     
   </channel>
