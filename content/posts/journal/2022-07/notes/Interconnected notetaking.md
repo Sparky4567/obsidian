@@ -1,9 +1,11 @@
 ---
-date: 2022-07-17T17:01:05+03:00
+date: 2022-07-17T14:01:05.000Z
 Author: Artefaktas
-Tags: ["new_note","interconnected","notetaking"]
+Tags:["new_note","interconnected","notetaking"]
 draft: false
 title: Interconnected notetaking
+link: https://www.notion.so/Interconnected-notetaking-639d8e5527de4c69b18a33b0cd9860d2
+notionID: 639d8e55-27de-4c69-b18a-33b0cd9860d2
 ---
 
 # Interconnected notetaking
