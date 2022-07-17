@@ -11,6 +11,6 @@ title: {{Title}}
 > [!tldr] {{Title}}
 > TLDR
 
-Internal links if exists:
+Internal links if exist:
 
 External links if exist:

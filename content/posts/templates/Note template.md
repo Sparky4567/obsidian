@@ -11,6 +11,6 @@ title: {{Title}}
 > [!quote] {{Title}}
 > Write something here
 
-Internal links if exists:
+Internal links if exist:
 
 External links if exist:
