@@ -7,23 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Sun, 17 Jul 2022 14:01:05 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jul 2022 18:49:05 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>new_note</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/new_note/</link>
+      <pubDate>Sun, 17 Jul 2022 18:49:05 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/new_note/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>note</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/note/</link>
+      <pubDate>Sun, 17 Jul 2022 18:49:05 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/note/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/test/</link>
+      <pubDate>Sun, 17 Jul 2022 18:49:05 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/test/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>interconnected</title>
       <link>https://obsidiannotes.artefaktas.eu/tags/interconnected/</link>
       <pubDate>Sun, 17 Jul 2022 14:01:05 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/interconnected/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>new_note</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/new_note/</link>
-      <pubDate>Sun, 17 Jul 2022 14:01:05 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/new_note/</guid>
       <description></description>
       <content></content>
     </item>
@@ -94,16 +114,6 @@
       <pubDate>Sun, 17 Jul 2022 11:43:33 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/publish/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/test/</link>
-      <pubDate>Sun, 17 Jul 2022 11:43:33 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/test/</guid>
       <description></description>
       <content></content>
     </item>

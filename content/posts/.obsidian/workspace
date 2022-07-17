@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "journal/2022-07/Jul 16.md",
+            "file": "journal/2022-07/notes/Test note.md",
             "mode": "source",
             "source": false
           }
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/2022-07/Jul 16.md",
+                "file": "journal/2022-07/notes/Test note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/2022-07/Jul 16.md",
+                "file": "journal/2022-07/notes/Test note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/2022-07/Jul 16.md"
+                "file": "journal/2022-07/notes/Test note.md"
               }
             }
           },
@@ -137,10 +136,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "df0ae989f3e08660",
+  "active": "3fab9341b504142f",
   "lastOpenFiles": [
-    "journal/2022-07/Jul 15.md",
     "journal/2022-07/Jul 16.md",
+    "journal/2022-07/Jul 15.md",
     "kanban/Kanban board.md",
     "journal/2022-07/new note.md",
     "new note.md",
