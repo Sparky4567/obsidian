@@ -5,3 +5,4 @@ draft: false
 ---
 
 Email: admin@artefaktas.eu
+Main website: artefaktas.eu
