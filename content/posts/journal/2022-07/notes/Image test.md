@@ -1,7 +1,7 @@
 ---
 date: 2022-07-17T21:38:24+03:00
 Author: Artefaktas
-Tags: ["new_note"]
+Tags: ["new_note","test","image"]
 draft: false
 title: Image test
 ---
