@@ -27,6 +27,6 @@ The answer is quite simple. Let me give you a list:
 -   Internal links 
 -   External links
 
-Internal links if exists:
+Internal links if exist:
 
 External links if exist:

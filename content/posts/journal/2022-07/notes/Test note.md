@@ -11,6 +11,6 @@ title: Test note
 > [!quote] Test note
 > This is a test note
 
-Internal links if exists:
+Internal links if exist:
 
 External links if exist:

@@ -45,6 +45,6 @@ So my recipe is:
 7.  Write your post and publish it.
 
 
-Internal links if exists: 
+Internal links if exist: 
 
 External links if exist:

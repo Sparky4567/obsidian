@@ -106,6 +106,6 @@ If I could give you an advice, here it is. If you are a novice user, just choose
 
 Personally, I do not think that there is a perfect tool around to solve all of your WEB issues. Web standards change frequently, so you might need to modify a couple of things here and there later. Choose wisely.
 
-Internal links if exists:
+Internal links if exist:
 
 External links if exist:
