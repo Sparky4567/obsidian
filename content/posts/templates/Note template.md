@@ -1,5 +1,5 @@
 ---
-date: {{date:YYY-MM-DD}}T{{time:HH:mm:ssZ}}
+date: {{date:YYYY-MM-DD}}T{{time:HH:mm:ssZ}}
 Author: Artefaktas
 Tags: ["new_note"]
 draft: false
