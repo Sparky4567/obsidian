@@ -1,0 +1,30 @@
+---
+date: 2022-07-17T17:01:05+03:00
+Author: Artefaktas
+Tags: ["new_note","interconnected","notetaking"]
+draft: false
+title: Interconnected notetaking
+---
+
+# Interconnected notetaking
+
+> [!quote] Interconnected notetaking
+> Starting from here
+
+My approach is simple. All you have is to make some notes and use some linking. Though the notebook looks like nonsense now, it will spread and start to look like a web of ideas a few weeks later. 
+
+# How am I going to do this?
+
+  
+
+The answer is quite simple. Let me give you a list:
+
+  
+
+-   Tagging 
+-   Internal links 
+-   External links
+
+Internal links if exists:
+
+External links if exist:
