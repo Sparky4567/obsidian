@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/grammarly/</loc>
+    <lastmod>2022-07-18T21:45:04+03:00</lastmod>
+  </url><url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/improve/</loc>
+    <lastmod>2022-07-18T21:45:04+03:00</lastmod>
+  </url><url>
+    <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-18/</loc>
+    <lastmod>2022-07-18T21:45:04+03:00</lastmod>
+  </url><url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/new_post/</loc>
+    <lastmod>2022-07-18T21:45:04+03:00</lastmod>
+  </url><url>
+    <loc>https://obsidiannotes.artefaktas.eu/</loc>
+    <lastmod>2022-07-18T21:45:04+03:00</lastmod>
+  </url><url>
+    <loc>https://obsidiannotes.artefaktas.eu/posts/</loc>
+    <lastmod>2022-07-18T21:45:04+03:00</lastmod>
+  </url><url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/</loc>
+    <lastmod>2022-07-18T21:45:04+03:00</lastmod>
+  </url><url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/writing/</loc>
+    <lastmod>2022-07-18T21:45:04+03:00</lastmod>
+  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/efficient-note-tagging/</loc>
     <lastmod>2022-07-18T20:42:47+03:00</lastmod>
   </url><url>
@@ -11,19 +35,10 @@
     <loc>https://obsidiannotes.artefaktas.eu/tags/note/</loc>
     <lastmod>2022-07-18T20:42:47+03:00</lastmod>
   </url><url>
-    <loc>https://obsidiannotes.artefaktas.eu/</loc>
-    <lastmod>2022-07-18T20:42:47+03:00</lastmod>
-  </url><url>
-    <loc>https://obsidiannotes.artefaktas.eu/posts/</loc>
-    <lastmod>2022-07-18T20:42:47+03:00</lastmod>
-  </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/start/</loc>
     <lastmod>2022-07-18T20:42:47+03:00</lastmod>
   </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/tagging/</loc>
-    <lastmod>2022-07-18T20:42:47+03:00</lastmod>
-  </url><url>
-    <loc>https://obsidiannotes.artefaktas.eu/tags/</loc>
     <lastmod>2022-07-18T20:42:47+03:00</lastmod>
   </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/new/</loc>
@@ -90,9 +105,6 @@
     <lastmod>2022-07-17T11:43:33+03:00</lastmod>
   </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-17/</loc>
-    <lastmod>2022-07-17T11:43:33+03:00</lastmod>
-  </url><url>
-    <loc>https://obsidiannotes.artefaktas.eu/tags/new_post/</loc>
     <lastmod>2022-07-17T11:43:33+03:00</lastmod>
   </url><url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/posts/</loc>
