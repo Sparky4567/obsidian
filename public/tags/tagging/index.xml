@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tagging on Obsidian notes</title>
+    <link>https://obsidiannotes.artefaktas.eu/tags/tagging/</link>
+    <description>Recent content in tagging on Obsidian notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights belong to artefaktas.eu</copyright>
+    <lastBuildDate>Mon, 18 Jul 2022 20:42:47 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/tagging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Efficient note tagging</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/efficient-note-tagging/</link>
+      <pubDate>Mon, 18 Jul 2022 20:42:47 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/efficient-note-tagging/</guid>
+      <description>Efficient note tagging [!quote] Efficient note tagging This note is about efficient tagging. Nothing more to say.
+So, how do you use tagging in obsidian? I will share some of my ideas. You do not have to follow this blindly.
+These are just a few tactics I use myself.
+Let us start with ABC&amp;rsquo;S ABC&amp;rsquo;S? Yes, literally. You can grab a community plugin called &amp;ldquo;Advanced tables&amp;rdquo; and use one of my tiny templates called &amp;ldquo;ABC&amp;rdquo;.</description>
+    </item>
+    
+  </channel>
+</rss>

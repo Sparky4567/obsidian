@@ -7,20 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Mon, 18 Jul 2022 18:39:58 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>new</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/new/</link>
-      <pubDate>Mon, 18 Jul 2022 18:39:58 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/new/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Mon, 18 Jul 2022 20:42:47 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>new_note</title>
       <link>https://obsidiannotes.artefaktas.eu/tags/new_note/</link>
-      <pubDate>Mon, 18 Jul 2022 18:39:58 +0300</pubDate>
+      <pubDate>Mon, 18 Jul 2022 20:42:47 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/new_note/</guid>
       <description></description>
@@ -29,9 +20,36 @@
     <item>
       <title>note</title>
       <link>https://obsidiannotes.artefaktas.eu/tags/note/</link>
-      <pubDate>Mon, 18 Jul 2022 18:39:58 +0300</pubDate>
+      <pubDate>Mon, 18 Jul 2022 20:42:47 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>start</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/start/</link>
+      <pubDate>Mon, 18 Jul 2022 20:42:47 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/start/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tagging</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/tagging/</link>
+      <pubDate>Mon, 18 Jul 2022 20:42:47 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/tagging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>new</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/new/</link>
+      <pubDate>Mon, 18 Jul 2022 18:39:58 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/new/</guid>
       <description></description>
     </item>
     

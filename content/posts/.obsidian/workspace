@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "3fab9341b504142f",
+        "id": "6d74d51812e14119",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "journal/2022-07/notes/Image test.md",
+            "file": "journal/2022-07/notes/Efficient note tagging.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/2022-07/notes/Image test.md",
+                "file": "journal/2022-07/notes/Efficient note tagging.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/2022-07/notes/Image test.md",
+                "file": "journal/2022-07/notes/Efficient note tagging.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/2022-07/notes/Image test.md"
+                "file": "journal/2022-07/notes/Efficient note tagging.md"
               }
             }
           },
@@ -137,17 +137,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3fab9341b504142f",
+  "active": "6d74d51812e14119",
   "lastOpenFiles": [
-    "kanban/Kanban board.md",
+    "journal/2022-07/notes/Image test.md",
+    "journal/2022-07/notes/Efficient note tagging.md",
+    "journal/2022-07/notes/I just added some extra templates.md",
     "journal/2022-07/Jul 17.md",
+    "kanban/Kanban board.md",
     "journal/2022-07/notes/Test note.md",
     "journal/2022-07/notes/Interconnected notetaking.md",
-    "journal/2022-07/notes/Image test.md",
     "templates/Markdown link.md",
     "templates/Theme image.md",
-    "journal/2022-07/Jul 16.md",
-    "journal/2022-07/Jul 15.md",
-    "journal/2022-07/new note.md"
+    "journal/2022-07/Jul 16.md"
   ]
 }
