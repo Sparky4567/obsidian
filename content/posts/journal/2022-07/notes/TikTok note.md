@@ -1,7 +1,7 @@
 ---
 date: 2022-07-18T18:39:58+03:00
 Author: Artefaktas
-Tags: ["new_note","tiktok","note","new","template"]
+Tags: ["new_note","tiktok","note","new","template","rebuild"]
 draft: false
 title: TikTok note
 ---
