@@ -7,15 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Sun, 17 Jul 2022 21:38:24 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/new_note/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jul 2022 17:51:19 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/new_note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I just added some extra templates</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/i-just-added-some-extra-templates/</link>
+      <pubDate>Mon, 18 Jul 2022 17:51:19 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/i-just-added-some-extra-templates/</guid>
+      <description>I just added some extra templates  [!quote] I just added some extra templates One for obsidian and one for hugo
+   Internal links if exist:
+External links if exist:</description>
+    </item>
+    
     <item>
       <title>Image test</title>
       <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/image-test/</link>
       <pubDate>Sun, 17 Jul 2022 21:38:24 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/image-test/</guid>
-      <description>Image test [!quote] Image test Write something here
-![[flying-dog-5946987_1920.jpg]]
+      <description>Image test  [!quote] Image test Write something here
+ ![[flying-dog-5946987_1920.jpg]]
 From pixabay.com
 Internal links if exist:
 External links if exist: [https://pixabay.com/photos/flying-dog-dog-angel-funny-animals-5946987/]
@@ -28,8 +39,8 @@ Markdown external: https://pixabay.com/photos/flying-dog-dog-angel-funny-animals
       <pubDate>Sun, 17 Jul 2022 18:49:05 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/test-note/</guid>
-      <description>Test note [!quote] Test note This is a test note
-Internal links if exist:
+      <description>Test note  [!quote] Test note This is a test note
+ Internal links if exist:
 External links if exist:</description>
     </item>
     
@@ -39,9 +50,9 @@ External links if exist:</description>
       <pubDate>Sun, 17 Jul 2022 14:01:05 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/interconnected-notetaking/</guid>
-      <description>Interconnected notetaking [!quote] Interconnected notetaking Starting from here
-My approach is simple. All you have is to make some notes and use some linking. Though the notebook looks like nonsense now, it will spread and start to look like a web of ideas a few weeks later. How am I going to do this? The answer is quite simple. Let me give you a list:
-Tagging Internal links External links Internal links if exist:</description>
+      <description>Interconnected notetaking  [!quote] Interconnected notetaking Starting from here
+ My approach is simple. All you have is to make some notes and use some linking. Though the notebook looks like nonsense now, it will spread and start to look like a web of ideas a few weeks later. How am I going to do this? The answer is quite simple. Let me give you a list:
+ Tagging  Internal links  External links  Internal links if exist:</description>
     </item>
     
   </channel>

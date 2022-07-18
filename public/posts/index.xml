@@ -7,15 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Sun, 17 Jul 2022 21:38:24 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jul 2022 17:51:19 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I just added some extra templates</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/i-just-added-some-extra-templates/</link>
+      <pubDate>Mon, 18 Jul 2022 17:51:19 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/i-just-added-some-extra-templates/</guid>
+      <description>I just added some extra templates  [!quote] I just added some extra templates One for obsidian and one for hugo
+   Internal links if exist:
+External links if exist:</description>
+    </item>
+    
     <item>
       <title>Image test</title>
       <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/image-test/</link>
       <pubDate>Sun, 17 Jul 2022 21:38:24 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/image-test/</guid>
-      <description>Image test [!quote] Image test Write something here
-![[flying-dog-5946987_1920.jpg]]
+      <description>Image test  [!quote] Image test Write something here
+ ![[flying-dog-5946987_1920.jpg]]
 From pixabay.com
 Internal links if exist:
 External links if exist: [https://pixabay.com/photos/flying-dog-dog-angel-funny-animals-5946987/]
@@ -28,8 +39,8 @@ Markdown external: https://pixabay.com/photos/flying-dog-dog-angel-funny-animals
       <pubDate>Sun, 17 Jul 2022 18:49:05 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/test-note/</guid>
-      <description>Test note [!quote] Test note This is a test note
-Internal links if exist:
+      <description>Test note  [!quote] Test note This is a test note
+ Internal links if exist:
 External links if exist:</description>
     </item>
     
@@ -39,9 +50,9 @@ External links if exist:</description>
       <pubDate>Sun, 17 Jul 2022 14:01:05 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/interconnected-notetaking/</guid>
-      <description>Interconnected notetaking [!quote] Interconnected notetaking Starting from here
-My approach is simple. All you have is to make some notes and use some linking. Though the notebook looks like nonsense now, it will spread and start to look like a web of ideas a few weeks later. How am I going to do this? The answer is quite simple. Let me give you a list:
-Tagging Internal links External links Internal links if exist:</description>
+      <description>Interconnected notetaking  [!quote] Interconnected notetaking Starting from here
+ My approach is simple. All you have is to make some notes and use some linking. Though the notebook looks like nonsense now, it will spread and start to look like a web of ideas a few weeks later. How am I going to do this? The answer is quite simple. Let me give you a list:
+ Tagging  Internal links  External links  Internal links if exist:</description>
     </item>
     
     <item>
@@ -50,8 +61,8 @@ Tagging Internal links External links Internal links if exist:</description>
       <pubDate>Sun, 17 Jul 2022 11:43:33 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-17/</guid>
-      <description>Jul 17 [!tldr] Jul 17 Did not read again? This is a shor post about how I use the information I find to create some of my blog posts.
-Some of you might be interested in the information I use in writing my newest blog posts. I can tell you one thing. I use multiple sources from different places all around the internet and even some of my old notebooks.</description>
+      <description>Jul 17  [!tldr] Jul 17 Did not read again? This is a shor post about how I use the information I find to create some of my blog posts.
+ Some of you might be interested in the information I use in writing my newest blog posts. I can tell you one thing. I use multiple sources from different places all around the internet and even some of my old notebooks.</description>
     </item>
     
     <item>
@@ -60,8 +71,8 @@ Some of you might be interested in the information I use in writing my newest bl
       <pubDate>Sat, 16 Jul 2022 14:19:32 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-16/</guid>
-      <description>Jul 16 [!tldr] Jul 16 Just another post. This one is about the best blogging system around. To sum up, it does not exist.
-Is there a perfect content management system for blogging? I still doubt it.
+      <description>Jul 16  [!tldr] Jul 16 Just another post. This one is about the best blogging system around. To sum up, it does not exist.
+ Is there a perfect content management system for blogging? I still doubt it.
 You see, I tried almost every possible tool that I could find all over the internet.
 Joomla, WordPress, Jekyll, Hugo, Blogger - you name it. I even constructed a blogging tool myself a long time ago to prove that it is possible to usae almost any web tool you like to create a website you will enjoy using.</description>
     </item>
@@ -72,11 +83,10 @@ Joomla, WordPress, Jekyll, Hugo, Blogger - you name it. I even constructed a blo
       <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</guid>
-      <description>Jul 15 [!tldr] Jul 15 There is nothing to read yet. This is a test post.
-Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
+      <description>Jul 15  [!tldr] Jul 15 There is nothing to read yet. This is a test post.
+ Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
 Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
-[!hint] Hint
-#!/bin/bash CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;` hugo git add * -f message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE git commit -m &amp;#34;$message&amp;#34; git push Final solution If you want to replicate this</description>
+ [!hint] Hint</description>
     </item>
     
     <item>
@@ -85,9 +95,9 @@ Everytime I run a shell command to sync latest posts, with the help of Hugo, Git
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</guid>
-      <description>Preparing Make more templates Doing Add more posts Done Test rebuilds ! Archive Complete
+      <description>Preparing  Make more templates  Doing  Add more posts  Done  Test rebuilds !  Archive Complete
 %% kanban:settings
-{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>
+{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;}%%</description>
     </item>
     
   </channel>
