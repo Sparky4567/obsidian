@@ -221,37 +221,37 @@ git push
 <p>If you want to replicate this</p>
 <p>Create a file called remote.sh</p>
 <p>Insert this code inside</p>
-<pre><code>
-#!/bin/bash
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<span style="color:#75715e">#!/bin/bash</span>
 
-CURRENTDATE=`date +&quot;%Y-%m-%d %T&quot;`
+CURRENTDATE<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>date +<span style="color:#e6db74">&#34;%Y-%m-%d %T&#34;</span><span style="color:#e6db74">`</span>
 
 git add content -f
 
 git add public -f
 
-message=&quot;Obsidian update: &quot;$CURRENTDATE
+message<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Obsidian update: &#34;</span>$CURRENTDATE
 
-git commit -m &quot;$message&quot;
+git commit -m <span style="color:#e6db74">&#34;</span>$message<span style="color:#e6db74">&#34;</span>
 
 git push
 
 
-</code></pre><p><strong>Create a good-named alias in your ~/.bashrc file</strong></p>
+</code></pre></div><p><strong>Create a good-named alias in your ~/.bashrc file</strong></p>
 <p>For example:</p>
-<pre><code>
-alias obsidianbuild=&quot;cd /home/yourusername/Desktop/vaults/interconnection/ &amp;&amp; hugo &amp;&amp; ./remote.sh&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+alias obsidianbuild<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cd /home/yourusername/Desktop/vaults/interconnection/ &amp;&amp; hugo &amp;&amp; ./remote.sh&#34;</span>
 
-</code></pre><p><strong>Source your ~/.bashrc</strong></p>
-<pre><code>
+</code></pre></div><p><strong>Source your ~/.bashrc</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 source ~/.bashrc
 
-</code></pre><h2 id="open-your-terminal">Open your terminal<a href="#open-your-terminal" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+</code></pre></div><h2 id="open-your-terminal">Open your terminal<a href="#open-your-terminal" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p><strong>And run a command</strong></p>
-<pre><code>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 obsidianbuild
 
-</code></pre><p>Internal links if exist:</p>
+</code></pre></div><p>Internal links if exist:</p>
 <p>External links if exist:</p>
 
       </div></div>

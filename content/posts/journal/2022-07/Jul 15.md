@@ -44,7 +44,7 @@ Create a file called remote.sh
 
 Insert this code inside
 
-```
+```bash
 
 #!/bin/bash
 
@@ -67,7 +67,7 @@ git push
 
 For example:
 
-```
+```bash
 
 alias obsidianbuild="cd /home/yourusername/Desktop/vaults/interconnection/ && hugo && ./remote.sh"
 
@@ -75,7 +75,7 @@ alias obsidianbuild="cd /home/yourusername/Desktop/vaults/interconnection/ && hu
 
 **Source your ~/.bashrc**
 
-```
+```bash
 
 source ~/.bashrc
 
@@ -85,7 +85,7 @@ source ~/.bashrc
 
 **And run a command**
 
-```
+```bash
 
 obsidianbuild
 
