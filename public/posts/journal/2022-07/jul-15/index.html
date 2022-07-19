@@ -6,11 +6,10 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Jul 15 [!tldr] Jul 15 There is nothing to read yet. This is a test post.
-Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
+<meta name="description" content="Jul 15  [!tldr] Jul 15 There is nothing to read yet. This is a test post.
+ Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
 Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
-[!hint] Hint
-#!/bin/bash CURRENTDATE=`date &#43;&amp;#34;%Y-%m-%d %T&amp;#34;` hugo git add * -f message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE git commit -m &amp;#34;$message&amp;#34; git push Final solution If you want to replicate this" />
+ [!hint] Hint" />
 <meta name="keywords" content="Atefaktas,obsidian,notes,hugo,obsidiannotes.artefaktas.eu" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/" />
@@ -45,11 +44,10 @@ Everytime I run a shell command to sync latest posts, with the help of Hugo, Git
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Jul 15">
-<meta property="og:description" content="Jul 15 [!tldr] Jul 15 There is nothing to read yet. This is a test post.
-Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
+<meta property="og:description" content="Jul 15  [!tldr] Jul 15 There is nothing to read yet. This is a test post.
+ Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
 Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
-[!hint] Hint
-#!/bin/bash CURRENTDATE=`date &#43;&amp;#34;%Y-%m-%d %T&amp;#34;` hugo git add * -f message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE git commit -m &amp;#34;$message&amp;#34; git push Final solution If you want to replicate this" />
+ [!hint] Hint" />
 <meta property="og:url" content="https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/" />
 <meta property="og:site_name" content="Obsidian notes" />
 
@@ -116,6 +114,10 @@ Everytime I run a shell command to sync latest posts, with the help of Hugo, Git
         
       
         
+          <li><a href="/support">Support page</a></li>
+        
+      
+        
           <li><a href="/tags">Tags</a></li>
         
       
@@ -141,6 +143,10 @@ Everytime I run a shell command to sync latest posts, with the help of Hugo, Git
     
       
         <li><a href="/contacts">Contacts</a></li>
+      
+    
+      
+        <li><a href="/support">Support page</a></li>
       
     
       
@@ -204,50 +210,56 @@ There is nothing to read yet. This is a test post.</p>
 <p>Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.</p>
 <blockquote>
 <p>[!hint] Hint</p>
-<pre tabindex="0"><code>#!/bin/bash
+<pre><code>#!/bin/bash
 
-CURRENTDATE=`date +&#34;%Y-%m-%d %T&#34;`
+CURRENTDATE=`date +&quot;%Y-%m-%d %T&quot;`
 
 hugo
 
 git add * -f
 
-message=&#34;Obsidian update: &#34;$CURRENTDATE
+message=&quot;Obsidian update: &quot;$CURRENTDATE
 
-git commit -m &#34;$message&#34;
+git commit -m &quot;$message&quot;
 
 git push
+
 </code></pre></blockquote>
 <h2 id="final-solution">Final solution<a href="#final-solution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>If you want to replicate this</p>
 <p>Create a file called remote.sh</p>
 <p>Insert this code inside</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>CURRENTDATE<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>date +<span style="color:#e6db74">&#34;%Y-%m-%d %T&#34;</span><span style="color:#e6db74">`</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>git add content -f
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>git add public -f
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>message<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Obsidian update: &#34;</span>$CURRENTDATE
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;</span>$message<span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>git push
-</span></span></code></pre></div><p><strong>Create a good-named alias in your ~/.bashrc file</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<span style="color:#75715e">#!/bin/bash</span>
+
+CURRENTDATE<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>date +<span style="color:#e6db74">&#34;%Y-%m-%d %T&#34;</span><span style="color:#e6db74">`</span>
+
+git add content -f
+
+git add public -f
+
+message<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Obsidian update: &#34;</span>$CURRENTDATE
+
+git commit -m <span style="color:#e6db74">&#34;</span>$message<span style="color:#e6db74">&#34;</span>
+
+git push
+
+
+</code></pre></div><p><strong>Create a good-named alias in your ~/.bashrc file</strong></p>
 <p>For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>alias obsidianbuild<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cd /home/yourusername/Desktop/vaults/interconnection/ &amp;&amp; hugo &amp;&amp; ./remote.sh&#34;</span>
-</span></span></code></pre></div><p><strong>Source your ~/.bashrc</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>source ~/.bashrc
-</span></span></code></pre></div><h2 id="open-your-terminal">Open your terminal<a href="#open-your-terminal" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+alias obsidianbuild<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cd /home/yourusername/Desktop/vaults/interconnection/ &amp;&amp; hugo &amp;&amp; ./remote.sh&#34;</span>
+
+</code></pre></div><p><strong>Source your ~/.bashrc</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+source ~/.bashrc
+
+</code></pre></div><h2 id="open-your-terminal">Open your terminal<a href="#open-your-terminal" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p><strong>And run a command</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>obsidianbuild
-</span></span></code></pre></div><p>Internal links if exist:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+obsidianbuild
+
+</code></pre></div><p>Internal links if exist:</p>
 <p>External links if exist:</p>
 
       </div></div>

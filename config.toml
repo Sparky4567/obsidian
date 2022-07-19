@@ -14,7 +14,7 @@ ignoreFiles = "/content/posts/templates.*"
   themeColor = "green"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 5
+  showMenuItems = 6
 
   # show selector to switch language
   showLanguageSelector = false
@@ -84,4 +84,8 @@ ignoreFiles = "/content/posts/templates.*"
         identifier = "commentpolicy"
         name = "Comments policy"
         url = "/comments-policy"
+      [[languages.en.menu.main]]
+        identifier = "support"
+        name = "Support page"
+        url = "/support"
 

@@ -14,8 +14,8 @@
       <pubDate>Mon, 18 Jul 2022 18:39:58 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/tiktok-note/</guid>
-      <description>TikTok note [!quote] TikTok note Write something here
-Internal links if exist:
+      <description>TikTok note  [!quote] TikTok note Write something here
+ window.addEventListener(&#34;load&#34;,()={let videoId = &#34;https://www.tiktok.com/@astroospace/video/7060186331674184966?is_from_webapp=1\u0026sender_device=pc\u0026web_id=7116423487334270470&#34;;let className = &#34;7060186331674184966?is_from_webapp=1\u0026sender_device=pc\u0026web_id=7116423487334270470&#34;let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId;let classSelector = String(className);fetch(fetchUrl).then((r)=r.json()).then((d)={document.getElementsByClassName(classSelector)[0].innerHTML = d.html;let sc = document.createElement(&#34;script&#34;);sc.src = &#34;https://www.tiktok.com/embed.js&#34;;document.body.appendChild(sc);}).catch((err)={console.log(err);});}); Internal links if exist:
 External links if exist:</description>
     </item>
     

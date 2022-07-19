@@ -14,8 +14,8 @@
       <pubDate>Mon, 18 Jul 2022 20:42:47 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/efficient-note-tagging/</guid>
-      <description>Efficient note tagging [!quote] Efficient note tagging This note is about efficient tagging. Nothing more to say.
-So, how do you use tagging in obsidian? I will share some of my ideas. You do not have to follow this blindly.
+      <description>Efficient note tagging  [!quote] Efficient note tagging This note is about efficient tagging. Nothing more to say.
+ So, how do you use tagging in obsidian? I will share some of my ideas. You do not have to follow this blindly.
 These are just a few tactics I use myself.
 Let us start with ABC&amp;rsquo;S ABC&amp;rsquo;S? Yes, literally. You can grab a community plugin called &amp;ldquo;Advanced tables&amp;rdquo; and use one of my tiny templates called &amp;ldquo;ABC&amp;rdquo;.</description>
     </item>
@@ -26,8 +26,8 @@ Let us start with ABC&amp;rsquo;S ABC&amp;rsquo;S? Yes, literally. You can grab
       <pubDate>Mon, 18 Jul 2022 18:39:58 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/tiktok-note/</guid>
-      <description>TikTok note [!quote] TikTok note Write something here
-Internal links if exist:
+      <description>TikTok note  [!quote] TikTok note Write something here
+ window.addEventListener(&#34;load&#34;,()={let videoId = &#34;https://www.tiktok.com/@astroospace/video/7060186331674184966?is_from_webapp=1\u0026sender_device=pc\u0026web_id=7116423487334270470&#34;;let className = &#34;7060186331674184966?is_from_webapp=1\u0026sender_device=pc\u0026web_id=7116423487334270470&#34;let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId;let classSelector = String(className);fetch(fetchUrl).then((r)=r.json()).then((d)={document.getElementsByClassName(classSelector)[0].innerHTML = d.html;let sc = document.createElement(&#34;script&#34;);sc.src = &#34;https://www.tiktok.com/embed.js&#34;;document.body.appendChild(sc);}).catch((err)={console.log(err);});}); Internal links if exist:
 External links if exist:</description>
     </item>
     
@@ -37,8 +37,8 @@ External links if exist:</description>
       <pubDate>Sun, 17 Jul 2022 18:49:05 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/test-note/</guid>
-      <description>Test note [!quote] Test note This is a test note
-Internal links if exist:
+      <description>Test note  [!quote] Test note This is a test note
+ Internal links if exist:
 External links if exist:</description>
     </item>
     
