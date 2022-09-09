@@ -15,6 +15,8 @@ Woosh. I skipped a lot of time on this one due to technical issues.
 
 I will try to automate this blog as much as I can.
 
+(A-ha! Visual Studio Code online editor is the solution. There is no need to automate this blog anymore.)
+
 Internal links if exist:
 
 External links if exist:
