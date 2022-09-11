@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>notice on Obsidian notes</title>
+    <link>https://obsidiannotes.artefaktas.eu/tags/notice/</link>
+    <description>Recent content in notice on Obsidian notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights belong to artefaktas.eu</copyright>
+    <lastBuildDate>Fri, 09 Sep 2022 19:00:11 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/notice/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sep 09</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-09/</link>
+      <pubDate>Fri, 09 Sep 2022 19:00:11 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-09/</guid>
+      <description>Sep 09  [!tldr] Aug 09 Short notice
+ Woosh. I skipped a lot of time on this one due to technical issues.
+I will try to automate this blog as much as I can.
+(A-ha! Visual Studio Code online editor is the solution. There is no need to automate this blog anymore.)
+Internal links if exist:
+External links if exist:</description>
+    </item>
+    
+  </channel>
+</rss>

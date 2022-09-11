@@ -7,7 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Tue, 19 Jul 2022 21:38:47 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Sep 2022 11:10:26 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sep 11</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-10/</link>
+      <pubDate>Sun, 11 Sep 2022 11:10:26 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-10/</guid>
+      <description>Sep 11  [!tldr] Sep 11 This is a test post. Testing a bat script execution.
+ Test post.
+window.addEventListener(&#34;load&#34;,()={let videoId = &#34;https://www.tiktok.com/@happycat202/video/7141787468558290182&#34;;let className = &#34;7141787468558290182&#34;let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId;let classSelector = String(className);fetch(fetchUrl).then((r)=r.json()).then((d)={document.getElementsByClassName(classSelector)[0].innerHTML = d.html;let sc = document.createElement(&#34;script&#34;);sc.src = &#34;https://www.tiktok.com/embed.js&#34;;document.body.appendChild(sc);}).catch((err)={console.log(err);});}); Internal links if exist:
+External links if exist:</description>
+    </item>
+    
+    <item>
+      <title>Sep 09</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-09/</link>
+      <pubDate>Fri, 09 Sep 2022 19:00:11 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-09/</guid>
+      <description>Sep 09  [!tldr] Aug 09 Short notice
+ Woosh. I skipped a lot of time on this one due to technical issues.
+I will try to automate this blog as much as I can.
+(A-ha! Visual Studio Code online editor is the solution. There is no need to automate this blog anymore.)
+Internal links if exist:
+External links if exist:</description>
+    </item>
+    
     <item>
       <title>Jul 19</title>
       <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-19/</link>
