@@ -1,17 +1,17 @@
 ---
-date: 2022-09-11T12:10:26+03:00
+date: 2022-09-11T11:10:26+03:00
 Author: Artefaktas
-Tags: ["new_post"]
+Tags: ["new_post","test","post","bat"]
 draft: false
 title: Sep 11
 ---
 
 # Sep 11
 
-> [!tldr] Sep 10
-> TLDR
+> [!tldr] Sep 11
+> This is a test post. Testing a bat script execution.
 
-
+Test post.
 
 Internal links if exist:
 
