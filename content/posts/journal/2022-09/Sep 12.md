@@ -13,6 +13,8 @@ title: Sep 12
 
 This is a test post No. 2
 
+A piece of code is visible for some strange reason. Therefore, I wrote some more text to test this out.
+
 {{<tiktok tiktoklink="https://www.tiktok.com/@yasinald8/video/7142167454381395206">}}
 
 Internal links if exist:
