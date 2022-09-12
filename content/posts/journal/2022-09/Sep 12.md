@@ -1,7 +1,7 @@
 ---
 date: 2022-09-12T16:02:05+03:00
 Author: Artefaktas
-Tags: ["new_post"]
+Tags: ["new_post","automation","once","again"]
 draft: false
 title: Sep 12
 ---
