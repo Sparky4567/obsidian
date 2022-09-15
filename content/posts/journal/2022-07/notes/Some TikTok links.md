@@ -39,6 +39,8 @@ https://www.tiktok.com/@yasinald8/video/7142167454381395206 (Roller skating turt
 
 https://www.tiktok.com/@creatures.of.sonaria.mem/video/7133076339518721286 (That is how the modern education should work)
 
+https://www.tiktok.com/@hejmeddigsamuel/video/7142040143271120134 (Okay)
+
 ## Infodump
 
 https://www.tiktok.com/@nerdyaboutneature/video/7141030478617775366
