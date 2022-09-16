@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>picture on Obsidian notes</title>
+    <link>https://obsidiannotes.artefaktas.eu/tags/picture/</link>
+    <description>Recent content in picture on Obsidian notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights belong to artefaktas.eu</copyright>
+    <lastBuildDate>Thu, 15 Sep 2022 19:36:10 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/picture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sep 15</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-15/</link>
+      <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-15/</guid>
+      <description>Sep 15  [!tldr] Sep 15 A new ReactJS project
+ Hello, blog readers. I want to share with you one of my recent projects. It is a basic image watermarking tool built purely with the ReactJS framework and some extra libraries to manipulate your chosen illustrations.
+Short instructions on how to use the tool Follow the link https://watermark.artefaktas.eu/, upload an image, change the default watermark text, adjust the font size and press &amp;ldquo;Watermark It&amp;rdquo;.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,22 +7,103 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Sun, 11 Sep 2022 11:10:26 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Sep 2022 19:36:10 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>bat</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/bat/</link>
-      <pubDate>Sun, 11 Sep 2022 11:10:26 +0300</pubDate>
+      <title>illustration</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/illustration/</link>
+      <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/bat/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/tags/illustration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>new_post</title>
       <link>https://obsidiannotes.artefaktas.eu/tags/new_post/</link>
-      <pubDate>Sun, 11 Sep 2022 11:10:26 +0300</pubDate>
+      <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/new_post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>picture</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/picture/</link>
+      <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/picture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reactjs</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/reactjs/</link>
+      <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/reactjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tool</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/tool/</link>
+      <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>watermark</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/watermark/</link>
+      <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/watermark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>watermarking</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/watermarking/</link>
+      <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/watermarking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>again</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/again/</link>
+      <pubDate>Mon, 12 Sep 2022 16:02:05 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/again/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/automation/</link>
+      <pubDate>Mon, 12 Sep 2022 16:02:05 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>once</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/once/</link>
+      <pubDate>Mon, 12 Sep 2022 16:02:05 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/once/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bat</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/bat/</link>
+      <pubDate>Sun, 11 Sep 2022 11:10:26 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/bat/</guid>
       <description></description>
     </item>
     
@@ -50,15 +131,6 @@
       <pubDate>Fri, 09 Sep 2022 19:00:11 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/automate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>automation</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/automation/</link>
-      <pubDate>Fri, 09 Sep 2022 19:00:11 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/automation/</guid>
       <description></description>
     </item>
     
@@ -374,15 +446,6 @@
       <pubDate>Sat, 16 Jul 2022 14:19:32 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/systems/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tool</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/tool/</link>
-      <pubDate>Sat, 16 Jul 2022 14:19:32 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/tool/</guid>
       <description></description>
     </item>
     

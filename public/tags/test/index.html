@@ -22,6 +22,9 @@
 
 
 
+  <link rel="manifest" href="/assets/manifest.json">
+
+
 
 <link rel="apple-touch-icon" href="https://obsidiannotes.artefaktas.eu/img/apple-touch-icon-192x192.png">
 
@@ -64,6 +67,23 @@
 
 
 
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6MN09D93GJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6MN09D93GJ');
+</script>
+<script defer="defer" type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "doe9i3o2c3");
+</script>
 
 
 </head>
@@ -162,7 +182,7 @@
     
       <div class="post on-list">
         <h1 class="post-title">
-          <a href="https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-10/">Sep 11</a>
+          <a href="https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-11/">Sep 11</a>
         </h1>
         <div class="post-meta">
           <span class="post-date">
@@ -203,7 +223,7 @@ External links if exist:
         
         <div>
           <a class="read-more button"
-            href="/posts/journal/2022-09/sep-10/">Read more →</a>
+            href="/posts/journal/2022-09/sep-11/">Read more →</a>
         </div>
         
       </div>
@@ -384,6 +404,18 @@ Some of you might be interested in the information I use in writing my newest bl
 <script src="https://obsidiannotes.artefaktas.eu/assets/prism.js"></script>
 
 
+
+<script>
+   if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('assets/sw.js').then((registration) => {
+    console.log('Service worker registration succeeded:', registration);
+  },   (error) => {
+    console.error(`Service worker registration failed: ${error}`);
+  });
+} else {
+  console.error('Service workers are not supported.');
+      }</script>
+</script>
 
 
 

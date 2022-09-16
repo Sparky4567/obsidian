@@ -7,13 +7,58 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Sun, 11 Sep 2022 11:10:26 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Sep 2022 19:36:10 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sep 15</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-15/</link>
+      <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-15/</guid>
+      <description>Sep 15  [!tldr] Sep 15 A new ReactJS project
+ Hello, blog readers. I want to share with you one of my recent projects. It is a basic image watermarking tool built purely with the ReactJS framework and some extra libraries to manipulate your chosen illustrations.
+Short instructions on how to use the tool Follow the link https://watermark.artefaktas.eu/, upload an image, change the default watermark text, adjust the font size and press &amp;ldquo;Watermark It&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Sep 12</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-12/</link>
+      <pubDate>Mon, 12 Sep 2022 16:02:05 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-12/</guid>
+      <description>Sep 12  [!tldr] Sep 12 Testing automation once again
+ This is a test post No. 2
+A piece of code is visible for some strange reason. Therefore, I wrote some more text to test this out.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis quam vitae ligula luctus, eget convallis urna rhoncus. Vestibulum imperdiet dictum massa eu varius. Morbi est urna, suscipit a pellentesque sed, malesuada ut magna.</description>
+    </item>
+    
+    <item>
+      <title>Some TikTok links</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/some-tiktok-links/</link>
+      <pubDate>Sun, 11 Sep 2022 12:14:14 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/some-tiktok-links/</guid>
+      <description>Some TikTok links  [!tldr] Some TikTok links TLDR
+ Music https://www.tiktok.com/@gleexchilean/video/7132203934843751685 (Survivor from Glee)
+https://www.tiktok.com/@djgallixc/video/7126339208280804654 (DJ sampling)
+https://www.tiktok.com/@mr.wiredup/video/7125185511852969258 (J-Lo feat. Pitbull [BOP])
+https://www.tiktok.com/@breakingthestigmaofadhd/video/7114886935839018246 (Safe and Sound)
+https://www.tiktok.com/@scottylaf8/video/7136345179744718086 (I&amp;rsquo;m good vs. I&amp;rsquo;m blue)
+https://www.tiktok.com/@twisted_stranger/video/7136811052058037550 (Skyrim)
+https://www.tiktok.com/@christy.from81/video/7119258818340687150 (Duck Tales)
+https://www.tiktok.com/@crazycool2955/video/7131896414317317422 (Melomanic)
+https://www.tiktok.com/@simpleplan.edits/video/7130000116768853254 (Simple Plan - What&amp;rsquo;s new Scooby Doo?)
+https://www.tiktok.com/@shortfunnyanimation/video/7141318886498061574 (Some funny animation)
+https://www.tiktok.com/@amazing_partner/video/7117807378359274757 (What about some cats?)
+https://www.tiktok.com/@yasinald8/video/7142167454381395206 (Roller skating turtle)
+https://www.tiktok.com/@creatures.of.sonaria.mem/video/7133076339518721286 (That is how the modern education should work)</description>
+    </item>
+    
     <item>
       <title>Sep 11</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-10/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-11/</link>
       <pubDate>Sun, 11 Sep 2022 11:10:26 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-10/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-11/</guid>
       <description>Sep 11  [!tldr] Sep 11 This is a test post. Testing a bat script execution.
  Test post.
 window.addEventListener(&#34;load&#34;,()={let videoId = &#34;https://www.tiktok.com/@happycat202/video/7141787468558290182&#34;;let className = &#34;7141787468558290182&#34;let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId;let classSelector = String(className);fetch(fetchUrl).then((r)=r.json()).then((d)={document.getElementsByClassName(classSelector)[0].innerHTML = d.html;let sc = document.createElement(&#34;script&#34;);sc.src = &#34;https://www.tiktok.com/embed.js&#34;;document.body.appendChild(sc);}).catch((err)={console.log(err);});}); Internal links if exist:
