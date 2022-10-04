@@ -14,3 +14,5 @@ title: {{Title}}
 Internal links if exist:
 
 External links if exist:
+
+Markdown external: 
