@@ -7,22 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Thu, 15 Sep 2022 19:36:10 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Oct 2022 13:18:17 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>new_post</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/new_post/</link>
+      <pubDate>Fri, 07 Oct 2022 13:18:17 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/new_post/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>illustration</title>
       <link>https://obsidiannotes.artefaktas.eu/tags/illustration/</link>
       <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/illustration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>new_post</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/new_post/</link>
-      <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/new_post/</guid>
       <description></description>
     </item>
     
@@ -221,141 +221,6 @@
       <pubDate>Mon, 18 Jul 2022 21:45:04 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/writing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>note</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/note/</link>
-      <pubDate>Mon, 18 Jul 2022 20:42:47 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/note/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>start</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/start/</link>
-      <pubDate>Mon, 18 Jul 2022 20:42:47 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/start/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tagging</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/tagging/</link>
-      <pubDate>Mon, 18 Jul 2022 20:42:47 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/tagging/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>new</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/new/</link>
-      <pubDate>Mon, 18 Jul 2022 18:39:58 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/new/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rebuild</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/rebuild/</link>
-      <pubDate>Mon, 18 Jul 2022 18:39:58 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/rebuild/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>template</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/template/</link>
-      <pubDate>Mon, 18 Jul 2022 18:39:58 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/template/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tiktok</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/tiktok/</link>
-      <pubDate>Mon, 18 Jul 2022 18:39:58 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/tiktok/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>added</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/added/</link>
-      <pubDate>Mon, 18 Jul 2022 17:51:19 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/added/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>extra</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/extra/</link>
-      <pubDate>Mon, 18 Jul 2022 17:51:19 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/extra/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>some</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/some/</link>
-      <pubDate>Mon, 18 Jul 2022 17:51:19 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/some/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>templates</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/templates/</link>
-      <pubDate>Mon, 18 Jul 2022 17:51:19 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/templates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>image</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/image/</link>
-      <pubDate>Sun, 17 Jul 2022 21:38:24 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/image/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>test_note</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/test_note/</link>
-      <pubDate>Sun, 17 Jul 2022 18:49:05 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/test_note/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>interconnected</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/interconnected/</link>
-      <pubDate>Sun, 17 Jul 2022 14:01:05 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/interconnected/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>notetaking</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/notetaking/</link>
-      <pubDate>Sun, 17 Jul 2022 14:01:05 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/notetaking/</guid>
       <description></description>
     </item>
     

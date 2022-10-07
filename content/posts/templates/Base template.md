@@ -11,8 +11,11 @@ title: {{Title}}
 > [!tldr] {{Title}}
 > TLDR
 
+Inner Tags:
+
 Internal links if exist:
 
 External links if exist:
 
 Markdown external: 
+

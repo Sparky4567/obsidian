@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Thu, 15 Sep 2022 19:36:10 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Oct 2022 13:18:17 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oct 7</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-7/</link>
+      <pubDate>Fri, 07 Oct 2022 13:18:17 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-7/</guid>
+      <description>Oct 7  [!tldr] Oct 7 TLDR
+ Internal links if exist:
+External links if exist:
+Markdown external:</description>
+    </item>
+    
     <item>
       <title>Sep 15</title>
       <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-15/</link>
@@ -29,28 +41,6 @@ Short instructions on how to use the tool Follow the link https://watermark.arte
  This is a test post No. 2
 A piece of code is visible for some strange reason. Therefore, I wrote some more text to test this out.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis quam vitae ligula luctus, eget convallis urna rhoncus. Vestibulum imperdiet dictum massa eu varius. Morbi est urna, suscipit a pellentesque sed, malesuada ut magna.</description>
-    </item>
-    
-    <item>
-      <title>Some TikTok links</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/some-tiktok-links/</link>
-      <pubDate>Sun, 11 Sep 2022 12:14:14 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/some-tiktok-links/</guid>
-      <description>Some TikTok links  [!tldr] Some TikTok links TLDR
- Music https://www.tiktok.com/@gleexchilean/video/7132203934843751685 (Survivor from Glee)
-https://www.tiktok.com/@djgallixc/video/7126339208280804654 (DJ sampling)
-https://www.tiktok.com/@mr.wiredup/video/7125185511852969258 (J-Lo feat. Pitbull [BOP])
-https://www.tiktok.com/@breakingthestigmaofadhd/video/7114886935839018246 (Safe and Sound)
-https://www.tiktok.com/@scottylaf8/video/7136345179744718086 (I&amp;rsquo;m good vs. I&amp;rsquo;m blue)
-https://www.tiktok.com/@twisted_stranger/video/7136811052058037550 (Skyrim)
-https://www.tiktok.com/@christy.from81/video/7119258818340687150 (Duck Tales)
-https://www.tiktok.com/@crazycool2955/video/7131896414317317422 (Melomanic)
-https://www.tiktok.com/@simpleplan.edits/video/7130000116768853254 (Simple Plan - What&amp;rsquo;s new Scooby Doo?)
-https://www.tiktok.com/@shortfunnyanimation/video/7141318886498061574 (Some funny animation)
-https://www.tiktok.com/@amazing_partner/video/7117807378359274757 (What about some cats?)
-https://www.tiktok.com/@yasinald8/video/7142167454381395206 (Roller skating turtle)
-https://www.tiktok.com/@creatures.of.sonaria.mem/video/7133076339518721286 (That is how the modern education should work)</description>
     </item>
     
     <item>
@@ -102,80 +92,6 @@ Boy, oh boy. It is one tool that gives you hell, also.</description>
     </item>
     
     <item>
-      <title>Efficient note tagging</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/efficient-note-tagging/</link>
-      <pubDate>Mon, 18 Jul 2022 20:42:47 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/efficient-note-tagging/</guid>
-      <description>Efficient note tagging  [!quote] Efficient note tagging This note is about efficient tagging. Nothing more to say.
- So, how do you use tagging in obsidian? I will share some of my ideas. You do not have to follow this blindly.
-These are just a few tactics I use myself.
-Let us start with ABC&amp;rsquo;S ABC&amp;rsquo;S? Yes, literally. You can grab a community plugin called &amp;ldquo;Advanced tables&amp;rdquo; and use one of my tiny templates called &amp;ldquo;ABC&amp;rdquo;.</description>
-    </item>
-    
-    <item>
-      <title>TikTok note</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/tiktok-note/</link>
-      <pubDate>Mon, 18 Jul 2022 18:39:58 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/tiktok-note/</guid>
-      <description>TikTok note  [!quote] TikTok note Write something here
- window.addEventListener(&#34;load&#34;,()={let videoId = &#34;https://www.tiktok.com/@astroospace/video/7060186331674184966?is_from_webapp=1\u0026sender_device=pc\u0026web_id=7116423487334270470&#34;;let className = &#34;7060186331674184966?is_from_webapp=1\u0026sender_device=pc\u0026web_id=7116423487334270470&#34;let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId;let classSelector = String(className);fetch(fetchUrl).then((r)=r.json()).then((d)={document.getElementsByClassName(classSelector)[0].innerHTML = d.html;let sc = document.createElement(&#34;script&#34;);sc.src = &#34;https://www.tiktok.com/embed.js&#34;;document.body.appendChild(sc);}).catch((err)={console.log(err);});}); Internal links if exist:
-External links if exist:</description>
-    </item>
-    
-    <item>
-      <title>I just added some extra templates</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/i-just-added-some-extra-templates/</link>
-      <pubDate>Mon, 18 Jul 2022 17:51:19 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/i-just-added-some-extra-templates/</guid>
-      <description>I just added some extra templates  [!quote] I just added some extra templates One for obsidian and one for hugo
-   If you decide to use hugo, copy youtube link from your address bar.
-For example, I use this one below:
-https://www.youtube.com/watch?v=hqV3pos7DGM
-Construct hugo partial using the part of a copied link after the symbols v=
-Internal links if exist:
-External links if exist:</description>
-    </item>
-    
-    <item>
-      <title>Image test</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/image-test/</link>
-      <pubDate>Sun, 17 Jul 2022 21:38:24 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/image-test/</guid>
-      <description>Image test  [!quote] Image test Write something here
- ![[flying-dog-5946987_1920.jpg]]
-From pixabay.com
-Internal links if exist:
-External links if exist: [https://pixabay.com/photos/flying-dog-dog-angel-funny-animals-5946987/]
-Markdown external: https://pixabay.com/photos/flying-dog-dog-angel-funny-animals-5946987/</description>
-    </item>
-    
-    <item>
-      <title>Test note</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/test-note/</link>
-      <pubDate>Sun, 17 Jul 2022 18:49:05 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/test-note/</guid>
-      <description>Test note  [!quote] Test note This is a test note
- Internal links if exist:
-External links if exist:</description>
-    </item>
-    
-    <item>
-      <title>Interconnected notetaking</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/interconnected-notetaking/</link>
-      <pubDate>Sun, 17 Jul 2022 14:01:05 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/notes/interconnected-notetaking/</guid>
-      <description>Interconnected notetaking  [!quote] Interconnected notetaking Starting from here
- My approach is simple. All you have is to make some notes and use some linking. Though the notebook looks like nonsense now, it will spread and start to look like a web of ideas a few weeks later. How am I going to do this? The answer is quite simple. Let me give you a list:
- Tagging  Internal links  External links  Internal links if exist:</description>
-    </item>
-    
-    <item>
       <title>Jul 17</title>
       <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-17/</link>
       <pubDate>Sun, 17 Jul 2022 11:43:33 +0300</pubDate>
@@ -218,6 +134,16 @@ Everytime I run a shell command to sync latest posts, with the help of Hugo, Git
       <description>Preparing  Make more templates  Doing  Add more posts  Done  Test rebuilds !  Archive Complete
 %% kanban:settings
 {&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;}%%</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/wp_posts/dom%C4%97jimasis-naujov%C4%97mis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/wp_posts/dom%C4%97jimasis-naujov%C4%97mis/</guid>
+      <description>Na taip. Manau, kad kiekvieno blogerio ar &amp;ldquo;wanna be tinklaraštininko&amp;rdquo; atmintyje turėtų atsirasti vietos naujovėms. Kaipgi be jų? O jei tos naujovės dar ir leidžia sutaupyti laiko, tai išvis pasaka, o ne tinklaraštininkavimas.
+Apie Obsidian bei WordPress plėtinį Šiuo metu įrašą bildenu naudodamasis Obsidian užrašų knygele. Tai visiškai nemokama e-užrašų aplikacija leidžianti kuriamus tekstus laikyti ne tik savo kompiuteriuose, bet ir nuotolinėse saugyklose (reikia trupučio papildomų žinių). Įrankis pravartus ir netgi perdėtai išmanus.</description>
     </item>
     
   </channel>
