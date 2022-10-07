@@ -11,7 +11,7 @@ ignoreFiles = "/content/posts/templates.*"
   contentTypeName = "posts"
 
   # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "green"
+  themeColor = "orange"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 6
@@ -42,8 +42,8 @@ ignoreFiles = "/content/posts/templates.*"
   # set Twitter handles for Twitter cards
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
   # do not include @
-  creator = ""
-  site = ""
+  creator = "artefaktas"
+  site = "https://www.artefaktas.eu"
 
 [languages]
   [languages.en]
