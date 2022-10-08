@@ -1,0 +1,86 @@
+{
+  "aestheticStyle": "glass",
+  "menuCommands": [
+    {
+      "id": "editor:set-heading",
+      "name": "Toggle heading",
+      "icon": "heading-glyph"
+    },
+    {
+      "id": "cmenu-plugin:editor:toggle-bold",
+      "name": "cMenu: Toggle bold",
+      "icon": "bold-glyph"
+    },
+    {
+      "id": "cmenu-plugin:editor:toggle-italics",
+      "name": "cMenu: Toggle italics",
+      "icon": "italic-glyph"
+    },
+    {
+      "id": "cmenu-plugin:editor:toggle-strikethrough",
+      "name": "cMenu: Toggle strikethrough",
+      "icon": "strikethrough-glyph"
+    },
+    {
+      "id": "cmenu-plugin:underline",
+      "name": "cMenu: Toggle underline",
+      "icon": "underline-glyph"
+    },
+    {
+      "id": "cmenu-plugin:editor:toggle-code",
+      "name": "cMenu: Toggle code",
+      "icon": "code-glyph"
+    },
+    {
+      "id": "cmenu-plugin:codeblock",
+      "name": "cMenu: Toggle codeblock",
+      "icon": "codeblock-glyph"
+    },
+    {
+      "id": "cmenu-plugin:editor:toggle-blockquote",
+      "name": "cMenu: Toggle blockquote",
+      "icon": "quote-glyph"
+    },
+    {
+      "id": "insert-template",
+      "name": "Templates: Insert template",
+      "icon": "duplicate-glyph"
+    },
+    {
+      "id": "notetweet:post-tweet",
+      "name": "NoteTweet🐦: Post Tweet",
+      "icon": "feather-twitter"
+    },
+    {
+      "id": "obsidian-wordpress:defaultPublish",
+      "name": "WordPress: Publish current document with default options",
+      "icon": "paper-plane-glyph"
+    },
+    {
+      "id": "obsidian-shellcommands:shell-command-aus006fdqv",
+      "name": "Shell commands: Execute: Localpost to Github",
+      "icon": "remix-GithubFill"
+    },
+    {
+      "id": "obsidian-to-notion:share-to-notion",
+      "name": "Obsidian shared to Notion: share to notion",
+      "icon": "remix-BookFill"
+    },
+    {
+      "id": "obsidian-emoji-toolbar:emoji-picker:open-picker",
+      "name": "Emoji Toolbar: Open emoji picker",
+      "hotkeys": [],
+      "icon": "remix-EmotionFill"
+    },
+    {
+      "id": "audio-recorder:start",
+      "name": "Audio recorder: Start recording audio",
+      "icon": "play-audio-glyph"
+    }
+  ],
+  "appendMethod": "body",
+  "shouldShowMenuOnSelect": false,
+  "cMenuVisibility": true,
+  "cMenuBottomValue": 4.25,
+  "cMenuNumRows": 8
+}
