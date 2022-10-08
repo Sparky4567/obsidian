@@ -14,11 +14,13 @@ Run a script depending on the operating system you use (Or modify one according 
 ## Linux distros
 
 ./remote.sh - push to remote (cMenu: Local post to Github)
+
 ./local.sh - run a local development environment 
 
 ## Windows
 
 .\hremote.bat - push to remote (cMenu: Local post to Github)
+
 .\local.bat - run a local development environment
 
 ## Contacts
