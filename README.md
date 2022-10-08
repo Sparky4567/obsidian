@@ -1,15 +1,19 @@
-# Get the latest hugo generator version from here
-
-https://github.com/gohugoio/hugo/releases
-
-# Vault is in the directory provided bellow
-
-content/posts/
-
 # You will need to install
 
 - git
 - hugo
+
+# Get the latest hugo generator version from here
+
+https://github.com/gohugoio/hugo/releases
+
+# Git 
+
+https://git-scm.com/downloads
+
+# Vault is in the directory provided bellow
+
+content/posts/
 
 # Building 
 
