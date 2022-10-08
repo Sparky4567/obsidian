@@ -1,0 +1,14 @@
+{
+  "apiKey": "",
+  "apiSecret": "",
+  "accessToken": "",
+  "accessTokenSecret": "",
+  "postTweetTag": "",
+  "secureMode": false,
+  "scheduling": {
+    "enabled": false,
+    "url": "",
+    "password": "",
+    "cronStrings": []
+  }
+}
