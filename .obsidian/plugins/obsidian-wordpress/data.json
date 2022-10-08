@@ -1,0 +1,10 @@
+{
+  "apiType": "",
+  "endpoint": "",
+  "saveUserName": true,
+  "savePassword": true,
+  "showRibbonIcon": true,
+  "defaultPostStatus": "publish",
+  "userName": "",
+  "password": ""
+}
