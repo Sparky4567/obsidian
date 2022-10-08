@@ -1,3 +1,7 @@
+# Get the latest hugo generator version from here
+
+https://github.com/gohugoio/hugo/releases
+
 # Vault is in the directory provided bellow
 
 content/posts/
