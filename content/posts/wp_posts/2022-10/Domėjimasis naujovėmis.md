@@ -17,4 +17,3 @@ O tai priklausys tik nuo jūsų WordPress konfigūracijos. Pavyzdžiui, jei turi
 ## Trumpas reziumė
 
 Skatinu domėtis automatizacijos naujovėmis ir būti morališkai pasiruošus jų prisijaukinimui, nes... Kaip sako daugumą dirbančių su programiniu kodu ar specifinėmis programomis... Praganiau apie porą valandų laiko tam, kad automatizuočiau dešimties minučių užduotį.
-
