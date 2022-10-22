@@ -5,6 +5,8 @@ paginate = 5
 
 ignoreFiles = ["/content/posts/templates.*","/content/posts/notes","/content/posts/wp_posts"]
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
 
 [params]
   # dir name of your main content (default is `content/posts`).
