@@ -3,28 +3,73 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/migration/</loc>
+    <lastmod>2022-10-22T22:03:11+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/never_again/</loc>
+    <lastmod>2022-10-22T22:03:11+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/new_post/</loc>
-    <lastmod>2022-10-07T13:18:17+03:00</lastmod>
+    <lastmod>2022-10-22T22:03:11+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://obsidiannotes.artefaktas.eu/</loc>
-    <lastmod>2022-10-07T13:18:17+03:00</lastmod>
+    <lastmod>2022-10-22T22:03:11+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-7/</loc>
-    <lastmod>2022-10-07T13:18:17+03:00</lastmod>
+    <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-22/</loc>
+    <lastmod>2022-10-22T22:03:11+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://obsidiannotes.artefaktas.eu/posts/</loc>
-    <lastmod>2022-10-07T13:18:17+03:00</lastmod>
+    <lastmod>2022-10-22T22:03:11+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/</loc>
-    <lastmod>2022-10-07T13:18:17+03:00</lastmod>
+    <lastmod>2022-10-22T22:03:11+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/vaults/</loc>
+    <lastmod>2022-10-22T22:03:11+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/apps/</loc>
+    <lastmod>2022-10-17T15:00:54+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/external/</loc>
+    <lastmod>2022-10-17T15:00:54+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/grammarly/</loc>
+    <lastmod>2022-10-17T15:00:54+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-17/</loc>
+    <lastmod>2022-10-17T15:00:54+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/page/</loc>
+    <lastmod>2022-10-17T15:00:54+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/web/</loc>
+    <lastmod>2022-10-17T15:00:54+03:00</lastmod>
   </url>
   
   <url>
@@ -158,11 +203,6 @@
   </url>
   
   <url>
-    <loc>https://obsidiannotes.artefaktas.eu/tags/grammarly/</loc>
-    <lastmod>2022-07-18T21:45:04+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/improve/</loc>
     <lastmod>2022-07-18T21:45:04+03:00</lastmod>
   </url>
@@ -238,11 +278,6 @@
   </url>
   
   <url>
-    <loc>https://obsidiannotes.artefaktas.eu/tags/web/</loc>
-    <lastmod>2022-07-16T14:19:32+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/wordpress/</loc>
     <lastmod>2022-07-16T14:19:32+03:00</lastmod>
   </url>
@@ -285,10 +320,6 @@
   <url>
     <loc>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</loc>
     <lastmod>2022-07-15T13:58:39+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://obsidiannotes.artefaktas.eu/posts/wp_posts/dom%C4%97jimasis-naujov%C4%97mis/</loc>
   </url>
   
   <url>

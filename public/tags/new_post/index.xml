@@ -7,17 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Fri, 07 Oct 2022 13:18:17 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/new_post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Oct 2022 22:03:11 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/new_post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Oct 7</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-7/</link>
-      <pubDate>Fri, 07 Oct 2022 13:18:17 +0300</pubDate>
+      <title>Oct 22</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-22/</link>
+      <pubDate>Sat, 22 Oct 2022 22:03:11 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-7/</guid>
-      <description>Oct 7  [!tldr] Oct 7 TLDR
- Internal links if exist:
-External links if exist:
-Markdown external:</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-22/</guid>
+      <description>Oct 22  [!tldr] Oct 22 Save some of your precious time and visit my GitHub project
+ This post is a little reminder to myself. Although it is possible to migrate existing Hugo websites from Firebase, it requires a lot of work to do so. But to convert one into an Obsidian vault is another level. If you visited this website to find an answer to how to achieve by yourselves, I recommend taking a look at my GitHub project existing here: https://github.</description>
+    </item>
+    
+    <item>
+      <title>Oct 17</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-17/</link>
+      <pubDate>Mon, 17 Oct 2022 15:00:54 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-17/</guid>
+      <description>Oct 17  [!tldr] Oct 17 You were searching for a way to use Grammarly in your notes. Here it is.
+ Boy, oh boy. The majority of this site visitors come here to check if there is even the slightest possibility to use the Grammarly plugin in Obsidian Notes. The short answer is no. There is no possibility to use the plugin.
+On the other hand, due to raised traffic, I had to find another way to use Grammarly without any external apps.</description>
     </item>
     
     <item>

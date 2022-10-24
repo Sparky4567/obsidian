@@ -7,13 +7,85 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Fri, 07 Oct 2022 13:18:17 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Oct 2022 22:03:11 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>migration</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/migration/</link>
+      <pubDate>Sat, 22 Oct 2022 22:03:11 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/migration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>never_again</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/never_again/</link>
+      <pubDate>Sat, 22 Oct 2022 22:03:11 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/never_again/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>new_post</title>
       <link>https://obsidiannotes.artefaktas.eu/tags/new_post/</link>
-      <pubDate>Fri, 07 Oct 2022 13:18:17 +0300</pubDate>
+      <pubDate>Sat, 22 Oct 2022 22:03:11 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/new_post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vaults</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/vaults/</link>
+      <pubDate>Sat, 22 Oct 2022 22:03:11 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/vaults/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apps</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/apps/</link>
+      <pubDate>Mon, 17 Oct 2022 15:00:54 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/apps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>external</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/external/</link>
+      <pubDate>Mon, 17 Oct 2022 15:00:54 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/external/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>grammarly</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/grammarly/</link>
+      <pubDate>Mon, 17 Oct 2022 15:00:54 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/grammarly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>page</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/page/</link>
+      <pubDate>Mon, 17 Oct 2022 15:00:54 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/page/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/web/</link>
+      <pubDate>Mon, 17 Oct 2022 15:00:54 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/web/</guid>
       <description></description>
     </item>
     
@@ -198,15 +270,6 @@
     </item>
     
     <item>
-      <title>grammarly</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/grammarly/</link>
-      <pubDate>Mon, 18 Jul 2022 21:45:04 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/grammarly/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>improve</title>
       <link>https://obsidiannotes.artefaktas.eu/tags/improve/</link>
       <pubDate>Mon, 18 Jul 2022 21:45:04 +0300</pubDate>
@@ -311,15 +374,6 @@
       <pubDate>Sat, 16 Jul 2022 14:19:32 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/systems/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/web/</link>
-      <pubDate>Sat, 16 Jul 2022 14:19:32 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/web/</guid>
       <description></description>
     </item>
     

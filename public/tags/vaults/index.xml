@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vaults on Obsidian notes</title>
+    <link>https://obsidiannotes.artefaktas.eu/tags/vaults/</link>
+    <description>Recent content in vaults on Obsidian notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights belong to artefaktas.eu</copyright>
+    <lastBuildDate>Sat, 22 Oct 2022 22:03:11 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/vaults/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oct 22</title>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-22/</link>
+      <pubDate>Sat, 22 Oct 2022 22:03:11 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-22/</guid>
+      <description>Oct 22  [!tldr] Oct 22 Save some of your precious time and visit my GitHub project
+ This post is a little reminder to myself. Although it is possible to migrate existing Hugo websites from Firebase, it requires a lot of work to do so. But to convert one into an Obsidian vault is another level. If you visited this website to find an answer to how to achieve by yourselves, I recommend taking a look at my GitHub project existing here: https://github.</description>
+    </item>
+    
+  </channel>
+</rss>
