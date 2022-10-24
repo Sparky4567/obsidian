@@ -1,0 +1,22 @@
+<tiktok>
+    {{ $ttLink := .Get "tiktoklink" }}
+    {{ $className := split $ttLink "video/" }}
+    {{ $className := index ($className) 1 }}
+    <div class={{ $className }}></div>
+    <script defer>
+        window.addEventListener("load",()=>{
+        let videoId = {{ $ttLink }};
+        let className = {{ $className }}
+        let fetchUrl = "https://www.tiktok.com/oembed?url="+videoId;
+        let classSelector = String(className);
+        fetch(fetchUrl).then((r)=>r.json()).then((d)=>{
+            document.getElementsByClassName(classSelector)[0].innerHTML = d.html;
+            let sc = document.createElement("script");
+            sc.src = "https://www.tiktok.com/embed.js";
+            document.body.appendChild(sc);
+        }).catch((err)=>{
+            console.log(err);
+        });
+        });
+    </script>
+</tiktok>
