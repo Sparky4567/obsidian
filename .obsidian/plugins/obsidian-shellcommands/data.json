@@ -16,7 +16,8 @@
   "shell_commands": [
     {
       "platform_specific_commands": {
-        "default": ".\\hremote.bat"
+        "default": ".\\hremote.bat",
+        "linux": "./remote.sh"
       },
       "shells": {},
       "alias": "Gitbackup",
@@ -37,7 +38,8 @@
     {
       "id": "aus006fdqv",
       "platform_specific_commands": {
-        "default": ".\\localposts.bat"
+        "default": ".\\localposts.bat",
+        "linux": "./localposts.sh"
       },
       "shells": {},
       "alias": "Localpost to Github",

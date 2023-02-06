@@ -1,8 +1,8 @@
 {
-  "apiKey": "",
-  "apiSecret": "",
-  "accessToken": "",
-  "accessTokenSecret": "",
+  "apiKey": "Wqdxj10DyjvKC6v7OrsRrDFfN",
+  "apiSecret": "oBIGDWFxSgVxBVlHLeWbTX1iQQ6gYS1UUe9Dpd6yAnf8v0NymL",
+  "accessToken": "1085441621909479424-KXUxFrgBC6pP2BBfiQ2pULC4sxbfXY",
+  "accessTokenSecret": "Qey862Wdo93kgHpUScAzFB59wSq0CVjMXiTnZUmLpyfyu",
   "postTweetTag": "",
   "secureMode": false,
   "scheduling": {

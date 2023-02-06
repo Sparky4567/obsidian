@@ -1,10 +1,10 @@
 {
-  "apiType": "",
-  "endpoint": "",
+  "apiType": "xml-rpc",
+  "endpoint": "https://altiusdaycom.wordpress.com/",
   "saveUserName": true,
   "savePassword": true,
   "showRibbonIcon": true,
   "defaultPostStatus": "publish",
-  "userName": "",
-  "password": ""
+  "userName": "artefaktaseu",
+  "password": "Babylon19931109"
 }
