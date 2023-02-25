@@ -44,6 +44,7 @@
         {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">&#8983;</a> ${3}` | safeHTML }}
       </div>
     {{- end -}}
+    {{ partial "follow_it.html" . }}
   </div>
 
   {{ if eq .Type $.Site.Params.contentTypeName }}
