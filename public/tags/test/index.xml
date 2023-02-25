@@ -14,9 +14,9 @@
       <pubDate>Sun, 11 Sep 2022 11:10:26 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-11/</guid>
-      <description>Sep 11  [!tldr] Sep 11 This is a test post. Testing a bat script execution.
- Test post.
-window.addEventListener(&#34;load&#34;,()={let videoId = &#34;https://www.tiktok.com/@happycat202/video/7141787468558290182&#34;;let className = &#34;7141787468558290182&#34;let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId;let classSelector = String(className);fetch(fetchUrl).then((r)=r.json()).then((d)={document.getElementsByClassName(classSelector)[0].innerHTML = d.html;let sc = document.createElement(&#34;script&#34;);sc.src = &#34;https://www.tiktok.com/embed.js&#34;;document.body.appendChild(sc);}).catch((err)={console.log(err);});}); Internal links if exist:
+      <description>Sep 11 [!tldr] Sep 11 This is a test post. Testing a bat script execution.
+Test post.
+Internal links if exist:
 External links if exist:</description>
     </item>
     
@@ -26,8 +26,8 @@ External links if exist:</description>
       <pubDate>Sun, 17 Jul 2022 11:43:33 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-17/</guid>
-      <description>Jul 17  [!tldr] Jul 17 Did not read again? This is a shor post about how I use the information I find to create some of my blog posts.
- Some of you might be interested in the information I use in writing my newest blog posts. I can tell you one thing. I use multiple sources from different places all around the internet and even some of my old notebooks.</description>
+      <description>Jul 17 [!tldr] Jul 17 Did not read again? This is a shor post about how I use the information I find to create some of my blog posts.
+Some of you might be interested in the information I use in writing my newest blog posts. I can tell you one thing. I use multiple sources from different places all around the internet and even some of my old notebooks.</description>
     </item>
     
   </channel>
