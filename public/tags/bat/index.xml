@@ -14,9 +14,9 @@
       <pubDate>Sun, 11 Sep 2022 11:10:26 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-11/</guid>
-      <description>Sep 11 [!tldr] Sep 11 This is a test post. Testing a bat script execution.
-Test post.
-Internal links if exist:
+      <description>Sep 11  [!tldr] Sep 11 This is a test post. Testing a bat script execution.
+ Test post.
+  window.addEventListener(&#34;load&#34;,()={ let videoId = &#34;https://www.tiktok.com/@happycat202/video/7141787468558290182&#34;; let className = &#34;7141787468558290182&#34; let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId; let classSelector = String(className); fetch(fetchUrl).then((r)=r.json()).then((d)={ document.getElementsByClassName(classSelector)[0].innerHTML = d.html; let sc = document.createElement(&#34;script&#34;); sc.src = &#34;https://www.tiktok.com/embed.js&#34;; document.body.appendChild(sc); }).catch((err)={ console.log(err); }); });   Internal links if exist:
 External links if exist:</description>
     </item>
     

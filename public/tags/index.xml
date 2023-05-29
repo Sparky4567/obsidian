@@ -7,34 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
-    <lastBuildDate>Tue, 25 Oct 2022 20:24:11 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>age</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/age/</link>
-      <pubDate>Tue, 25 Oct 2022 20:24:11 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/age/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>new_post</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/new_post/</link>
-      <pubDate>Tue, 25 Oct 2022 20:24:11 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/new_post/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>restrictions</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/restrictions/</link>
-      <pubDate>Tue, 25 Oct 2022 20:24:11 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/restrictions/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sat, 22 Oct 2022 22:03:11 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>migration</title>
       <link>https://obsidiannotes.artefaktas.eu/tags/migration/</link>
@@ -50,6 +23,15 @@
       <pubDate>Sat, 22 Oct 2022 22:03:11 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/tags/never_again/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>new_post</title>
+      <link>https://obsidiannotes.artefaktas.eu/tags/new_post/</link>
+      <pubDate>Sat, 22 Oct 2022 22:03:11 +0300</pubDate>
+      
+      <guid>https://obsidiannotes.artefaktas.eu/tags/new_post/</guid>
       <description></description>
     </item>
     
