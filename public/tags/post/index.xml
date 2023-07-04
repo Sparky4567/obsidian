@@ -5,7 +5,7 @@
     <link>https://obsidiannotes.artefaktas.eu/tags/post/</link>
     <description>Recent content in post on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
     <lastBuildDate>Sun, 11 Sep 2022 11:10:26 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -14,10 +14,37 @@
       <pubDate>Sun, 11 Sep 2022 11:10:26 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-11/</guid>
-      <description>Sep 11  [!tldr] Sep 11 This is a test post. Testing a bat script execution.
- Test post.
-  window.addEventListener(&#34;load&#34;,()={ let videoId = &#34;https://www.tiktok.com/@happycat202/video/7141787468558290182&#34;; let className = &#34;7141787468558290182&#34; let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId; let classSelector = String(className); fetch(fetchUrl).then((r)=r.json()).then((d)={ document.getElementsByClassName(classSelector)[0].innerHTML = d.html; let sc = document.createElement(&#34;script&#34;); sc.src = &#34;https://www.tiktok.com/embed.js&#34;; document.body.appendChild(sc); }).catch((err)={ console.log(err); }); });   Internal links if exist:
-External links if exist:</description>
+      <description>&lt;h1 id=&#34;sep-11&#34;&gt;Sep 11&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Sep 11
+This is a test post. Testing a bat script execution.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Test post.&lt;/p&gt;
+&lt;tiktok&gt;
+    
+    
+    
+    &lt;div class=7141787468558290182&gt;&lt;/div&gt;
+    &lt;script defer&gt;
+        window.addEventListener(&#34;load&#34;,()=&gt;{
+        let videoId = &#34;https://www.tiktok.com/@happycat202/video/7141787468558290182&#34;;
+        let className = &#34;7141787468558290182&#34;
+        let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId;
+        let classSelector = String(className);
+        fetch(fetchUrl).then((r)=&gt;r.json()).then((d)=&gt;{
+            document.getElementsByClassName(classSelector)[0].innerHTML = d.html;
+            let sc = document.createElement(&#34;script&#34;);
+            sc.src = &#34;https://www.tiktok.com/embed.js&#34;;
+            document.body.appendChild(sc);
+        }).catch((err)=&gt;{
+            console.log(err);
+        });
+        });
+    &lt;/script&gt;
+&lt;/tiktok&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -26,10 +53,62 @@ External links if exist:</description>
       <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</guid>
-      <description>Jul 15  [!tldr] Jul 15 There is nothing to read yet. This is a test post.
- Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
-Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
- [!hint] Hint</description>
+      <description>&lt;h1 id=&#34;jul-15&#34;&gt;Jul 15&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Jul 15
+There is nothing to read yet. This is a test post.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;testing-my-new-toolkit&#34;&gt;Testing my new toolkit&lt;/h2&gt;
+&lt;p&gt;I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.&lt;/p&gt;
+&lt;p&gt;Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!hint] Hint&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash
+
+CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;`
+
+hugo
+
+git add * -f
+
+message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE
+
+git commit -m &amp;#34;$message&amp;#34;
+
+git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;final-solution&#34;&gt;Final solution&lt;/h2&gt;
+&lt;p&gt;If you want to replicate this&lt;/p&gt;
+&lt;p&gt;Create a file called remote.sh&lt;/p&gt;
+&lt;p&gt;Insert this code inside&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CURRENTDATE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;date +&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%Y-%m-%d %T&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add content -f
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add public -f
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;message&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Obsidian update: &amp;#34;&lt;/span&gt;$CURRENTDATE
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$message&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Create a good-named alias in your ~/.bashrc file&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias obsidianbuild&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cd /home/yourusername/Desktop/vaults/interconnection/ &amp;amp;&amp;amp; hugo &amp;amp;&amp;amp; ./remote.sh&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Source your ~/.bashrc&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;source ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;open-your-terminal&#34;&gt;Open your terminal&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;And run a command&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;obsidianbuild
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</description>
     </item>
     
   </channel>

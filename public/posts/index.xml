@@ -5,7 +5,7 @@
     <link>https://obsidiannotes.artefaktas.eu/posts/</link>
     <description>Recent content in Posts on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <copyright>All rights belong to artefaktas.eu</copyright>
     <lastBuildDate>Sat, 22 Oct 2022 22:03:11 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -14,8 +14,17 @@
       <pubDate>Sat, 22 Oct 2022 22:03:11 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-22/</guid>
-      <description>Oct 22  [!tldr] Oct 22 Save some of your precious time and visit my GitHub project
- This post is a little reminder to myself. Although it is possible to migrate existing Hugo websites from Firebase, it requires a lot of work to do so. But to convert one into an Obsidian vault is another level. If you visited this website to find an answer to how to achieve by yourselves, I recommend taking a look at my GitHub project existing here: https://github.</description>
+      <description>&lt;h1 id=&#34;oct-22&#34;&gt;Oct 22&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Oct 22
+Save some of your precious time and visit my GitHub project&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This post is a little reminder to myself. Although it is possible to migrate existing Hugo websites from Firebase, it requires a lot of work to do so. But to convert one into an Obsidian vault is another level. If you visited this website to find an answer to how to achieve by yourselves, I recommend taking a look at my GitHub project existing here: &lt;a href=&#34;https://github.com/Sparky4567/obsidian&#34;&gt;https://github.com/Sparky4567/obsidian&lt;/a&gt;. It will save some time.&lt;/p&gt;
+&lt;p&gt;Inner Tags: #new_post #never #again #unless #someone #pays #for #it&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist: &lt;a href=&#34;https://github.com/Sparky4567/obsidian&#34;&gt;https://github.com/Sparky4567/obsidian&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -24,9 +33,22 @@
       <pubDate>Mon, 17 Oct 2022 15:00:54 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-17/</guid>
-      <description>Oct 17  [!tldr] Oct 17 You were searching for a way to use Grammarly in your notes. Here it is.
- Boy, oh boy. The majority of this site visitors come here to check if there is even the slightest possibility to use the Grammarly plugin in Obsidian Notes. The short answer is no. There is no possibility to use the plugin.
-On the other hand, due to raised traffic, I had to find another way to use Grammarly without any external apps.</description>
+      <description>&lt;h1 id=&#34;oct-17&#34;&gt;Oct 17&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Oct 17
+You were searching for a way to use Grammarly in your notes. Here it is.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Boy, oh boy. The majority of this site visitors come here to check if there is even the slightest possibility to use the Grammarly plugin in Obsidian Notes. The short answer is no. There is no possibility to use the plugin.&lt;/p&gt;
+&lt;p&gt;On the other hand, due to raised traffic, I had to find another way to use Grammarly without any external apps.&lt;/p&gt;
+&lt;p&gt;Somehow and somewhy I decided to visit Grammarly&amp;rsquo;s developer page and to my surprise, I found some useful information on implementing the grammar checking feature. A little bit of REACT, a few minutes of templating, some Javascript magic and&amp;hellip; If you want to use Grammarly in your notes, you can add a special template into your note. All you need is just an internet connection to be able to use the template.&lt;/p&gt;
+&lt;p&gt;So the idea is quite simple actually. I made a separate WEB page and implemented the Grammarly SDK. Furthermore, I did not include any unnecessary security restrictions so that the page could be shared as an IFRAME. Therefore, you can implement it into your pages as a template using a shortcode.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;iframe src=&amp;#34;https://grammarplugin.artefaktas.eu/&amp;#34; width=&amp;#34;100%&amp;#34; height=&amp;#34;600&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can support my little project by clicking the &amp;ldquo;Support me&amp;rdquo; option within the IFRAME.&lt;/p&gt;
+&lt;p&gt;Inner Tags: #new_post #grammarly #october&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -35,9 +57,20 @@ On the other hand, due to raised traffic, I had to find another way to use Gramm
       <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-15/</guid>
-      <description>Sep 15  [!tldr] Sep 15 A new ReactJS project
- Hello, blog readers. I want to share with you one of my recent projects. It is a basic image watermarking tool built purely with the ReactJS framework and some extra libraries to manipulate your chosen illustrations.
-Short instructions on how to use the tool Follow the link https://watermark.artefaktas.eu/, upload an image, change the default watermark text, adjust the font size and press &amp;ldquo;Watermark It&amp;rdquo;.</description>
+      <description>&lt;h1 id=&#34;sep-15&#34;&gt;Sep 15&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Sep 15
+A new ReactJS project&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Hello, blog readers. I want to share with you one of my recent projects. It is a basic image watermarking tool built purely with the ReactJS framework and some extra libraries to manipulate your chosen illustrations.&lt;/p&gt;
+&lt;h2 id=&#34;short-instructions-on-how-to-use-the-tool&#34;&gt;Short instructions on how to use the tool&lt;/h2&gt;
+&lt;p&gt;Follow the link &lt;a href=&#34;https://watermark.artefaktas.eu/&#34;&gt;https://watermark.artefaktas.eu/&lt;/a&gt;, upload an image, change the default watermark text, adjust the font size and press &amp;ldquo;Watermark It&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Finally, press the download button to store a modified image on your computer.&lt;/p&gt;
+&lt;p&gt;P.s. Some additional functions are still buggy. You can add a few extra effects if you want to. Although, each of them should be applied separately by choosing the filter, using the slider to regulate the strength of an effect and clicking &amp;ldquo;Apply filter&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;By the way, you can install the app as a PWA application on your favourite devices.&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -46,10 +79,43 @@ Short instructions on how to use the tool Follow the link https://watermark.arte
       <pubDate>Mon, 12 Sep 2022 16:02:05 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-12/</guid>
-      <description>Sep 12  [!tldr] Sep 12 Testing automation once again
- This is a test post No. 2
-A piece of code is visible for some strange reason. Therefore, I wrote some more text to test this out.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis quam vitae ligula luctus, eget convallis urna rhoncus. Vestibulum imperdiet dictum massa eu varius. Morbi est urna, suscipit a pellentesque sed, malesuada ut magna.</description>
+      <description>&lt;h1 id=&#34;sep-12&#34;&gt;Sep 12&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Sep 12
+Testing automation once again&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is a test post No. 2&lt;/p&gt;
+&lt;p&gt;A piece of code is visible for some strange reason. Therefore, I wrote some more text to test this out.&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis quam vitae ligula luctus, eget convallis urna rhoncus. Vestibulum imperdiet dictum massa eu varius. Morbi est urna, suscipit a pellentesque sed, malesuada ut magna. Ut porta ipsum in convallis mattis. Vivamus et dolor tincidunt lorem sagittis auctor sit amet sit amet sem. Vestibulum vitae sem sed leo ornare suscipit in sed nunc. Curabitur malesuada, enim at tristique luctus, justo ipsum pellentesque massa, a tristique lacus lectus quis purus. In ut dui ornare, tincidunt turpis quis, mollis enim. Cras quis finibus velit, sit amet elementum diam. Vestibulum vel nulla arcu.&lt;/p&gt;
+&lt;p&gt;Nullam vestibulum mauris arcu, id malesuada felis luctus rutrum. Curabitur pharetra tincidunt luctus. Etiam lacus justo, malesuada ut pretium a, porta sit amet ligula. Pellentesque pharetra est ac semper porta. Duis efficitur metus nulla, at molestie tellus dapibus gravida. Ut mollis arcu vitae eros dictum, in pharetra augue tincidunt. Pellentesque convallis magna et erat vehicula venenatis. Sed varius justo ac arcu accumsan commodo. Cras blandit tempor dui vitae rhoncus. Proin non interdum felis, ac maximus nunc.&lt;/p&gt;
+&lt;p&gt;Etiam efficitur sem eget malesuada sagittis. Phasellus nec luctus quam. Donec vehicula ac ante id scelerisque. Nullam massa eros, iaculis id ornare at, lobortis eget ipsum. Pellentesque facilisis enim sed risus efficitur, eu iaculis ex aliquam. In ante risus, rhoncus in tellus eu, dignissim consectetur ex. Mauris condimentum metus vitae imperdiet vehicula. Etiam commodo est massa, sed aliquam tortor interdum a. Sed ut dolor eu leo malesuada faucibus a a tellus. Proin quis est volutpat, convallis diam non, blandit dui. Vivamus aliquam vitae lacus eget pulvinar.&lt;/p&gt;
+&lt;p&gt;Sed a condimentum odio, at semper mi. Etiam ultrices arcu cursus venenatis semper. Nulla volutpat magna et pharetra vestibulum. Sed a tincidunt arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In eu pretium mauris, eget fringilla elit. Nunc varius mauris magna, id dapibus elit vehicula in. Nam ac consectetur erat. Morbi ut lobortis nulla. Sed varius nec velit eu ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus dapibus condimentum magna ac sagittis. Vivamus ultricies fermentum magna ac tincidunt. Duis purus dui, vestibulum eu egestas ac, sagittis eget sem. Mauris dolor magna, commodo vitae aliquet vitae, elementum vestibulum metus.&lt;/p&gt;
+&lt;p&gt;Phasellus rhoncus augue orci, cursus blandit mi ornare sed. Vivamus eget leo at massa mattis accumsan nec quis massa. Cras ut pretium purus. Nulla luctus elit augue. Aliquam nibh lorem, vestibulum id lacus ac, lobortis egestas odio. Donec laoreet nunc vel est volutpat, id accumsan lectus ornare. In vel erat volutpat, condimentum tellus ut, mollis nisl. Curabitur egestas ullamcorper turpis, sed venenatis ex sollicitudin id.&lt;/p&gt;
+&lt;tiktok&gt;
+    
+    
+    
+    &lt;div class=7142167454381395206&gt;&lt;/div&gt;
+    &lt;script defer&gt;
+        window.addEventListener(&#34;load&#34;,()=&gt;{
+        let videoId = &#34;https://www.tiktok.com/@yasinald8/video/7142167454381395206&#34;;
+        let className = &#34;7142167454381395206&#34;
+        let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId;
+        let classSelector = String(className);
+        fetch(fetchUrl).then((r)=&gt;r.json()).then((d)=&gt;{
+            document.getElementsByClassName(classSelector)[0].innerHTML = d.html;
+            let sc = document.createElement(&#34;script&#34;);
+            sc.src = &#34;https://www.tiktok.com/embed.js&#34;;
+            document.body.appendChild(sc);
+        }).catch((err)=&gt;{
+            console.log(err);
+        });
+        });
+    &lt;/script&gt;
+&lt;/tiktok&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -58,10 +124,37 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis quam vitae li
       <pubDate>Sun, 11 Sep 2022 11:10:26 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-11/</guid>
-      <description>Sep 11  [!tldr] Sep 11 This is a test post. Testing a bat script execution.
- Test post.
-  window.addEventListener(&#34;load&#34;,()={ let videoId = &#34;https://www.tiktok.com/@happycat202/video/7141787468558290182&#34;; let className = &#34;7141787468558290182&#34; let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId; let classSelector = String(className); fetch(fetchUrl).then((r)=r.json()).then((d)={ document.getElementsByClassName(classSelector)[0].innerHTML = d.html; let sc = document.createElement(&#34;script&#34;); sc.src = &#34;https://www.tiktok.com/embed.js&#34;; document.body.appendChild(sc); }).catch((err)={ console.log(err); }); });   Internal links if exist:
-External links if exist:</description>
+      <description>&lt;h1 id=&#34;sep-11&#34;&gt;Sep 11&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Sep 11
+This is a test post. Testing a bat script execution.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Test post.&lt;/p&gt;
+&lt;tiktok&gt;
+    
+    
+    
+    &lt;div class=7141787468558290182&gt;&lt;/div&gt;
+    &lt;script defer&gt;
+        window.addEventListener(&#34;load&#34;,()=&gt;{
+        let videoId = &#34;https://www.tiktok.com/@happycat202/video/7141787468558290182&#34;;
+        let className = &#34;7141787468558290182&#34;
+        let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId;
+        let classSelector = String(className);
+        fetch(fetchUrl).then((r)=&gt;r.json()).then((d)=&gt;{
+            document.getElementsByClassName(classSelector)[0].innerHTML = d.html;
+            let sc = document.createElement(&#34;script&#34;);
+            sc.src = &#34;https://www.tiktok.com/embed.js&#34;;
+            document.body.appendChild(sc);
+        }).catch((err)=&gt;{
+            console.log(err);
+        });
+        });
+    &lt;/script&gt;
+&lt;/tiktok&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -70,12 +163,17 @@ External links if exist:</description>
       <pubDate>Fri, 09 Sep 2022 19:00:11 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-09/</guid>
-      <description>Sep 09  [!tldr] Aug 09 Short notice
- Woosh. I skipped a lot of time on this one due to technical issues.
-I will try to automate this blog as much as I can.
-(A-ha! Visual Studio Code online editor is the solution. There is no need to automate this blog anymore.)
-Internal links if exist:
-External links if exist:</description>
+      <description>&lt;h1 id=&#34;sep-09&#34;&gt;Sep 09&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Aug 09
+Short notice&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Woosh. I skipped a lot of time on this one due to technical issues.&lt;/p&gt;
+&lt;p&gt;I will try to automate this blog as much as I can.&lt;/p&gt;
+&lt;p&gt;(A-ha! Visual Studio Code online editor is the solution. There is no need to automate this blog anymore.)&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -84,8 +182,15 @@ External links if exist:</description>
       <pubDate>Tue, 19 Jul 2022 21:38:47 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-19/</guid>
-      <description>Jul 19  [!quote] Jul 19 Feynman&amp;rsquo;s technique
- Nothing too much interesting happened today. Just as usual. It is worth mentioning that I managed to stumble on one good technique called &amp;ldquo;Feynman&amp;rsquo;s technique&amp;rdquo;. Its purpose - memorize and recall the information a bit faster. I think that I already use it, but I will try to dig into this deeper. There are still some unknown variables. Well, at least for me.</description>
+      <description>&lt;h1 id=&#34;jul-19&#34;&gt;Jul 19&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!quote] Jul 19
+Feynman&amp;rsquo;s technique&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Nothing too much interesting happened today. Just as usual. It is worth mentioning that I managed to stumble on one good technique called &amp;ldquo;Feynman&amp;rsquo;s technique&amp;rdquo;. Its purpose - memorize and recall the information a bit faster. I think that I already use it, but I will try to dig into this deeper. There are still some unknown variables. Well, at least for me.&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist: Just use google this time&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -94,10 +199,21 @@ External links if exist:</description>
       <pubDate>Mon, 18 Jul 2022 21:45:04 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-18/</guid>
-      <description>Jul 18  [!tldr] Jul 18 Oh, Grammarly&amp;hellip;
- What to do if English is not your native language? Well, you start to use the Grammarly plugin, of course. And you love it. And you hate it. And you adore it. And you despise it.
-It is probably the one tool that can assist you in improving your writing skill.
-Boy, oh boy. It is one tool that gives you hell, also.</description>
+      <description>&lt;h1 id=&#34;jul-18&#34;&gt;Jul 18&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Jul 18
+Oh, Grammarly&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What to do if English is not your native language? Well, you start to use the Grammarly plugin, of course. And you love it. And you hate it. And you adore it. And you despise it.&lt;/p&gt;
+&lt;p&gt;It is probably the one tool that can assist you in improving your writing skill.&lt;/p&gt;
+&lt;p&gt;Boy, oh boy. It is one tool that gives you hell, also.&lt;/p&gt;
+&lt;p&gt;Correctness score? Clarity? Engagement? Delivery and overall score? For my dogs&amp;rsquo; sake, Grammarly! Am I trying to pass an exam here?&lt;/p&gt;
+&lt;p&gt;All jokes aside, I should mention that it is one of the best tools online. Like really. The top-notch.&lt;/p&gt;
+&lt;p&gt;It works as a browser plugin, an app and a desktop application. It is worth mentioning that a desktop version works on Windows only. So, if you use a Linux distro, you already know what to do. Install it as a browser plugin! Log in, go to &amp;ldquo;My Grammarly&amp;rdquo;, and start typing your post.&lt;/p&gt;
+&lt;p&gt;Come one, give it a test drive. Right now. Now. Or maybe now! Improve your writing.&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -106,8 +222,29 @@ Boy, oh boy. It is one tool that gives you hell, also.</description>
       <pubDate>Sun, 17 Jul 2022 11:43:33 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-17/</guid>
-      <description>Jul 17  [!tldr] Jul 17 Did not read again? This is a shor post about how I use the information I find to create some of my blog posts.
- Some of you might be interested in the information I use in writing my newest blog posts. I can tell you one thing. I use multiple sources from different places all around the internet and even some of my old notebooks.</description>
+      <description>&lt;h1 id=&#34;jul-17&#34;&gt;Jul 17&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Jul 17
+Did not read again? This is a shor post about how I use the information I find to create some of my blog posts.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Some of you might be interested in the information I use in writing my newest blog posts. &lt;/p&gt;
+&lt;p&gt;I can tell you one thing. I use multiple sources from different places all around the internet and even some of my old notebooks.&lt;/p&gt;
+&lt;p&gt;Almost every time I need to write something about the code or tools I use, I read lots of documentation and test a few things before writing. I want to make correct assumptions based on my personal experience, so that is why I investigate a bunch of functionalities myself. &lt;/p&gt;
+&lt;p&gt;That is helpful when you want to write some lengthy technical texts, but what about something else?&lt;/p&gt;
+&lt;p&gt;Would it be possible to use any of the TikTok videos as a base material for a start? Well, of course, it would. Though, you would need to view the material as sceptically as possible. Not everything you find on the internet is the truth. You may need to make the conclusions yourselves. &lt;/p&gt;
+&lt;p&gt;So my recipe is:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Watch the video.&lt;/li&gt;
+&lt;li&gt;Identify which parts of it are accurate and which are not.&lt;/li&gt;
+&lt;li&gt;Recheck the information.&lt;/li&gt;
+&lt;li&gt;Read some documentation or research papers if it is possible.&lt;/li&gt;
+&lt;li&gt;Is there a chance that you could test the theory? Test it!&lt;/li&gt;
+&lt;li&gt;Write down your conclusions.&lt;/li&gt;
+&lt;li&gt;Write your post and publish it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -116,10 +253,85 @@ Boy, oh boy. It is one tool that gives you hell, also.</description>
       <pubDate>Sat, 16 Jul 2022 14:19:32 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-16/</guid>
-      <description>Jul 16  [!tldr] Jul 16 Just another post. This one is about the best blogging system around. To sum up, it does not exist.
- Is there a perfect content management system for blogging? I still doubt it.
-You see, I tried almost every possible tool that I could find all over the internet.
-Joomla, WordPress, Jekyll, Hugo, Blogger - you name it. I even constructed a blogging tool myself a long time ago to prove that it is possible to usae almost any web tool you like to create a website you will enjoy using.</description>
+      <description>&lt;h1 id=&#34;jul-16&#34;&gt;Jul 16&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Jul 16
+Just another post. This one is about the best blogging system around. To sum up, it does not exist.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Is there a perfect content management system for blogging? I still doubt it.&lt;/p&gt;
+&lt;p&gt;You see, I tried almost every possible tool that I could find all over the internet.&lt;/p&gt;
+&lt;p&gt;Joomla, WordPress, Jekyll, Hugo, Blogger - you name it. I even constructed a blogging tool myself a long time ago to prove that it is possible to usae almost any web tool you like to create a website you will enjoy using. Well, as long as it is formatted in a suitable manner according to WEB guidelines.&lt;/p&gt;
+&lt;p&gt;A few important key points are only valid HTML structure, well-formatted RSS feed, easy-to-use graphical user interface, safety and appealing looks to your visitors.&lt;/p&gt;
+&lt;p&gt;How do you differ a good CMS from a bad one? How should you choose the one you trully need? I think you need some more information to decide.&lt;/p&gt;
+&lt;h1 id=&#34;let-us-talk-about-flat-file-content-management-systems&#34;&gt;Let us talk about Flat File Content Management Systems&lt;/h1&gt;
+&lt;p&gt;What is a &amp;ldquo;Flat File CMS&amp;rdquo;? What is a website generator? Could you tell me? I am sure that I can provide you with some information about those thingies.&lt;/p&gt;
+&lt;h2 id=&#34;flat-file-cms&#34;&gt;Flat File CMS&lt;/h2&gt;
+&lt;p&gt;How does a system like that even works? Hm, that is not as complicated, as you might think.&lt;/p&gt;
+&lt;p&gt;First things first, a flat file content management system is able to store and edit files. The main important thing is that such a system does not use a database atll. It stores data in the files and use them to generate webpages.&lt;/p&gt;
+&lt;p&gt;Second, most of the Flat file Systems have an admin panel to manage all of the recordings.&lt;/p&gt;
+&lt;p&gt;A perfect example of a FFCMS could be Grav: &lt;a href=&#34;https://getgrav.org/&#34;&gt;https://getgrav.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fast building times&lt;/li&gt;
+&lt;li&gt;Admin panel&lt;/li&gt;
+&lt;li&gt;Multiple users support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;website-generators&#34;&gt;Website generators&lt;/h2&gt;
+&lt;p&gt;Website generators are sets of specific tools dedicated to generate websites. Simple as that. Website generators can use almost any text files, such as JSON, markdown, html, text or even something else. One of the drawbacks of using such systems could be a lack of editing tools.&lt;/p&gt;
+&lt;p&gt;On the other hand, there are plenty of text editing tools you could find online or on your computer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Typora&lt;/li&gt;
+&lt;li&gt;Gedit&lt;/li&gt;
+&lt;li&gt;Kchem&amp;hellip; Notepad&lt;/li&gt;
+&lt;li&gt;Obsidian&lt;/li&gt;
+&lt;li&gt;Sublime Text&lt;/li&gt;
+&lt;li&gt;Visual Studio Code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Almost any code or text editor should do the job.&lt;/p&gt;
+&lt;p&gt;The main difference between WG and FFCMS is that in order to publish your work, you will have to write some basic commands into the command line.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;p&gt;Let us use some imagination. Here are two steps after you finish writing your breathtaking blog post:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;hugo (Builds/Rebuilds your project)&lt;/li&gt;
+&lt;li&gt;firebase deploy (Puts the files of public directory into a firebase)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Some website generator examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo (&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Jekyll (&lt;a href=&#34;https://jekyllrb.com/&#34;&gt;https://jekyllrb.com/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Gatsby (&lt;a href=&#34;https://www.gatsbyjs.com/&#34;&gt;https://www.gatsbyjs.com/&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fast building times !&lt;/li&gt;
+&lt;li&gt;The freedom to create templates by yourselves&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Almost everytime you need to include an extra functionality into your pages you will have to &amp;ldquo;google around&amp;rdquo; the solutions yourselves&lt;/li&gt;
+&lt;li&gt;Building configuration&amp;hellip; You will have to put your hands into the dirt sooner or later&lt;/li&gt;
+&lt;li&gt;Lack of editing tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;blogger-wordpress-joomla-and-other-similar-products&#34;&gt;Blogger, Wordpress, Joomla and other similar products&lt;/h2&gt;
+&lt;p&gt;So, could you tell me how these ones differ from FFCMS or a simple website generator? In case you could not, I can assure you that it is particulary easy to grasp the basic concepts.&lt;/p&gt;
+&lt;p&gt;Each one of the mentioned CMS use SQL databases to store the information. They use a special programmed steps to get this information on command (press of a button) and build the pages.&lt;/p&gt;
+&lt;p&gt;Advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The functionality can be improved by installing various plugins&lt;/li&gt;
+&lt;li&gt;Multiple user support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;They tend to be a bit slow sometimes depending on your service provider and use-case scenarios&lt;/li&gt;
+&lt;li&gt;They tend to have some bugggggggs and security holes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Despite all of those things I mentioned above, the overall approach to create a stylish website depends totally on the user and the knowledge of tools.&lt;/p&gt;
+&lt;p&gt;You can make a perfect website with almost every content management system or generator. I admit that the most straightforward solution for a novice could be Wordpress or Blogger. In some cases, when a person has a bit more understanding how to operate computer systems, there is nothing that could not be done with a generator and some extra effort.&lt;/p&gt;
+&lt;p&gt;If I could give you an advice, here it is. If you are a novice user, just choose the best option based on your personal knowledge and watch a few youtube videos to make the final decision.&lt;/p&gt;
+&lt;p&gt;Personally, I do not think that there is a perfect tool around to solve all of your WEB issues. Web standards change frequently, so you might need to modify a couple of things here and there later. Choose wisely.&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -128,10 +340,62 @@ Joomla, WordPress, Jekyll, Hugo, Blogger - you name it. I even constructed a blo
       <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</guid>
-      <description>Jul 15  [!tldr] Jul 15 There is nothing to read yet. This is a test post.
- Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
-Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
- [!hint] Hint</description>
+      <description>&lt;h1 id=&#34;jul-15&#34;&gt;Jul 15&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Jul 15
+There is nothing to read yet. This is a test post.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;testing-my-new-toolkit&#34;&gt;Testing my new toolkit&lt;/h2&gt;
+&lt;p&gt;I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.&lt;/p&gt;
+&lt;p&gt;Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!hint] Hint&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash
+
+CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;`
+
+hugo
+
+git add * -f
+
+message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE
+
+git commit -m &amp;#34;$message&amp;#34;
+
+git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;final-solution&#34;&gt;Final solution&lt;/h2&gt;
+&lt;p&gt;If you want to replicate this&lt;/p&gt;
+&lt;p&gt;Create a file called remote.sh&lt;/p&gt;
+&lt;p&gt;Insert this code inside&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CURRENTDATE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;date +&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%Y-%m-%d %T&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add content -f
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add public -f
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;message&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Obsidian update: &amp;#34;&lt;/span&gt;$CURRENTDATE
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$message&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Create a good-named alias in your ~/.bashrc file&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias obsidianbuild&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cd /home/yourusername/Desktop/vaults/interconnection/ &amp;amp;&amp;amp; hugo &amp;amp;&amp;amp; ./remote.sh&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Source your ~/.bashrc&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;source ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;open-your-terminal&#34;&gt;Open your terminal&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;And run a command&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;obsidianbuild
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -140,9 +404,24 @@ Everytime I run a shell command to sync latest posts, with the help of Hugo, Git
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</guid>
-      <description>Preparing  Make more templates  Doing  Add more posts  Done  Test rebuilds !  Archive Complete
-%% kanban:settings
-{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;} %%</description>
+      <description>&lt;h2 id=&#34;preparing&#34;&gt;Preparing&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Make more templates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;doing&#34;&gt;Doing&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add more posts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;done&#34;&gt;Done&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Test rebuilds !&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;archive&#34;&gt;Archive&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Complete&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;%% kanban:settings&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;
+</description>
     </item>
     
   </channel>
