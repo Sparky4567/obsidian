@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "924c31f7d94fb01c",
+            "id": "e2d375cc380cc1c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/about.md",
+                "file": "content/posts/wp_posts/2023-02/Untitled.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/about.md",
+                "file": "content/posts/wp_posts/2023-02/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/about.md",
+                "file": "content/posts/wp_posts/2023-02/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/about.md"
+                "file": "content/posts/wp_posts/2023-02/Untitled.md"
               }
             }
           },
@@ -173,15 +173,17 @@
       "map-of-content:Update Map of Content": false
     }
   },
-  "active": "7c5e84f8d578b4d2",
+  "active": "e2d375cc380cc1c9",
   "lastOpenFiles": [
+    "content/posts/wp_posts/2022-10/Informacija blogo postams.md",
+    "content/posts/wp_posts/2022-10/Apie temas.md",
+    "content/about.md",
     "content/posts/journal/2022-07/Jul 15.md",
     "content/posts/journal/2022-07/Jul 16.md",
     "content/posts/journal/2022-07/Jul 17.md",
     "content/posts/journal/2022-10/Oct 25.md",
     "content/posts/journal/2022-10/Oct 22.md",
     "content/posts/journal/2022-10/Oct 17.md",
-    "content/posts/journal/2023-01/Jan 14.md",
-    "content/posts/journal/Untitled.md"
+    "content/posts/journal/2023-01/Jan 14.md"
   ]
 }
