@@ -5,7 +5,6 @@
     <link>https://obsidiannotes.artefaktas.eu/categories/</link>
     <description>Recent content in Categories on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    
-    <copyright>All rights belong to artefaktas.eu</copyright><atom:link href="https://obsidiannotes.artefaktas.eu/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://obsidiannotes.artefaktas.eu/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
