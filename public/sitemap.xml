@@ -3,31 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2023-08/aug-08/</loc>
-    <lastmod>2023-08-02T19:54:18+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://obsidiannotes.artefaktas.eu/tags/new_post/</loc>
-    <lastmod>2023-08-02T19:54:18+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://obsidiannotes.artefaktas.eu/</loc>
-    <lastmod>2023-08-02T19:54:18+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://obsidiannotes.artefaktas.eu/posts/</loc>
-    <lastmod>2023-08-02T19:54:18+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://obsidiannotes.artefaktas.eu/tags/</loc>
-    <lastmod>2023-08-02T19:54:18+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://obsidiannotes.artefaktas.eu/tags/migration/</loc>
     <lastmod>2022-10-22T22:03:11+03:00</lastmod>
   </url>
@@ -38,7 +13,27 @@
   </url>
   
   <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/new_post/</loc>
+    <lastmod>2022-10-22T22:03:11+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/</loc>
+    <lastmod>2022-10-22T22:03:11+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-22/</loc>
+    <lastmod>2022-10-22T22:03:11+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/posts/</loc>
+    <lastmod>2022-10-22T22:03:11+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/</loc>
     <lastmod>2022-10-22T22:03:11+03:00</lastmod>
   </url>
   
