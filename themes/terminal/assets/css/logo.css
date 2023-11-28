@@ -6,3 +6,11 @@
   color: black;
   padding: 5px 10px;
 }
+
+#onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-button {
+  width: 54px !important;
+  height: 54px !important;
+  position: absolute;
+  right: 20px !important;
+  bottom: 60px !important;
+}
