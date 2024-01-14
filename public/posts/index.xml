@@ -41,7 +41,7 @@ You were searching for a way to use Grammarly in your notes. Here it is.&lt;/p&g
 &lt;p&gt;On the other hand, due to raised traffic, I had to find another way to use Grammarly without any external apps.&lt;/p&gt;
 &lt;p&gt;Somehow and somewhy I decided to visit Grammarly&amp;rsquo;s developer page and to my surprise, I found some useful information on implementing the grammar checking feature. A little bit of REACT, a few minutes of templating, some Javascript magic and&amp;hellip; If you want to use Grammarly in your notes, you can add a special template into your note. All you need is just an internet connection to be able to use the template.&lt;/p&gt;
 &lt;p&gt;So the idea is quite simple actually. I made a separate WEB page and implemented the Grammarly SDK. Furthermore, I did not include any unnecessary security restrictions so that the page could be shared as an IFRAME. Therefore, you can implement it into your pages as a template using a shortcode.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;iframe src=&amp;quot;https://grammarplugin.artefaktas.eu/&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;600&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;iframe src=&amp;#34;https://grammarplugin.artefaktas.eu/&amp;#34; width=&amp;#34;100%&amp;#34; height=&amp;#34;600&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can support my little project by clicking the &amp;ldquo;Support me&amp;rdquo; option within the IFRAME.&lt;/p&gt;
 &lt;p&gt;Inner Tags: #new_post #grammarly #october&lt;/p&gt;
 &lt;p&gt;Internal links if exist:&lt;/p&gt;
@@ -63,7 +63,7 @@ A new ReactJS project&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Hello, blog readers. I want to share with you one of my recent projects. It is a basic image watermarking tool built purely with the ReactJS framework and some extra libraries to manipulate your chosen illustrations.&lt;/p&gt;
 &lt;h2 id=&#34;short-instructions-on-how-to-use-the-tool&#34;&gt;Short instructions on how to use the tool&lt;/h2&gt;
-&lt;p&gt;Follow the link &lt;a href=&#34;https://watermark.artefaktas.eu/,&#34;&gt;https://watermark.artefaktas.eu/,&lt;/a&gt; upload an image, change the default watermark text, adjust the font size and press &amp;ldquo;Watermark It&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Follow the link &lt;a href=&#34;https://watermark.artefaktas.eu/&#34;&gt;https://watermark.artefaktas.eu/&lt;/a&gt;, upload an image, change the default watermark text, adjust the font size and press &amp;ldquo;Watermark It&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Finally, press the download button to store a modified image on your computer.&lt;/p&gt;
 &lt;p&gt;P.s. Some additional functions are still buggy. You can add a few extra effects if you want to. Although, each of them should be applied separately by choosing the filter, using the slider to regulate the strength of an effect and clicking &amp;ldquo;Apply filter&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;By the way, you can install the app as a PWA application on your favourite devices.&lt;/p&gt;
@@ -206,7 +206,7 @@ Oh, Grammarly&amp;hellip;&lt;/p&gt;
 &lt;p&gt;What to do if English is not your native language? Well, you start to use the Grammarly plugin, of course. And you love it. And you hate it. And you adore it. And you despise it.&lt;/p&gt;
 &lt;p&gt;It is probably the one tool that can assist you in improving your writing skill.&lt;/p&gt;
 &lt;p&gt;Boy, oh boy. It is one tool that gives you hell, also.&lt;/p&gt;
-&lt;p&gt;Correctness score? Clarity? Engagement? Delivery and overall score? For my dogs&#39; sake, Grammarly! Am I trying to pass an exam here?&lt;/p&gt;
+&lt;p&gt;Correctness score? Clarity? Engagement? Delivery and overall score? For my dogs&amp;rsquo; sake, Grammarly! Am I trying to pass an exam here?&lt;/p&gt;
 &lt;p&gt;All jokes aside, I should mention that it is one of the best tools online. Like really. The top-notch.&lt;/p&gt;
 &lt;p&gt;It works as a browser plugin, an app and a desktop application. It is worth mentioning that a desktop version works on Windows only. So, if you use a Linux distro, you already know what to do. Install it as a browser plugin! Log in, go to &amp;ldquo;My Grammarly&amp;rdquo;, and start typing your post.&lt;/p&gt;
 &lt;p&gt;Come one, give it a test drive. Right now. Now. Or maybe now! Improve your writing.&lt;/p&gt;
@@ -349,56 +349,50 @@ There is nothing to read yet. This is a test post.&lt;/p&gt;
 &lt;p&gt;Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!hint] Hint&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash
 
-CURRENTDATE=`date +&amp;quot;%Y-%m-%d %T&amp;quot;`
+CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;`
 
 hugo
 
 git add * -f
 
-message=&amp;quot;Obsidian update: &amp;quot;$CURRENTDATE
+message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE
 
-git commit -m &amp;quot;$message&amp;quot;
+git commit -m &amp;#34;$message&amp;#34;
 
 git push
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;final-solution&#34;&gt;Final solution&lt;/h2&gt;
 &lt;p&gt;If you want to replicate this&lt;/p&gt;
 &lt;p&gt;Create a file called remote.sh&lt;/p&gt;
 &lt;p&gt;Insert this code inside&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-CURRENTDATE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;date +&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%Y-%m-%d %T&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;
-
-git add content -f
-
-git add public -f
-
-message&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Obsidian update: &amp;#34;&lt;/span&gt;$CURRENTDATE
-
-git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$message&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
-
-git push
-
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Create a good-named alias in your ~/.bashrc file&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CURRENTDATE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;date +&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%Y-%m-%d %T&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add content -f
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add public -f
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;message&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Obsidian update: &amp;#34;&lt;/span&gt;$CURRENTDATE
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$message&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Create a good-named alias in your ~/.bashrc file&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;For example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
-alias obsidianbuild&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cd /home/yourusername/Desktop/vaults/interconnection/ &amp;amp;&amp;amp; hugo &amp;amp;&amp;amp; ./remote.sh&amp;#34;&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Source your ~/.bashrc&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
-source ~/.bashrc
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;open-your-terminal&#34;&gt;Open your terminal&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias obsidianbuild&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cd /home/yourusername/Desktop/vaults/interconnection/ &amp;amp;&amp;amp; hugo &amp;amp;&amp;amp; ./remote.sh&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Source your ~/.bashrc&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;source ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;open-your-terminal&#34;&gt;Open your terminal&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;And run a command&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
-obsidianbuild
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;obsidianbuild
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Internal links if exist:&lt;/p&gt;
 &lt;p&gt;External links if exist:&lt;/p&gt;
 </description>
     </item>
@@ -424,7 +418,7 @@ obsidianbuild
 &lt;h2 id=&#34;archive&#34;&gt;Archive&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Complete&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;%% kanban:settings&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;}
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;}
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;
 </description>
     </item>
