@@ -13,22 +13,9 @@
       <pubDate>Mon, 17 Oct 2022 15:00:54 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-17/</guid>
-      <description>&lt;h1 id=&#34;oct-17&#34;&gt;Oct 17&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[!tldr] Oct 17
-You were searching for a way to use Grammarly in your notes. Here it is.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Boy, oh boy. The majority of this site visitors come here to check if there is even the slightest possibility to use the Grammarly plugin in Obsidian Notes. The short answer is no. There is no possibility to use the plugin.&lt;/p&gt;
-&lt;p&gt;On the other hand, due to raised traffic, I had to find another way to use Grammarly without any external apps.&lt;/p&gt;
-&lt;p&gt;Somehow and somewhy I decided to visit Grammarly&amp;rsquo;s developer page and to my surprise, I found some useful information on implementing the grammar checking feature. A little bit of REACT, a few minutes of templating, some Javascript magic and&amp;hellip; If you want to use Grammarly in your notes, you can add a special template into your note. All you need is just an internet connection to be able to use the template.&lt;/p&gt;
-&lt;p&gt;So the idea is quite simple actually. I made a separate WEB page and implemented the Grammarly SDK. Furthermore, I did not include any unnecessary security restrictions so that the page could be shared as an IFRAME. Therefore, you can implement it into your pages as a template using a shortcode.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;iframe src=&amp;quot;https://grammarplugin.artefaktas.eu/&amp;quot; width=&amp;quot;100%&amp;quot; height=&amp;quot;600&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can support my little project by clicking the &amp;ldquo;Support me&amp;rdquo; option within the IFRAME.&lt;/p&gt;
-&lt;p&gt;Inner Tags: #new_post #grammarly #october&lt;/p&gt;
-&lt;p&gt;Internal links if exist:&lt;/p&gt;
-&lt;p&gt;External links if exist:&lt;/p&gt;
-&lt;p&gt;Markdown external:&lt;/p&gt;
-</description>
+      <description>Oct 17  [!tldr] Oct 17 You were searching for a way to use Grammarly in your notes. Here it is.
+ Boy, oh boy. The majority of this site visitors come here to check if there is even the slightest possibility to use the Grammarly plugin in Obsidian Notes. The short answer is no. There is no possibility to use the plugin.
+On the other hand, due to raised traffic, I had to find another way to use Grammarly without any external apps.</description>
     </item>
     
     <item>
@@ -37,21 +24,10 @@ You were searching for a way to use Grammarly in your notes. Here it is.&lt;/p&g
       <pubDate>Mon, 18 Jul 2022 21:45:04 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-18/</guid>
-      <description>&lt;h1 id=&#34;jul-18&#34;&gt;Jul 18&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[!tldr] Jul 18
-Oh, Grammarly&amp;hellip;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;What to do if English is not your native language? Well, you start to use the Grammarly plugin, of course. And you love it. And you hate it. And you adore it. And you despise it.&lt;/p&gt;
-&lt;p&gt;It is probably the one tool that can assist you in improving your writing skill.&lt;/p&gt;
-&lt;p&gt;Boy, oh boy. It is one tool that gives you hell, also.&lt;/p&gt;
-&lt;p&gt;Correctness score? Clarity? Engagement? Delivery and overall score? For my dogs&#39; sake, Grammarly! Am I trying to pass an exam here?&lt;/p&gt;
-&lt;p&gt;All jokes aside, I should mention that it is one of the best tools online. Like really. The top-notch.&lt;/p&gt;
-&lt;p&gt;It works as a browser plugin, an app and a desktop application. It is worth mentioning that a desktop version works on Windows only. So, if you use a Linux distro, you already know what to do. Install it as a browser plugin! Log in, go to &amp;ldquo;My Grammarly&amp;rdquo;, and start typing your post.&lt;/p&gt;
-&lt;p&gt;Come one, give it a test drive. Right now. Now. Or maybe now! Improve your writing.&lt;/p&gt;
-&lt;p&gt;Internal links if exist:&lt;/p&gt;
-&lt;p&gt;External links if exist:&lt;/p&gt;
-</description>
+      <description>Jul 18  [!tldr] Jul 18 Oh, Grammarly&amp;hellip;
+ What to do if English is not your native language? Well, you start to use the Grammarly plugin, of course. And you love it. And you hate it. And you adore it. And you despise it.
+It is probably the one tool that can assist you in improving your writing skill.
+Boy, oh boy. It is one tool that gives you hell, also.</description>
     </item>
     
   </channel>

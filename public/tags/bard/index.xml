@@ -13,24 +13,9 @@
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</guid>
-      <description>&lt;h2 id=&#34;preparing&#34;&gt;Preparing&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Make more templates&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;doing&#34;&gt;Doing&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add more posts&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;done&#34;&gt;Done&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Test rebuilds !&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;archive&#34;&gt;Archive&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Complete&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;%% kanban:settings&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;
-</description>
+      <description>Preparing  Make more templates  Doing  Add more posts  Done  Test rebuilds !  Archive Complete
+%% kanban:settings
+{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;} %%</description>
     </item>
     
   </channel>

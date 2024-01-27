@@ -6,7 +6,8 @@
                 {
                     "href": "{{ $page.Permalink }}",
                     "title": "{{ htmlEscape $page.Title }}",
-                    "categories": [{{ range $tindex, $tag := $page.Params.categories }}{{ if $tindex }}, {{ end }}"{{ $tag| htmlEscape }}"{{ end }}]
+                    "categories": [{{ range $tindex, $tag := $page.Params.categories }}{{ if $tindex }}, {{ end }}"{{ $tag| htmlEscape }}"{{ end }}],
+                    "content":"{{ .PlainWords }}"
                 }
                 {{- if (lt (add $index 1) $len) }}
                 ,

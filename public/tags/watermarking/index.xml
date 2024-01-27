@@ -13,20 +13,9 @@
       <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
       
       <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-15/</guid>
-      <description>&lt;h1 id=&#34;sep-15&#34;&gt;Sep 15&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[!tldr] Sep 15
-A new ReactJS project&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Hello, blog readers. I want to share with you one of my recent projects. It is a basic image watermarking tool built purely with the ReactJS framework and some extra libraries to manipulate your chosen illustrations.&lt;/p&gt;
-&lt;h2 id=&#34;short-instructions-on-how-to-use-the-tool&#34;&gt;Short instructions on how to use the tool&lt;/h2&gt;
-&lt;p&gt;Follow the link &lt;a href=&#34;https://watermark.artefaktas.eu/,&#34;&gt;https://watermark.artefaktas.eu/,&lt;/a&gt; upload an image, change the default watermark text, adjust the font size and press &amp;ldquo;Watermark It&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;Finally, press the download button to store a modified image on your computer.&lt;/p&gt;
-&lt;p&gt;P.s. Some additional functions are still buggy. You can add a few extra effects if you want to. Although, each of them should be applied separately by choosing the filter, using the slider to regulate the strength of an effect and clicking &amp;ldquo;Apply filter&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;By the way, you can install the app as a PWA application on your favourite devices.&lt;/p&gt;
-&lt;p&gt;Internal links if exist:&lt;/p&gt;
-&lt;p&gt;External links if exist:&lt;/p&gt;
-</description>
+      <description>Sep 15  [!tldr] Sep 15 A new ReactJS project
+ Hello, blog readers. I want to share with you one of my recent projects. It is a basic image watermarking tool built purely with the ReactJS framework and some extra libraries to manipulate your chosen illustrations.
+Short instructions on how to use the tool Follow the link https://watermark.artefaktas.eu/, upload an image, change the default watermark text, adjust the font size and press &amp;ldquo;Watermark It&amp;rdquo;.</description>
     </item>
     
   </channel>
