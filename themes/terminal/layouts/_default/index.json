@@ -1,17 +1,54 @@
-[   
-    {{ $list := (where .Site.Pages "Type" "==" "posts") }}
-    {{ $len := (len $list)}}
-    {{ range $index, $page := $list }}
-        {{- if $page.Plain -}}
+{{- $pctx := . -}}
+{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
+{{- $pages := $pctx.RegularPages -}}
+{{- $limit := 10 -}} 
+{{- if ge $limit 1 -}}
+{{- $pages = $pages | first $limit -}}
+{{- end -}}
+{{ $length := (len $pages) -}}
+{
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": "{{ if eq  .Title  site.Title }}{{ site.Title }}{{ else }}{{ with .Title }}{{ . }} {{ i18n "string_on" }} {{ end }}{{ site.Title }}{{ end }}",
+    "description": "{{ i18n "string_recent_content" }} {{ if ne  .Title  site.Title }}{{ with .Title }}{{ i18n "string_in" }} {{ . }} {{ end }}{{ end }}{{ i18n "string_on" }} {{ site.Title }}",
+    "home_page_url": "{{ site.BaseURL }}",
+    {{ with .OutputFormats.Get "JSON" -}}
+    "feed_url": "{{ .Permalink }}",
+    {{ end -}}
+    {{ with site.LanguageCode -}}
+    "language": "{{ . }}",
+    {{ end -}}
+    {{ with $.Param "icon" -}}
+    "icon": "{{ . | absURL }}",
+    {{ end -}}
+    {{ with $.Param "favicon" -}}
+    "favicon": "{{ . | absURL }}",
+    {{ end -}}
+    {{ with site.Params.author.name -}}
+    "authors": [
+        {
+            "name": "{{ . }}"{{ with site.Params.author.url }},
+            "url": "{{ . }}"{{ end }}{{ with site.Params.author.avatar }},
+            "avatar": "{{ . | absURL }}"{{ end }}
+        }
+    ],
+    {{ end -}}
+    "items": [
+        {{ range $index, $element := $pages -}}
+        {
+            "title": {{ .Title | jsonify }},
+            "date_published": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+            "date_modified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+            "id": "{{ .Permalink }}",
+            "url": "{{ .Permalink }}",
+            {{ with .Params.author -}}
+            "authors": [
                 {
-                    "href": "{{ $page.Permalink }}",
-                    "title": "{{ htmlEscape $page.Title }}",
-                    "categories": [{{ range $tindex, $tag := $page.Params.categories }}{{ if $tindex }}, {{ end }}"{{ $tag| htmlEscape }}"{{ end }}],
-                    "content":"{{ .Plain }}"
+                  "name": "{{ . }}"
                 }
-                {{- if (lt (add $index 1) $len) }}
-                ,
-                {{- end }}
-            {{- end -}}
-    {{- end -}}
-]
+            ],
+            {{ end -}}
+            "content_html": {{ .Content | jsonify }}
+        }{{ if ne (add $index 1) $length }},{{ end }}
+        {{ end -}}
+    ]
+}
