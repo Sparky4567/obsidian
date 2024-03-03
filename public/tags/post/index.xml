@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>post on Obsidian notes</title>
-    <link>https://obsidiannotes.artefaktas.eu/tags/post/</link>
-    <description>Recent content in post on Obsidian notes</description>
+    <title>Post on Obsidian notes</title>
+    <link>http://localhost:1313/tags/post/</link>
+    <description>Recent content in Post on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Sun, 11 Sep 2022 11:10:26 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Sep 2022 11:10:26 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sep 11</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-11/</link>
+      <link>http://localhost:1313/posts/journal/2022-09/sep-11/</link>
       <pubDate>Sun, 11 Sep 2022 11:10:26 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-11/</guid>
-      <description>Sep 11  [!tldr] Sep 11 This is a test post. Testing a bat script execution.
- Test post.
-  window.addEventListener(&#34;load&#34;,()={ let videoId = &#34;https://www.tiktok.com/@happycat202/video/7141787468558290182&#34;; let className = &#34;7141787468558290182&#34; let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId; let classSelector = String(className); fetch(fetchUrl).then((r)=r.json()).then((d)={ document.getElementsByClassName(classSelector)[0].innerHTML = d.html; let sc = document.createElement(&#34;script&#34;); sc.src = &#34;https://www.tiktok.com/embed.js&#34;; document.body.appendChild(sc); }).catch((err)={ console.log(err); }); });   Internal links if exist:
+      <guid>http://localhost:1313/posts/journal/2022-09/sep-11/</guid>
+      <description>Sep 11 [!tldr] Sep 11 This is a test post. Testing a bat script execution.
+Test post.
+Internal links if exist:
 External links if exist:</description>
     </item>
     
     <item>
       <title>Jul 15</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</link>
+      <link>http://localhost:1313/posts/journal/2022-07/jul-15/</link>
       <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</guid>
-      <description>Jul 15  [!tldr] Jul 15 There is nothing to read yet. This is a test post.
- Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
+      <guid>http://localhost:1313/posts/journal/2022-07/jul-15/</guid>
+      <description>Jul 15 [!tldr] Jul 15 There is nothing to read yet. This is a test post.
+Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
 Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
- [!hint] Hint</description>
+[!hint] Hint
+#!/bin/bash CURRENTDATE=`date +&amp;#34;%Y-%m-%d %T&amp;#34;` hugo git add * -f message=&amp;#34;Obsidian update: &amp;#34;$CURRENTDATE git commit -m &amp;#34;$message&amp;#34; git push Final solution If you want to replicate this</description>
     </item>
     
   </channel>

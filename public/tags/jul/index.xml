@@ -1,65 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>jul on Obsidian notes</title>
-    <link>https://obsidiannotes.artefaktas.eu/tags/jul/</link>
-    <description>Recent content in jul on Obsidian notes</description>
+    <title>Jul on Obsidian notes</title>
+    <link>http://localhost:1313/tags/jul/</link>
+    <description>Recent content in Jul on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Tue, 19 Jul 2022 21:38:47 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/jul/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Jul 19</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-19/</link>
-      <pubDate>Tue, 19 Jul 2022 21:38:47 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-19/</guid>
-      <description>Jul 19  [!quote] Jul 19 Feynman&amp;rsquo;s technique
- Nothing too much interesting happened today. Just as usual. It is worth mentioning that I managed to stumble on one good technique called &amp;ldquo;Feynman&amp;rsquo;s technique&amp;rdquo;. Its purpose - memorize and recall the information a bit faster. I think that I already use it, but I will try to dig into this deeper. There are still some unknown variables. Well, at least for me.</description>
-    </item>
-    
-    <item>
-      <title>Jul 17</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-17/</link>
-      <pubDate>Sun, 17 Jul 2022 11:43:33 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-17/</guid>
-      <description>Jul 17  [!tldr] Jul 17 Did not read again? This is a shor post about how I use the information I find to create some of my blog posts.
- Some of you might be interested in the information I use in writing my newest blog posts. I can tell you one thing. I use multiple sources from different places all around the internet and even some of my old notebooks.</description>
-    </item>
-    
-    <item>
-      <title>Jul 16</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-16/</link>
-      <pubDate>Sat, 16 Jul 2022 14:19:32 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-16/</guid>
-      <description>Jul 16  [!tldr] Jul 16 Just another post. This one is about the best blogging system around. To sum up, it does not exist.
- Is there a perfect content management system for blogging? I still doubt it.
-You see, I tried almost every possible tool that I could find all over the internet.
-Joomla, WordPress, Jekyll, Hugo, Blogger - you name it. I even constructed a blogging tool myself a long time ago to prove that it is possible to usae almost any web tool you like to create a website you will enjoy using.</description>
-    </item>
-    
-    <item>
-      <title>Jul 15</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</link>
-      <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</guid>
-      <description>Jul 15  [!tldr] Jul 15 There is nothing to read yet. This is a test post.
- Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
-Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
- [!hint] Hint</description>
-    </item>
-    
+    <lastBuildDate>Fri, 15 Jul 2022 13:58:39 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/jul/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kanban Board</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</link>
+      <link>http://localhost:1313/posts/kanban/kanban-board/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</guid>
-      <description>Preparing  Make more templates  Doing  Add more posts  Done  Test rebuilds !  Archive Complete
+      <guid>http://localhost:1313/posts/kanban/kanban-board/</guid>
+      <description>Preparing Make more templates Doing Add more posts Done Test rebuilds ! Archive Complete
 %% kanban:settings
-{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;} %%</description>
+{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>
     </item>
     
   </channel>

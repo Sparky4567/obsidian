@@ -2,146 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Obsidian notes</title>
-    <link>https://obsidiannotes.artefaktas.eu/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Sat, 22 Oct 2022 22:03:11 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Oct 22</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-22/</link>
-      <pubDate>Sat, 22 Oct 2022 22:03:11 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-22/</guid>
-      <description>Oct 22  [!tldr] Oct 22 Save some of your precious time and visit my GitHub project
- This post is a little reminder to myself. Although it is possible to migrate existing Hugo websites from Firebase, it requires a lot of work to do so. But to convert one into an Obsidian vault is another level. If you visited this website to find an answer to how to achieve by yourselves, I recommend taking a look at my GitHub project existing here: https://github.</description>
-    </item>
-    
-    <item>
-      <title>Oct 17</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-17/</link>
-      <pubDate>Mon, 17 Oct 2022 15:00:54 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-10/oct-17/</guid>
-      <description>Oct 17  [!tldr] Oct 17 You were searching for a way to use Grammarly in your notes. Here it is.
- Boy, oh boy. The majority of this site visitors come here to check if there is even the slightest possibility to use the Grammarly plugin in Obsidian Notes. The short answer is no. There is no possibility to use the plugin.
-On the other hand, due to raised traffic, I had to find another way to use Grammarly without any external apps.</description>
-    </item>
-    
-    <item>
-      <title>Sep 15</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-15/</link>
-      <pubDate>Thu, 15 Sep 2022 19:36:10 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-15/</guid>
-      <description>Sep 15  [!tldr] Sep 15 A new ReactJS project
- Hello, blog readers. I want to share with you one of my recent projects. It is a basic image watermarking tool built purely with the ReactJS framework and some extra libraries to manipulate your chosen illustrations.
-Short instructions on how to use the tool Follow the link https://watermark.artefaktas.eu/, upload an image, change the default watermark text, adjust the font size and press &amp;ldquo;Watermark It&amp;rdquo;.</description>
-    </item>
-    
-    <item>
-      <title>Sep 12</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-12/</link>
-      <pubDate>Mon, 12 Sep 2022 16:02:05 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-12/</guid>
-      <description>Sep 12  [!tldr] Sep 12 Testing automation once again
- This is a test post No. 2
-A piece of code is visible for some strange reason. Therefore, I wrote some more text to test this out.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis quam vitae ligula luctus, eget convallis urna rhoncus. Vestibulum imperdiet dictum massa eu varius. Morbi est urna, suscipit a pellentesque sed, malesuada ut magna.</description>
-    </item>
-    
-    <item>
-      <title>Sep 11</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-11/</link>
-      <pubDate>Sun, 11 Sep 2022 11:10:26 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-11/</guid>
-      <description>Sep 11  [!tldr] Sep 11 This is a test post. Testing a bat script execution.
- Test post.
-  window.addEventListener(&#34;load&#34;,()={ let videoId = &#34;https://www.tiktok.com/@happycat202/video/7141787468558290182&#34;; let className = &#34;7141787468558290182&#34; let fetchUrl = &#34;https://www.tiktok.com/oembed?url=&#34;+videoId; let classSelector = String(className); fetch(fetchUrl).then((r)=r.json()).then((d)={ document.getElementsByClassName(classSelector)[0].innerHTML = d.html; let sc = document.createElement(&#34;script&#34;); sc.src = &#34;https://www.tiktok.com/embed.js&#34;; document.body.appendChild(sc); }).catch((err)={ console.log(err); }); });   Internal links if exist:
-External links if exist:</description>
-    </item>
-    
-    <item>
-      <title>Sep 09</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-09/</link>
-      <pubDate>Fri, 09 Sep 2022 19:00:11 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-09/sep-09/</guid>
-      <description>Sep 09  [!tldr] Aug 09 Short notice
- Woosh. I skipped a lot of time on this one due to technical issues.
-I will try to automate this blog as much as I can.
-(A-ha! Visual Studio Code online editor is the solution. There is no need to automate this blog anymore.)
-Internal links if exist:
-External links if exist:</description>
-    </item>
-    
-    <item>
-      <title>Jul 19</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-19/</link>
-      <pubDate>Tue, 19 Jul 2022 21:38:47 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-19/</guid>
-      <description>Jul 19  [!quote] Jul 19 Feynman&amp;rsquo;s technique
- Nothing too much interesting happened today. Just as usual. It is worth mentioning that I managed to stumble on one good technique called &amp;ldquo;Feynman&amp;rsquo;s technique&amp;rdquo;. Its purpose - memorize and recall the information a bit faster. I think that I already use it, but I will try to dig into this deeper. There are still some unknown variables. Well, at least for me.</description>
-    </item>
-    
-    <item>
-      <title>Jul 18</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-18/</link>
-      <pubDate>Mon, 18 Jul 2022 21:45:04 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-18/</guid>
-      <description>Jul 18  [!tldr] Jul 18 Oh, Grammarly&amp;hellip;
- What to do if English is not your native language? Well, you start to use the Grammarly plugin, of course. And you love it. And you hate it. And you adore it. And you despise it.
-It is probably the one tool that can assist you in improving your writing skill.
-Boy, oh boy. It is one tool that gives you hell, also.</description>
-    </item>
-    
-    <item>
-      <title>Jul 17</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-17/</link>
-      <pubDate>Sun, 17 Jul 2022 11:43:33 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-17/</guid>
-      <description>Jul 17  [!tldr] Jul 17 Did not read again? This is a shor post about how I use the information I find to create some of my blog posts.
- Some of you might be interested in the information I use in writing my newest blog posts. I can tell you one thing. I use multiple sources from different places all around the internet and even some of my old notebooks.</description>
-    </item>
-    
-    <item>
-      <title>Jul 16</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-16/</link>
-      <pubDate>Sat, 16 Jul 2022 14:19:32 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-16/</guid>
-      <description>Jul 16  [!tldr] Jul 16 Just another post. This one is about the best blogging system around. To sum up, it does not exist.
- Is there a perfect content management system for blogging? I still doubt it.
-You see, I tried almost every possible tool that I could find all over the internet.
-Joomla, WordPress, Jekyll, Hugo, Blogger - you name it. I even constructed a blogging tool myself a long time ago to prove that it is possible to usae almost any web tool you like to create a website you will enjoy using.</description>
-    </item>
-    
-    <item>
-      <title>Jul 15</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</link>
-      <pubDate>Fri, 15 Jul 2022 18:58:39 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2022-07/jul-15/</guid>
-      <description>Jul 15  [!tldr] Jul 15 There is nothing to read yet. This is a test post.
- Testing my new toolkit I guess I made something fascinating today. I mixed a couple of well-known technologies and here we are.
-Everytime I run a shell command to sync latest posts, with the help of Hugo, Github and Cloudflare pages, new posts appear online with almost no effort.
- [!hint] Hint</description>
-    </item>
-    
+    <lastBuildDate>Fri, 15 Jul 2022 13:58:39 +0300</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kanban Board</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</link>
+      <link>http://localhost:1313/posts/kanban/kanban-board/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</guid>
-      <description>Preparing  Make more templates  Doing  Add more posts  Done  Test rebuilds !  Archive Complete
+      <guid>http://localhost:1313/posts/kanban/kanban-board/</guid>
+      <description>Preparing Make more templates Doing Add more posts Done Test rebuilds ! Archive Complete
 %% kanban:settings
-{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;} %%</description>
+{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>
     </item>
     
   </channel>
