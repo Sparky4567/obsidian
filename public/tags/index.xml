@@ -6,7 +6,88 @@
     <description>Recent content in Tags on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Mon, 04 Mar 2024 16:05:36 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Mar 2024 11:23:37 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advice</title>
+      <link>http://localhost:1313/tags/advice/</link>
+      <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/advice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ai</title>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>From</title>
+      <link>http://localhost:1313/tags/from/</link>
+      <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/from/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Newpost</title>
+      <link>http://localhost:1313/tags/newpost/</link>
+      <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/newpost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seo</title>
+      <link>http://localhost:1313/tags/seo/</link>
+      <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/seo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writtenbyai</title>
+      <link>http://localhost:1313/tags/writtenbyai/</link>
+      <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/writtenbyai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Generated</title>
+      <link>http://localhost:1313/tags/generated/</link>
+      <pubDate>Mon, 04 Mar 2024 16:08:55 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/generated/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Short</title>
+      <link>http://localhost:1313/tags/short/</link>
+      <pubDate>Mon, 04 Mar 2024 16:08:55 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/short/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Story</title>
+      <link>http://localhost:1313/tags/story/</link>
+      <pubDate>Mon, 04 Mar 2024 16:08:55 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/story/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title> Ai</title>
       <link>http://localhost:1313/tags/-ai/</link>
@@ -31,15 +112,6 @@
       <pubDate>Mon, 04 Mar 2024 16:05:36 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/-written/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Newpost</title>
-      <link>http://localhost:1313/tags/newpost/</link>
-      <pubDate>Mon, 04 Mar 2024 16:05:36 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/newpost/</guid>
       <description></description>
     </item>
     

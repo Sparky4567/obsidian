@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>From on Obsidian notes</title>
+    <link>http://localhost:1313/tags/from/</link>
+    <description>Recent content in From on Obsidian notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+    <lastBuildDate>Tue, 05 Mar 2024 11:23:37 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/from/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mar 5</title>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-5/</link>
+      <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-5/</guid>
+      <description>Query: What advice would you give me to optimize my current website for a better performance Mar 5 [!tldr] Mar 5 TLDR Text is too short to sumarize
+I can provide you with some general tips and insights on optimizing your current website for better performance, but i cannot offer specific advice based on your individual situation. Here are some broad recommendations:
+conduct thorough keyword research: knowing what keywords or phrases your target audience is searching for can help you optimize your content and your website&amp;rsquo;s meta descriptions and header tags to attract search engine crawlers.</description>
+    </item>
+    
+  </channel>
+</rss>
