@@ -62,33 +62,6 @@
     </item>
     
     <item>
-      <title>Generated</title>
-      <link>http://localhost:1313/tags/generated/</link>
-      <pubDate>Mon, 04 Mar 2024 16:08:55 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/generated/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Short</title>
-      <link>http://localhost:1313/tags/short/</link>
-      <pubDate>Mon, 04 Mar 2024 16:08:55 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/short/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Story</title>
-      <link>http://localhost:1313/tags/story/</link>
-      <pubDate>Mon, 04 Mar 2024 16:08:55 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/story/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title> Ai</title>
       <link>http://localhost:1313/tags/-ai/</link>
       <pubDate>Mon, 04 Mar 2024 16:05:36 +0300</pubDate>
