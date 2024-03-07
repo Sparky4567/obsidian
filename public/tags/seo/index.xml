@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>seo on Obsidian notes</title>
-    <link>https://obsidiannotes.artefaktas.eu/tags/seo/</link>
-    <description>Recent content in seo on Obsidian notes</description>
+    <title>Seo on Obsidian notes</title>
+    <link>http://localhost:1313/tags/seo/</link>
+    <description>Recent content in Seo on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Wed, 06 Mar 2024 20:54:32 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/seo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Mar 2024 20:54:32 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/seo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 6</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-6/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-6/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-6/</guid>
-      <description>Query: Write an articale about seo Mar 6  [!tldr] Mar 6 TLDR Text is too short to sumarize
- Introduction
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-6/</guid>
+      <description>Query: Write an articale about seo Mar 6 [!tldr] Mar 6 TLDR Text is too short to sumarize
+Introduction
 Search engine optimization (seo) is the process of optimizing website content and meta tags to improve visibility on search engine results pages (serps). It is a crucial component of any online marketing strategy, as it helps websites attract more traffic and convert leads. The online landscape has undergone significant changes in recent years, making seo an ever-evolving field that requires constant adaptation to stay relevant.</description>
     </item>
     
     <item>
       <title>Mar 5</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-5/</link>
       <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/</guid>
-      <description>Query: What advice would you give me to optimize my current website for a better performance Mar 5  [!tldr] Mar 5 TLDR SEO advice from AI 🤖
- I can provide you with some general tips and insights on optimizing your current website for better performance, but i cannot offer specific advice based on your individual situation. Here are some broad recommendations:
-  Conduct thorough keyword research: knowing what keywords or phrases your target audience is searching for can help you optimize your content and your website&amp;rsquo;s meta descriptions and header tags to attract search engine crawlers.</description>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-5/</guid>
+      <description>Query: What advice would you give me to optimize my current website for a better performance Mar 5 [!tldr] Mar 5 TLDR SEO advice from AI 🤖
+I can provide you with some general tips and insights on optimizing your current website for better performance, but i cannot offer specific advice based on your individual situation. Here are some broad recommendations:
+Conduct thorough keyword research: knowing what keywords or phrases your target audience is searching for can help you optimize your content and your website&amp;rsquo;s meta descriptions and header tags to attract search engine crawlers.</description>
     </item>
     
   </channel>

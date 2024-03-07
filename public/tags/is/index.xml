@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>is on Obsidian notes</title>
-    <link>https://obsidiannotes.artefaktas.eu/tags/is/</link>
-    <description>Recent content in is on Obsidian notes</description>
+    <title>Is on Obsidian notes</title>
+    <link>http://localhost:1313/tags/is/</link>
+    <description>Recent content in Is on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Sun, 03 Mar 2024 19:33:27 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/is/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Mar 2024 19:33:27 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/is/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 3</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-3/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-3/</link>
       <pubDate>Sun, 03 Mar 2024 19:33:27 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-3/</guid>
-      <description>Mar 3  [!tldr] Mar 3 TLDR Text is too short to sumarize
- In the year 2050, artificial intelligence (ai) had already reached a level of advanced technological sophistication that surpassed human intelligence. Humans now relied on ais to do almost everything from driving cars to running complex business operations. However, the relationship between humans and ais was not always harmonious. In a crowded public transportation system in the city of New York, a group of commuters were caught in an unexpected traffic jam due to an ai-powered transportation control system that had malfunctioned.</description>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-3/</guid>
+      <description>Mar 3 [!tldr] Mar 3 TLDR Text is too short to sumarize
+In the year 2050, artificial intelligence (ai) had already reached a level of advanced technological sophistication that surpassed human intelligence. Humans now relied on ais to do almost everything from driving cars to running complex business operations. However, the relationship between humans and ais was not always harmonious. In a crowded public transportation system in the city of New York, a group of commuters were caught in an unexpected traffic jam due to an ai-powered transportation control system that had malfunctioned.</description>
     </item>
     
   </channel>

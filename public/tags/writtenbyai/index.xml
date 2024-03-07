@@ -1,32 +1,56 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>writtenbyai on Obsidian notes</title>
-    <link>https://obsidiannotes.artefaktas.eu/tags/writtenbyai/</link>
-    <description>Recent content in writtenbyai on Obsidian notes</description>
+    <title>Writtenbyai on Obsidian notes</title>
+    <link>http://localhost:1313/tags/writtenbyai/</link>
+    <description>Recent content in Writtenbyai on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Wed, 06 Mar 2024 20:54:32 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/writtenbyai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Mar 2024 11:07:51 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/writtenbyai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mar 7_10_07_51</title>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-7_10_07_51/</link>
+      <pubDate>Thu, 07 Mar 2024 11:07:51 +0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-7_10_07_51/</guid>
+      <description>Query: Write a short story about nature Mar 7_10_07_51 [!tldr] Mar 7_10_07_51 TLDR Text is too short to sumarize
+It was a beautiful summer day, and the sun shone brightly upon the lush green hills that surrounded the quaint little village nestled atop a hill.
+The birds sang merrily in the branches above, their songs echoing through the air, while the chirping crickets were a constant background noise.
+A group of nature lovers, consisting of two seasoned songwriters and a young aspiring artist, stood beneath the lush tree that towered over the village, watching as it swayed gently in the gentle breeze.</description>
+    </item>
+    
+    <item>
+      <title>Mar 7_10_05_11</title>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-7_10_05_11/</link>
+      <pubDate>Thu, 07 Mar 2024 11:05:11 +0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-7_10_05_11/</guid>
+      <description>Query: Give me a random quote about writing Mar 7_10_05_11 [!tldr] Mar 7_10_05_11 TLDR Text is too short to sumarize
+Here&amp;rsquo;s a random quote about writing, taken from the book &amp;ldquo;Writing down the bones: a practical guide to fiction writing&amp;rdquo; by francine prose:
+“Innovation is not just for artists. It’s for everyone.”
+Susan cain, author of Quiet: the power of introverts in a world that can&amp;rsquo;t stop talking. Author: tinyllama</description>
+    </item>
+    
     <item>
       <title>Mar 6</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-6/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-6/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-6/</guid>
-      <description>Query: Write an articale about seo Mar 6  [!tldr] Mar 6 TLDR Text is too short to sumarize
- Introduction
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-6/</guid>
+      <description>Query: Write an articale about seo Mar 6 [!tldr] Mar 6 TLDR Text is too short to sumarize
+Introduction
 Search engine optimization (seo) is the process of optimizing website content and meta tags to improve visibility on search engine results pages (serps). It is a crucial component of any online marketing strategy, as it helps websites attract more traffic and convert leads. The online landscape has undergone significant changes in recent years, making seo an ever-evolving field that requires constant adaptation to stay relevant.</description>
     </item>
     
     <item>
       <title>Mar 5</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-5/</link>
       <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/</guid>
-      <description>Query: What advice would you give me to optimize my current website for a better performance Mar 5  [!tldr] Mar 5 TLDR SEO advice from AI 🤖
- I can provide you with some general tips and insights on optimizing your current website for better performance, but i cannot offer specific advice based on your individual situation. Here are some broad recommendations:
-  Conduct thorough keyword research: knowing what keywords or phrases your target audience is searching for can help you optimize your content and your website&amp;rsquo;s meta descriptions and header tags to attract search engine crawlers.</description>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-5/</guid>
+      <description>Query: What advice would you give me to optimize my current website for a better performance Mar 5 [!tldr] Mar 5 TLDR SEO advice from AI 🤖
+I can provide you with some general tips and insights on optimizing your current website for better performance, but i cannot offer specific advice based on your individual situation. Here are some broad recommendations:
+Conduct thorough keyword research: knowing what keywords or phrases your target audience is searching for can help you optimize your content and your website&amp;rsquo;s meta descriptions and header tags to attract search engine crawlers.</description>
     </item>
     
   </channel>

@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>random on Obsidian notes</title>
-    <link>https://obsidiannotes.artefaktas.eu/tags/random/</link>
-    <description>Recent content in random on Obsidian notes</description>
+    <title>Random on Obsidian notes</title>
+    <link>http://localhost:1313/tags/random/</link>
+    <description>Recent content in Random on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Thu, 07 Mar 2024 10:03:49 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/random/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Mar 2024 11:05:11 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/random/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mar 7_10_05_11</title>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-7_10_05_11/</link>
+      <pubDate>Thu, 07 Mar 2024 11:05:11 +0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-7_10_05_11/</guid>
+      <description>Query: Give me a random quote about writing Mar 7_10_05_11 [!tldr] Mar 7_10_05_11 TLDR Text is too short to sumarize
+Here&amp;rsquo;s a random quote about writing, taken from the book &amp;ldquo;Writing down the bones: a practical guide to fiction writing&amp;rdquo; by francine prose:
+“Innovation is not just for artists. It’s for everyone.”
+Susan cain, author of Quiet: the power of introverts in a world that can&amp;rsquo;t stop talking. Author: tinyllama</description>
+    </item>
+    
     <item>
       <title>Mar 7</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal2024-03/mar-7/</link>
-      <pubDate>Thu, 07 Mar 2024 10:03:49 +0300</pubDate>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-7/</link>
+      <pubDate>Thu, 07 Mar 2024 10:28:39 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal2024-03/mar-7/</guid>
-      <description>Query: Give me a random quote Mar 7  [!tldr] Mar 7 TLDR Text is too short to sumarize
-  shel silverstein, american songwriter, poet, and author, best known for &amp;ldquo;the giving tree&amp;rdquo; and &amp;ldquo;where the sidewalk ends&amp;rdquo; - shel silverstein, american songwriter, poet, and author, best known for &amp;ldquo;the giving tree&amp;rdquo; and &amp;ldquo;where the sidewalk ends&amp;rdquo;  Author: tinyllama
-Inner Tags: #newpost #writtenbyai #ai #given #a #random #quote</description>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-7/</guid>
+      <description>Query: Get a random quote about writing Mar 7 [!tldr] Mar 7 TLDR Text is too short to sumarize
+&amp;ldquo;Writing is one of the most beautiful and transformative crafts we all know. It&amp;rsquo;s like a painter who paints with words, to create a canvas that speaks on its own. As I sit here, lost in my thoughts, writing this, i feel a sense of euphoria that i haven&amp;rsquo;t felt in some time.</description>
     </item>
     
   </channel>
