@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kanban on Obsidian notes</title>
-    <link>http://localhost:1313/tags/kanban/</link>
-    <description>Recent content in Kanban on Obsidian notes</description>
+    <title>kanban on Obsidian notes</title>
+    <link>https://obsidiannotes.artefaktas.eu/tags/kanban/</link>
+    <description>Recent content in kanban on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Fri, 15 Jul 2022 13:58:39 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/kanban/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jul 2022 13:58:39 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/kanban/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kanban Board</title>
-      <link>http://localhost:1313/posts/kanban/kanban-board/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/kanban/kanban-board/</guid>
-      <description>Preparing Make more templates Doing Add more posts Done Test rebuilds ! Archive Complete
+      <guid>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</guid>
+      <description>Preparing  Make more templates  Doing  Add more posts  Done  Test rebuilds !  Archive Complete
 %% kanban:settings
-{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>
+{&amp;quot;kanban-plugin&amp;quot;:&amp;quot;basic&amp;quot;} %%</description>
     </item>
     
   </channel>

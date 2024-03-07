@@ -2,16 +2,29 @@
     "version": "https://jsonfeed.org/version/1.1",
     "title": "Obsidian notes",
     "description": "  Obsidian notes",
-    "home_page_url": "http://localhost:1313/",
-    "feed_url": "http://localhost:1313/index.json",
-    "language": "en",
+    "home_page_url": "https://obsidiannotes.artefaktas.eu/",
+    "feed_url": "https://obsidiannotes.artefaktas.eu/index.json",
+    "language": "en-us",
     "items": [
+        {
+            "title": "Mar 7",
+            "date_published": "2024-03-07T10:28:39+03:00",
+            "date_modified": "2024-03-07T10:28:39+03:00",
+            "id": "https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-7/",
+            "url": "https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-7/",
+            "authors": [
+                {
+                  "name": "tinyllama"
+                }
+            ],
+            "content_html": "\u003ch1 id=\"query-get-a-random-quote-about-writing\"\u003eQuery: Get a random quote about writing\u003c/h1\u003e\n\u003ch1 id=\"mar-7\"\u003eMar 7\u003c/h1\u003e\n\u003cblockquote\u003e\n\u003cp\u003e[!tldr] Mar 7\nTLDR\nText is too short to sumarize\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003cul\u003e\n\u003cli\u003eunknown (born 1903-died 2000) - unknown (born 1903-died 2000)\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eAuthor: tinyllama\u003c/p\u003e\n\u003cp\u003eInner Tags: #newpost #createdbyAI\u003c/p\u003e\n\u003cp\u003eInternal links if exist:\u003c/p\u003e\n\u003cp\u003eExternal links if exist:\u003c/p\u003e\n\u003cp\u003eMarkdown external:\u003c/p\u003e\n"
+        },
         {
             "title": "Mar 6",
             "date_published": "2024-03-06T20:54:32+03:00",
             "date_modified": "2024-03-06T20:54:32+03:00",
-            "id": "http://localhost:1313/posts/journal/2024-03/mar-6/",
-            "url": "http://localhost:1313/posts/journal/2024-03/mar-6/",
+            "id": "https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-6/",
+            "url": "https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-6/",
             "authors": [
                 {
                   "name": "tinyllama"
@@ -23,8 +36,8 @@
             "title": "Mar 5",
             "date_published": "2024-03-05T11:23:37+03:00",
             "date_modified": "2024-03-05T11:23:37+03:00",
-            "id": "http://localhost:1313/posts/journal/2024-03/mar-5/",
-            "url": "http://localhost:1313/posts/journal/2024-03/mar-5/",
+            "id": "https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/",
+            "url": "https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/",
             "authors": [
                 {
                   "name": "tinyllama"
@@ -36,8 +49,8 @@
             "title": "Mar 4",
             "date_published": "2024-03-04T16:05:36+03:00",
             "date_modified": "2024-03-04T16:05:36+03:00",
-            "id": "http://localhost:1313/posts/journal/2024-03/mar-4/",
-            "url": "http://localhost:1313/posts/journal/2024-03/mar-4/",
+            "id": "https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-4/",
+            "url": "https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-4/",
             "authors": [
                 {
                   "name": "tinyllama"
@@ -49,8 +62,8 @@
             "title": "Mar 3",
             "date_published": "2024-03-03T19:33:27+03:00",
             "date_modified": "2024-03-03T19:33:27+03:00",
-            "id": "http://localhost:1313/posts/journal/2024-03/mar-3/",
-            "url": "http://localhost:1313/posts/journal/2024-03/mar-3/",
+            "id": "https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-3/",
+            "url": "https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-3/",
             "authors": [
                 {
                   "name": "Tiny Lama Model"
@@ -62,46 +75,46 @@
             "title": "Support",
             "date_published": "2022-07-19T14:07:15+03:00",
             "date_modified": "2022-07-19T14:07:15+03:00",
-            "id": "http://localhost:1313/support/",
-            "url": "http://localhost:1313/support/",
+            "id": "https://obsidiannotes.artefaktas.eu/support/",
+            "url": "https://obsidiannotes.artefaktas.eu/support/",
             "content_html": "\u003cdiv style=\"width:100%;text-align:center;height:auto;\"\u003e\n\u003ciframe id='kofiframe' src='https://ko-fi.com/artefaktas/?hidefeed=true\u0026widget=true\u0026embed=true\u0026preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='artefaktas'\u003e\u003c/iframe\u003e\n\u003c/div\u003e\n"
         },
         {
             "title": "Comments Policy",
             "date_published": "2022-07-16T11:50:05+03:00",
             "date_modified": "2022-07-16T11:50:05+03:00",
-            "id": "http://localhost:1313/comments-policy/",
-            "url": "http://localhost:1313/comments-policy/",
+            "id": "https://obsidiannotes.artefaktas.eu/comments-policy/",
+            "url": "https://obsidiannotes.artefaktas.eu/comments-policy/",
             "content_html": "\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eAll Rights Reserved:\u003c/strong\u003e The blog owner reserves the right to edit, delete, move, or mark as spam any and all comments. Blog owner has the right to block access to any one or group from commenting or from the entire blog.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eComment Form Guidelines:\u003c/strong\u003e The comment form must be filled in with a proper or legitimate sounding name and URL. Comments using keywords, spam or splog-like URLs, or suspicious information in the comment form will be deleted. Your comment will not be edited, it will simply be deleted in its entirety.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eLinks:\u003c/strong\u003e If you are leaving a comment and want to point to a link on your own or someone else’s site that is relevant to the topic, please feel free to do so. Keep in mind, however, the link \u003cstrong\u003emust\u003c/strong\u003e be relevant and add value to the blog and its readers. This blog is set up to automatically hold any comment with more than one link in moderation, which may delay your comment from appearing.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eThank You Comments:\u003c/strong\u003e Superficial comments that appear to be an attempt to get a backlink or get past comment moderation will be deleted.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eCopyright/Plagiarism:\u003c/strong\u003e If notice is received that a comment contains proprietary, copyrighted or plagiarized information, that comment will be deleted and the commenter may be blocked from further commenting.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eEmail Privacy:\u003c/strong\u003e Email addresses are required for commenting, and they are not published on the blog, nor shared. They may be used by the blog owner to privately contact the commenter.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eCommenter Privacy and Protection:\u003c/strong\u003e Comments containing email addresses, physical mail addresses, phone numbers, and any private and personal information will be deleted as soon as possible to protect the privacy of the affected party. To prevent such editing, never share private information within blog comments.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eLanguage and Manners:\u003c/strong\u003e Comments which include offensive or inappropriate language, or considered by the blog owner to be rude and offensive, will be deleted. Especially irritating are comments that disparage Microsoft (while asking for help with a Microsoft product). In the interest of fair play, no personal attacks are permitted in this blog\u0026rsquo;s comments. You may question or argue the content, but not attack the blogger, nor any other commenters. Failure to respect fellow participants on this blog could result in removal and blocked access.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eWhat To Do If Your Comment Does Not Appear:\u003c/strong\u003e Please be patient. Comments cannot always be approved right away. Please do not submit the same comment unless you think your original comment was not submitted correctly the first time.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eMultiple Comments on the same Post:\u003c/strong\u003e Multiple related comments on the same blog post (usually one after the other) may be combined into a single comment.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eIrrelevant Comments:\u003c/strong\u003e If a comment is irrelevant to a specific post, it may be moved to another post to which it is relevant, if possible. If no suitable post can be found, it may be deleted.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eComment Spam:\u003c/strong\u003e Any comment assumed to be possible comment spam will be deleted and marked as comment spam. In addition, it will be reported to services such as Project Honeypot, Botscout and/or Stop Forum Spam.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eLiability:\u003c/strong\u003e All comments within this blog are the responsibility of the individual commenter. By submitting a comment on this blog, you agree that the comment content is your own, and to hold this site, Jimmy Peña, and all subsidiaries and representatives harmless from any and all repercussions, damages, or liability.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eTrackbacks Are Comments:\u003c/strong\u003e All trackbacks will be treated inline with our Comments Policy.\u003c/li\u003e\n\u003c/ul\u003e\n"
         },
         {
             "title": "Contacts",
             "date_published": "2022-07-15T18:32:37+03:00",
             "date_modified": "2022-07-15T18:32:37+03:00",
-            "id": "http://localhost:1313/contacts/",
-            "url": "http://localhost:1313/contacts/",
+            "id": "https://obsidiannotes.artefaktas.eu/contacts/",
+            "url": "https://obsidiannotes.artefaktas.eu/contacts/",
             "content_html": "\u003cp\u003eEmail: \u003ca href=\"mailto:admin@artefaktas.eu\"\u003eadmin@artefaktas.eu\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003eMain website: artefaktas.eu\u003c/p\u003e\n\u003cp\u003ePhone number: will be added\u003c/p\u003e\n"
         },
         {
             "title": "About",
             "date_published": "2022-07-15T18:31:39+03:00",
             "date_modified": "2022-07-15T18:31:39+03:00",
-            "id": "http://localhost:1313/about/",
-            "url": "http://localhost:1313/about/",
+            "id": "https://obsidiannotes.artefaktas.eu/about/",
+            "url": "https://obsidiannotes.artefaktas.eu/about/",
             "content_html": "\u003ch1 id=\"about-content\"\u003eAbout content\u003c/h1\u003e\n\u003cp\u003eThis is a simple website generated purely from my personal Obsidian notes\u003c/p\u003e\n"
         },
         {
             "title": "Kanban Board",
             "date_published": "2022-07-15T13:58:39+03:00",
             "date_modified": "2022-07-15T13:58:39+03:00",
-            "id": "http://localhost:1313/posts/kanban/kanban-board/",
-            "url": "http://localhost:1313/posts/kanban/kanban-board/",
+            "id": "https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/",
+            "url": "https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/",
             "authors": [
                 {
                   "name": "Artefaktas"
                 }
             ],
-            "content_html": "\u003ch2 id=\"preparing\"\u003ePreparing\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cinput disabled=\"\" type=\"checkbox\"\u003e Make more templates\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"doing\"\u003eDoing\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cinput disabled=\"\" type=\"checkbox\"\u003e Add more posts\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"done\"\u003eDone\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cinput disabled=\"\" type=\"checkbox\"\u003e Test rebuilds !\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"archive\"\u003eArchive\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003eComplete\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e%% kanban:settings\u003c/p\u003e\n\u003cpre tabindex=\"0\"\u003e\u003ccode\u003e{\u0026#34;kanban-plugin\u0026#34;:\u0026#34;basic\u0026#34;}\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e%%\u003c/p\u003e\n"
+            "content_html": "\u003ch2 id=\"preparing\"\u003ePreparing\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cinput disabled=\"\" type=\"checkbox\"\u003e Make more templates\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"doing\"\u003eDoing\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cinput disabled=\"\" type=\"checkbox\"\u003e Add more posts\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"done\"\u003eDone\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cinput disabled=\"\" type=\"checkbox\"\u003e Test rebuilds !\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"archive\"\u003eArchive\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003eComplete\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e%% kanban:settings\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e{\u0026quot;kanban-plugin\u0026quot;:\u0026quot;basic\u0026quot;}\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e%%\u003c/p\u003e\n"
         }
         ]
 }

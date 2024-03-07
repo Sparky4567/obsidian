@@ -1,103 +1,199 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
-    <loc>http://localhost:1313/tags/advice/</loc>
-    <lastmod>2024-03-05T11:23:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
-    <lastmod>2024-03-05T11:23:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/from/</loc>
-    <lastmod>2024-03-05T11:23:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/journal/2024-03/mar-5/</loc>
-    <lastmod>2024-03-05T11:23:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/newpost/</loc>
-    <lastmod>2024-03-05T11:23:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-03-05T11:23:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-03-05T11:23:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/seo/</loc>
-    <lastmod>2024-03-05T11:23:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-03-05T11:23:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/writtenbyai/</loc>
-    <lastmod>2024-03-05T11:23:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/-ai/</loc>
-    <lastmod>2024-03-04T16:05:36+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/-by/</loc>
-    <lastmod>2024-03-04T16:05:36+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/-written/</loc>
-    <lastmod>2024-03-04T16:05:36+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/journal/2024-03/mar-4/</loc>
-    <lastmod>2024-03-04T16:05:36+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/poem/</loc>
-    <lastmod>2024-03-04T16:05:36+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/a/</loc>
-    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/bot/</loc>
-    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/is/</loc>
-    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/journal/2024-03/mar-3/</loc>
-    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/my/</loc>
-    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/scifi/</loc>
-    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/writer/</loc>
-    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/support/</loc>
-    <lastmod>2022-07-19T14:07:15+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/comments-policy/</loc>
-    <lastmod>2022-07-16T11:50:05+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/contacts/</loc>
-    <lastmod>2022-07-15T18:32:37+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/about/</loc>
-    <lastmod>2022-07-15T18:31:39+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/2022/</loc>
-    <lastmod>2022-07-15T13:58:39+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/bard/</loc>
-    <lastmod>2022-07-15T13:58:39+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/jul/</loc>
-    <lastmod>2022-07-15T13:58:39+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/kanban/</loc>
-    <lastmod>2022-07-15T13:58:39+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/kanban/kanban-board/</loc>
-    <lastmod>2022-07-15T13:58:39+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/new_post/</loc>
-    <lastmod>2022-07-15T13:58:39+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-7/</loc>
+    <lastmod>2024-03-07T10:28:39+03:00</lastmod>
   </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/newpost/</loc>
+    <lastmod>2024-03-07T10:28:39+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/</loc>
+    <lastmod>2024-03-07T10:28:39+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/posts/</loc>
+    <lastmod>2024-03-07T10:28:39+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/</loc>
+    <lastmod>2024-03-07T10:28:39+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/ai/</loc>
+    <lastmod>2024-03-06T20:54:32+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/about/</loc>
+    <lastmod>2024-03-06T20:54:32+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/article/</loc>
+    <lastmod>2024-03-06T20:54:32+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/engine/</loc>
+    <lastmod>2024-03-06T20:54:32+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-6/</loc>
+    <lastmod>2024-03-06T20:54:32+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/optimisation/</loc>
+    <lastmod>2024-03-06T20:54:32+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/search/</loc>
+    <lastmod>2024-03-06T20:54:32+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/seo/</loc>
+    <lastmod>2024-03-06T20:54:32+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/writtenbyai/</loc>
+    <lastmod>2024-03-06T20:54:32+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/advice/</loc>
+    <lastmod>2024-03-05T11:23:37+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/from/</loc>
+    <lastmod>2024-03-05T11:23:37+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/</loc>
+    <lastmod>2024-03-05T11:23:37+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/by/</loc>
+    <lastmod>2024-03-04T16:05:36+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/written/</loc>
+    <lastmod>2024-03-04T16:05:36+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-4/</loc>
+    <lastmod>2024-03-04T16:05:36+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/poem/</loc>
+    <lastmod>2024-03-04T16:05:36+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/a/</loc>
+    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/bot/</loc>
+    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/is/</loc>
+    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-3/</loc>
+    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/my/</loc>
+    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/scifi/</loc>
+    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/writer/</loc>
+    <lastmod>2024-03-03T19:33:27+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/support/</loc>
+    <lastmod>2022-07-19T14:07:15+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/comments-policy/</loc>
+    <lastmod>2022-07-16T11:50:05+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/contacts/</loc>
+    <lastmod>2022-07-15T18:32:37+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/about/</loc>
+    <lastmod>2022-07-15T18:31:39+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/2022/</loc>
+    <lastmod>2022-07-15T13:58:39+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/bard/</loc>
+    <lastmod>2022-07-15T13:58:39+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/jul/</loc>
+    <lastmod>2022-07-15T13:58:39+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/kanban/</loc>
+    <lastmod>2022-07-15T13:58:39+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</loc>
+    <lastmod>2022-07-15T13:58:39+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/tags/new_post/</loc>
+    <lastmod>2022-07-15T13:58:39+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://obsidiannotes.artefaktas.eu/categories/</loc>
+  </url>
+  
 </urlset>
