@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on Obsidian notes</title>
+    <link>http://localhost:1313/tags/data/</link>
+    <description>Recent content in Data on Obsidian notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+    <lastBuildDate>Fri, 08 Mar 2024 22:02:00 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mar 8</title>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-8/</link>
+      <pubDate>Fri, 08 Mar 2024 22:02:00 +0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-8/</guid>
+      <description>Query: Write a blog post on how to protect your data online, add recommended guidelines Mar 8 [!tldr] Mar 8 TLDR Text is too short to sumarize
+In today&amp;rsquo;s digital age, our personal and financial information is easily accessible online, making it more vulnerable than ever before. With cyber attacks becoming increasingly common, protecting ourselves and our data becomes even more crucial. In this blog post, we will provide you with essential tips on how to keep your data safe online, whether you&amp;rsquo;re a beginner or an experienced user.</description>
+    </item>
+    
+  </channel>
+</rss>
