@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Writing on Obsidian notes</title>
-    <link>http://localhost:1313/tags/writing/</link>
-    <description>Recent content in Writing on Obsidian notes</description>
+    <title>Skills on Obsidian notes</title>
+    <link>http://localhost:1313/tags/skills/</link>
+    <description>Recent content in Skills on Obsidian notes</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Mon, 11 Mar 2024 20:59:30 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Mar 2024 20:59:30 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/skills/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 11</title>
       <link>http://localhost:1313/posts/journal/2024-03/mar-11/</link>
