@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/journal/2022-10/Oct 22.md",
+                "file": "content/posts/journal/2024-03/Mar 7_10_07_51.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/journal/2022-10/Oct 22.md",
+                "file": "content/posts/journal/2024-03/Mar 7_10_07_51.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/journal/2022-10/Oct 22.md",
+                "file": "content/posts/journal/2024-03/Mar 7_10_07_51.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/journal/2022-10/Oct 22.md"
+                "file": "content/posts/journal/2024-03/Mar 7_10_07_51.md"
               }
             }
           },
@@ -183,6 +183,11 @@
   },
   "active": "e2d375cc380cc1c9",
   "lastOpenFiles": [
+    "content/posts/journal/2024-03/Mar 7_10_05_11.md",
+    "public/tags/newpost/page/2/index.html",
+    "public/tags/newpost/page/2",
+    "content/posts/journal/2024-03/Mar 7_09_59_05.md",
+    "content/posts/journal/2024-03/Mar 7_10_07_51.md",
     "content/posts/wp_posts/2022-10/Informacija blogo postams.md",
     "content/posts/wp_posts/2022-10/Apie temas.md",
     "content/about.md",
