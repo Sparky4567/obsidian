@@ -1,6 +1,9 @@
 [submodule "themes/terminal"]
 	path = themes/terminal
 	url = https://github.com/Sparky4567/terminal.git
-[submodule "themes/themes/terminal"]
-	path = themes/themes/terminal
-	url = https://github.com/Sparky4567/terminal.git
+[submodule "obsidian_ai_plugin"]
+	path = .obsidian/plugins/obsidian_ai_plugin
+	url = https://github.com/Sparky4567/obsidian_ai_plugin.git
+[submodule "themes/hugo-paper"]
+	path = themes/hugo-paper
+	url = https://github.com/Sparky4567/hugo-paper.git
