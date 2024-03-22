@@ -2,6 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/ai/</loc>
+    <lastmod>2024-03-18T20:26:21+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/assistant/</loc>
+    <lastmod>2024-03-18T20:26:21+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/blogpost/</loc>
+    <lastmod>2024-03-18T20:26:21+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/journal/2024-03/mar-18/</loc>
+    <lastmod>2024-03-18T20:26:21+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/newpost/</loc>
+    <lastmod>2024-03-18T20:26:21+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-03-18T20:26:21+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-03-18T20:26:21+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-03-18T20:26:21+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/writing/</loc>
+    <lastmod>2024-03-18T20:26:21+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/writtenbyai/</loc>
+    <lastmod>2024-03-18T20:26:21+03:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/entertainment/</loc>
     <lastmod>2024-03-17T21:36:34+03:00</lastmod>
   </url><url>
@@ -17,29 +47,11 @@
     <loc>http://localhost:1313/posts/journal/2024-03/mar-17/</loc>
     <lastmod>2024-03-17T21:36:34+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/newpost/</loc>
-    <lastmod>2024-03-17T21:36:34+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-03-17T21:36:34+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-03-17T21:36:34+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-03-17T21:36:34+03:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/ten/</loc>
     <lastmod>2024-03-17T21:36:34+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/than/</loc>
     <lastmod>2024-03-17T21:36:34+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/writtenbyai/</loc>
-    <lastmod>2024-03-17T21:36:34+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
-    <lastmod>2024-03-14T17:47:32+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/from/</loc>
     <lastmod>2024-03-14T17:47:32+03:00</lastmod>
@@ -78,9 +90,6 @@
     <lastmod>2024-03-12T14:14:02+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/why/</loc>
-    <lastmod>2024-03-12T14:14:02+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/writing/</loc>
     <lastmod>2024-03-12T14:14:02+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/how/</loc>
@@ -233,6 +242,21 @@
     <loc>http://localhost:1313/tags/scifi/</loc>
     <lastmod>2024-03-03T19:33:27+03:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/newpage/</loc>
+    <lastmod>2022-07-19T15:17:07+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/page/</loc>
+    <lastmod>2022-07-19T15:17:07+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/page/</loc>
+    <lastmod>2022-07-19T15:17:07+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/support/</loc>
+    <lastmod>2022-07-19T15:17:07+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/page/support/support/</loc>
+    <lastmod>2022-07-19T15:17:07+03:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/support/</loc>
     <lastmod>2022-07-19T14:07:15+03:00</lastmod>
   </url><url>
@@ -263,6 +287,24 @@
     <loc>http://localhost:1313/tags/new_post/</loc>
     <lastmod>2022-07-15T13:58:39+03:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/page/copyright/copyright/</loc>
+    <lastmod>2022-03-30T11:24:05+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/page/privacy/privacy/</loc>
+    <lastmod>2022-03-30T11:24:05+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/page/contact/contact/</loc>
+    <lastmod>2020-12-23T18:42:24+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/page/about/about/</loc>
+    <lastmod>2020-12-21T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/article/</loc>
+    <lastmod>2020-12-21T12:00:00-05:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2020-12-21T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/series/</loc>
   </url>
 </urlset>

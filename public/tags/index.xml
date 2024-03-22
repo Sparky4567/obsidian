@@ -1,12 +1,66 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Obsidian notes</title>
+    <title>Tags on Obsidian</title>
     <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on Obsidian notes</description>
+    <description>Recent content in Tags on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Sun, 17 Mar 2024 21:36:34 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Mar 2024 20:26:21 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai</title>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assistant</title>
+      <link>http://localhost:1313/tags/assistant/</link>
+      <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/assistant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blogpost</title>
+      <link>http://localhost:1313/tags/blogpost/</link>
+      <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/blogpost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Newpost</title>
+      <link>http://localhost:1313/tags/newpost/</link>
+      <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/newpost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writing</title>
+      <link>http://localhost:1313/tags/writing/</link>
+      <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/writing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writtenbyai</title>
+      <link>http://localhost:1313/tags/writtenbyai/</link>
+      <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/writtenbyai/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Entertainment</title>
       <link>http://localhost:1313/tags/entertainment/</link>
@@ -44,15 +98,6 @@
     </item>
     
     <item>
-      <title>Newpost</title>
-      <link>http://localhost:1313/tags/newpost/</link>
-      <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/newpost/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Ten</title>
       <link>http://localhost:1313/tags/ten/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
@@ -67,24 +112,6 @@
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/than/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Writtenbyai</title>
-      <link>http://localhost:1313/tags/writtenbyai/</link>
-      <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/writtenbyai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ai</title>
-      <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Thu, 14 Mar 2024 17:47:32 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/ai/</guid>
       <description></description>
     </item>
     
@@ -175,15 +202,6 @@
       <pubDate>Tue, 12 Mar 2024 14:14:02 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/why/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Writing</title>
-      <link>http://localhost:1313/tags/writing/</link>
-      <pubDate>Tue, 12 Mar 2024 14:14:02 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/writing/</guid>
       <description></description>
     </item>
     
@@ -535,6 +553,33 @@
       <pubDate>Sun, 03 Mar 2024 19:33:27 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/scifi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Newpage</title>
+      <link>http://localhost:1313/tags/newpage/</link>
+      <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/newpage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Page</title>
+      <link>http://localhost:1313/tags/page/</link>
+      <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/page/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Support</title>
+      <link>http://localhost:1313/tags/support/</link>
+      <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/support/</guid>
       <description></description>
     </item>
     

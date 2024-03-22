@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Assistant on Obsidian</title>
+    <link>http://localhost:1313/tags/assistant/</link>
+    <description>Recent content in Assistant on Obsidian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+    <lastBuildDate>Mon, 18 Mar 2024 20:26:21 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/assistant/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mar 18</title>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-18/</link>
+      <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-18/</guid>
+      <description>Prompt: Act as if you were a writer, write a blog post on why you like technology Mar 18 [!tldr] Mar 18 TLDR Text is too short to sumarize
+Dear Technology Lover,
+It&amp;rsquo;s hard to imagine a world without technology. From smartphones and laptops to smart home devices and online shopping, these technological innovations have become a staple in our daily lives. But why exactly do we love technology so much?</description>
+    </item>
+    
+  </channel>
+</rss>

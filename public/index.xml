@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Obsidian notes</title>
+    <title>Obsidian</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Obsidian notes</description>
+    <description>Recent content on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Sun, 17 Mar 2024 21:36:34 +0300</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Mar 2024 20:26:21 +0300</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mar 18</title>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-18/</link>
+      <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-18/</guid>
+      <description>Prompt: Act as if you were a writer, write a blog post on why you like technology Mar 18 [!tldr] Mar 18 TLDR Text is too short to sumarize
+Dear Technology Lover,
+It&amp;rsquo;s hard to imagine a world without technology. From smartphones and laptops to smart home devices and online shopping, these technological innovations have become a staple in our daily lives. But why exactly do we love technology so much?</description>
+    </item>
+    
     <item>
       <title>Mar 17</title>
       <link>http://localhost:1313/posts/journal/2024-03/mar-17/</link>
@@ -171,6 +182,15 @@ In the year 2050, artificial intelligence (ai) had already reached a level of ad
     
     <item>
       <title>Support</title>
+      <link>http://localhost:1313/page/support/support/</link>
+      <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
+      
+      <guid>http://localhost:1313/page/support/support/</guid>
+      <description>Support Artefaktas projects </description>
+    </item>
+    
+    <item>
+      <title>Support</title>
       <link>http://localhost:1313/support/</link>
       <pubDate>Tue, 19 Jul 2022 14:07:15 +0300</pubDate>
       
@@ -216,6 +236,50 @@ Phone number: will be added</description>
       <description>Preparing Make more templates Doing Add more posts Done Test rebuilds ! Archive Complete
 %% kanban:settings
 {&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>
+    </item>
+    
+    <item>
+      <title>copyright</title>
+      <link>http://localhost:1313/page/copyright/copyright/</link>
+      <pubDate>Wed, 30 Mar 2022 11:24:05 +0300</pubDate>
+      
+      <guid>http://localhost:1313/page/copyright/copyright/</guid>
+      <description>Copyright Copyright Disclaimer:
+All content included on this website, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of https://artefaktas.eu or its content suppliers and protected by international copyright laws. The compilation of all content on this site is the exclusive property of https://artefaktas.eu and protected by international copyright laws.
+The content on this website is provided for informational purposes only.</description>
+    </item>
+    
+    <item>
+      <title>Privacy</title>
+      <link>http://localhost:1313/page/privacy/privacy/</link>
+      <pubDate>Wed, 30 Mar 2022 11:24:05 +0300</pubDate>
+      
+      <guid>http://localhost:1313/page/privacy/privacy/</guid>
+      <description>Welcome to our Privacy Policy
+Your privacy is critically important to us.
+Artefaktas is located at:
+Artefaktas, Lithuania It is Artefaktas&amp;rsquo;s policy to respect your privacy regarding any information we may collect while operating our website. This Privacy Policy applies to https://nerdy.artefaktas.eu (hereinafter, &amp;ldquo;us&amp;rdquo;, &amp;ldquo;we&amp;rdquo;, or &amp;ldquo;https://nerdy.artefaktas.eu&amp;rdquo;). We respect your privacy and are committed to protecting personally identifiable information you may provide us through the Website. We have adopted this privacy policy (&amp;ldquo;Privacy Policy&amp;rdquo;) to explain what information may be collected on our Website, how we use this information, and under what circumstances we may disclose the information to third parties.</description>
+    </item>
+    
+    <item>
+      <title>Kontaktai</title>
+      <link>http://localhost:1313/page/contact/contact/</link>
+      <pubDate>Wed, 23 Dec 2020 18:42:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/page/contact/contact/</guid>
+      <description>Kontaktai bendradarbiavimui Email admin@artefaktas.eu </description>
+    </item>
+    
+    <item>
+      <title>Apie</title>
+      <link>http://localhost:1313/page/about/about/</link>
+      <pubDate>Mon, 21 Dec 2020 12:00:00 -0500</pubDate>
+      
+      <guid>http://localhost:1313/page/about/about/</guid>
+      <description>Svetainę kūrė ir administruoja artefaktas.eu tinklaraščio savininkas.
+Sveikinu apsilankius skiltyje &amp;ldquo;Apie&amp;rdquo;.
+Turite klausimų? Gal ko nepaminėjau?
+Galite parašyti elektroniniu paštu admin@artefaktas.eu ir būtinai atsakysiu.</description>
     </item>
     
   </channel>

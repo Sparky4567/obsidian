@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>From on Obsidian notes</title>
+    <title>From on Obsidian</title>
     <link>http://localhost:1313/tags/from/</link>
-    <description>Recent content in From on Obsidian notes</description>
+    <description>Recent content in From on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
     <lastBuildDate>Thu, 14 Mar 2024 17:47:32 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/from/index.xml" rel="self" type="application/rss+xml" />
