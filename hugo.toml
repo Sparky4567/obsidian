@@ -1,0 +1,67 @@
+baseURL = 'https://obsidiannotes.artefaktas.eu/'
+languageCode = 'en-us'
+title = 'Obsidian'
+theme = 'hugo-paper'
+ignoreFiles = ["/content/posts/templates.*","/content/posts/notion","/content/posts/wp_posts"]
+disqusShortname = "obsidian-1"
+
+[params]
+  color = 'linen'
+  avatar = 'https://pbs.twimg.com/profile_images/1617151724346642433/jTWgeG5o_400x400.jpg'
+  github = 'Sparky4567'
+  name = 'Artefaktas'
+  bio = 'Freelance blogger and programmer'
+  monoDarkIcon = true
+  
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "main"
+    name = "Main"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/tags/new_post/"
+    weight = 2
+  [[menu.main]]
+    identifier = "contacts"
+    name = "Contacts"
+    url = "/page/contact/contact/"
+    weight = 3
+  [[menu.main]]
+    identifier = "support"
+    name = "Support"
+    url = "/page/support/support/"
+    weight = 4
+  [[menu.main]]
+    identifier = "privacy"
+    name = "Privacy"
+    url = "/page/privacy/privacy/"
+    weight = 5
+  [[menu.main]]
+    identifier = "privacy"
+    name = "Privacy"
+    url = "/page/privacy/privacy/"
+    weight = 6
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/page/about/about/"
+    weight = 7
+  [[menu.main]]
+    identifier = "copyright"
+    name = "Copyright"
+    url = "/page/copyright/copyright/"
+    weight = 8
+
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
