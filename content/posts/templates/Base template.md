@@ -10,8 +10,9 @@ title: {{Title}}
 
 > [!tldr] {{Title}}
 > TLDR
+> Postas per trumpas tam, kad jį reikėtų reziumuoti.
 
-Inner Tags:
+Inner Tags: #new_post
 
 Internal links if exist:
 

@@ -6,7 +6,17 @@
     <description>Recent content in Newpost on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Mon, 18 Mar 2024 20:26:21 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/newpost/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Mar 2024 12:16:37 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/newpost/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mar 25</title>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-25/</link>
+      <pubDate>Mon, 25 Mar 2024 12:16:37 +0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-25/</guid>
+      <description>Prompt: Act as if you were a professional web developer, write a blog post explaining why it is a good idea to use serverless architecture Mar 25 [!tldr] Mar 25 TLDR Text is too short to sumarize
+In today&amp;rsquo;s fast-paced technology world, where even small businesses are embracing the cloud and adopting the latest trends, the concept of serverless architecture has gained immense popularity. Let me explain why it is a good idea to use serverless architecture for your web development projects.</description>
+    </item>
+    
     <item>
       <title>Mar 18</title>
       <link>http://localhost:1313/posts/journal/2024-03/mar-18/</link>
