@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Mon, 25 Mar 2024 12:16:37 +0300</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Mar 2024 17:14:21 +0300</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mar 26</title>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-26/</link>
+      <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-26/</guid>
+      <description>Prompt: Act as if you were a developer, write a post on how to stay productive by using nowaday technologies Mar 26 [!tldr] Mar 26 TLDR Text is too short to sumarize
+As a busy programmer and project manager, I know how important it is to be efficient and focused to get things done. Here are some nowaday technologies that can help you stay productive:
+Productivity software: There are several productivity software tools out there, such as Trello, Asana, Monday, and Monday.</description>
+    </item>
+    
     <item>
       <title>Mar 25</title>
       <link>http://localhost:1313/posts/journal/2024-03/mar-25/</link>

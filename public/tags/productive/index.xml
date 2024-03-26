@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Productive on Obsidian</title>
+    <link>http://localhost:1313/tags/productive/</link>
+    <description>Recent content in Productive on Obsidian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+    <lastBuildDate>Tue, 26 Mar 2024 17:14:21 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/productive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mar 26</title>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-26/</link>
+      <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-26/</guid>
+      <description>Prompt: Act as if you were a developer, write a post on how to stay productive by using nowaday technologies Mar 26 [!tldr] Mar 26 TLDR Text is too short to sumarize
+As a busy programmer and project manager, I know how important it is to be efficient and focused to get things done. Here are some nowaday technologies that can help you stay productive:
+Productivity software: There are several productivity software tools out there, such as Trello, Asana, Monday, and Monday.</description>
+    </item>
+    
+  </channel>
+</rss>
