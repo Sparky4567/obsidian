@@ -6,14 +6,25 @@
     <description>Recent content in Newpost on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Tue, 26 Mar 2024 17:14:21 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/newpost/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Mar 2024 11:47:04 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/newpost/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mar 27</title>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-27/</link>
+      <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-27/</guid>
+      <description>Prompt: Act as if you were a writer, write a blog post on how to create good titles for your journal entries Mar 27 [!tldr] Mar 27 TLDR Text is too short to sumarize
+Title: The Art of Creating Captivating Journal Entries
+As a writer, it&amp;rsquo;s essential to know that great titles are crucial for attracting and retaining readers. A well-crafted title not only captures the reader&amp;rsquo;s attention but also sets up expectations about what they can expect from your journal entries.</description>
+    </item>
+    
     <item>
       <title>Mar 26</title>
       <link>http://localhost:1313/posts/journal/2024-03/mar-26/</link>
       <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
       
       <guid>http://localhost:1313/posts/journal/2024-03/mar-26/</guid>
-      <description>Prompt: Act as if you were a developer, write a post on how to stay productive by using nowaday technologies Mar 26 [!tldr] Mar 26 TLDR Text is too short to sumarize
+      <description>Prompt: Act as if you were a developer, write a post on how to stay productive by using nowadays technologies Mar 26 [!tldr] Mar 26 TLDR Text is too short to sumarize
 As a busy programmer and project manager, I know how important it is to be efficient and focused to get things done. Here are some nowaday technologies that can help you stay productive:
 Productivity software: There are several productivity software tools out there, such as Trello, Asana, Monday, and Monday.</description>
     </item>

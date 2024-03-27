@@ -6,13 +6,67 @@
     <description>Recent content in Tags on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Tue, 26 Mar 2024 17:14:21 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Mar 2024 11:47:04 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advice</title>
+      <link>http://localhost:1313/tags/advice/</link>
+      <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/advice/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Ai</title>
       <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
+      <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Good</title>
+      <link>http://localhost:1313/tags/good/</link>
+      <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/good/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Newpost</title>
+      <link>http://localhost:1313/tags/newpost/</link>
+      <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/newpost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On</title>
+      <link>http://localhost:1313/tags/on/</link>
+      <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/on/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Titles</title>
+      <link>http://localhost:1313/tags/titles/</link>
+      <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/titles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writtenbyai</title>
+      <link>http://localhost:1313/tags/writtenbyai/</link>
+      <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/writtenbyai/</guid>
       <description></description>
     </item>
     
@@ -22,24 +76,6 @@
       <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/how/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Newpost</title>
-      <link>http://localhost:1313/tags/newpost/</link>
-      <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/newpost/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>On</title>
-      <link>http://localhost:1313/tags/on/</link>
-      <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/on/</guid>
       <description></description>
     </item>
     
@@ -67,15 +103,6 @@
       <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/to/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Writtenbyai</title>
-      <link>http://localhost:1313/tags/writtenbyai/</link>
-      <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/writtenbyai/</guid>
       <description></description>
     </item>
     
@@ -526,15 +553,6 @@
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/seo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Advice</title>
-      <link>http://localhost:1313/tags/advice/</link>
-      <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/advice/</guid>
       <description></description>
     </item>
     
