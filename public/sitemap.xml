@@ -2,6 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/ai/</loc>
+    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cope/</loc>
+    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/how/</loc>
+    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/journal/2024-03/mar-30/</loc>
+    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/newpost/</loc>
+    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/on/</loc>
+    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/stress/</loc>
+    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/to/</loc>
+    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/with/</loc>
+    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/writtenbyai/</loc>
+    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/a/</loc>
     <lastmod>2024-03-29T22:05:17+03:00</lastmod>
   </url><url>
@@ -23,43 +62,16 @@
     <loc>http://localhost:1313/tags/negativity/</loc>
     <lastmod>2024-03-29T22:05:17+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/newpost/</loc>
-    <lastmod>2024-03-29T22:05:17+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-03-29T22:05:17+03:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/positive/</loc>
     <lastmod>2024-03-29T22:05:17+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-03-29T22:05:17+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-03-29T22:05:17+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/writtenbyai/</loc>
-    <lastmod>2024-03-29T22:05:17+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
-    <lastmod>2024-03-28T12:15:07+03:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/creative/</loc>
-    <lastmod>2024-03-28T12:15:07+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/how/</loc>
     <lastmod>2024-03-28T12:15:07+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/journal/2024-03/mar-28/</loc>
     <lastmod>2024-03-28T12:15:07+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/on/</loc>
-    <lastmod>2024-03-28T12:15:07+03:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/stay/</loc>
-    <lastmod>2024-03-28T12:15:07+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/to/</loc>
     <lastmod>2024-03-28T12:15:07+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/advice/</loc>
