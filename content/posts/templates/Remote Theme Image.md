@@ -1,0 +1,1 @@
+{{< remoteimage src="https://www.dropbox.com/scl/fi/rpqopskwmylpydi6x3ubj/cyberpunkparot.jpg?rlkey=i7jlqb57zhm9azf8cnz20fasn&dl=1" position="center" style="border-radius: 8px;" >}}

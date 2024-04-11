@@ -2,6 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/ai/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/journal/2024-04/apr-11/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/basics/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/content/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/how/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/marketing/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/media/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/newpost/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/on/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/promote/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/seo/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/social/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/to/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/writtenbyai/</loc>
+    <lastmod>2024-04-11T14:39:42+03:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/journal/2024-04/apr-3/</loc>
     <lastmod>2024-04-03T11:43:05+03:00</lastmod>
   </url><url>
@@ -14,38 +65,11 @@
     <loc>http://localhost:1313/tags/create/</loc>
     <lastmod>2024-04-03T11:43:05+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/how/</loc>
-    <lastmod>2024-04-03T11:43:05+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/newpost/</loc>
-    <lastmod>2024-04-03T11:43:05+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-04-03T11:43:05+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/on/</loc>
-    <lastmod>2024-04-03T11:43:05+03:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/post/</loc>
-    <lastmod>2024-04-03T11:43:05+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-04-03T11:43:05+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-04-03T11:43:05+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/to/</loc>
     <lastmod>2024-04-03T11:43:05+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/tutorial/</loc>
     <lastmod>2024-04-03T11:43:05+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/writtenbyai/</loc>
-    <lastmod>2024-04-03T11:43:05+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
-    <lastmod>2024-03-30T13:03:11+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cope/</loc>
     <lastmod>2024-03-30T13:03:11+03:00</lastmod>
@@ -163,9 +187,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/racommendation/</loc>
     <lastmod>2024-03-14T17:47:32+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/content/</loc>
-    <lastmod>2024-03-13T23:21:41+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/journal/2024-03/mar-13/</loc>
     <lastmod>2024-03-13T23:21:41+03:00</lastmod>
@@ -288,9 +309,6 @@
     <lastmod>2024-03-06T20:54:32+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/search/</loc>
-    <lastmod>2024-03-06T20:54:32+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/seo/</loc>
     <lastmod>2024-03-06T20:54:32+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/journal/2024-03/mar-5/</loc>
