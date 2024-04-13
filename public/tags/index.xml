@@ -6,22 +6,85 @@
     <description>Recent content in Tags on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Fri, 12 Apr 2024 18:04:32 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Apr 2024 20:11:30 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ai</title>
       <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Fri, 12 Apr 2024 18:04:32 +0300</pubDate>
+      <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/ai/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Integrate</title>
+      <link>http://localhost:1313/tags/integrate/</link>
+      <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/integrate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Into</title>
+      <link>http://localhost:1313/tags/into/</link>
+      <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/into/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Newpost</title>
       <link>http://localhost:1313/tags/newpost/</link>
-      <pubDate>Fri, 12 Apr 2024 18:04:32 +0300</pubDate>
+      <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/newpost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>People</title>
+      <link>http://localhost:1313/tags/people/</link>
+      <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/people/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Should</title>
+      <link>http://localhost:1313/tags/should/</link>
+      <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/should/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Why</title>
+      <link>http://localhost:1313/tags/why/</link>
+      <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/why/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workflow</title>
+      <link>http://localhost:1313/tags/workflow/</link>
+      <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/workflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writtenbyai</title>
+      <link>http://localhost:1313/tags/writtenbyai/</link>
+      <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/writtenbyai/</guid>
       <description></description>
     </item>
     
@@ -31,15 +94,6 @@
       <pubDate>Fri, 12 Apr 2024 18:04:32 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/poetry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Writtenbyai</title>
-      <link>http://localhost:1313/tags/writtenbyai/</link>
-      <pubDate>Fri, 12 Apr 2024 18:04:32 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/writtenbyai/</guid>
       <description></description>
     </item>
     
@@ -481,15 +535,6 @@
       <pubDate>Tue, 12 Mar 2024 14:14:02 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/is/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Why</title>
-      <link>http://localhost:1313/tags/why/</link>
-      <pubDate>Tue, 12 Mar 2024 14:14:02 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/why/</guid>
       <description></description>
     </item>
     
