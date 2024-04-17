@@ -6,13 +6,67 @@
     <description>Recent content in Tags on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Mon, 15 Apr 2024 12:59:04 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Apr 2024 17:08:11 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ai</title>
       <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
+      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Content</title>
+      <link>http://localhost:1313/tags/content/</link>
+      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/content/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Friendly</title>
+      <link>http://localhost:1313/tags/friendly/</link>
+      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/friendly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Newpost</title>
+      <link>http://localhost:1313/tags/newpost/</link>
+      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/newpost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On</title>
+      <link>http://localhost:1313/tags/on/</link>
+      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/on/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seo</title>
+      <link>http://localhost:1313/tags/seo/</link>
+      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/seo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writtenbyai</title>
+      <link>http://localhost:1313/tags/writtenbyai/</link>
+      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/writtenbyai/</guid>
       <description></description>
     </item>
     
@@ -44,29 +98,11 @@
     </item>
     
     <item>
-      <title>Newpost</title>
-      <link>http://localhost:1313/tags/newpost/</link>
-      <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/newpost/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Some</title>
       <link>http://localhost:1313/tags/some/</link>
       <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/some/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Writtenbyai</title>
-      <link>http://localhost:1313/tags/writtenbyai/</link>
-      <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/writtenbyai/</guid>
       <description></description>
     </item>
     
@@ -143,15 +179,6 @@
     </item>
     
     <item>
-      <title>Content</title>
-      <link>http://localhost:1313/tags/content/</link>
-      <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/content/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>How</title>
       <link>http://localhost:1313/tags/how/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
@@ -179,29 +206,11 @@
     </item>
     
     <item>
-      <title>On</title>
-      <link>http://localhost:1313/tags/on/</link>
-      <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/on/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Promote</title>
       <link>http://localhost:1313/tags/promote/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/promote/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Seo</title>
-      <link>http://localhost:1313/tags/seo/</link>
-      <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/seo/</guid>
       <description></description>
     </item>
     
