@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on Obsidian</title>
-    <link>http://localhost:1313/tags/tutorial/</link>
+    <link>http://localhost:35907/tags/tutorial/</link>
     <description>Recent content in Tutorial on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Wed, 03 Apr 2024 11:43:05 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Apr 2024 11:43:05 +0300</lastBuildDate><atom:link href="http://localhost:35907/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apr 3</title>
-      <link>http://localhost:1313/posts/journal/2024-04/apr-3/</link>
+      <link>http://localhost:35907/posts/journal/2024-04/apr-3/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-04/apr-3/</guid>
+      <guid>http://localhost:35907/posts/journal/2024-04/apr-3/</guid>
       <description>Prompt: Act as if you were a writer, write a tutorial on how to create an awesome blog post Apr 3 [!tldr] Apr 3 TLDR Text is too short to sumarize
 Dear Reader,
 Welcome to our blog! We&amp;rsquo;re excited to share with you our latest post that will help you understand how to create an outstanding blog post. Whether you&amp;rsquo;re a beginner or a seasoned writer, this guide will provide you with the knowledge and skills you need to succeed in creating engaging content for your readers.</description>

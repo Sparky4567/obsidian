@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jul on Obsidian</title>
-    <link>http://localhost:1313/tags/jul/</link>
+    <link>http://localhost:35907/tags/jul/</link>
     <description>Recent content in Jul on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Fri, 15 Jul 2022 13:58:39 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/jul/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jul 2022 13:58:39 +0300</lastBuildDate><atom:link href="http://localhost:35907/tags/jul/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kanban Board</title>
-      <link>http://localhost:1313/posts/kanban/kanban-board/</link>
+      <link>http://localhost:35907/posts/kanban/kanban-board/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/kanban/kanban-board/</guid>
+      <guid>http://localhost:35907/posts/kanban/kanban-board/</guid>
       <description>Preparing Make more templates Doing Add more posts Done Test rebuilds ! Archive Complete
 %% kanban:settings
 {&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>

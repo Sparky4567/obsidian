@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Day on Obsidian</title>
-    <link>http://localhost:1313/tags/day/</link>
+    <link>http://localhost:35907/tags/day/</link>
     <description>Recent content in Day on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Sat, 09 Mar 2024 13:11:27 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/day/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Mar 2024 13:11:27 +0300</lastBuildDate><atom:link href="http://localhost:35907/tags/day/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 9</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-9/</link>
+      <link>http://localhost:35907/posts/journal/2024-03/mar-9/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-9/</guid>
+      <guid>http://localhost:35907/posts/journal/2024-03/mar-9/</guid>
       <description>Query: Act as if you were a blog owner, write a short post about your day Mar 9 [!tldr] Mar 9 TLDR Text is too short to sumarize
 Dear readers,
 I hope this post finds you well today! As always, I&amp;rsquo;m excited to share some of the highlights of my busy day.

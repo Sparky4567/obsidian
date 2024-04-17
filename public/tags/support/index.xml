@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Support on Obsidian</title>
-    <link>http://localhost:1313/tags/support/</link>
+    <link>http://localhost:35907/tags/support/</link>
     <description>Recent content in Support on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Tue, 19 Jul 2022 15:17:07 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/support/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jul 2022 15:17:07 +0300</lastBuildDate><atom:link href="http://localhost:35907/tags/support/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Support</title>
-      <link>http://localhost:1313/page/support/support/</link>
+      <link>http://localhost:35907/page/support/support/</link>
       <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
       
-      <guid>http://localhost:1313/page/support/support/</guid>
+      <guid>http://localhost:35907/page/support/support/</guid>
       <description>Support Artefaktas projects </description>
     </item>
     
