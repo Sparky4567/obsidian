@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Serverless on Obsidian</title>
-    <link>http://localhost:35907/tags/serverless/</link>
+    <link>http://localhost:1313/tags/serverless/</link>
     <description>Recent content in Serverless on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Mon, 25 Mar 2024 12:16:37 +0300</lastBuildDate><atom:link href="http://localhost:35907/tags/serverless/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Mar 2024 12:16:37 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/serverless/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 25</title>
-      <link>http://localhost:35907/posts/journal/2024-03/mar-25/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-25/</link>
       <pubDate>Mon, 25 Mar 2024 12:16:37 +0300</pubDate>
       
-      <guid>http://localhost:35907/posts/journal/2024-03/mar-25/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-25/</guid>
       <description>Prompt: Act as if you were a professional web developer, write a blog post explaining why it is a good idea to use serverless architecture Mar 25 [!tldr] Mar 25 TLDR Text is too short to sumarize
 In today&amp;rsquo;s fast-paced technology world, where even small businesses are embracing the cloud and adopting the latest trends, the concept of serverless architecture has gained immense popularity. Let me explain why it is a good idea to use serverless architecture for your web development projects.</description>
     </item>

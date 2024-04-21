@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Friendly on Obsidian</title>
-    <link>http://localhost:35907/tags/friendly/</link>
+    <link>http://localhost:1313/tags/friendly/</link>
     <description>Recent content in Friendly on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Wed, 17 Apr 2024 17:08:11 +0300</lastBuildDate><atom:link href="http://localhost:35907/tags/friendly/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Apr 2024 17:08:11 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/friendly/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apr 17</title>
-      <link>http://localhost:35907/posts/journal/2024-04/apr-17/</link>
+      <link>http://localhost:1313/posts/journal/2024-04/apr-17/</link>
       <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
       
-      <guid>http://localhost:35907/posts/journal/2024-04/apr-17/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-04/apr-17/</guid>
       <description>Prompt: Act as if you were a seo expert, give me some quality tips on how to create seo-friendly content Apr 17 [!tldr] Apr 17 TLDR Text is too short to sumarize
 Utilize keywords: The more targeted and relevant your keywords are, the better. Use them naturally in your content but also don&amp;rsquo;t overdo it as this can be seen as spamming by search engines.
 Use headings: Incorporate headings in your content to break it up into smaller chunks for easier reading.</description>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Less on Obsidian</title>
-    <link>http://localhost:35907/tags/less/</link>
+    <link>http://localhost:1313/tags/less/</link>
     <description>Recent content in Less on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Sun, 17 Mar 2024 21:36:34 +0300</lastBuildDate><atom:link href="http://localhost:35907/tags/less/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Mar 2024 21:36:34 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/less/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 17</title>
-      <link>http://localhost:35907/posts/journal/2024-03/mar-17/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-17/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
-      <guid>http://localhost:35907/posts/journal/2024-03/mar-17/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-17/</guid>
       <description>Prompt: Act as if you were a writer, write a blog post on how to entertain oneself for less than 10 euros Mar 17 [!tldr] Mar 17 TLDR Text is too short to sumarize
 As a busy professional juggling multiple tasks and deadlines, it&amp;rsquo;s easy to get caught up in the daily grind. Sometimes, all it takes is a few quarters at the coffee shop or a quick walk around the block to recharge your batteries.</description>
     </item>

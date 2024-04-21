@@ -2,944 +2,944 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Obsidian</title>
-    <link>http://localhost:35907/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Wed, 17 Apr 2024 17:08:11 +0300</lastBuildDate><atom:link href="http://localhost:35907/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Apr 2024 17:08:11 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ai</title>
-      <link>http://localhost:35907/tags/ai/</link>
+      <link>http://localhost:1313/tags/ai/</link>
       <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/ai/</guid>
+      <guid>http://localhost:1313/tags/ai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Content</title>
-      <link>http://localhost:35907/tags/content/</link>
+      <link>http://localhost:1313/tags/content/</link>
       <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/content/</guid>
+      <guid>http://localhost:1313/tags/content/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Friendly</title>
-      <link>http://localhost:35907/tags/friendly/</link>
+      <link>http://localhost:1313/tags/friendly/</link>
       <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/friendly/</guid>
+      <guid>http://localhost:1313/tags/friendly/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Newpost</title>
-      <link>http://localhost:35907/tags/newpost/</link>
+      <link>http://localhost:1313/tags/newpost/</link>
       <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/newpost/</guid>
+      <guid>http://localhost:1313/tags/newpost/</guid>
       <description></description>
     </item>
     
     <item>
       <title>On</title>
-      <link>http://localhost:35907/tags/on/</link>
+      <link>http://localhost:1313/tags/on/</link>
       <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/on/</guid>
+      <guid>http://localhost:1313/tags/on/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Seo</title>
-      <link>http://localhost:35907/tags/seo/</link>
+      <link>http://localhost:1313/tags/seo/</link>
       <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/seo/</guid>
+      <guid>http://localhost:1313/tags/seo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Writtenbyai</title>
-      <link>http://localhost:35907/tags/writtenbyai/</link>
+      <link>http://localhost:1313/tags/writtenbyai/</link>
       <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/writtenbyai/</guid>
+      <guid>http://localhost:1313/tags/writtenbyai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Art</title>
-      <link>http://localhost:35907/tags/art/</link>
+      <link>http://localhost:1313/tags/art/</link>
       <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/art/</guid>
+      <guid>http://localhost:1313/tags/art/</guid>
       <description></description>
     </item>
     
     <item>
       <title>For</title>
-      <link>http://localhost:35907/tags/for/</link>
+      <link>http://localhost:1313/tags/for/</link>
       <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/for/</guid>
+      <guid>http://localhost:1313/tags/for/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ideas</title>
-      <link>http://localhost:35907/tags/ideas/</link>
+      <link>http://localhost:1313/tags/ideas/</link>
       <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/ideas/</guid>
+      <guid>http://localhost:1313/tags/ideas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Some</title>
-      <link>http://localhost:35907/tags/some/</link>
+      <link>http://localhost:1313/tags/some/</link>
       <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/some/</guid>
+      <guid>http://localhost:1313/tags/some/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Integrate</title>
-      <link>http://localhost:35907/tags/integrate/</link>
+      <link>http://localhost:1313/tags/integrate/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/integrate/</guid>
+      <guid>http://localhost:1313/tags/integrate/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Into</title>
-      <link>http://localhost:35907/tags/into/</link>
+      <link>http://localhost:1313/tags/into/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/into/</guid>
+      <guid>http://localhost:1313/tags/into/</guid>
       <description></description>
     </item>
     
     <item>
       <title>People</title>
-      <link>http://localhost:35907/tags/people/</link>
+      <link>http://localhost:1313/tags/people/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/people/</guid>
+      <guid>http://localhost:1313/tags/people/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Should</title>
-      <link>http://localhost:35907/tags/should/</link>
+      <link>http://localhost:1313/tags/should/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/should/</guid>
+      <guid>http://localhost:1313/tags/should/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Why</title>
-      <link>http://localhost:35907/tags/why/</link>
+      <link>http://localhost:1313/tags/why/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/why/</guid>
+      <guid>http://localhost:1313/tags/why/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Workflow</title>
-      <link>http://localhost:35907/tags/workflow/</link>
+      <link>http://localhost:1313/tags/workflow/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/workflow/</guid>
+      <guid>http://localhost:1313/tags/workflow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Poetry</title>
-      <link>http://localhost:35907/tags/poetry/</link>
+      <link>http://localhost:1313/tags/poetry/</link>
       <pubDate>Fri, 12 Apr 2024 18:04:32 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/poetry/</guid>
+      <guid>http://localhost:1313/tags/poetry/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Basics</title>
-      <link>http://localhost:35907/tags/basics/</link>
+      <link>http://localhost:1313/tags/basics/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/basics/</guid>
+      <guid>http://localhost:1313/tags/basics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How</title>
-      <link>http://localhost:35907/tags/how/</link>
+      <link>http://localhost:1313/tags/how/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/how/</guid>
+      <guid>http://localhost:1313/tags/how/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Marketing</title>
-      <link>http://localhost:35907/tags/marketing/</link>
+      <link>http://localhost:1313/tags/marketing/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/marketing/</guid>
+      <guid>http://localhost:1313/tags/marketing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Media</title>
-      <link>http://localhost:35907/tags/media/</link>
+      <link>http://localhost:1313/tags/media/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/media/</guid>
+      <guid>http://localhost:1313/tags/media/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Promote</title>
-      <link>http://localhost:35907/tags/promote/</link>
+      <link>http://localhost:1313/tags/promote/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/promote/</guid>
+      <guid>http://localhost:1313/tags/promote/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Social</title>
-      <link>http://localhost:35907/tags/social/</link>
+      <link>http://localhost:1313/tags/social/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/social/</guid>
+      <guid>http://localhost:1313/tags/social/</guid>
       <description></description>
     </item>
     
     <item>
       <title>To</title>
-      <link>http://localhost:35907/tags/to/</link>
+      <link>http://localhost:1313/tags/to/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/to/</guid>
+      <guid>http://localhost:1313/tags/to/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Awesome</title>
-      <link>http://localhost:35907/tags/awesome/</link>
+      <link>http://localhost:1313/tags/awesome/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/awesome/</guid>
+      <guid>http://localhost:1313/tags/awesome/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blog</title>
-      <link>http://localhost:35907/tags/blog/</link>
+      <link>http://localhost:1313/tags/blog/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/blog/</guid>
+      <guid>http://localhost:1313/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Create</title>
-      <link>http://localhost:35907/tags/create/</link>
+      <link>http://localhost:1313/tags/create/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/create/</guid>
+      <guid>http://localhost:1313/tags/create/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Post</title>
-      <link>http://localhost:35907/tags/post/</link>
+      <link>http://localhost:1313/tags/post/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/post/</guid>
+      <guid>http://localhost:1313/tags/post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tutorial</title>
-      <link>http://localhost:35907/tags/tutorial/</link>
+      <link>http://localhost:1313/tags/tutorial/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/tutorial/</guid>
+      <guid>http://localhost:1313/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cope</title>
-      <link>http://localhost:35907/tags/cope/</link>
+      <link>http://localhost:1313/tags/cope/</link>
       <pubDate>Sat, 30 Mar 2024 13:03:11 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/cope/</guid>
+      <guid>http://localhost:1313/tags/cope/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stress</title>
-      <link>http://localhost:35907/tags/stress/</link>
+      <link>http://localhost:1313/tags/stress/</link>
       <pubDate>Sat, 30 Mar 2024 13:03:11 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/stress/</guid>
+      <guid>http://localhost:1313/tags/stress/</guid>
       <description></description>
     </item>
     
     <item>
       <title>With</title>
-      <link>http://localhost:35907/tags/with/</link>
+      <link>http://localhost:1313/tags/with/</link>
       <pubDate>Sat, 30 Mar 2024 13:03:11 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/with/</guid>
+      <guid>http://localhost:1313/tags/with/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A</title>
-      <link>http://localhost:35907/tags/a/</link>
+      <link>http://localhost:1313/tags/a/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/a/</guid>
+      <guid>http://localhost:1313/tags/a/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Expressing</title>
-      <link>http://localhost:35907/tags/expressing/</link>
+      <link>http://localhost:1313/tags/expressing/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/expressing/</guid>
+      <guid>http://localhost:1313/tags/expressing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>In</title>
-      <link>http://localhost:35907/tags/in/</link>
+      <link>http://localhost:1313/tags/in/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/in/</guid>
+      <guid>http://localhost:1313/tags/in/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Manner</title>
-      <link>http://localhost:35907/tags/manner/</link>
+      <link>http://localhost:1313/tags/manner/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/manner/</guid>
+      <guid>http://localhost:1313/tags/manner/</guid>
       <description></description>
     </item>
     
     <item>
       <title>More</title>
-      <link>http://localhost:35907/tags/more/</link>
+      <link>http://localhost:1313/tags/more/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/more/</guid>
+      <guid>http://localhost:1313/tags/more/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Negativity</title>
-      <link>http://localhost:35907/tags/negativity/</link>
+      <link>http://localhost:1313/tags/negativity/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/negativity/</guid>
+      <guid>http://localhost:1313/tags/negativity/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Positive</title>
-      <link>http://localhost:35907/tags/positive/</link>
+      <link>http://localhost:1313/tags/positive/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/positive/</guid>
+      <guid>http://localhost:1313/tags/positive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Creative</title>
-      <link>http://localhost:35907/tags/creative/</link>
+      <link>http://localhost:1313/tags/creative/</link>
       <pubDate>Thu, 28 Mar 2024 12:15:07 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/creative/</guid>
+      <guid>http://localhost:1313/tags/creative/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stay</title>
-      <link>http://localhost:35907/tags/stay/</link>
+      <link>http://localhost:1313/tags/stay/</link>
       <pubDate>Thu, 28 Mar 2024 12:15:07 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/stay/</guid>
+      <guid>http://localhost:1313/tags/stay/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Advice</title>
-      <link>http://localhost:35907/tags/advice/</link>
+      <link>http://localhost:1313/tags/advice/</link>
       <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/advice/</guid>
+      <guid>http://localhost:1313/tags/advice/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Good</title>
-      <link>http://localhost:35907/tags/good/</link>
+      <link>http://localhost:1313/tags/good/</link>
       <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/good/</guid>
+      <guid>http://localhost:1313/tags/good/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Titles</title>
-      <link>http://localhost:35907/tags/titles/</link>
+      <link>http://localhost:1313/tags/titles/</link>
       <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/titles/</guid>
+      <guid>http://localhost:1313/tags/titles/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Productive</title>
-      <link>http://localhost:35907/tags/productive/</link>
+      <link>http://localhost:1313/tags/productive/</link>
       <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/productive/</guid>
+      <guid>http://localhost:1313/tags/productive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Architecture</title>
-      <link>http://localhost:35907/tags/architecture/</link>
+      <link>http://localhost:1313/tags/architecture/</link>
       <pubDate>Mon, 25 Mar 2024 12:16:37 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/architecture/</guid>
+      <guid>http://localhost:1313/tags/architecture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Serverless</title>
-      <link>http://localhost:35907/tags/serverless/</link>
+      <link>http://localhost:1313/tags/serverless/</link>
       <pubDate>Mon, 25 Mar 2024 12:16:37 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/serverless/</guid>
+      <guid>http://localhost:1313/tags/serverless/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Assistant</title>
-      <link>http://localhost:35907/tags/assistant/</link>
+      <link>http://localhost:1313/tags/assistant/</link>
       <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/assistant/</guid>
+      <guid>http://localhost:1313/tags/assistant/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blogpost</title>
-      <link>http://localhost:35907/tags/blogpost/</link>
+      <link>http://localhost:1313/tags/blogpost/</link>
       <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/blogpost/</guid>
+      <guid>http://localhost:1313/tags/blogpost/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Writing</title>
-      <link>http://localhost:35907/tags/writing/</link>
+      <link>http://localhost:1313/tags/writing/</link>
       <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/writing/</guid>
+      <guid>http://localhost:1313/tags/writing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Entertainment</title>
-      <link>http://localhost:35907/tags/entertainment/</link>
+      <link>http://localhost:1313/tags/entertainment/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/entertainment/</guid>
+      <guid>http://localhost:1313/tags/entertainment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Euros</title>
-      <link>http://localhost:35907/tags/euros/</link>
+      <link>http://localhost:1313/tags/euros/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/euros/</guid>
+      <guid>http://localhost:1313/tags/euros/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Less</title>
-      <link>http://localhost:35907/tags/less/</link>
+      <link>http://localhost:1313/tags/less/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/less/</guid>
+      <guid>http://localhost:1313/tags/less/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ten</title>
-      <link>http://localhost:35907/tags/ten/</link>
+      <link>http://localhost:1313/tags/ten/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/ten/</guid>
+      <guid>http://localhost:1313/tags/ten/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Than</title>
-      <link>http://localhost:35907/tags/than/</link>
+      <link>http://localhost:1313/tags/than/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/than/</guid>
+      <guid>http://localhost:1313/tags/than/</guid>
       <description></description>
     </item>
     
     <item>
       <title>From</title>
-      <link>http://localhost:35907/tags/from/</link>
+      <link>http://localhost:1313/tags/from/</link>
       <pubDate>Thu, 14 Mar 2024 17:47:32 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/from/</guid>
+      <guid>http://localhost:1313/tags/from/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Movie</title>
-      <link>http://localhost:35907/tags/movie/</link>
+      <link>http://localhost:1313/tags/movie/</link>
       <pubDate>Thu, 14 Mar 2024 17:47:32 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/movie/</guid>
+      <guid>http://localhost:1313/tags/movie/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Racommendation</title>
-      <link>http://localhost:35907/tags/racommendation/</link>
+      <link>http://localhost:1313/tags/racommendation/</link>
       <pubDate>Thu, 14 Mar 2024 17:47:32 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/racommendation/</guid>
+      <guid>http://localhost:1313/tags/racommendation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Protecting</title>
-      <link>http://localhost:35907/tags/protecting/</link>
+      <link>http://localhost:1313/tags/protecting/</link>
       <pubDate>Wed, 13 Mar 2024 23:21:41 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/protecting/</guid>
+      <guid>http://localhost:1313/tags/protecting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Written</title>
-      <link>http://localhost:35907/tags/written/</link>
+      <link>http://localhost:1313/tags/written/</link>
       <pubDate>Wed, 13 Mar 2024 23:21:41 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/written/</guid>
+      <guid>http://localhost:1313/tags/written/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Beneficial</title>
-      <link>http://localhost:35907/tags/beneficial/</link>
+      <link>http://localhost:1313/tags/beneficial/</link>
       <pubDate>Tue, 12 Mar 2024 14:14:02 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/beneficial/</guid>
+      <guid>http://localhost:1313/tags/beneficial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Is</title>
-      <link>http://localhost:35907/tags/is/</link>
+      <link>http://localhost:1313/tags/is/</link>
       <pubDate>Tue, 12 Mar 2024 14:14:02 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/is/</guid>
+      <guid>http://localhost:1313/tags/is/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Improve</title>
-      <link>http://localhost:35907/tags/improve/</link>
+      <link>http://localhost:1313/tags/improve/</link>
       <pubDate>Mon, 11 Mar 2024 20:59:30 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/improve/</guid>
+      <guid>http://localhost:1313/tags/improve/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ones</title>
-      <link>http://localhost:35907/tags/ones/</link>
+      <link>http://localhost:1313/tags/ones/</link>
       <pubDate>Mon, 11 Mar 2024 20:59:30 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/ones/</guid>
+      <guid>http://localhost:1313/tags/ones/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Skills</title>
-      <link>http://localhost:35907/tags/skills/</link>
+      <link>http://localhost:1313/tags/skills/</link>
       <pubDate>Mon, 11 Mar 2024 20:59:30 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/skills/</guid>
+      <guid>http://localhost:1313/tags/skills/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Awareness</title>
-      <link>http://localhost:35907/tags/awareness/</link>
+      <link>http://localhost:1313/tags/awareness/</link>
       <pubDate>Sun, 10 Mar 2024 15:18:48 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/awareness/</guid>
+      <guid>http://localhost:1313/tags/awareness/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Brand</title>
-      <link>http://localhost:35907/tags/brand/</link>
+      <link>http://localhost:1313/tags/brand/</link>
       <pubDate>Sun, 10 Mar 2024 15:18:48 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/brand/</guid>
+      <guid>http://localhost:1313/tags/brand/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Raising</title>
-      <link>http://localhost:35907/tags/raising/</link>
+      <link>http://localhost:1313/tags/raising/</link>
       <pubDate>Sun, 10 Mar 2024 15:18:48 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/raising/</guid>
+      <guid>http://localhost:1313/tags/raising/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Another</title>
-      <link>http://localhost:35907/tags/another/</link>
+      <link>http://localhost:1313/tags/another/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/another/</guid>
+      <guid>http://localhost:1313/tags/another/</guid>
       <description></description>
     </item>
     
     <item>
       <title>As</title>
-      <link>http://localhost:35907/tags/as/</link>
+      <link>http://localhost:1313/tags/as/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/as/</guid>
+      <guid>http://localhost:1313/tags/as/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Day</title>
-      <link>http://localhost:35907/tags/day/</link>
+      <link>http://localhost:1313/tags/day/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/day/</guid>
+      <guid>http://localhost:1313/tags/day/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Owner</title>
-      <link>http://localhost:35907/tags/owner/</link>
+      <link>http://localhost:1313/tags/owner/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/owner/</guid>
+      <guid>http://localhost:1313/tags/owner/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Story</title>
-      <link>http://localhost:35907/tags/story/</link>
+      <link>http://localhost:1313/tags/story/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/story/</guid>
+      <guid>http://localhost:1313/tags/story/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data</title>
-      <link>http://localhost:35907/tags/data/</link>
+      <link>http://localhost:1313/tags/data/</link>
       <pubDate>Fri, 08 Mar 2024 22:02:00 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/data/</guid>
+      <guid>http://localhost:1313/tags/data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Online</title>
-      <link>http://localhost:35907/tags/online/</link>
+      <link>http://localhost:1313/tags/online/</link>
       <pubDate>Fri, 08 Mar 2024 22:02:00 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/online/</guid>
+      <guid>http://localhost:1313/tags/online/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recommendations</title>
-      <link>http://localhost:35907/tags/recommendations/</link>
+      <link>http://localhost:1313/tags/recommendations/</link>
       <pubDate>Fri, 08 Mar 2024 22:02:00 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/recommendations/</guid>
+      <guid>http://localhost:1313/tags/recommendations/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Safety</title>
-      <link>http://localhost:35907/tags/safety/</link>
+      <link>http://localhost:1313/tags/safety/</link>
       <pubDate>Fri, 08 Mar 2024 22:02:00 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/safety/</guid>
+      <guid>http://localhost:1313/tags/safety/</guid>
       <description></description>
     </item>
     
     <item>
       <title>By</title>
-      <link>http://localhost:35907/tags/by/</link>
+      <link>http://localhost:1313/tags/by/</link>
       <pubDate>Thu, 07 Mar 2024 11:07:51 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/by/</guid>
+      <guid>http://localhost:1313/tags/by/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Short</title>
-      <link>http://localhost:35907/tags/short/</link>
+      <link>http://localhost:1313/tags/short/</link>
       <pubDate>Thu, 07 Mar 2024 11:07:51 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/short/</guid>
+      <guid>http://localhost:1313/tags/short/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quote</title>
-      <link>http://localhost:35907/tags/quote/</link>
+      <link>http://localhost:1313/tags/quote/</link>
       <pubDate>Thu, 07 Mar 2024 11:05:11 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/quote/</guid>
+      <guid>http://localhost:1313/tags/quote/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Random</title>
-      <link>http://localhost:35907/tags/random/</link>
+      <link>http://localhost:1313/tags/random/</link>
       <pubDate>Thu, 07 Mar 2024 11:05:11 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/random/</guid>
+      <guid>http://localhost:1313/tags/random/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CreatedbyAI</title>
-      <link>http://localhost:35907/tags/createdbyai/</link>
+      <link>http://localhost:1313/tags/createdbyai/</link>
       <pubDate>Thu, 07 Mar 2024 10:28:39 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/createdbyai/</guid>
+      <guid>http://localhost:1313/tags/createdbyai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Writer</title>
-      <link>http://localhost:35907/tags/writer/</link>
+      <link>http://localhost:1313/tags/writer/</link>
       <pubDate>Thu, 07 Mar 2024 10:28:39 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/writer/</guid>
+      <guid>http://localhost:1313/tags/writer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://localhost:35907/tags/about/</link>
+      <link>http://localhost:1313/tags/about/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/about/</guid>
+      <guid>http://localhost:1313/tags/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Article</title>
-      <link>http://localhost:35907/tags/article/</link>
+      <link>http://localhost:1313/tags/article/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/article/</guid>
+      <guid>http://localhost:1313/tags/article/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Engine</title>
-      <link>http://localhost:35907/tags/engine/</link>
+      <link>http://localhost:1313/tags/engine/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/engine/</guid>
+      <guid>http://localhost:1313/tags/engine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Optimisation</title>
-      <link>http://localhost:35907/tags/optimisation/</link>
+      <link>http://localhost:1313/tags/optimisation/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/optimisation/</guid>
+      <guid>http://localhost:1313/tags/optimisation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Search</title>
-      <link>http://localhost:35907/tags/search/</link>
+      <link>http://localhost:1313/tags/search/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/search/</guid>
+      <guid>http://localhost:1313/tags/search/</guid>
       <description></description>
     </item>
     
     <item>
       <title> Ai</title>
-      <link>http://localhost:35907/tags/-ai/</link>
+      <link>http://localhost:1313/tags/-ai/</link>
       <pubDate>Mon, 04 Mar 2024 16:05:36 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/-ai/</guid>
+      <guid>http://localhost:1313/tags/-ai/</guid>
       <description></description>
     </item>
     
     <item>
       <title> By</title>
-      <link>http://localhost:35907/tags/-by/</link>
+      <link>http://localhost:1313/tags/-by/</link>
       <pubDate>Mon, 04 Mar 2024 16:05:36 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/-by/</guid>
+      <guid>http://localhost:1313/tags/-by/</guid>
       <description></description>
     </item>
     
     <item>
       <title> Written</title>
-      <link>http://localhost:35907/tags/-written/</link>
+      <link>http://localhost:1313/tags/-written/</link>
       <pubDate>Mon, 04 Mar 2024 16:05:36 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/-written/</guid>
+      <guid>http://localhost:1313/tags/-written/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Poem</title>
-      <link>http://localhost:35907/tags/poem/</link>
+      <link>http://localhost:1313/tags/poem/</link>
       <pubDate>Mon, 04 Mar 2024 16:05:36 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/poem/</guid>
+      <guid>http://localhost:1313/tags/poem/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bot</title>
-      <link>http://localhost:35907/tags/bot/</link>
+      <link>http://localhost:1313/tags/bot/</link>
       <pubDate>Sun, 03 Mar 2024 19:33:27 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/bot/</guid>
+      <guid>http://localhost:1313/tags/bot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>My</title>
-      <link>http://localhost:35907/tags/my/</link>
+      <link>http://localhost:1313/tags/my/</link>
       <pubDate>Sun, 03 Mar 2024 19:33:27 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/my/</guid>
+      <guid>http://localhost:1313/tags/my/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scifi</title>
-      <link>http://localhost:35907/tags/scifi/</link>
+      <link>http://localhost:1313/tags/scifi/</link>
       <pubDate>Sun, 03 Mar 2024 19:33:27 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/scifi/</guid>
+      <guid>http://localhost:1313/tags/scifi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Newpage</title>
-      <link>http://localhost:35907/tags/newpage/</link>
+      <link>http://localhost:1313/tags/newpage/</link>
       <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/newpage/</guid>
+      <guid>http://localhost:1313/tags/newpage/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Page</title>
-      <link>http://localhost:35907/tags/page/</link>
+      <link>http://localhost:1313/tags/page/</link>
       <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/page/</guid>
+      <guid>http://localhost:1313/tags/page/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Support</title>
-      <link>http://localhost:35907/tags/support/</link>
+      <link>http://localhost:1313/tags/support/</link>
       <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/support/</guid>
+      <guid>http://localhost:1313/tags/support/</guid>
       <description></description>
     </item>
     
     <item>
       <title>2022</title>
-      <link>http://localhost:35907/tags/2022/</link>
+      <link>http://localhost:1313/tags/2022/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/2022/</guid>
+      <guid>http://localhost:1313/tags/2022/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bard</title>
-      <link>http://localhost:35907/tags/bard/</link>
+      <link>http://localhost:1313/tags/bard/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/bard/</guid>
+      <guid>http://localhost:1313/tags/bard/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jul</title>
-      <link>http://localhost:35907/tags/jul/</link>
+      <link>http://localhost:1313/tags/jul/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/jul/</guid>
+      <guid>http://localhost:1313/tags/jul/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kanban</title>
-      <link>http://localhost:35907/tags/kanban/</link>
+      <link>http://localhost:1313/tags/kanban/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/kanban/</guid>
+      <guid>http://localhost:1313/tags/kanban/</guid>
       <description></description>
     </item>
     
     <item>
       <title>New_post</title>
-      <link>http://localhost:35907/tags/new_post/</link>
+      <link>http://localhost:1313/tags/new_post/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>http://localhost:35907/tags/new_post/</guid>
+      <guid>http://localhost:1313/tags/new_post/</guid>
       <description></description>
     </item>
     

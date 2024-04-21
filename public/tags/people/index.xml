@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>People on Obsidian</title>
-    <link>http://localhost:35907/tags/people/</link>
+    <link>http://localhost:1313/tags/people/</link>
     <description>Recent content in People on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Sat, 13 Apr 2024 20:11:30 +0300</lastBuildDate><atom:link href="http://localhost:35907/tags/people/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Apr 2024 20:11:30 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/people/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apr 13</title>
-      <link>http://localhost:35907/posts/journal/2024-04/apr-13/</link>
+      <link>http://localhost:1313/posts/journal/2024-04/apr-13/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>http://localhost:35907/posts/journal/2024-04/apr-13/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-04/apr-13/</guid>
       <description>Prompt: Act as if you were a writer, write a blog post on why people should integrate ai into their workflow Apr 13 [!tldr] Apr 13 TLDR Text is too short to sumarize
 Dear fellow writers out there!
 In today&amp;rsquo;s digital age, where content creation and publishing are more crucial than ever before, it can be challenging to stand out from the crowd. With so many competitors vying for attention on social media and online publications, how do you make your mark?</description>

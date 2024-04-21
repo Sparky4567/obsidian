@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Good on Obsidian</title>
-    <link>http://localhost:35907/tags/good/</link>
+    <link>http://localhost:1313/tags/good/</link>
     <description>Recent content in Good on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Wed, 27 Mar 2024 11:47:04 +0300</lastBuildDate><atom:link href="http://localhost:35907/tags/good/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Mar 2024 11:47:04 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/good/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 27</title>
-      <link>http://localhost:35907/posts/journal/2024-03/mar-27/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-27/</link>
       <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
       
-      <guid>http://localhost:35907/posts/journal/2024-03/mar-27/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-27/</guid>
       <description>Prompt: Act as if you were a writer, write a blog post on how to create good titles for your journal entries Mar 27 [!tldr] Mar 27 TLDR Text is too short to sumarize
 Title: The Art of Creating Captivating Journal Entries
 As a writer, it&amp;rsquo;s essential to know that great titles are crucial for attracting and retaining readers. A well-crafted title not only captures the reader&amp;rsquo;s attention but also sets up expectations about what they can expect from your journal entries.</description>

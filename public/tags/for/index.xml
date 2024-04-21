@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>For on Obsidian</title>
-    <link>http://localhost:35907/tags/for/</link>
+    <link>http://localhost:1313/tags/for/</link>
     <description>Recent content in For on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Mon, 15 Apr 2024 12:59:04 +0300</lastBuildDate><atom:link href="http://localhost:35907/tags/for/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Apr 2024 12:59:04 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/for/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apr 15</title>
-      <link>http://localhost:35907/posts/journal/2024-04/apr-15/</link>
+      <link>http://localhost:1313/posts/journal/2024-04/apr-15/</link>
       <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
       
-      <guid>http://localhost:35907/posts/journal/2024-04/apr-15/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-04/apr-15/</guid>
       <description>Prompt: Act as if you were an artist, give me some creative but relevant ideas for my future ai art Apr 15 [!tldr] Apr 15 TLDR Text is too short to sumarize
 Certainly! Here are some creative and relevant ideas for your future AI art:
 Create a virtual world where the user can explore and interact with various digital beings. This could be an exciting world of augmented reality, in which users can see and interact with digitally generated characters that come to life in front of their eyes.</description>
@@ -20,10 +20,10 @@ Create a virtual world where the user can explore and interact with various digi
     
     <item>
       <title>Mar 17</title>
-      <link>http://localhost:35907/posts/journal/2024-03/mar-17/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-17/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
-      <guid>http://localhost:35907/posts/journal/2024-03/mar-17/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-17/</guid>
       <description>Prompt: Act as if you were a writer, write a blog post on how to entertain oneself for less than 10 euros Mar 17 [!tldr] Mar 17 TLDR Text is too short to sumarize
 As a busy professional juggling multiple tasks and deadlines, it&amp;rsquo;s easy to get caught up in the daily grind. Sometimes, all it takes is a few quarters at the coffee shop or a quick walk around the block to recharge your batteries.</description>
     </item>
