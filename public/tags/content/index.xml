@@ -2,40 +2,185 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Content on Obsidian</title>
-    <link>http://localhost:1313/tags/content/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/content/</link>
     <description>Recent content in Content on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Wed, 17 Apr 2024 17:08:11 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/content/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Apr 2024 17:08:11 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/content/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apr 17</title>
-      <link>http://localhost:1313/posts/journal/2024-04/apr-17/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-17/</link>
       <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-04/apr-17/</guid>
-      <description>Prompt: Act as if you were a seo expert, give me some quality tips on how to create seo-friendly content Apr 17 [!tldr] Apr 17 TLDR Text is too short to sumarize
-Utilize keywords: The more targeted and relevant your keywords are, the better. Use them naturally in your content but also don&amp;rsquo;t overdo it as this can be seen as spamming by search engines.
-Use headings: Incorporate headings in your content to break it up into smaller chunks for easier reading.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-17/</guid>
+      <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-seo-expert-give-me-some-quality-tips-on-how-to-create-seo-friendly-content&#34;&gt;Prompt: Act as if you were a seo expert, give me some quality tips on how to create seo-friendly content&lt;/h1&gt;
+&lt;h1 id=&#34;apr-17&#34;&gt;Apr 17&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Apr 17
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Utilize keywords: The more targeted and relevant your keywords are, the better. Use them naturally in your content but also don&amp;rsquo;t overdo it as this can be seen as spamming by search engines.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use headings: Incorporate headings in your content to break it up into smaller chunks for easier reading. Headings should be used consistently throughout the article or blog post and provide a clear structure to your content.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a strong title: The title is the first thing people see on a webpage, so make sure it&amp;rsquo;s attention-grabbing. Use your keywords in the title but also include something that makes it relevant to your target audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimize images: Use alt text for images to provide descriptive information about what they contain. This can help search engines understand what each image is about and improve their ranking.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Write engaging content: Your content should be informative, entertaining, and of high quality. It should have a clear purpose and be written in a conversational style that makes sense to your target audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimize for mobile devices: More than half of all internet traffic now comes from mobile devices. Make sure your website is responsive and easy to navigate on smartphones and tablets.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use schema markup: Schema markup allows search engines to understand the content of your pages better, which can improve their ranking. Make sure you&amp;rsquo;re using it on all of your content pages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Engage with your audience: Engage with your readers by answering questions, responding to comments and answering frequently asked questions in your niche. This can help build trust and credibility with your audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Provide value: To attract and retain readers, provide valuable information and insights that are relevant to your target audience&amp;rsquo;s needs. Don&amp;rsquo;t just fill your content with data, but also share unique perspectives or insights that help solve problems for your audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #ai #on #seo #friendly #content&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Apr 11</title>
-      <link>http://localhost:1313/posts/journal/2024-04/apr-11/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-11/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-04/apr-11/</guid>
-      <description>Prompt: Act as if you were bloger, write a blog post on how to promote ones content Apr 11 [!tldr] Apr 11 TLDR Text is too short to sumarize
-Welcome to our weekly blog post! Today, we&amp;rsquo;ll be discussing how you can effectively promote your content online. Here at SEO-friendly, we strive to help our clients grow their businesses through effective SEO techniques, but there are a few things we can do as well.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-11/</guid>
+      <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-bloger-write-a-blog-post-on-how-to-promote-ones-content&#34;&gt;Prompt: Act as if you were bloger, write a blog post on how to promote ones content&lt;/h1&gt;
+&lt;h1 id=&#34;apr-11&#34;&gt;Apr 11&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Apr 11
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Welcome to our weekly blog post! Today, we&amp;rsquo;ll be discussing how you can effectively promote your content online. Here at SEO-friendly, we strive to help our clients grow their businesses through effective SEO techniques, but there are a few things we can do as well.&lt;/p&gt;
+&lt;p&gt;So how exactly can you promote your content online? Here are some tips:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create high-quality content:
+Content is the backbone of any successful marketing campaign and it&amp;rsquo;s crucial to ensure that your content is of value to your audience. Ensure that your content is unique, informative and relevant to your target audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimize your website for SEO:
+SEO stands for Search Engine Optimization. It involves optimizing your website for search engines such as Google, Bing, or Yahoo by including relevant keywords in your URL, title tags, meta descriptions, and headers. This will help to improve your site&amp;rsquo;s visibility and attract more traffic.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create engaging content:
+Engaging content is the foundation of any effective marketing campaign. Ensure that you create compelling content with a clear purpose that resonates with your audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Leverage social media platforms:
+Social media is an essential platform to promote your content. Use social media platforms such as Facebook, Twitter, LinkedIn, Instagram, and YouTube to reach out to your target audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Participate in online forums:
+Forum participation is an excellent way to get your brand recognized, build relationships with potential customers, and attract traffic to your website.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use paid advertising:
+Paid advertising is another great way to reach out to your target audience. Utilize Google Ads, Bing Ads, and social media ads to increase your online visibility and drive more traffic to your site.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Promote through email marketing:
+Email marketing is a powerful tool that can help you keep in touch with your subscribers, build relationships with them, and generate new leads.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now that we&amp;rsquo;ve covered some of the basics for promoting content online, let&amp;rsquo;s dive deeper into some more specific strategies:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create blog posts:
+Blog post is a great way to add value to your website. Blog posts can provide valuable information, insights, and tips that resonate with your audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use social media for email marketing:
+Social media can be an excellent tool for promoting email marketing campaigns. Posting blogs or sharing industry news on social media platforms like LinkedIn, Twitter, and Facebook can help generate interest in your content.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create video content:
+Video content is a powerful way to share information and promote your products. Use video content to create tutorials, infographics, and explainer videos that help users understand your brand or product.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Leverage guest blogging:
+Guest blogging is an excellent way to introduce yourself as an authority in your field while also promoting your content. Reach out to other influencers within your niche for guest blogs on their websites.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Offer valuable resources:
+Creating valuable resources such as whitepapers, e-books or infographics can help you attract new leads and establish yourself as an authority in your field.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Host webinars:
+Webinars are a great way to educate your audience on a particular topic and build relationships with potential clients. Webinars can be held live or recorded, and offer valuable insights into your industry.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Leverage social media ads:
+Social media ads are an excellent way to increase brand awareness and generate leads for your business. Use social media platforms like Facebook, Instagram, and Twitter to create targeted ad campaigns that reach your audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In conclusion, promoting your content online requires a combination of SEO techniques, website optimization, engaging content creation, social media marketing, email marketing, guest blogging, and webinar hosting. By implementing these strategies, you can increase your online visibility, attract more leads, and grow your business over time.&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #ai #on #how #to #promote #content #seo #social #media #marketing #basics&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Mar 13</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-13/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-13/</link>
       <pubDate>Wed, 13 Mar 2024 23:21:41 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-13/</guid>
-      <description>Prompt: Write a blog post on how to protect your written content from copyright infringement Mar 13 [!tldr] Mar 13 TLDR Text is too short to sumarize
-Copyright infringement is a serious issue that can have a significant impact on businesses and individuals alike. It occurs when someone uses or replicates another&amp;rsquo;s original work without permission, including words, music, images, videos, or software. If you&amp;rsquo;re a writer or creative individual, this could be especially damaging to your career.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-13/</guid>
+      <description>&lt;h1 id=&#34;prompt-write-a-blog-post-on-how-to-protect-your-written-content-from-copyright-infringement&#34;&gt;Prompt: Write a blog post on how to protect your written content from copyright infringement&lt;/h1&gt;
+&lt;h1 id=&#34;mar-13&#34;&gt;Mar 13&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 13
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Copyright infringement is a serious issue that can have a significant impact on businesses and individuals alike. It occurs when someone uses or replicates another&amp;rsquo;s original work without permission, including words, music, images, videos, or software. If you&amp;rsquo;re a writer or creative individual, this could be especially damaging to your career.&lt;/p&gt;
+&lt;p&gt;Here are some ways to protect your written content from copyright infraction:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Don&amp;rsquo;t share your ideas with anyone else: Before sharing your work with anyone else, make sure they have permission to use it. If you create a piece of content on behalf of your business or organization, ask the rights holder for permission beforehand. It&amp;rsquo;s also essential not to reuse content that has already been published elsewhere.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure all sources are cited: When writing about something you found online, make sure to cite the original source so others can check their work and verify its validity. Also, ensure that the copied material is properly attributed to the original creator(s) in your document or article. This helps avoid copyright infringement while also giving credit where credit is due.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use Creative Commons Licenses: Creative Commons allows you to share your work under a license that grants others permission to use it. It&amp;rsquo;s important to read the license before using any content, especially if you&amp;rsquo;re not sure about its usage terms. When appropriate, consider using CC-BY or CC0 (Public Domain) licenses so that they can be used freely by anyone.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stay up to date with copyright laws: Make sure you know the current copyright law in your country, region, or industry. Keeping up with new legislation and adapting to it is essential for protecting your work from infringement. It can also help you avoid legal action and preserve your rights in the future.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use a WordPress Plugin: There are several WordPress plugins that help protect your content. The Free Content ID plugin allows you to add a &amp;ldquo;Free Content&amp;rdquo; tag to your posts or pages, while the Mega Content ID plugin also lets you use a free or premium WordPress theme with an added tag.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In conclusion, protecting your written content from copyright infraction is essential for maintaining it as valuable and original work. By taking these precautions, you can ensure that you keep your intellectual property safe while still allowing others to publish their ideas effectively.&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #written #content #protecting&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
   </channel>

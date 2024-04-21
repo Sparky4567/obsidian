@@ -2,20 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>New_post on Obsidian</title>
-    <link>http://localhost:1313/tags/new_post/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/new_post/</link>
     <description>Recent content in New_post on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Fri, 15 Jul 2022 13:58:39 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/new_post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jul 2022 13:58:39 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/new_post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kanban Board</title>
-      <link>http://localhost:1313/posts/kanban/kanban-board/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/kanban/kanban-board/</guid>
-      <description>Preparing Make more templates Doing Add more posts Done Test rebuilds ! Archive Complete
-%% kanban:settings
-{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;} %%</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/kanban/kanban-board/</guid>
+      <description>&lt;h2 id=&#34;preparing&#34;&gt;Preparing&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Make more templates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;doing&#34;&gt;Doing&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add more posts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;done&#34;&gt;Done&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Test rebuilds !&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;archive&#34;&gt;Archive&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Complete&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;%% kanban:settings&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{&amp;#34;kanban-plugin&amp;#34;:&amp;#34;basic&amp;#34;}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;%%&lt;/p&gt;
+</description>
     </item>
     
   </channel>

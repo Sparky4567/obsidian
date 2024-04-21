@@ -2,52 +2,257 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Seo on Obsidian</title>
-    <link>http://localhost:1313/tags/seo/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/seo/</link>
     <description>Recent content in Seo on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Wed, 17 Apr 2024 17:08:11 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/seo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Apr 2024 17:08:11 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/seo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apr 17</title>
-      <link>http://localhost:1313/posts/journal/2024-04/apr-17/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-17/</link>
       <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-04/apr-17/</guid>
-      <description>Prompt: Act as if you were a seo expert, give me some quality tips on how to create seo-friendly content Apr 17 [!tldr] Apr 17 TLDR Text is too short to sumarize
-Utilize keywords: The more targeted and relevant your keywords are, the better. Use them naturally in your content but also don&amp;rsquo;t overdo it as this can be seen as spamming by search engines.
-Use headings: Incorporate headings in your content to break it up into smaller chunks for easier reading.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-17/</guid>
+      <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-seo-expert-give-me-some-quality-tips-on-how-to-create-seo-friendly-content&#34;&gt;Prompt: Act as if you were a seo expert, give me some quality tips on how to create seo-friendly content&lt;/h1&gt;
+&lt;h1 id=&#34;apr-17&#34;&gt;Apr 17&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Apr 17
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Utilize keywords: The more targeted and relevant your keywords are, the better. Use them naturally in your content but also don&amp;rsquo;t overdo it as this can be seen as spamming by search engines.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use headings: Incorporate headings in your content to break it up into smaller chunks for easier reading. Headings should be used consistently throughout the article or blog post and provide a clear structure to your content.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a strong title: The title is the first thing people see on a webpage, so make sure it&amp;rsquo;s attention-grabbing. Use your keywords in the title but also include something that makes it relevant to your target audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimize images: Use alt text for images to provide descriptive information about what they contain. This can help search engines understand what each image is about and improve their ranking.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Write engaging content: Your content should be informative, entertaining, and of high quality. It should have a clear purpose and be written in a conversational style that makes sense to your target audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimize for mobile devices: More than half of all internet traffic now comes from mobile devices. Make sure your website is responsive and easy to navigate on smartphones and tablets.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use schema markup: Schema markup allows search engines to understand the content of your pages better, which can improve their ranking. Make sure you&amp;rsquo;re using it on all of your content pages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Engage with your audience: Engage with your readers by answering questions, responding to comments and answering frequently asked questions in your niche. This can help build trust and credibility with your audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Provide value: To attract and retain readers, provide valuable information and insights that are relevant to your target audience&amp;rsquo;s needs. Don&amp;rsquo;t just fill your content with data, but also share unique perspectives or insights that help solve problems for your audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #ai #on #seo #friendly #content&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Apr 11</title>
-      <link>http://localhost:1313/posts/journal/2024-04/apr-11/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-11/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-04/apr-11/</guid>
-      <description>Prompt: Act as if you were bloger, write a blog post on how to promote ones content Apr 11 [!tldr] Apr 11 TLDR Text is too short to sumarize
-Welcome to our weekly blog post! Today, we&amp;rsquo;ll be discussing how you can effectively promote your content online. Here at SEO-friendly, we strive to help our clients grow their businesses through effective SEO techniques, but there are a few things we can do as well.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-11/</guid>
+      <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-bloger-write-a-blog-post-on-how-to-promote-ones-content&#34;&gt;Prompt: Act as if you were bloger, write a blog post on how to promote ones content&lt;/h1&gt;
+&lt;h1 id=&#34;apr-11&#34;&gt;Apr 11&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Apr 11
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Welcome to our weekly blog post! Today, we&amp;rsquo;ll be discussing how you can effectively promote your content online. Here at SEO-friendly, we strive to help our clients grow their businesses through effective SEO techniques, but there are a few things we can do as well.&lt;/p&gt;
+&lt;p&gt;So how exactly can you promote your content online? Here are some tips:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create high-quality content:
+Content is the backbone of any successful marketing campaign and it&amp;rsquo;s crucial to ensure that your content is of value to your audience. Ensure that your content is unique, informative and relevant to your target audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimize your website for SEO:
+SEO stands for Search Engine Optimization. It involves optimizing your website for search engines such as Google, Bing, or Yahoo by including relevant keywords in your URL, title tags, meta descriptions, and headers. This will help to improve your site&amp;rsquo;s visibility and attract more traffic.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create engaging content:
+Engaging content is the foundation of any effective marketing campaign. Ensure that you create compelling content with a clear purpose that resonates with your audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Leverage social media platforms:
+Social media is an essential platform to promote your content. Use social media platforms such as Facebook, Twitter, LinkedIn, Instagram, and YouTube to reach out to your target audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Participate in online forums:
+Forum participation is an excellent way to get your brand recognized, build relationships with potential customers, and attract traffic to your website.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use paid advertising:
+Paid advertising is another great way to reach out to your target audience. Utilize Google Ads, Bing Ads, and social media ads to increase your online visibility and drive more traffic to your site.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Promote through email marketing:
+Email marketing is a powerful tool that can help you keep in touch with your subscribers, build relationships with them, and generate new leads.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now that we&amp;rsquo;ve covered some of the basics for promoting content online, let&amp;rsquo;s dive deeper into some more specific strategies:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create blog posts:
+Blog post is a great way to add value to your website. Blog posts can provide valuable information, insights, and tips that resonate with your audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use social media for email marketing:
+Social media can be an excellent tool for promoting email marketing campaigns. Posting blogs or sharing industry news on social media platforms like LinkedIn, Twitter, and Facebook can help generate interest in your content.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create video content:
+Video content is a powerful way to share information and promote your products. Use video content to create tutorials, infographics, and explainer videos that help users understand your brand or product.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Leverage guest blogging:
+Guest blogging is an excellent way to introduce yourself as an authority in your field while also promoting your content. Reach out to other influencers within your niche for guest blogs on their websites.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Offer valuable resources:
+Creating valuable resources such as whitepapers, e-books or infographics can help you attract new leads and establish yourself as an authority in your field.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Host webinars:
+Webinars are a great way to educate your audience on a particular topic and build relationships with potential clients. Webinars can be held live or recorded, and offer valuable insights into your industry.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Leverage social media ads:
+Social media ads are an excellent way to increase brand awareness and generate leads for your business. Use social media platforms like Facebook, Instagram, and Twitter to create targeted ad campaigns that reach your audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In conclusion, promoting your content online requires a combination of SEO techniques, website optimization, engaging content creation, social media marketing, email marketing, guest blogging, and webinar hosting. By implementing these strategies, you can increase your online visibility, attract more leads, and grow your business over time.&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #ai #on #how #to #promote #content #seo #social #media #marketing #basics&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Mar 6</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-6/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-6/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-6/</guid>
-      <description>Query: Write an articale about seo Mar 6 [!tldr] Mar 6 TLDR Text is too short to sumarize
-Introduction
-Search engine optimization (seo) is the process of optimizing website content and meta tags to improve visibility on search engine results pages (serps). It is a crucial component of any online marketing strategy, as it helps websites attract more traffic and convert leads. The online landscape has undergone significant changes in recent years, making seo an ever-evolving field that requires constant adaptation to stay relevant.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-6/</guid>
+      <description>&lt;h1 id=&#34;query-write-an-articale-about-seo&#34;&gt;Query: Write an articale about seo&lt;/h1&gt;
+&lt;h1 id=&#34;mar-6&#34;&gt;Mar 6&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 6
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Introduction&lt;/p&gt;
+&lt;p&gt;Search engine optimization (seo) is the process of optimizing website content and meta tags to improve visibility on search engine results pages (serps). It is a crucial component of any online marketing strategy, as it helps websites attract more traffic and convert leads. The online landscape has undergone significant changes in recent years, making seo an ever-evolving field that requires constant adaptation to stay relevant.&lt;/p&gt;
+&lt;p&gt;Benefits of seo for websites&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Increased traffic: seo improves website traffic by making it easier and more convenient for users to find a website. Studies have shown that the top results on serps receive over 80% of clicks, whereas the bottom half receives only 5%. By optimizing your website content and meta tags, you can increase your chances of appearing in these top positions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Improved conversions: with an optimized website, you can attract more leads and conversions. Leads are potential customers who express interest in a specific product or service. Conversions involve making a purchase or signing up for a newsletter. Seo helps websites convert visitors into leads by increasing the likelihood of them taking action.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Brand awareness: improved brand awareness is another benefit of seo. When people are searching for specific keywords related to your business, they may come across your website and notice your brand&amp;rsquo;s name or logo. This can increase brand recognition and trust among potential customers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Increased reach: by optimizing your website for search engines, you can reach a broader audience beyond your local area. This helps build brand awareness, attracting more people to your business.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Techniques for seo optimization&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Keyword research: the first step in seo is to research the most relevant keywords for your niche. These are words or phrases that people use to search for products or services related to your industry. Use keyword tools like google keyword planner or ahrefs to find relevant keywords.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On-page optimization: on-page optimization involves improving website content, meta tags, and other internal links on your site. This helps the search engine understand your website&amp;rsquo;s content better and improve the overall user experience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Link building: link building involves creating backlinks to your website from other high-quality websites in your industry. These links provide credibility to your website and can help you rank higher in search results.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Content optimization: creating informative, engaging content is an important part of seo. It includes things like keyword research, structured data markup (sdm), and meta descriptions. These can all help your website appear more frequently to users searching for specific keywords related to your business.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Tips for improving seo results&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Keep up-to-date: the online landscape changes quickly, so it&amp;rsquo;s essential to keep up with the latest seo practices and trends. Follow industry blogs and news outlets to stay informed about best practices.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Analyze performance: use tools like google analytics or semrush to analyze your site&amp;rsquo;s performance. This will help you understand what&amp;rsquo;s working and what needs improvement.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimize for mobile: with more people accessing the internet from their smartphones and tablets, optimizing your website for mobile is crucial. Use responsive design, clear calls-to-action (ctas), and fast loading speeds to improve your site&amp;rsquo;s performance on smaller screens.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Conclusion&lt;/p&gt;
+&lt;p&gt;Seo is a complex field that requires constant attention and adaptation. By implementing these techniques and tips, businesses can improve their website&amp;rsquo;s visibility in serps and attract more leads and conversions. With the right approach and resources, you can achieve great results with seo.&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #ai #article #about #seo #search #engine #optimisation&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Mar 5</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-5/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/</link>
       <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-5/</guid>
-      <description>Query: What advice would you give me to optimize my current website for a better performance Mar 5 [!tldr] Mar 5 TLDR SEO advice from AI 🤖
-I can provide you with some general tips and insights on optimizing your current website for better performance, but i cannot offer specific advice based on your individual situation. Here are some broad recommendations:
-Conduct thorough keyword research: knowing what keywords or phrases your target audience is searching for can help you optimize your content and your website&amp;rsquo;s meta descriptions and header tags to attract search engine crawlers.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/</guid>
+      <description>&lt;h1 id=&#34;query-what-advice-would-you-give-me-to-optimize-my-current-website-for-a-better-performance&#34;&gt;Query: What advice would you give me to optimize my current website for a better performance&lt;/h1&gt;
+&lt;h1 id=&#34;mar-5&#34;&gt;Mar 5&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 5
+TLDR
+SEO advice from AI 🤖&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I can provide you with some general tips and insights on optimizing your current website for better performance, but i cannot offer specific advice based on your individual situation. Here are some broad recommendations:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Conduct thorough keyword research: knowing what keywords or phrases your target audience is searching for can help you optimize your content and your website&amp;rsquo;s meta descriptions and header tags to attract search engine crawlers. Use tools like google keyword planner, seo book, or google search console to conduct keyword research.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimize your website structure: a well-organized website structure is key to improving user experience and increasing page views. Use headings, subheadings, and bullet points to break up content into easy-to-understand sections, and make sure the main heading (h1) for each page matches its primary purpose and keywords.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimize your meta description and header tags: meta descriptions are text snippets that appear below a page&amp;rsquo;s title in search results. Optimizing these descriptions with relevant keywords is crucial to improving visibility. Use headline-style language, include specific benefits or value propositions, and avoid using sales language or empty phrases. Your header tags (h1, h2, etc.) Should also be optimized with the same level of importance.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimize your site for mobile users: while desktop computers are the norm in most industries, mobile search volumes are growing faster than desktop searches. Ensure that your website is fully responsive and compatible across all devices, including desktops and tablets, to improve visibility and attract more traffic from smartphone users.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use a content management system (cms) that supports optimization: if you&amp;rsquo;re using a cms like wordpress or wix, consider switching to a platform with built-in tools for optimizing your website for better performance. Popular options include yola, drupal, and sphinn.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Test your site regularly: conduct regular tests to see which pages perform the best and which ones require improvement. Use analytics tools to track visitor behavior and adjust your content strategy accordingly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Monitor and analyze your performance: use tools like google analytics or seo book to monitor and analyze your website&amp;rsquo;s traffic, bounce rates, conversion rates, and other key metrics. Use this information to make data-driven decisions about how to optimize your site for better performance in the future.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Remember that optimizing a website is a long-term process that requires patience and dedication. Start by taking small steps to improve your existing website, then gradually work your way towards improving the overall performance of your site over time.&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #seo #advice #from #ai&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
   </channel>

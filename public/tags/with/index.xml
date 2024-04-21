@@ -2,20 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>With on Obsidian</title>
-    <link>http://localhost:1313/tags/with/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/with/</link>
     <description>Recent content in With on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Sat, 30 Mar 2024 13:03:11 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/with/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Mar 2024 13:03:11 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/with/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 30</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-30/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-30/</link>
       <pubDate>Sat, 30 Mar 2024 13:03:11 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-30/</guid>
-      <description>Prompt: Write a short guideline on how to cope with stress Mar 30 [!tldr] Mar 30 TLDR Text is too short to sumarize
-Coping with stress is an important skill for maintaining mental well-being and overall health. Here&amp;rsquo;s a step-by-step guide to help you manage stress effectively:
-Identify the sources of stress in your life. This may involve keeping a journal to track when you experience high levels of stress and what events or situations seem to trigger it.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-30/</guid>
+      <description>&lt;h1 id=&#34;prompt-write-a-short-guideline-on-how-to-cope-with-stress&#34;&gt;Prompt: Write a short guideline on how to cope with stress&lt;/h1&gt;
+&lt;h1 id=&#34;mar-30&#34;&gt;Mar 30&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 30
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Coping with stress is an important skill for maintaining mental well-being and overall health. Here&amp;rsquo;s a step-by-step guide to help you manage stress effectively:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Identify the sources of stress in your life. This may involve keeping a journal to track when you experience high levels of stress and what events or situations seem to trigger it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Prioritize activities that promote relaxation, such as deep breathing exercises, meditation, yoga, or engaging in hobbies that bring you joy. Regular practice can help alleviate stress and improve your overall emotional resilience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Maintain a balanced and healthy lifestyle by getting regular exercise, eating a well-balanced diet, and getting adequate sleep. These habits support physical and mental health and can contribute to lower stress levels.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build a strong support network of friends or family members who can offer emotional support and encouragement when you&amp;rsquo;re feeling stressed or overwhelmed. Sharing your feelings with someone you trust can be very helpful in managing stress.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Practice good time management by setting priorities, creating to-do lists, and breaking tasks into smaller steps to avoid feeling overwhelmed. This can help you feel more organized and in control of your daily life.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Learn to say no when necessary and set boundaries for yourself. Don&amp;rsquo;t be afraid to ask for help from friends, family, or professionals if you need it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Engage in problem-solving by breaking down issues into manageable parts and exploring different solutions. Sometimes, simply re-framing the situation can offer new perspectives and ideas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remind yourself of past instances when you successfully coped with stress, and draw from those experiences to build confidence in your ability to navigate challenging situations.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;By implementing these strategies, you&amp;rsquo;ll be better equipped to manage stress and maintain emotional well-being. Do you have any personal experiences or insights related to coping with stress that you&amp;rsquo;d like to share?&lt;/p&gt;
+&lt;p&gt;Author: samantha-mistral&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #ai #on #how #to #cope #with #stress&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
   </channel>

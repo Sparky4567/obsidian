@@ -2,19 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Online on Obsidian</title>
-    <link>http://localhost:1313/tags/online/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/online/</link>
     <description>Recent content in Online on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Fri, 08 Mar 2024 22:02:00 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/online/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Mar 2024 22:02:00 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/online/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 8</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-8/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-8/</link>
       <pubDate>Fri, 08 Mar 2024 22:02:00 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-8/</guid>
-      <description>Query: Write a blog post on how to protect your data online, add recommended guidelines Mar 8 [!tldr] Mar 8 TLDR Text is too short to sumarize
-In today&amp;rsquo;s digital age, our personal and financial information is easily accessible online, making it more vulnerable than ever before. With cyber attacks becoming increasingly common, protecting ourselves and our data becomes even more crucial. In this blog post, we will provide you with essential tips on how to keep your data safe online, whether you&amp;rsquo;re a beginner or an experienced user.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-8/</guid>
+      <description>&lt;h1 id=&#34;query-write-a-blog-post-on-how-to-protect-your-data-online-add-recommended-guidelines&#34;&gt;Query: Write a blog post on how to protect your data online, add recommended guidelines&lt;/h1&gt;
+&lt;h1 id=&#34;mar-8&#34;&gt;Mar 8&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 8
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In today&amp;rsquo;s digital age, our personal and financial information is easily accessible online, making it more vulnerable than ever before. With cyber attacks becoming increasingly common, protecting ourselves and our data becomes even more crucial. In this blog post, we will provide you with essential tips on how to keep your data safe online, whether you&amp;rsquo;re a beginner or an experienced user.&lt;/p&gt;
+&lt;p&gt;Before we dive into the specifics of protecting yourself online, it is essential to understand some basic principles in cybersecurity. Here are a few key points to consider:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Use strong passwords and two-factor authentication: Avoid sharing your login information with anyone over the phone or email unless you&amp;rsquo;re sure they are trustworthy. Use complex passwords that include letters, numbers, and symbols and choose a strong passphrase that includes these elements. Consider using Two-Factor Authentication (2FA) to add an extra layer of security. 2. Be cautious with downloading software: Before downloading any software or programs, make sure you know what you&amp;rsquo;re getting into. Do some research on the developer and verify their credentials before installing anything new.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Keep your operating system up to date: Regularly update all of your programs and applications to ensure that they are running safely and securely. The latest versions may contain patches or fixes for known vulnerabilities, which can help protect against attacks. 4. Be cautious with downloading files: Before opening any email attachments or clicking on links from unknown sources, make sure you know where the file is coming from and what it contains. If you&amp;rsquo;re unsure, don&amp;rsquo;t open the file and contact someone you trust to help you investigate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use a VPN: A Virtual Private Network (VPN) can help protect your internet traffic by encrypting your data as it travels between your device and the server hosting your online activities. This means that even if someone intercepts your data while it&amp;rsquo;s being transmitted, they will not be able to read or modify it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Monitor your activity: Use a monitoring tool such as Malwarebytes or AVG to keep an eye on your browser history and social media activity. This can help you catch suspicious or unauthorized activity and stop it from happening in the first place.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now that we&amp;rsquo;ve covered the basics, here are some more specific tips for protecting yourself online:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Use a strong password: Avoid using common passwords like &amp;ldquo;password&amp;rdquo; or &amp;ldquo;123456,&amp;rdquo; as these are easy to guess and can be easily cracked. Instead, use a unique, complex password that includes letters, numbers, and symbols.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Be cautious with links: While clicking on a link in an email or message may seem like a convenient way to access your data or files, always verify its legitimacy before clicking on it. If it looks too good to be true, it probably is. 3. Limit the number of social media accounts you have: Having too many social media accounts can make it easier for hackers to gain unauthorized access to your personal information. Try limiting your activity and only open new accounts when necessary.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Keep software updated: Make sure all of your programs and applications are up to date with the latest patches and fixes. This will help protect you from known vulnerabilities that could be exploited by hackers in the future.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use a password manager: A password manager is a tool that generates and manages strong passwords for you, making it easier for you to remember them. Consider using LastPass or Dashlane to keep track of your login credentials.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Don&amp;rsquo;t share personal information on social media: Unless you&amp;rsquo;re friends with the person you&amp;rsquo;re sharing information with, don&amp;rsquo;t give out your personal details on social media. This can make it easier for hackers to gain access to your accounts and steal your data. 7. Be cautious with downloads: Be mindful of any downloads you receive from unknown sources or websites. Make sure they are trustworthy before downloading anything new.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;By following these tips, you can help protect yourself online and keep your data safe from cyber criminals. Remember to be vigilant about your online activity, monitor your internet traffic, and use the latest security software and tools available. By following these tips, you can enjoy a safer and more secure online experience!&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #ai #recommendations #data #safety #online&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
   </channel>

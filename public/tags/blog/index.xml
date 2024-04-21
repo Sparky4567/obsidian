@@ -2,32 +2,77 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Obsidian</title>
-    <link>http://localhost:1313/tags/blog/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/blog/</link>
     <description>Recent content in Blog on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Wed, 03 Apr 2024 11:43:05 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Apr 2024 11:43:05 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apr 3</title>
-      <link>http://localhost:1313/posts/journal/2024-04/apr-3/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-3/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-04/apr-3/</guid>
-      <description>Prompt: Act as if you were a writer, write a tutorial on how to create an awesome blog post Apr 3 [!tldr] Apr 3 TLDR Text is too short to sumarize
-Dear Reader,
-Welcome to our blog! We&amp;rsquo;re excited to share with you our latest post that will help you understand how to create an outstanding blog post. Whether you&amp;rsquo;re a beginner or a seasoned writer, this guide will provide you with the knowledge and skills you need to succeed in creating engaging content for your readers.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-3/</guid>
+      <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-tutorial-on-how-to-create-an-awesome-blog-post&#34;&gt;Prompt: Act as if you were a writer, write a tutorial on how to create an awesome blog post&lt;/h1&gt;
+&lt;h1 id=&#34;apr-3&#34;&gt;Apr 3&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Apr 3
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Dear Reader,&lt;/p&gt;
+&lt;p&gt;Welcome to our blog! We&amp;rsquo;re excited to share with you our latest post that will help you understand how to create an outstanding blog post. Whether you&amp;rsquo;re a beginner or a seasoned writer, this guide will provide you with the knowledge and skills you need to succeed in creating engaging content for your readers.&lt;/p&gt;
+&lt;p&gt;Step 1: Define Your Audience&lt;/p&gt;
+&lt;p&gt;The first step to writing a great blog post is identifying your target audience. You can use tools like Google Analytics or social media analytics to identify who&amp;rsquo;s reading your posts and how they&amp;rsquo;re engaging with them. Once you have this information, you can tailor your content to speak directly to your audience&amp;rsquo;s needs, interests, and pain points.&lt;/p&gt;
+&lt;p&gt;Step 2: Choose Your Topic&lt;/p&gt;
+&lt;p&gt;Once you know who you&amp;rsquo;re writing for, you need to choose a topic that&amp;rsquo;s relevant and interesting to them. Avoid general topics like &amp;ldquo;life hacks&amp;rdquo; or &amp;ldquo;success stories,&amp;rdquo; as these are too broad to be effective. Instead, focus on a specific problem that your audience has. For example, if you write about how to save money on groceries, your target audience may be people who struggle to afford healthy food options at reasonable prices.&lt;/p&gt;
+&lt;p&gt;Step 3: Start with a Hook&lt;/p&gt;
+&lt;p&gt;Your blog post needs a catchy hook to grab the reader&amp;rsquo;s attention. A great hook can be something unexpected or surprising that makes them curious about what you have to say. For example, if your topic is how to save money on groceries, you might start by saying &amp;ldquo;8 Ways to Save Money on Groceries That You Never Knew Existed.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Step 4: Research Your Topic&lt;/p&gt;
+&lt;p&gt;Once you&amp;rsquo;ve chosen your topic and established a hook, you need to do some research. This could involve reading industry reports, studying trends in your niche, or speaking with other experts in the field. Be sure to include this research in your post so that readers can see how much they can learn from what you have to say.&lt;/p&gt;
+&lt;p&gt;Step 5: Write Your Content&lt;/p&gt;
+&lt;p&gt;Your content should be written in a clear and concise style that&amp;rsquo;s easy for readers to understand. Use bullet points or numbers wherever possible, and avoid using technical jargon. Make sure your post is organized logically and flows smoothly from one idea to the next.&lt;/p&gt;
+&lt;p&gt;Step 6: Engage Your Audience&lt;/p&gt;
+&lt;p&gt;When writing a blog post, it&amp;rsquo;s important to engage with your audience. Use comments or social media to answer questions and address any concerns that readers may have. Share your own experiences or insights to add value and showcase your expertise in your field.&lt;/p&gt;
+&lt;p&gt;Step 7: Edit and Repeat&lt;/p&gt;
+&lt;p&gt;After you&amp;rsquo;ve finished writing your post, take a moment to edit it for clarity and readability. Check your grammar, spelling, and punctuation for errors. If there are any, go back and make necessary corrections before publishing.&lt;/p&gt;
+&lt;p&gt;With these tips in mind, you can write an outstanding blog post that will attract more readers and increase engagement on your website. Remember to be authentic, engaging, and relevant, and don&amp;rsquo;t forget to share your own experiences or insights along the way!&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #tutorial #on #how #to #create #awesome #blog #post&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Mar 9</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-9/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-9/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-9/</guid>
-      <description>Query: Act as if you were a blog owner, write a short post about your day Mar 9 [!tldr] Mar 9 TLDR Text is too short to sumarize
-Dear readers,
-I hope this post finds you well today! As always, I&amp;rsquo;m excited to share some of the highlights of my busy day.
-First and foremost, I have to start by saying that I had an absolute blast at the annual conference that took place last week.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-9/</guid>
+      <description>&lt;h1 id=&#34;query-act-as-if-you-were-a-blog-owner-write-a-short-post-about-your-day&#34;&gt;Query: Act as if you were a blog owner, write a short post about your day&lt;/h1&gt;
+&lt;h1 id=&#34;mar-9&#34;&gt;Mar 9&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 9
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Dear readers,&lt;/p&gt;
+&lt;p&gt;I hope this post finds you well today! As always, I&amp;rsquo;m excited to share some of the highlights of my busy day.&lt;/p&gt;
+&lt;p&gt;First and foremost, I have to start by saying that I had an absolute blast at the annual conference that took place last week. The event was full of exciting sessions on different topics related to my niche (in this case, digital marketing), and I learned a lot from the presenters.&lt;/p&gt;
+&lt;p&gt;Aside from all the knowledge I picked up during the conference, there were plenty of other moments that stand out in my mind. One of them was when I met some old friends from my university days. We had been staying in touch for a while, but it finally happened when we attended the same event together!&lt;/p&gt;
+&lt;p&gt;Another highlight was spending time with my family. I spent an entire weekend with them, which was incredibly rewarding and fulfilling. Seeing my loved ones make new memories together brought me immense joy.&lt;/p&gt;
+&lt;p&gt;In terms of work-related things, there were several tasks that I completed during the conference. Firstly, I organized a team meeting to review the outcomes of our presentations. The feedback we received was invaluable and gave us a clearer idea of how to improve for future events.&lt;/p&gt;
+&lt;p&gt;Secondly, I worked on an article related to my niche. The topic was quite broad, but I managed to narrow it down to something that was more focused and relevant to my audience. The piece went live within the week, and it received positive feedback from readers.&lt;/p&gt;
+&lt;p&gt;Lastly, I had a few sales conversations with potential clients. These were both on-site and offline, and while they didn&amp;rsquo;t end up in any deals, it was still an opportunity to learn more about their needs and how we could help them meet those goals.&lt;/p&gt;
+&lt;p&gt;In conclusion, my day was full of exciting moments, from attending a conference to spending quality time with loved ones. While I have many tasks left to complete, I am confident that the knowledge and experiences gained will help me in the future. ❤️&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #another #day #another #story #ai #as #a #blog #owner&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
   </channel>

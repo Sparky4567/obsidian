@@ -2,20 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Assistant on Obsidian</title>
-    <link>http://localhost:1313/tags/assistant/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/assistant/</link>
     <description>Recent content in Assistant on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Mon, 18 Mar 2024 20:26:21 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/assistant/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Mar 2024 20:26:21 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/assistant/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 18</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-18/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-18/</link>
       <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-18/</guid>
-      <description>Prompt: Act as if you were a writer, write a blog post on why you like technology Mar 18 [!tldr] Mar 18 TLDR Text is too short to sumarize
-Dear Technology Lover,
-It&amp;rsquo;s hard to imagine a world without technology. From smartphones and laptops to smart home devices and online shopping, these technological innovations have become a staple in our daily lives. But why exactly do we love technology so much?</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-18/</guid>
+      <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-blog-post-on-why-you-like-technology&#34;&gt;Prompt: Act as if you were a writer, write a blog post on why you like technology&lt;/h1&gt;
+&lt;h1 id=&#34;mar-18&#34;&gt;Mar 18&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 18
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Dear Technology Lover,&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s hard to imagine a world without technology. From smartphones and laptops to smart home devices and online shopping, these technological innovations have become a staple in our daily lives. But why exactly do we love technology so much?&lt;/p&gt;
+&lt;p&gt;First and foremost, technology has transformed the way we live our lives. From communication to entertainment, work to play, there&amp;rsquo;s no doubt that technology has made our lives easier and more convenient. Whether it&amp;rsquo;s sending emails or ordering a pizza online, we&amp;rsquo;re able to do things much faster and with far less effort than in the past.&lt;/p&gt;
+&lt;p&gt;Technology has also created new opportunities for people who may not have had access to them before. For example, people from rural areas now have access to education and training programs thanks to technology like video conferencing. Additionally, social media platforms have given people a voice and allowed them to connect with others around the world.&lt;/p&gt;
+&lt;p&gt;However, despite all of these benefits, there are some downsides to technology as well. For instance, there&amp;rsquo;s been a rise in cybercrime and privacy breaches due to the increasing adoption of online services like social media and e-commerce. Moreover, technological advancements have led to job loss and displacement for some workers.&lt;/p&gt;
+&lt;p&gt;In conclusion, technology has made our lives better, more convenient and more accessible, but it&amp;rsquo;s not without its flaws. If you&amp;rsquo;re a Technology Lover, take pride in what these technologies have done for our world and continue to push for change that benefits the greater good. As an AI Assistant, I&amp;rsquo;d be honored to provide you with further insight into how technology has transformed our lives, and how we can continue to use it to make a positive impact on society.&lt;/p&gt;
+&lt;p&gt;Thank you for reading my blog post, and I hope you enjoy exploring more about the benefits of Technology!&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #ai #writing #assistant #blogpost&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
   </channel>

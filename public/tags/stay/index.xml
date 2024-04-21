@@ -2,31 +2,104 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stay on Obsidian</title>
-    <link>http://localhost:1313/tags/stay/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/stay/</link>
     <description>Recent content in Stay on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Thu, 28 Mar 2024 12:15:07 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/stay/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Mar 2024 12:15:07 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/stay/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 28</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-28/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-28/</link>
       <pubDate>Thu, 28 Mar 2024 12:15:07 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-28/</guid>
-      <description>Prompt: Write a blog post on how to stay creative Mar 28 [!tldr] Mar 28 TLDR Text is too short to sumarize
-In today&amp;rsquo;s digital age, staying creative has become increasingly important. With all the distractions and interruptions, it can be challenging to find time for creativity in our busy schedules. But let me share with you a few tips on how to stay creative!
-Take breaks: Sometimes we get so caught up in work or life that we forget to take breaks.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-28/</guid>
+      <description>&lt;h1 id=&#34;prompt-write-a-blog-post-on-how-to-stay-creative&#34;&gt;Prompt: Write a blog post on how to stay creative&lt;/h1&gt;
+&lt;h1 id=&#34;mar-28&#34;&gt;Mar 28&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 28
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In today&amp;rsquo;s digital age, staying creative has become increasingly important. With all the distractions and interruptions, it can be challenging to find time for creativity in our busy schedules. But let me share with you a few tips on how to stay creative!&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Take breaks: Sometimes we get so caught up in work or life that we forget to take breaks. Take a break every hour or two, even if it&amp;rsquo;s just a few minutes. It will help refresh your mind and energy, which will allow you to be more productive during the rest of your day.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create an environment: Choose a space where you can focus on your creative work without distractions like music or noise. Try to find a quiet and serene place where you won&amp;rsquo;t be bothered by anyone, even if it means spending an extra $50 for a room with no neighbors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Read: Reading is a great way to unwind and relax. There are plenty of books on creativity that will help you think more creatively. Don&amp;rsquo;t just read about ideas, though; try to apply what you learn in practice.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Take inspiration from others: It&amp;rsquo;s easy to get lost in our own creative work. But sometimes it can be helpful to take inspiration from other people&amp;rsquo;s work. Look for creatives who are like-minded and see how they approach their craft.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stay curious: Curiosity is one of the keys to staying creative. It helps us keep exploring different ideas, even if we don&amp;rsquo;t know where it will take us. Don&amp;rsquo;t be afraid to try new things or take risks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Practice regularly: Even though it may seem like a waste of time, practicing creativity is important. Even if you only spend an hour a day, that&amp;rsquo;s still better than nothing at all.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Be open to ideas: Don&amp;rsquo;t be afraid to let your mind run wild and come up with new ideas. It&amp;rsquo;s much more likely that you&amp;rsquo;ll get something good out of it when you have to think outside the box.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Take risks: Lastly, don&amp;rsquo;t be too scared to take risks in your creative work. Don&amp;rsquo;t be afraid to try new things or to push yourself beyond what you thought was possible. Sometimes taking a risk will lead to something great.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In conclusion, staying creative is not just about having an idea, but also practicing and exploring ideas regularly. These tips can help you in your journey towards becoming more creative. Remember, the most important thing is to be patient and continue to practice until you find what works for you.&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #ai #on #how #to #stay #creative&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Mar 26</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-26/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-26/</link>
       <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-26/</guid>
-      <description>Prompt: Act as if you were a developer, write a post on how to stay productive by using nowadays technologies Mar 26 [!tldr] Mar 26 TLDR Text is too short to sumarize
-As a busy programmer and project manager, I know how important it is to be efficient and focused to get things done. Here are some nowaday technologies that can help you stay productive:
-Productivity software: There are several productivity software tools out there, such as Trello, Asana, Monday, and Monday.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-26/</guid>
+      <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-developer-write-a-post-on-how-to-stay-productive-by-using-nowadays-technologies&#34;&gt;Prompt: Act as if you were a developer, write a post on how to stay productive by using nowadays technologies&lt;/h1&gt;
+&lt;h1 id=&#34;mar-26&#34;&gt;Mar 26&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 26
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As a busy programmer and project manager, I know how important it is to be efficient and focused to get things done. Here are some nowaday technologies that can help you stay productive:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Productivity software: There are several productivity software tools out there, such as Trello, Asana, Monday, and Monday.com. These apps help you manage your tasks, create timelines, and track progress. They can be customized to fit your work style and workflows.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Time-tracking apps: There are many time-tracking apps available for both iOS and Android devices. These tools help you keep track of the hours spent on each task. This data can be analyzed to identify areas where you can improve productivity.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pomodoro technique: The Pomodoro technique involves working in 25-minute &amp;ldquo;sprints&amp;rdquo; with short breaks, known as pomodoros. It helps break down work into smaller, more manageable chunks and encourages the use of task lists to track progress.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Project management tools: These tools help you set priorities, assign tasks, track progress, and communicate with stakeholders. Some popular project management tools include Asana, Trello, and Monday.com.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Time blocking: Time blocking is a technique where you schedule your work in blocks of time, rather than using the standard 9-to-5 work day. This can help prevent burnout and increase focus.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Resilience training: Resilience training helps you cope with stress and handle setbacks. It involves practicing positive self-talk, meditation, and mindfulness exercises.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Time-blocking for meetings: Use time blocking for meetings to manage the length of each meeting and minimize distractions. This can help you stay on track and avoid getting sidetracked.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;By using nowaday technologies, you can stay productive by managing your workload efficiently, increasing focus, improving time management skills, reducing stress, and avoiding burnout.&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #ai #on #how #to #stay #productive&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
   </channel>

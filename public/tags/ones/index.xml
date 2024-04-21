@@ -2,20 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ones on Obsidian</title>
-    <link>http://localhost:1313/tags/ones/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/ones/</link>
     <description>Recent content in Ones on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Mon, 11 Mar 2024 20:59:30 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/ones/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Mar 2024 20:59:30 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/ones/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 11</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-11/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-11/</link>
       <pubDate>Mon, 11 Mar 2024 20:59:30 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-11/</guid>
-      <description>Prompt: Act as if you were a writer, write a blog post on how to improve ones writing skills Mar 11 [!tldr] Mar 11 TLDR Text is too short to sumarize
-Dear [Friend/Fellow],
-Today, I want to talk to you about one of the most important aspects of your life: Your Writing Skills. You may think that this is something that doesn&amp;rsquo;t require any improvement or that you&amp;rsquo;re already doing a pretty decent job with it.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-11/</guid>
+      <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-blog-post-on-how-to-improve-ones-writing-skills&#34;&gt;Prompt: Act as if you were a writer, write a blog post on how to improve ones writing skills&lt;/h1&gt;
+&lt;h1 id=&#34;mar-11&#34;&gt;Mar 11&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 11
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Dear [Friend/Fellow],&lt;/p&gt;
+&lt;p&gt;Today, I want to talk to you about one of the most important aspects of your life: Your Writing Skills. You may think that this is something that doesn&amp;rsquo;t require any improvement or that you&amp;rsquo;re already doing a pretty decent job with it. But in today&amp;rsquo;s world of social media and instant gratification, quality writing is still essential for success in all aspects of your life.&lt;/p&gt;
+&lt;p&gt;Here are some tips for improving your writing skills:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Set aside time: Writing is not something you can just pick up whenever you want to. You have to set aside time for it each day. Whether it&amp;rsquo;s 5 minutes or an hour, make a habit out of it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Write regularly: The more you write, the easier it will be for you to develop your skills. Set aside at least one or two pages of writing every day and try to revise them thoroughly before moving on to the next day&amp;rsquo;s writing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Read widely: Reading books, articles, and blogs that focus on writing is essential for your development. Take time to read and analyze what others are doing well and how they did it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Practice regularly: You can&amp;rsquo;t expect to improve if you don&amp;rsquo;t practice regularly. Do a few pages every day or two, depending on your level of familiarity with the topic.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use writing tools: There are many writing tools available that can help you make your writing more effective and easier to read. Tools like Grammarly or Hemingway Editor can help catch grammar mistakes and improve your writing in general.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get feedback: Ask for feedback from others, whether it&amp;rsquo;s a friend, family member, or an instructor at school. Feedback is vital for learning and developing your skills.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Practice writing every day: Writing every day will help you become more confident with your writing abilities. It also helps to build habit, which is the foundation of effective writing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Write from the heart: Whether you&amp;rsquo;re writing a blog post or an essay, try to write from the heart. This means that you should be passionate and enthusiastic about the topic. You might even consider writing about something that you truly care about.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Take breaks: Writing takes time and effort, so it&amp;rsquo;s essential to take breaks throughout your day. It helps to relax your mind and hands, allowing you to focus on your writing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use editing software: Editing tools like Microsoft Word or Google Docs can help you catch errors and improve the quality of your writing. This will give you a better idea of what works and what doesn&amp;rsquo;t in your writing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In conclusion, improving your writing skills is essential for success in all aspects of your life. By following these tips, you&amp;rsquo;ll be on your way to becoming a more skilled writer who can write with confidence, clarity, and effectiveness. So take action today and start improving your writing skills!&lt;/p&gt;
+&lt;p&gt;Thank you for reading. If you have any questions or feedback, please don&amp;rsquo;t hesitate to reach out. I hope this helps!&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #how #to #improve #ones #writing #skills&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
   </channel>

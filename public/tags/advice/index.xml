@@ -2,31 +2,110 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Advice on Obsidian</title>
-    <link>http://localhost:1313/tags/advice/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/advice/</link>
     <description>Recent content in Advice on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Wed, 27 Mar 2024 11:47:04 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/advice/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Mar 2024 11:47:04 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/advice/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 27</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-27/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-27/</link>
       <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-27/</guid>
-      <description>Prompt: Act as if you were a writer, write a blog post on how to create good titles for your journal entries Mar 27 [!tldr] Mar 27 TLDR Text is too short to sumarize
-Title: The Art of Creating Captivating Journal Entries
-As a writer, it&amp;rsquo;s essential to know that great titles are crucial for attracting and retaining readers. A well-crafted title not only captures the reader&amp;rsquo;s attention but also sets up expectations about what they can expect from your journal entries.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-27/</guid>
+      <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-blog-post-on-how-to-create-good-titles-for-your-journal-entries&#34;&gt;Prompt: Act as if you were a writer, write a blog post on how to create good titles for your journal entries&lt;/h1&gt;
+&lt;h1 id=&#34;mar-27&#34;&gt;Mar 27&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 27
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Title: The Art of Creating Captivating Journal Entries&lt;/p&gt;
+&lt;p&gt;As a writer, it&amp;rsquo;s essential to know that great titles are crucial for attracting and retaining readers. A well-crafted title not only captures the reader&amp;rsquo;s attention but also sets up expectations about what they can expect from your journal entries. In this blog post, we will explore the art of creating captivating journal entries by identifying and discussing some effective techniques for crafting engaging titles.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Start with a Punchline:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The title should immediately grab the reader&amp;rsquo;s attention and convey the main idea or theme of your entry. A catchy, memorable punchline is an excellent way to do this. For example:&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;My Life in Monarchy: From Being Queen&amp;rsquo;s Handmaid to Queen&amp;rsquo;s Mistress&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;This title immediately sets up the idea that the author has a unique perspective on the royal court system and is sharing their experiences as a member of the royal family.&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Use Anecdotes or Personal Experiences:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Using anecdotes, stories, or personal experiences can help you create a sense of intimacy and make your journal entries feel more relatable to readers. For example:&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;A Day in My Life as the Queen&amp;rsquo;s Mistress: From Cleaning Up Her Husband&amp;rsquo;s Messes to Raising His Children&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;This title immediately sets up the idea that the author has a unique perspective on royal life and is sharing their experiences as a member of the royal family.&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Use Quotations or Insights from Authoritative Sources:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Using quotes or insights from authoritative sources can provide additional context and insight into your subject matter, making it more interesting to read. For example:&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;The Royal Dilemma: My Life as the Queen&amp;rsquo;s Handmaid is a Nightmare&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;This title immediately sets up the idea that the author has a unique perspective on royal life and is sharing their experiences as a member of the royal family.&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Include Numbers or Statistics:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Using statistics or numbers can make your entry more informative and interesting to read. For example:&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;My Life in Monarchy: From Being Queen&amp;rsquo;s Handmaid to Queen&amp;rsquo;s Mistress, I Have Gone from Zero to One&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;This title immediately sets up the idea that the author has a unique perspective on royal life and is sharing their experiences as a member of the royal family.&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Use Metaphors or Similes:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Using metaphors or similes can help create a poetic and descriptive language in your journal entries, making them more engaging to read. For example:&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;My Life in Monarchy: From Being Queen&amp;rsquo;s Handmaid to Queen&amp;rsquo;s Mistress, I Have Gone from White Dove to Black Swan&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;This title immediately sets up the idea that the author has a unique perspective on royal life and is sharing their experiences as a member of the royal family.&lt;/p&gt;
+&lt;p&gt;Conclusion:&lt;/p&gt;
+&lt;p&gt;Using effective titles can make your journal entries more engaging and interesting to read, helping you create a sense of familiarity and belonging with readers. By exploring different techniques for crafting great titles, you can create journal entries that leave a lasting impression on your audience.&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #ai #advice #on #good #titles&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Mar 5</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-5/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/</link>
       <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-5/</guid>
-      <description>Query: What advice would you give me to optimize my current website for a better performance Mar 5 [!tldr] Mar 5 TLDR SEO advice from AI 🤖
-I can provide you with some general tips and insights on optimizing your current website for better performance, but i cannot offer specific advice based on your individual situation. Here are some broad recommendations:
-Conduct thorough keyword research: knowing what keywords or phrases your target audience is searching for can help you optimize your content and your website&amp;rsquo;s meta descriptions and header tags to attract search engine crawlers.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/</guid>
+      <description>&lt;h1 id=&#34;query-what-advice-would-you-give-me-to-optimize-my-current-website-for-a-better-performance&#34;&gt;Query: What advice would you give me to optimize my current website for a better performance&lt;/h1&gt;
+&lt;h1 id=&#34;mar-5&#34;&gt;Mar 5&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 5
+TLDR
+SEO advice from AI 🤖&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I can provide you with some general tips and insights on optimizing your current website for better performance, but i cannot offer specific advice based on your individual situation. Here are some broad recommendations:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Conduct thorough keyword research: knowing what keywords or phrases your target audience is searching for can help you optimize your content and your website&amp;rsquo;s meta descriptions and header tags to attract search engine crawlers. Use tools like google keyword planner, seo book, or google search console to conduct keyword research.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimize your website structure: a well-organized website structure is key to improving user experience and increasing page views. Use headings, subheadings, and bullet points to break up content into easy-to-understand sections, and make sure the main heading (h1) for each page matches its primary purpose and keywords.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimize your meta description and header tags: meta descriptions are text snippets that appear below a page&amp;rsquo;s title in search results. Optimizing these descriptions with relevant keywords is crucial to improving visibility. Use headline-style language, include specific benefits or value propositions, and avoid using sales language or empty phrases. Your header tags (h1, h2, etc.) Should also be optimized with the same level of importance.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimize your site for mobile users: while desktop computers are the norm in most industries, mobile search volumes are growing faster than desktop searches. Ensure that your website is fully responsive and compatible across all devices, including desktops and tablets, to improve visibility and attract more traffic from smartphone users.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use a content management system (cms) that supports optimization: if you&amp;rsquo;re using a cms like wordpress or wix, consider switching to a platform with built-in tools for optimizing your website for better performance. Popular options include yola, drupal, and sphinn.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Test your site regularly: conduct regular tests to see which pages perform the best and which ones require improvement. Use analytics tools to track visitor behavior and adjust your content strategy accordingly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Monitor and analyze your performance: use tools like google analytics or seo book to monitor and analyze your website&amp;rsquo;s traffic, bounce rates, conversion rates, and other key metrics. Use this information to make data-driven decisions about how to optimize your site for better performance in the future.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Remember that optimizing a website is a long-term process that requires patience and dedication. Start by taking small steps to improve your existing website, then gradually work your way towards improving the overall performance of your site over time.&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #seo #advice #from #ai&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
   </channel>

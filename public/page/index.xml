@@ -2,62 +2,104 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Obsidian</title>
-    <link>http://localhost:1313/page/</link>
+    <link>https://obsidiannotes.artefaktas.eu/page/</link>
     <description>Recent content in Pages on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Tue, 19 Jul 2022 15:17:07 +0300</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jul 2022 15:17:07 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Support</title>
-      <link>http://localhost:1313/page/support/support/</link>
+      <link>https://obsidiannotes.artefaktas.eu/page/support/support/</link>
       <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
       
-      <guid>http://localhost:1313/page/support/support/</guid>
-      <description>Support Artefaktas projects </description>
+      <guid>https://obsidiannotes.artefaktas.eu/page/support/support/</guid>
+      <description>&lt;h1 id=&#34;support-artefaktas-projects&#34;&gt;Support Artefaktas projects&lt;/h1&gt;
+&lt;div style=&#34;width:100%;text-align: center;&#34;&gt;
+    &lt;iframe height=&#34;712&#34; id=&#34;kofiframe&#34; src=&#34;https://ko-fi.com/artefaktas/?hidefeed=true&amp;amp;widget=true&amp;amp;embed=true&amp;amp;preview=true&#34; style=&#34;background: #f9f9f9; border: none; padding: 4px; width: 100%;&#34; title=&#34;artefaktas&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
       <title>copyright</title>
-      <link>http://localhost:1313/page/copyright/copyright/</link>
+      <link>https://obsidiannotes.artefaktas.eu/page/copyright/copyright/</link>
       <pubDate>Wed, 30 Mar 2022 11:24:05 +0300</pubDate>
       
-      <guid>http://localhost:1313/page/copyright/copyright/</guid>
-      <description>Copyright Copyright Disclaimer:
-All content included on this website, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of https://artefaktas.eu or its content suppliers and protected by international copyright laws. The compilation of all content on this site is the exclusive property of https://artefaktas.eu and protected by international copyright laws.
-The content on this website is provided for informational purposes only.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/page/copyright/copyright/</guid>
+      <description>&lt;h1 id=&#34;copyright&#34;&gt;Copyright&lt;/h1&gt;
+&lt;p&gt;Copyright Disclaimer:&lt;/p&gt;
+&lt;p&gt;All content included on this website, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of &lt;a href=&#34;https://artefaktas.eu&#34;&gt;https://artefaktas.eu&lt;/a&gt; or its content suppliers and protected by international copyright laws. The compilation of all content on this site is the exclusive property of &lt;a href=&#34;https://artefaktas.eu&#34;&gt;https://artefaktas.eu&lt;/a&gt; and protected by international copyright laws.&lt;/p&gt;
+&lt;p&gt;The content on this website is provided for informational purposes only. It may not be reproduced, distributed, transmitted, displayed, published, or broadcast without the prior written permission of &lt;a href=&#34;https://artefaktas.eu&#34;&gt;https://artefaktas.eu&lt;/a&gt;. Unauthorized use of any material on this website may violate copyright, trademark, and other applicable laws and could result in criminal or civil penalties.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://artefaktas.eu&#34;&gt;https://artefaktas.eu&lt;/a&gt; respects the intellectual property rights of others and expects users of this website to do the same. If you believe that your copyrighted work has been copied in a way that constitutes copyright infringement and is accessible on this website, please notify us immediately for prompt removal.&lt;/p&gt;
+&lt;p&gt;For inquiries regarding the use or licensing of &lt;a href=&#34;https://artefaktas.eu&#34;&gt;https://artefaktas.eu&lt;/a&gt;&amp;rsquo;s copyrighted materials, please contact us at &lt;a href=&#34;mailto:admin@artefaktas.eu&#34;&gt;admin@artefaktas.eu&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Privacy</title>
-      <link>http://localhost:1313/page/privacy/privacy/</link>
+      <link>https://obsidiannotes.artefaktas.eu/page/privacy/privacy/</link>
       <pubDate>Wed, 30 Mar 2022 11:24:05 +0300</pubDate>
       
-      <guid>http://localhost:1313/page/privacy/privacy/</guid>
-      <description>Welcome to our Privacy Policy
-Your privacy is critically important to us.
-Artefaktas is located at:
-Artefaktas, Lithuania It is Artefaktas&amp;rsquo;s policy to respect your privacy regarding any information we may collect while operating our website. This Privacy Policy applies to https://nerdy.artefaktas.eu (hereinafter, &amp;ldquo;us&amp;rdquo;, &amp;ldquo;we&amp;rdquo;, or &amp;ldquo;https://nerdy.artefaktas.eu&amp;rdquo;). We respect your privacy and are committed to protecting personally identifiable information you may provide us through the Website. We have adopted this privacy policy (&amp;ldquo;Privacy Policy&amp;rdquo;) to explain what information may be collected on our Website, how we use this information, and under what circumstances we may disclose the information to third parties.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/page/privacy/privacy/</guid>
+      <description>&lt;p&gt;Welcome to our Privacy Policy&lt;/p&gt;
+&lt;p&gt;Your privacy is critically important to us.&lt;/p&gt;
+&lt;p&gt;Artefaktas is located at:&lt;/p&gt;
+&lt;p&gt;Artefaktas, Lithuania
+It is Artefaktas&amp;rsquo;s policy to respect your privacy regarding any information we may collect while operating our website. This Privacy Policy applies to &lt;a href=&#34;https://nerdy.artefaktas.eu&#34;&gt;https://nerdy.artefaktas.eu&lt;/a&gt; (hereinafter, &amp;ldquo;us&amp;rdquo;, &amp;ldquo;we&amp;rdquo;, or &amp;ldquo;&lt;a href=&#34;https://nerdy.artefaktas.eu&#34;&gt;https://nerdy.artefaktas.eu&lt;/a&gt;&amp;rdquo;). We respect your privacy and are committed to protecting personally identifiable information you may provide us through the Website. We have adopted this privacy policy (&amp;ldquo;Privacy Policy&amp;rdquo;) to explain what information may be collected on our Website, how we use this information, and under what circumstances we may disclose the information to third parties. This Privacy Policy applies only to information we collect through the Website and does not apply to our collection of information from other sources.
+This Privacy Policy, together with the Terms and conditions posted on our Website, set forth the general rules and policies governing your use of our Website. Depending on your activities when visiting our Website, you may be required to agree to additional terms and conditions.&lt;/p&gt;
+&lt;p&gt;Website Visitors&lt;/p&gt;
+&lt;p&gt;Like most website operators, Artefaktas collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. Artefaktas&amp;rsquo;s purpose in collecting non-personally identifying information is to better understand how Artefaktas&amp;rsquo;s visitors use its website. From time to time, Artefaktas may release non-personally-identifying information in the aggregate, e.g., by publishing a report on trends in the usage of its website.
+Artefaktas also collects potentially personally-identifying information like Internet Protocol (IP) addresses for logged in users and for users leaving comments on &lt;a href=&#34;https://nerdy.artefaktas.eu&#34;&gt;https://nerdy.artefaktas.eu&lt;/a&gt; blog posts. Artefaktas only discloses logged in user and commenter IP addresses under the same circumstances that it uses and discloses personally-identifying information as described below.&lt;/p&gt;
+&lt;p&gt;Gathering of Personally-Identifying Information&lt;/p&gt;
+&lt;p&gt;Certain visitors to Artefaktas&amp;rsquo;s websites choose to interact with Artefaktas in ways that require Artefaktas to gather personally-identifying information. The amount and type of information that Artefaktas gathers depend on the nature of the interaction. For example, we ask visitors who sign up for a blog at &lt;a href=&#34;https://nerdy.artefaktas.eu&#34;&gt;https://nerdy.artefaktas.eu&lt;/a&gt; to provide an email address.&lt;/p&gt;
+&lt;p&gt;Security&lt;/p&gt;
+&lt;p&gt;The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security.&lt;/p&gt;
+&lt;p&gt;Advertisements&lt;/p&gt;
+&lt;p&gt;Ads appearing on our website may be delivered to users by advertising partners, who may set cookies. These cookies allow the ad server to recognize your computer each time they send you an online advertisement to compile information about you or others who use your computer. This information allows ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you. This Privacy Policy covers the use of cookies by Artefaktas and does not cover the use of cookies by any advertisers.&lt;/p&gt;
+&lt;p&gt;Links To External Sites&lt;/p&gt;
+&lt;p&gt;Our Service may contain links to external sites that are not operated by us. If you click on a third party link, you will be directed to that third party&amp;rsquo;s site. We strongly advise you to review the Privacy Policy and the terms and conditions of every site you visit.
+We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites, products or services.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nerdy.artefaktas.eu&#34;&gt;https://nerdy.artefaktas.eu&lt;/a&gt; uses Google AdWords for remarketing&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nerdy.artefaktas.eu&#34;&gt;https://nerdy.artefaktas.eu&lt;/a&gt; uses the remarketing services to advertise on third party websites (including Google) to previous visitors to our site. It could mean that we advertise to previous visitors who haven&amp;rsquo;t completed a task on our site, for example using the contact form to make an enquiry. This could be in the form of an advertisement on the Google search results page, or a site in the Google Display Network. Third-party vendors, including Google, use cookies to serve ads based on someone&amp;rsquo;s past visits. Of course, any data collected will be used in accordance with our own privacy policy and Google&amp;rsquo;s privacy policy.
+You can set preferences for how Google advertises to you using the Google Ad Preferences page, and if you want to you can opt-out of interest-based advertising entirely by cookie settings or permanently using a browser plugin.&lt;/p&gt;
+&lt;p&gt;Aggregated Statistics&lt;/p&gt;
+&lt;p&gt;Artefaktas may collect statistics about the behavior of visitors to its website. Artefaktas may display this information publicly or provide it to others. However, Artefaktas does not disclose your personally-identifying information.&lt;/p&gt;
+&lt;p&gt;Cookies&lt;/p&gt;
+&lt;p&gt;To enrich and perfect your online experience, Artefaktas uses &amp;ldquo;Cookies&amp;rdquo;, similar technologies and services provided by others to display personalized content, appropriate advertising and store your preferences on your computer.
+A cookie is a string of information that a website stores on a visitor&amp;rsquo;s computer, and that the visitor&amp;rsquo;s browser provides to the website each time the visitor returns. Artefaktas uses cookies to help Artefaktas identify and track visitors, their usage of &lt;a href=&#34;https://nerdy.artefaktas.eu&#34;&gt;https://nerdy.artefaktas.eu&lt;/a&gt;, and their website access preferences. Artefaktas visitors who do not wish to have cookies placed on their computers should set their browsers to refuse cookies before using Artefaktas&amp;rsquo;s websites, with the drawback that certain features of Artefaktas&amp;rsquo;s websites may not function properly without the aid of cookies.&lt;/p&gt;
+&lt;p&gt;By continuing to navigate our website without changing your cookie settings, you hereby acknowledge and agree to Artefaktas&amp;rsquo;s use of cookies.&lt;/p&gt;
+&lt;p&gt;E-commerce&lt;/p&gt;
+&lt;p&gt;Those who engage in transactions with Artefaktas – by purchasing Artefaktas&amp;rsquo;s services or products are asked to provide additional information, including as necessary the personal and financial information required to process those transactions. In each case, Artefaktas collects such information only insofar as is necessary or appropriate to fulfil the purpose of the visitor&amp;rsquo;s interaction with Artefaktas. Artefaktas does not disclose personally-identifying information other than as described below. And visitors can always refuse to supply personally-identifying information, with the caveat that it may prevent them from engaging in certain website-related activities.&lt;/p&gt;
+&lt;p&gt;Privacy Policy Changes&lt;/p&gt;
+&lt;p&gt;Although most changes are likely to be minor, Artefaktas may change its Privacy Policy from time to time, and in Artefaktas&amp;rsquo;s sole discretion. Artefaktas encourages visitors to frequently check this page for any changes to its Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.&lt;/p&gt;
+&lt;p&gt;Credit &amp;amp; Contact Information&lt;/p&gt;
+&lt;p&gt;If you have any questions about this Privacy Policy, please contact us by email or phone.&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Kontaktai</title>
-      <link>http://localhost:1313/page/contact/contact/</link>
+      <link>https://obsidiannotes.artefaktas.eu/page/contact/contact/</link>
       <pubDate>Wed, 23 Dec 2020 18:42:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/page/contact/contact/</guid>
-      <description>Kontaktai bendradarbiavimui Email admin@artefaktas.eu </description>
+      <guid>https://obsidiannotes.artefaktas.eu/page/contact/contact/</guid>
+      <description>&lt;h2 id=&#34;kontaktai-bendradarbiavimui&#34;&gt;Kontaktai bendradarbiavimui&lt;/h2&gt;
+&lt;h3 id=&#34;email&#34;&gt;Email&lt;/h3&gt;
+&lt;h4 id=&#34;adminartefaktaseu&#34;&gt;&lt;a href=&#34;mailto:admin@artefaktas.eu&#34;&gt;admin@artefaktas.eu&lt;/a&gt;&lt;/h4&gt;
+</description>
     </item>
     
     <item>
       <title>Apie</title>
-      <link>http://localhost:1313/page/about/about/</link>
+      <link>https://obsidiannotes.artefaktas.eu/page/about/about/</link>
       <pubDate>Mon, 21 Dec 2020 12:00:00 -0500</pubDate>
       
-      <guid>http://localhost:1313/page/about/about/</guid>
-      <description>Svetainę kūrė ir administruoja artefaktas.eu tinklaraščio savininkas.
-Sveikinu apsilankius skiltyje &amp;ldquo;Apie&amp;rdquo;.
-Turite klausimų? Gal ko nepaminėjau?
-Galite parašyti elektroniniu paštu admin@artefaktas.eu ir būtinai atsakysiu.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/page/about/about/</guid>
+      <description>&lt;p&gt;Svetainę kūrė ir administruoja artefaktas.eu tinklaraščio savininkas.&lt;/p&gt;
+&lt;p&gt;Sveikinu apsilankius skiltyje &amp;ldquo;Apie&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Turite klausimų? Gal ko nepaminėjau?&lt;/p&gt;
+&lt;p&gt;Galite parašyti elektroniniu paštu &lt;a href=&#34;mailto:admin@artefaktas.eu&#34;&gt;admin@artefaktas.eu&lt;/a&gt; ir būtinai atsakysiu.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

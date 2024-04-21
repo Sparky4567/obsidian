@@ -2,21 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Owner on Obsidian</title>
-    <link>http://localhost:1313/tags/owner/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/owner/</link>
     <description>Recent content in Owner on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Sat, 09 Mar 2024 13:11:27 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/owner/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Mar 2024 13:11:27 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/owner/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 9</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-9/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-9/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-9/</guid>
-      <description>Query: Act as if you were a blog owner, write a short post about your day Mar 9 [!tldr] Mar 9 TLDR Text is too short to sumarize
-Dear readers,
-I hope this post finds you well today! As always, I&amp;rsquo;m excited to share some of the highlights of my busy day.
-First and foremost, I have to start by saying that I had an absolute blast at the annual conference that took place last week.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-9/</guid>
+      <description>&lt;h1 id=&#34;query-act-as-if-you-were-a-blog-owner-write-a-short-post-about-your-day&#34;&gt;Query: Act as if you were a blog owner, write a short post about your day&lt;/h1&gt;
+&lt;h1 id=&#34;mar-9&#34;&gt;Mar 9&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 9
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Dear readers,&lt;/p&gt;
+&lt;p&gt;I hope this post finds you well today! As always, I&amp;rsquo;m excited to share some of the highlights of my busy day.&lt;/p&gt;
+&lt;p&gt;First and foremost, I have to start by saying that I had an absolute blast at the annual conference that took place last week. The event was full of exciting sessions on different topics related to my niche (in this case, digital marketing), and I learned a lot from the presenters.&lt;/p&gt;
+&lt;p&gt;Aside from all the knowledge I picked up during the conference, there were plenty of other moments that stand out in my mind. One of them was when I met some old friends from my university days. We had been staying in touch for a while, but it finally happened when we attended the same event together!&lt;/p&gt;
+&lt;p&gt;Another highlight was spending time with my family. I spent an entire weekend with them, which was incredibly rewarding and fulfilling. Seeing my loved ones make new memories together brought me immense joy.&lt;/p&gt;
+&lt;p&gt;In terms of work-related things, there were several tasks that I completed during the conference. Firstly, I organized a team meeting to review the outcomes of our presentations. The feedback we received was invaluable and gave us a clearer idea of how to improve for future events.&lt;/p&gt;
+&lt;p&gt;Secondly, I worked on an article related to my niche. The topic was quite broad, but I managed to narrow it down to something that was more focused and relevant to my audience. The piece went live within the week, and it received positive feedback from readers.&lt;/p&gt;
+&lt;p&gt;Lastly, I had a few sales conversations with potential clients. These were both on-site and offline, and while they didn&amp;rsquo;t end up in any deals, it was still an opportunity to learn more about their needs and how we could help them meet those goals.&lt;/p&gt;
+&lt;p&gt;In conclusion, my day was full of exciting moments, from attending a conference to spending quality time with loved ones. While I have many tasks left to complete, I am confident that the knowledge and experiences gained will help me in the future. ❤️&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #another #day #another #story #ai #as #a #blog #owner&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
   </channel>

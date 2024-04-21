@@ -2,19 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Protecting on Obsidian</title>
-    <link>http://localhost:1313/tags/protecting/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/protecting/</link>
     <description>Recent content in Protecting on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Wed, 13 Mar 2024 23:21:41 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/protecting/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Mar 2024 23:21:41 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/protecting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 13</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-13/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-13/</link>
       <pubDate>Wed, 13 Mar 2024 23:21:41 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-13/</guid>
-      <description>Prompt: Write a blog post on how to protect your written content from copyright infringement Mar 13 [!tldr] Mar 13 TLDR Text is too short to sumarize
-Copyright infringement is a serious issue that can have a significant impact on businesses and individuals alike. It occurs when someone uses or replicates another&amp;rsquo;s original work without permission, including words, music, images, videos, or software. If you&amp;rsquo;re a writer or creative individual, this could be especially damaging to your career.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-13/</guid>
+      <description>&lt;h1 id=&#34;prompt-write-a-blog-post-on-how-to-protect-your-written-content-from-copyright-infringement&#34;&gt;Prompt: Write a blog post on how to protect your written content from copyright infringement&lt;/h1&gt;
+&lt;h1 id=&#34;mar-13&#34;&gt;Mar 13&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Mar 13
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Copyright infringement is a serious issue that can have a significant impact on businesses and individuals alike. It occurs when someone uses or replicates another&amp;rsquo;s original work without permission, including words, music, images, videos, or software. If you&amp;rsquo;re a writer or creative individual, this could be especially damaging to your career.&lt;/p&gt;
+&lt;p&gt;Here are some ways to protect your written content from copyright infraction:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Don&amp;rsquo;t share your ideas with anyone else: Before sharing your work with anyone else, make sure they have permission to use it. If you create a piece of content on behalf of your business or organization, ask the rights holder for permission beforehand. It&amp;rsquo;s also essential not to reuse content that has already been published elsewhere.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure all sources are cited: When writing about something you found online, make sure to cite the original source so others can check their work and verify its validity. Also, ensure that the copied material is properly attributed to the original creator(s) in your document or article. This helps avoid copyright infringement while also giving credit where credit is due.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use Creative Commons Licenses: Creative Commons allows you to share your work under a license that grants others permission to use it. It&amp;rsquo;s important to read the license before using any content, especially if you&amp;rsquo;re not sure about its usage terms. When appropriate, consider using CC-BY or CC0 (Public Domain) licenses so that they can be used freely by anyone.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stay up to date with copyright laws: Make sure you know the current copyright law in your country, region, or industry. Keeping up with new legislation and adapting to it is essential for protecting your work from infringement. It can also help you avoid legal action and preserve your rights in the future.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use a WordPress Plugin: There are several WordPress plugins that help protect your content. The Free Content ID plugin allows you to add a &amp;ldquo;Free Content&amp;rdquo; tag to your posts or pages, while the Mega Content ID plugin also lets you use a free or premium WordPress theme with an added tag.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In conclusion, protecting your written content from copyright infraction is essential for maintaining it as valuable and original work. By taking these precautions, you can ensure that you keep your intellectual property safe while still allowing others to publish their ideas effectively.&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #written #content #protecting&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
   </channel>

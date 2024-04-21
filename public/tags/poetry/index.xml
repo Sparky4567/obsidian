@@ -2,19 +2,55 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Poetry on Obsidian</title>
-    <link>http://localhost:1313/tags/poetry/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/poetry/</link>
     <description>Recent content in Poetry on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Fri, 12 Apr 2024 18:04:32 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/poetry/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Apr 2024 18:04:32 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/poetry/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apr 12</title>
-      <link>http://localhost:1313/posts/journal/2024-04/apr-12/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-12/</link>
       <pubDate>Fri, 12 Apr 2024 18:04:32 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-04/apr-12/</guid>
-      <description>Prompt: Write a short poem about spring Apr 12 [!tldr] Apr 12 TLDR Short AI generated poem about spring
-In the early morning light, A world of new beginnings awake, Golden buds bursting forth from earth, Sparkling like stars in the sky above. The air is fragrant with blooms and breeze, Whispering secrets of new life&amp;#39;s growth, A symphony of sound, echoes through the forest, A melody that will carry for years to come.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-12/</guid>
+      <description>&lt;h1 id=&#34;prompt-write-a-short-poem-about-spring&#34;&gt;Prompt: Write a short poem about spring&lt;/h1&gt;
+&lt;h1 id=&#34;apr-12&#34;&gt;Apr 12&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Apr 12
+TLDR
+Short AI generated poem about spring&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+In the early morning light,
+A world of new beginnings awake,
+Golden buds bursting forth from earth,
+Sparkling like stars in the sky above.
+
+The air is fragrant with blooms and breeze,
+Whispering secrets of new life&amp;#39;s growth,
+A symphony of sound, echoes through the forest,
+A melody that will carry for years to come.
+
+Crimson blossoms dance in the light,
+Irises and daffodils bloom with ease,
+As we take a stroll down the spring path,
+With nature&amp;#39;s show at our feet, oh so dear.
+
+The sun rises high above, casting its rays,
+On fields of wildflowers and blooming greens,
+A world full of wonder, where each day is new,
+An adventure waiting for you to begin.
+
+Let the earth&amp;#39;s beauty bring you joy and peace,
+In this season of hope, filled with brightness,
+For springtime always brings a sense of calm,
+And new beginnings that never cease to stir.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #ai #poetry&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
   </channel>

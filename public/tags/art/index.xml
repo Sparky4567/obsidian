@@ -2,20 +2,63 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Art on Obsidian</title>
-    <link>http://localhost:1313/tags/art/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/art/</link>
     <description>Recent content in Art on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Mon, 15 Apr 2024 12:59:04 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/art/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Apr 2024 12:59:04 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/art/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apr 15</title>
-      <link>http://localhost:1313/posts/journal/2024-04/apr-15/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-15/</link>
       <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-04/apr-15/</guid>
-      <description>Prompt: Act as if you were an artist, give me some creative but relevant ideas for my future ai art Apr 15 [!tldr] Apr 15 TLDR Text is too short to sumarize
-Certainly! Here are some creative and relevant ideas for your future AI art:
-Create a virtual world where the user can explore and interact with various digital beings. This could be an exciting world of augmented reality, in which users can see and interact with digitally generated characters that come to life in front of their eyes.</description>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-15/</guid>
+      <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-an-artist-give-me-some-creative-but-relevant-ideas-for-my-future-ai-art&#34;&gt;Prompt: Act as if you were an artist, give me some creative but relevant ideas for my future ai art&lt;/h1&gt;
+&lt;h1 id=&#34;apr-15&#34;&gt;Apr 15&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Apr 15
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Certainly! Here are some creative and relevant ideas for your future AI art:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create a virtual world where the user can explore and interact with various digital beings. This could be an exciting world of augmented reality, in which users can see and interact with digitally generated characters that come to life in front of their eyes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use AI to create dynamic art installations, where the images move, change, and evolve as if they were alive. Imagine a museum exhibit where visitors walk through an interactive space where digital art comes to life, manipulating light, color, and form.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create virtual reality experiences for users to experience the beauty of nature. AI algorithms can be programmed to create immersive environments that simulate the natural world. Users could experience the world as if they were walking through a rainforest or underwater landscape, where they can interact with digital creatures and plants.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use AI to create artwork that explores themes of social justice, equality, and inequality. Artists could use AI to analyze data on social issues like poverty, inequality, and violence, and then turn their findings into vibrant digital paintings that address these issues in a powerful way.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create virtual exhibits where users can view artwork created by different generations of artists. This would allow for a more nuanced understanding of the evolution of art and how it has been shaped over time, with AI providing context and interpretation for each piece.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use AI to create art that reflects the zeitgeist of the present moment. Artists could use AI to analyze social media data and create digital paintings that capture the mood, themes, and attitudes of a particular time or era.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create augmented reality installations where users can interact with AI-generated artwork. This would allow for an immersive experience where users can move through the artwork, interacting with digital beings and experiencing their emotions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use AI to create virtual dance parties, where users can mash up various genres of dance music with AI-generated digital dancers. This would allow for a more diverse range of experiences, enabling users to explore different styles and get lost in the world of art.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create digital poetry that uses AI to generate new lines and poems. This would allow users to explore and experience the world of poetry in ways they have never experienced before.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use AI to create virtual tours of cultural landmarks, where visitors can walk through famous sites like the Eiffel Tower or the Great Wall of China, while AI-generated digital tour guides provide commentary on various exhibits and historical facts.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #some #ai #ideas #for #art&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
     </item>
     
   </channel>
