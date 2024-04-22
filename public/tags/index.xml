@@ -2,944 +2,953 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Obsidian</title>
-    <link>https://obsidiannotes.artefaktas.eu/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Wed, 17 Apr 2024 17:08:11 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Apr 2024 18:08:36 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advice</title>
+      <link>http://localhost:1313/tags/advice/</link>
+      <pubDate>Mon, 22 Apr 2024 18:08:36 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/advice/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Ai</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/ai/</link>
-      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Mon, 22 Apr 2024 18:08:36 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/ai/</guid>
+      <guid>http://localhost:1313/tags/ai/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Content</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/content/</link>
-      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
+      <title>Monetization</title>
+      <link>http://localhost:1313/tags/monetization/</link>
+      <pubDate>Mon, 22 Apr 2024 18:08:36 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/content/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Friendly</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/friendly/</link>
-      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/friendly/</guid>
+      <guid>http://localhost:1313/tags/monetization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Newpost</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/newpost/</link>
-      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
+      <link>http://localhost:1313/tags/newpost/</link>
+      <pubDate>Mon, 22 Apr 2024 18:08:36 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/newpost/</guid>
+      <guid>http://localhost:1313/tags/newpost/</guid>
       <description></description>
     </item>
     
     <item>
       <title>On</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/on/</link>
-      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
+      <link>http://localhost:1313/tags/on/</link>
+      <pubDate>Mon, 22 Apr 2024 18:08:36 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/on/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Seo</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/seo/</link>
-      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/seo/</guid>
+      <guid>http://localhost:1313/tags/on/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Writtenbyai</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/writtenbyai/</link>
+      <link>http://localhost:1313/tags/writtenbyai/</link>
+      <pubDate>Mon, 22 Apr 2024 18:08:36 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/writtenbyai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Content</title>
+      <link>http://localhost:1313/tags/content/</link>
       <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/writtenbyai/</guid>
+      <guid>http://localhost:1313/tags/content/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Friendly</title>
+      <link>http://localhost:1313/tags/friendly/</link>
+      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/friendly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seo</title>
+      <link>http://localhost:1313/tags/seo/</link>
+      <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/seo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Art</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/art/</link>
+      <link>http://localhost:1313/tags/art/</link>
       <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/art/</guid>
+      <guid>http://localhost:1313/tags/art/</guid>
       <description></description>
     </item>
     
     <item>
       <title>For</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/for/</link>
+      <link>http://localhost:1313/tags/for/</link>
       <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/for/</guid>
+      <guid>http://localhost:1313/tags/for/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ideas</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/ideas/</link>
+      <link>http://localhost:1313/tags/ideas/</link>
       <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/ideas/</guid>
+      <guid>http://localhost:1313/tags/ideas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Some</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/some/</link>
+      <link>http://localhost:1313/tags/some/</link>
       <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/some/</guid>
+      <guid>http://localhost:1313/tags/some/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Integrate</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/integrate/</link>
+      <link>http://localhost:1313/tags/integrate/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/integrate/</guid>
+      <guid>http://localhost:1313/tags/integrate/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Into</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/into/</link>
+      <link>http://localhost:1313/tags/into/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/into/</guid>
+      <guid>http://localhost:1313/tags/into/</guid>
       <description></description>
     </item>
     
     <item>
       <title>People</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/people/</link>
+      <link>http://localhost:1313/tags/people/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/people/</guid>
+      <guid>http://localhost:1313/tags/people/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Should</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/should/</link>
+      <link>http://localhost:1313/tags/should/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/should/</guid>
+      <guid>http://localhost:1313/tags/should/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Why</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/why/</link>
+      <link>http://localhost:1313/tags/why/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/why/</guid>
+      <guid>http://localhost:1313/tags/why/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Workflow</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/workflow/</link>
+      <link>http://localhost:1313/tags/workflow/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/workflow/</guid>
+      <guid>http://localhost:1313/tags/workflow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Poetry</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/poetry/</link>
+      <link>http://localhost:1313/tags/poetry/</link>
       <pubDate>Fri, 12 Apr 2024 18:04:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/poetry/</guid>
+      <guid>http://localhost:1313/tags/poetry/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Basics</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/basics/</link>
+      <link>http://localhost:1313/tags/basics/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/basics/</guid>
+      <guid>http://localhost:1313/tags/basics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/how/</link>
+      <link>http://localhost:1313/tags/how/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/how/</guid>
+      <guid>http://localhost:1313/tags/how/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Marketing</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/marketing/</link>
+      <link>http://localhost:1313/tags/marketing/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/marketing/</guid>
+      <guid>http://localhost:1313/tags/marketing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Media</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/media/</link>
+      <link>http://localhost:1313/tags/media/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/media/</guid>
+      <guid>http://localhost:1313/tags/media/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Promote</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/promote/</link>
+      <link>http://localhost:1313/tags/promote/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/promote/</guid>
+      <guid>http://localhost:1313/tags/promote/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Social</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/social/</link>
+      <link>http://localhost:1313/tags/social/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/social/</guid>
+      <guid>http://localhost:1313/tags/social/</guid>
       <description></description>
     </item>
     
     <item>
       <title>To</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/to/</link>
+      <link>http://localhost:1313/tags/to/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/to/</guid>
+      <guid>http://localhost:1313/tags/to/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Awesome</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/awesome/</link>
+      <link>http://localhost:1313/tags/awesome/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/awesome/</guid>
+      <guid>http://localhost:1313/tags/awesome/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blog</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/blog/</link>
+      <link>http://localhost:1313/tags/blog/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/blog/</guid>
+      <guid>http://localhost:1313/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Create</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/create/</link>
+      <link>http://localhost:1313/tags/create/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/create/</guid>
+      <guid>http://localhost:1313/tags/create/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Post</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/post/</link>
+      <link>http://localhost:1313/tags/post/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/post/</guid>
+      <guid>http://localhost:1313/tags/post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tutorial</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/tutorial/</link>
+      <link>http://localhost:1313/tags/tutorial/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/tutorial/</guid>
+      <guid>http://localhost:1313/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cope</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/cope/</link>
+      <link>http://localhost:1313/tags/cope/</link>
       <pubDate>Sat, 30 Mar 2024 13:03:11 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/cope/</guid>
+      <guid>http://localhost:1313/tags/cope/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stress</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/stress/</link>
+      <link>http://localhost:1313/tags/stress/</link>
       <pubDate>Sat, 30 Mar 2024 13:03:11 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/stress/</guid>
+      <guid>http://localhost:1313/tags/stress/</guid>
       <description></description>
     </item>
     
     <item>
       <title>With</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/with/</link>
+      <link>http://localhost:1313/tags/with/</link>
       <pubDate>Sat, 30 Mar 2024 13:03:11 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/with/</guid>
+      <guid>http://localhost:1313/tags/with/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/a/</link>
+      <link>http://localhost:1313/tags/a/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/a/</guid>
+      <guid>http://localhost:1313/tags/a/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Expressing</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/expressing/</link>
+      <link>http://localhost:1313/tags/expressing/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/expressing/</guid>
+      <guid>http://localhost:1313/tags/expressing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>In</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/in/</link>
+      <link>http://localhost:1313/tags/in/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/in/</guid>
+      <guid>http://localhost:1313/tags/in/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Manner</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/manner/</link>
+      <link>http://localhost:1313/tags/manner/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/manner/</guid>
+      <guid>http://localhost:1313/tags/manner/</guid>
       <description></description>
     </item>
     
     <item>
       <title>More</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/more/</link>
+      <link>http://localhost:1313/tags/more/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/more/</guid>
+      <guid>http://localhost:1313/tags/more/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Negativity</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/negativity/</link>
+      <link>http://localhost:1313/tags/negativity/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/negativity/</guid>
+      <guid>http://localhost:1313/tags/negativity/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Positive</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/positive/</link>
+      <link>http://localhost:1313/tags/positive/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/positive/</guid>
+      <guid>http://localhost:1313/tags/positive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Creative</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/creative/</link>
+      <link>http://localhost:1313/tags/creative/</link>
       <pubDate>Thu, 28 Mar 2024 12:15:07 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/creative/</guid>
+      <guid>http://localhost:1313/tags/creative/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stay</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/stay/</link>
+      <link>http://localhost:1313/tags/stay/</link>
       <pubDate>Thu, 28 Mar 2024 12:15:07 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/stay/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Advice</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/advice/</link>
-      <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
-      
-      <guid>https://obsidiannotes.artefaktas.eu/tags/advice/</guid>
+      <guid>http://localhost:1313/tags/stay/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Good</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/good/</link>
+      <link>http://localhost:1313/tags/good/</link>
       <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/good/</guid>
+      <guid>http://localhost:1313/tags/good/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Titles</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/titles/</link>
+      <link>http://localhost:1313/tags/titles/</link>
       <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/titles/</guid>
+      <guid>http://localhost:1313/tags/titles/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Productive</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/productive/</link>
+      <link>http://localhost:1313/tags/productive/</link>
       <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/productive/</guid>
+      <guid>http://localhost:1313/tags/productive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Architecture</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/architecture/</link>
+      <link>http://localhost:1313/tags/architecture/</link>
       <pubDate>Mon, 25 Mar 2024 12:16:37 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/architecture/</guid>
+      <guid>http://localhost:1313/tags/architecture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Serverless</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/serverless/</link>
+      <link>http://localhost:1313/tags/serverless/</link>
       <pubDate>Mon, 25 Mar 2024 12:16:37 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/serverless/</guid>
+      <guid>http://localhost:1313/tags/serverless/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Assistant</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/assistant/</link>
+      <link>http://localhost:1313/tags/assistant/</link>
       <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/assistant/</guid>
+      <guid>http://localhost:1313/tags/assistant/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blogpost</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/blogpost/</link>
+      <link>http://localhost:1313/tags/blogpost/</link>
       <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/blogpost/</guid>
+      <guid>http://localhost:1313/tags/blogpost/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Writing</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/writing/</link>
+      <link>http://localhost:1313/tags/writing/</link>
       <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/writing/</guid>
+      <guid>http://localhost:1313/tags/writing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Entertainment</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/entertainment/</link>
+      <link>http://localhost:1313/tags/entertainment/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/entertainment/</guid>
+      <guid>http://localhost:1313/tags/entertainment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Euros</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/euros/</link>
+      <link>http://localhost:1313/tags/euros/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/euros/</guid>
+      <guid>http://localhost:1313/tags/euros/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Less</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/less/</link>
+      <link>http://localhost:1313/tags/less/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/less/</guid>
+      <guid>http://localhost:1313/tags/less/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ten</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/ten/</link>
+      <link>http://localhost:1313/tags/ten/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/ten/</guid>
+      <guid>http://localhost:1313/tags/ten/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Than</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/than/</link>
+      <link>http://localhost:1313/tags/than/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/than/</guid>
+      <guid>http://localhost:1313/tags/than/</guid>
       <description></description>
     </item>
     
     <item>
       <title>From</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/from/</link>
+      <link>http://localhost:1313/tags/from/</link>
       <pubDate>Thu, 14 Mar 2024 17:47:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/from/</guid>
+      <guid>http://localhost:1313/tags/from/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Movie</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/movie/</link>
+      <link>http://localhost:1313/tags/movie/</link>
       <pubDate>Thu, 14 Mar 2024 17:47:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/movie/</guid>
+      <guid>http://localhost:1313/tags/movie/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Racommendation</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/racommendation/</link>
+      <link>http://localhost:1313/tags/racommendation/</link>
       <pubDate>Thu, 14 Mar 2024 17:47:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/racommendation/</guid>
+      <guid>http://localhost:1313/tags/racommendation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Protecting</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/protecting/</link>
+      <link>http://localhost:1313/tags/protecting/</link>
       <pubDate>Wed, 13 Mar 2024 23:21:41 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/protecting/</guid>
+      <guid>http://localhost:1313/tags/protecting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Written</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/written/</link>
+      <link>http://localhost:1313/tags/written/</link>
       <pubDate>Wed, 13 Mar 2024 23:21:41 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/written/</guid>
+      <guid>http://localhost:1313/tags/written/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Beneficial</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/beneficial/</link>
+      <link>http://localhost:1313/tags/beneficial/</link>
       <pubDate>Tue, 12 Mar 2024 14:14:02 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/beneficial/</guid>
+      <guid>http://localhost:1313/tags/beneficial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Is</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/is/</link>
+      <link>http://localhost:1313/tags/is/</link>
       <pubDate>Tue, 12 Mar 2024 14:14:02 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/is/</guid>
+      <guid>http://localhost:1313/tags/is/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Improve</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/improve/</link>
+      <link>http://localhost:1313/tags/improve/</link>
       <pubDate>Mon, 11 Mar 2024 20:59:30 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/improve/</guid>
+      <guid>http://localhost:1313/tags/improve/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ones</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/ones/</link>
+      <link>http://localhost:1313/tags/ones/</link>
       <pubDate>Mon, 11 Mar 2024 20:59:30 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/ones/</guid>
+      <guid>http://localhost:1313/tags/ones/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Skills</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/skills/</link>
+      <link>http://localhost:1313/tags/skills/</link>
       <pubDate>Mon, 11 Mar 2024 20:59:30 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/skills/</guid>
+      <guid>http://localhost:1313/tags/skills/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Awareness</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/awareness/</link>
+      <link>http://localhost:1313/tags/awareness/</link>
       <pubDate>Sun, 10 Mar 2024 15:18:48 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/awareness/</guid>
+      <guid>http://localhost:1313/tags/awareness/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Brand</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/brand/</link>
+      <link>http://localhost:1313/tags/brand/</link>
       <pubDate>Sun, 10 Mar 2024 15:18:48 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/brand/</guid>
+      <guid>http://localhost:1313/tags/brand/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Raising</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/raising/</link>
+      <link>http://localhost:1313/tags/raising/</link>
       <pubDate>Sun, 10 Mar 2024 15:18:48 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/raising/</guid>
+      <guid>http://localhost:1313/tags/raising/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Another</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/another/</link>
+      <link>http://localhost:1313/tags/another/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/another/</guid>
+      <guid>http://localhost:1313/tags/another/</guid>
       <description></description>
     </item>
     
     <item>
       <title>As</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/as/</link>
+      <link>http://localhost:1313/tags/as/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/as/</guid>
+      <guid>http://localhost:1313/tags/as/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Day</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/day/</link>
+      <link>http://localhost:1313/tags/day/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/day/</guid>
+      <guid>http://localhost:1313/tags/day/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Owner</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/owner/</link>
+      <link>http://localhost:1313/tags/owner/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/owner/</guid>
+      <guid>http://localhost:1313/tags/owner/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Story</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/story/</link>
+      <link>http://localhost:1313/tags/story/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/story/</guid>
+      <guid>http://localhost:1313/tags/story/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/data/</link>
+      <link>http://localhost:1313/tags/data/</link>
       <pubDate>Fri, 08 Mar 2024 22:02:00 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/data/</guid>
+      <guid>http://localhost:1313/tags/data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Online</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/online/</link>
+      <link>http://localhost:1313/tags/online/</link>
       <pubDate>Fri, 08 Mar 2024 22:02:00 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/online/</guid>
+      <guid>http://localhost:1313/tags/online/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recommendations</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/recommendations/</link>
+      <link>http://localhost:1313/tags/recommendations/</link>
       <pubDate>Fri, 08 Mar 2024 22:02:00 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/recommendations/</guid>
+      <guid>http://localhost:1313/tags/recommendations/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Safety</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/safety/</link>
+      <link>http://localhost:1313/tags/safety/</link>
       <pubDate>Fri, 08 Mar 2024 22:02:00 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/safety/</guid>
+      <guid>http://localhost:1313/tags/safety/</guid>
       <description></description>
     </item>
     
     <item>
       <title>By</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/by/</link>
+      <link>http://localhost:1313/tags/by/</link>
       <pubDate>Thu, 07 Mar 2024 11:07:51 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/by/</guid>
+      <guid>http://localhost:1313/tags/by/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Short</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/short/</link>
+      <link>http://localhost:1313/tags/short/</link>
       <pubDate>Thu, 07 Mar 2024 11:07:51 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/short/</guid>
+      <guid>http://localhost:1313/tags/short/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quote</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/quote/</link>
+      <link>http://localhost:1313/tags/quote/</link>
       <pubDate>Thu, 07 Mar 2024 11:05:11 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/quote/</guid>
+      <guid>http://localhost:1313/tags/quote/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Random</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/random/</link>
+      <link>http://localhost:1313/tags/random/</link>
       <pubDate>Thu, 07 Mar 2024 11:05:11 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/random/</guid>
+      <guid>http://localhost:1313/tags/random/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CreatedbyAI</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/createdbyai/</link>
+      <link>http://localhost:1313/tags/createdbyai/</link>
       <pubDate>Thu, 07 Mar 2024 10:28:39 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/createdbyai/</guid>
+      <guid>http://localhost:1313/tags/createdbyai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Writer</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/writer/</link>
+      <link>http://localhost:1313/tags/writer/</link>
       <pubDate>Thu, 07 Mar 2024 10:28:39 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/writer/</guid>
+      <guid>http://localhost:1313/tags/writer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/about/</link>
+      <link>http://localhost:1313/tags/about/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/about/</guid>
+      <guid>http://localhost:1313/tags/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Article</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/article/</link>
+      <link>http://localhost:1313/tags/article/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/article/</guid>
+      <guid>http://localhost:1313/tags/article/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Engine</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/engine/</link>
+      <link>http://localhost:1313/tags/engine/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/engine/</guid>
+      <guid>http://localhost:1313/tags/engine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Optimisation</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/optimisation/</link>
+      <link>http://localhost:1313/tags/optimisation/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/optimisation/</guid>
+      <guid>http://localhost:1313/tags/optimisation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Search</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/search/</link>
+      <link>http://localhost:1313/tags/search/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/search/</guid>
+      <guid>http://localhost:1313/tags/search/</guid>
       <description></description>
     </item>
     
     <item>
       <title> Ai</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/-ai/</link>
+      <link>http://localhost:1313/tags/-ai/</link>
       <pubDate>Mon, 04 Mar 2024 16:05:36 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/-ai/</guid>
+      <guid>http://localhost:1313/tags/-ai/</guid>
       <description></description>
     </item>
     
     <item>
       <title> By</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/-by/</link>
+      <link>http://localhost:1313/tags/-by/</link>
       <pubDate>Mon, 04 Mar 2024 16:05:36 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/-by/</guid>
+      <guid>http://localhost:1313/tags/-by/</guid>
       <description></description>
     </item>
     
     <item>
       <title> Written</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/-written/</link>
+      <link>http://localhost:1313/tags/-written/</link>
       <pubDate>Mon, 04 Mar 2024 16:05:36 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/-written/</guid>
+      <guid>http://localhost:1313/tags/-written/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Poem</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/poem/</link>
+      <link>http://localhost:1313/tags/poem/</link>
       <pubDate>Mon, 04 Mar 2024 16:05:36 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/poem/</guid>
+      <guid>http://localhost:1313/tags/poem/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bot</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/bot/</link>
+      <link>http://localhost:1313/tags/bot/</link>
       <pubDate>Sun, 03 Mar 2024 19:33:27 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/bot/</guid>
+      <guid>http://localhost:1313/tags/bot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>My</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/my/</link>
+      <link>http://localhost:1313/tags/my/</link>
       <pubDate>Sun, 03 Mar 2024 19:33:27 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/my/</guid>
+      <guid>http://localhost:1313/tags/my/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scifi</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/scifi/</link>
+      <link>http://localhost:1313/tags/scifi/</link>
       <pubDate>Sun, 03 Mar 2024 19:33:27 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/scifi/</guid>
+      <guid>http://localhost:1313/tags/scifi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Newpage</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/newpage/</link>
+      <link>http://localhost:1313/tags/newpage/</link>
       <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/newpage/</guid>
+      <guid>http://localhost:1313/tags/newpage/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Page</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/page/</link>
+      <link>http://localhost:1313/tags/page/</link>
       <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/page/</guid>
+      <guid>http://localhost:1313/tags/page/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Support</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/support/</link>
+      <link>http://localhost:1313/tags/support/</link>
       <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/support/</guid>
+      <guid>http://localhost:1313/tags/support/</guid>
       <description></description>
     </item>
     
     <item>
       <title>2022</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/2022/</link>
+      <link>http://localhost:1313/tags/2022/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/2022/</guid>
+      <guid>http://localhost:1313/tags/2022/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bard</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/bard/</link>
+      <link>http://localhost:1313/tags/bard/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/bard/</guid>
+      <guid>http://localhost:1313/tags/bard/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jul</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/jul/</link>
+      <link>http://localhost:1313/tags/jul/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/jul/</guid>
+      <guid>http://localhost:1313/tags/jul/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kanban</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/kanban/</link>
+      <link>http://localhost:1313/tags/kanban/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/kanban/</guid>
+      <guid>http://localhost:1313/tags/kanban/</guid>
       <description></description>
     </item>
     
     <item>
       <title>New_post</title>
-      <link>https://obsidiannotes.artefaktas.eu/tags/new_post/</link>
+      <link>http://localhost:1313/tags/new_post/</link>
       <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/tags/new_post/</guid>
+      <guid>http://localhost:1313/tags/new_post/</guid>
       <description></description>
     </item>
     

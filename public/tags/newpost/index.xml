@@ -2,17 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Newpost on Obsidian</title>
-    <link>https://obsidiannotes.artefaktas.eu/tags/newpost/</link>
+    <link>http://localhost:1313/tags/newpost/</link>
     <description>Recent content in Newpost on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Wed, 17 Apr 2024 17:08:11 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/newpost/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Apr 2024 18:08:36 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/newpost/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apr 22</title>
+      <link>http://localhost:1313/posts/journal/2024-04/apr-22/</link>
+      <pubDate>Mon, 22 Apr 2024 18:08:36 +0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/journal/2024-04/apr-22/</guid>
+      <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-marketer-recommend-a-few-ways-to-monetize-my-blog&#34;&gt;Prompt: Act as if you were a marketer, recommend a few ways to monetize my blog&lt;/h1&gt;
+&lt;h1 id=&#34;apr-22&#34;&gt;Apr 22&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tldr] Apr 22
+TLDR
+Text is too short to sumarize&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As a highly skilled artificial intelligence (AI) assistant, I am well-versed in recommending strategies for monetizing your blog. Here are some potential options:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Monetization through Affiliate Marketing: An affiliate marketing program involves placing sponsored links on your site to earn commission from sales made by readers clicking on those links. You can set up an affiliate program with popular affiliate networks like Amazon Associates, ShareASale, and Commission Junction. This will enable you to generate revenue through advertising while also driving traffic to your blog.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Selling Your Content: If you have a unique niche or are highly experienced in the topic you cover, you can offer your readers exclusive access to your content, such as eBooks, webinars, or guides, for an upfront fee. This will help you monetize your audience and generate revenue while providing valuable value to them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Advertising: If you have a high-traffic blog with engaging content, you could consider advertising on social media platforms, search engines, or other relevant websites. You can set up ads for different keywords related to your niche or targeted traffic to specific regions. This will help generate revenue from Google AdSense, Facebook Ads, or other advertising networks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Affiliate Programs: Consider creating an affiliate program with Amazon, eBay, or other online retailers that sell similar products as your blog&amp;rsquo;s content. You can offer a percentage commission on sales made through your affiliate link to generate revenue while driving traffic to your site and promoting your brand.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sponsored Content: Consider creating sponsored content such as guest posts, blog posts, or infographics for other websites. This will help drive traffic to your site and promote your brand or business while generating revenue through paid links.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Overall, monetizing your blog can be a valuable way to generate additional income and help you further establish your brand and niche. By utilizing the above options, you can create a sustainable business model that allows you to invest in content creation and growth without having to rely solely on ad revenue.&lt;/p&gt;
+&lt;p&gt;Author: tinyllama&lt;/p&gt;
+&lt;p&gt;Inner Tags: #newpost #writtenbyai #ai #advice #on #monetization&lt;/p&gt;
+&lt;p&gt;Internal links if exist:&lt;/p&gt;
+&lt;p&gt;External links if exist:&lt;/p&gt;
+&lt;p&gt;Markdown external:&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>Apr 17</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-17/</link>
+      <link>http://localhost:1313/posts/journal/2024-04/apr-17/</link>
       <pubDate>Wed, 17 Apr 2024 17:08:11 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-17/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-04/apr-17/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-seo-expert-give-me-some-quality-tips-on-how-to-create-seo-friendly-content&#34;&gt;Prompt: Act as if you were a seo expert, give me some quality tips on how to create seo-friendly content&lt;/h1&gt;
 &lt;h1 id=&#34;apr-17&#34;&gt;Apr 17&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -59,10 +99,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Apr 15</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-15/</link>
+      <link>http://localhost:1313/posts/journal/2024-04/apr-15/</link>
       <pubDate>Mon, 15 Apr 2024 12:59:04 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-15/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-04/apr-15/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-an-artist-give-me-some-creative-but-relevant-ideas-for-my-future-ai-art&#34;&gt;Prompt: Act as if you were an artist, give me some creative but relevant ideas for my future ai art&lt;/h1&gt;
 &lt;h1 id=&#34;apr-15&#34;&gt;Apr 15&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -113,10 +153,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Apr 13</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-13/</link>
+      <link>http://localhost:1313/posts/journal/2024-04/apr-13/</link>
       <pubDate>Sat, 13 Apr 2024 20:11:30 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-13/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-04/apr-13/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-blog-post-on-why-people-should-integrate-ai-into-their-workflow&#34;&gt;Prompt: Act as if you were a writer, write a blog post on why people should integrate ai into their workflow&lt;/h1&gt;
 &lt;h1 id=&#34;apr-13&#34;&gt;Apr 13&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -160,10 +200,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Apr 12</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-12/</link>
+      <link>http://localhost:1313/posts/journal/2024-04/apr-12/</link>
       <pubDate>Fri, 12 Apr 2024 18:04:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-12/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-04/apr-12/</guid>
       <description>&lt;h1 id=&#34;prompt-write-a-short-poem-about-spring&#34;&gt;Prompt: Write a short poem about spring&lt;/h1&gt;
 &lt;h1 id=&#34;apr-12&#34;&gt;Apr 12&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -206,10 +246,10 @@ And new beginnings that never cease to stir.
     
     <item>
       <title>Apr 11</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-11/</link>
+      <link>http://localhost:1313/posts/journal/2024-04/apr-11/</link>
       <pubDate>Thu, 11 Apr 2024 14:39:42 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-11/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-04/apr-11/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-bloger-write-a-blog-post-on-how-to-promote-ones-content&#34;&gt;Prompt: Act as if you were bloger, write a blog post on how to promote ones content&lt;/h1&gt;
 &lt;h1 id=&#34;apr-11&#34;&gt;Apr 11&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -291,10 +331,10 @@ Social media ads are an excellent way to increase brand awareness and generate l
     
     <item>
       <title>Apr 3</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-3/</link>
+      <link>http://localhost:1313/posts/journal/2024-04/apr-3/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-3/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-04/apr-3/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-tutorial-on-how-to-create-an-awesome-blog-post&#34;&gt;Prompt: Act as if you were a writer, write a tutorial on how to create an awesome blog post&lt;/h1&gt;
 &lt;h1 id=&#34;apr-3&#34;&gt;Apr 3&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -329,10 +369,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 30</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-30/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-30/</link>
       <pubDate>Sat, 30 Mar 2024 13:03:11 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-30/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-30/</guid>
       <description>&lt;h1 id=&#34;prompt-write-a-short-guideline-on-how-to-cope-with-stress&#34;&gt;Prompt: Write a short guideline on how to cope with stress&lt;/h1&gt;
 &lt;h1 id=&#34;mar-30&#34;&gt;Mar 30&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -378,10 +418,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 29</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-29/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-29/</link>
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-29/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-29/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-blog-post-on-how-to-express-your-negativity-in-a-more-positive-manner&#34;&gt;Prompt: Act as if you were a writer, write a blog post on how to express your negativity in a more positive manner&lt;/h1&gt;
 &lt;h1 id=&#34;mar-29&#34;&gt;Mar 29&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -429,10 +469,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 28</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-28/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-28/</link>
       <pubDate>Thu, 28 Mar 2024 12:15:07 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-28/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-28/</guid>
       <description>&lt;h1 id=&#34;prompt-write-a-blog-post-on-how-to-stay-creative&#34;&gt;Prompt: Write a blog post on how to stay creative&lt;/h1&gt;
 &lt;h1 id=&#34;mar-28&#34;&gt;Mar 28&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -478,10 +518,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 27</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-27/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-27/</link>
       <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-27/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-27/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-blog-post-on-how-to-create-good-titles-for-your-journal-entries&#34;&gt;Prompt: Act as if you were a writer, write a blog post on how to create good titles for your journal entries&lt;/h1&gt;
 &lt;h1 id=&#34;mar-27&#34;&gt;Mar 27&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -533,10 +573,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 26</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-26/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-26/</link>
       <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-26/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-26/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-developer-write-a-post-on-how-to-stay-productive-by-using-nowadays-technologies&#34;&gt;Prompt: Act as if you were a developer, write a post on how to stay productive by using nowadays technologies&lt;/h1&gt;
 &lt;h1 id=&#34;mar-26&#34;&gt;Mar 26&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -579,10 +619,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 25</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-25/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-25/</link>
       <pubDate>Mon, 25 Mar 2024 12:16:37 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-25/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-25/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-professional-web-developer-write-a-blog-post-explaining-why-it-is-a-good-idea-to-use-serverless-architecture&#34;&gt;Prompt: Act as if you were a professional web developer, write a blog post explaining why it is a good idea to use serverless architecture&lt;/h1&gt;
 &lt;h1 id=&#34;mar-25&#34;&gt;Mar 25&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -624,10 +664,10 @@ Serverless architecture doesn&amp;rsquo;t require any changes in your developmen
     
     <item>
       <title>Mar 18</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-18/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-18/</link>
       <pubDate>Mon, 18 Mar 2024 20:26:21 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-18/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-18/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-blog-post-on-why-you-like-technology&#34;&gt;Prompt: Act as if you were a writer, write a blog post on why you like technology&lt;/h1&gt;
 &lt;h1 id=&#34;mar-18&#34;&gt;Mar 18&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -652,10 +692,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 17</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-17/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-17/</link>
       <pubDate>Sun, 17 Mar 2024 21:36:34 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-17/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-17/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-blog-post-on-how-to-entertain-oneself-for-less-than-10-euros&#34;&gt;Prompt: Act as if you were a writer, write a blog post on how to entertain oneself for less than 10 euros&lt;/h1&gt;
 &lt;h1 id=&#34;mar-17&#34;&gt;Mar 17&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -708,10 +748,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 14</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-14/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-14/</link>
       <pubDate>Thu, 14 Mar 2024 17:47:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-14/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-14/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-movie-critic-recommend-me-a-movie-to-watch&#34;&gt;Prompt: Act as if you were a movie critic, recommend me a movie to watch&lt;/h1&gt;
 &lt;h1 id=&#34;mar-14&#34;&gt;Mar 14&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -735,10 +775,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 13</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-13/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-13/</link>
       <pubDate>Wed, 13 Mar 2024 23:21:41 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-13/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-13/</guid>
       <description>&lt;h1 id=&#34;prompt-write-a-blog-post-on-how-to-protect-your-written-content-from-copyright-infringement&#34;&gt;Prompt: Write a blog post on how to protect your written content from copyright infringement&lt;/h1&gt;
 &lt;h1 id=&#34;mar-13&#34;&gt;Mar 13&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -776,10 +816,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 12</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-12/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-12/</link>
       <pubDate>Tue, 12 Mar 2024 14:14:02 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-12/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-12/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-blog-post-on-why-creative-writing-is-beneficial&#34;&gt;Prompt: Act as if you were a writer, write a blog post on why creative writing is beneficial&lt;/h1&gt;
 &lt;h1 id=&#34;mar-12&#34;&gt;Mar 12&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -818,10 +858,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 11</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-11/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-11/</link>
       <pubDate>Mon, 11 Mar 2024 20:59:30 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-11/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-11/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-blog-post-on-how-to-improve-ones-writing-skills&#34;&gt;Prompt: Act as if you were a writer, write a blog post on how to improve ones writing skills&lt;/h1&gt;
 &lt;h1 id=&#34;mar-11&#34;&gt;Mar 11&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -876,10 +916,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 10</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-10/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-10/</link>
       <pubDate>Sun, 10 Mar 2024 15:18:48 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-10/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-10/</guid>
       <description>&lt;h1 id=&#34;prompt-write-a-blog-post-include-simple-instructions-on-how-to-raise-my-brand-awareness&#34;&gt;Prompt: Write a blog post, include simple instructions on how to raise my brand awareness&lt;/h1&gt;
 &lt;h1 id=&#34;mar-10&#34;&gt;Mar 10&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -929,10 +969,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 9</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-9/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-9/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-9/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-9/</guid>
       <description>&lt;h1 id=&#34;query-act-as-if-you-were-a-blog-owner-write-a-short-post-about-your-day&#34;&gt;Query: Act as if you were a blog owner, write a short post about your day&lt;/h1&gt;
 &lt;h1 id=&#34;mar-9&#34;&gt;Mar 9&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -959,10 +999,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 8</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-8/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-8/</link>
       <pubDate>Fri, 08 Mar 2024 22:02:00 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-8/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-8/</guid>
       <description>&lt;h1 id=&#34;query-write-a-blog-post-on-how-to-protect-your-data-online-add-recommended-guidelines&#34;&gt;Query: Write a blog post on how to protect your data online, add recommended guidelines&lt;/h1&gt;
 &lt;h1 id=&#34;mar-8&#34;&gt;Mar 8&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -1015,10 +1055,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 7_10_07_51</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-7_10_07_51/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-7_10_07_51/</link>
       <pubDate>Thu, 07 Mar 2024 11:07:51 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-7_10_07_51/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-7_10_07_51/</guid>
       <description>&lt;h1 id=&#34;query-write-a-short-story-about-nature&#34;&gt;Query: Write a short story about nature&lt;/h1&gt;
 &lt;h1 id=&#34;mar-7_10_07_51&#34;&gt;Mar 7_10_07_51&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -1059,10 +1099,10 @@ A short story&amp;hellip;&lt;/p&gt;
     
     <item>
       <title>Mar 7_10_05_11</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-7_10_05_11/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-7_10_05_11/</link>
       <pubDate>Thu, 07 Mar 2024 11:05:11 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-7_10_05_11/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-7_10_05_11/</guid>
       <description>&lt;h1 id=&#34;query-give-me-a-random-quote-about-writing&#34;&gt;Query: Give me a random quote about writing&lt;/h1&gt;
 &lt;h1 id=&#34;mar-7_10_05_11&#34;&gt;Mar 7_10_05_11&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -1087,10 +1127,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 7</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-7/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-7/</link>
       <pubDate>Thu, 07 Mar 2024 10:28:39 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-7/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-7/</guid>
       <description>&lt;h1 id=&#34;query-get-a-random-quote-about-writing&#34;&gt;Query: Get a random quote about writing&lt;/h1&gt;
 &lt;h1 id=&#34;mar-7&#34;&gt;Mar 7&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -1111,10 +1151,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 6</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-6/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-6/</link>
       <pubDate>Wed, 06 Mar 2024 20:54:32 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-6/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-6/</guid>
       <description>&lt;h1 id=&#34;query-write-an-articale-about-seo&#34;&gt;Query: Write an articale about seo&lt;/h1&gt;
 &lt;h1 id=&#34;mar-6&#34;&gt;Mar 6&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -1178,10 +1218,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 5</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-5/</link>
       <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-5/</guid>
       <description>&lt;h1 id=&#34;query-what-advice-would-you-give-me-to-optimize-my-current-website-for-a-better-performance&#34;&gt;Query: What advice would you give me to optimize my current website for a better performance&lt;/h1&gt;
 &lt;h1 id=&#34;mar-5&#34;&gt;Mar 5&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -1224,10 +1264,10 @@ SEO advice from AI 🤖&lt;/p&gt;
     
     <item>
       <title>Mar 4</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-4/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-4/</link>
       <pubDate>Mon, 04 Mar 2024 16:05:36 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-4/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-4/</guid>
       <description>&lt;h1 id=&#34;mar-4&#34;&gt;Mar 4&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!tldr] Mar 4
@@ -1264,10 +1304,10 @@ in a world of magic and wonder.&lt;/p&gt;
     
     <item>
       <title>Mar 3</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-3/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-3/</link>
       <pubDate>Sun, 03 Mar 2024 19:33:27 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-3/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-3/</guid>
       <description>&lt;h1 id=&#34;mar-3&#34;&gt;Mar 3&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!tldr] Mar 3
