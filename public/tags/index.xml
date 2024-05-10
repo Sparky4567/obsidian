@@ -6,13 +6,49 @@
     <description>Recent content in Tags on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Fri, 26 Apr 2024 12:08:48 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 May 2024 18:50:23 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ai</title>
       <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Fri, 26 Apr 2024 12:08:48 +0300</pubDate>
+      <pubDate>Fri, 10 May 2024 18:50:23 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Motivational</title>
+      <link>http://localhost:1313/tags/motivational/</link>
+      <pubDate>Fri, 10 May 2024 18:50:23 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/motivational/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Newpost</title>
+      <link>http://localhost:1313/tags/newpost/</link>
+      <pubDate>Fri, 10 May 2024 18:50:23 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/newpost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Speech</title>
+      <link>http://localhost:1313/tags/speech/</link>
+      <pubDate>Fri, 10 May 2024 18:50:23 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/speech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writtenbyai</title>
+      <link>http://localhost:1313/tags/writtenbyai/</link>
+      <pubDate>Fri, 10 May 2024 18:50:23 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/writtenbyai/</guid>
       <description></description>
     </item>
     
@@ -35,29 +71,11 @@
     </item>
     
     <item>
-      <title>Newpost</title>
-      <link>http://localhost:1313/tags/newpost/</link>
-      <pubDate>Fri, 26 Apr 2024 12:08:48 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/newpost/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Songwriting</title>
       <link>http://localhost:1313/tags/songwriting/</link>
       <pubDate>Fri, 26 Apr 2024 12:08:48 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/songwriting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Writtenbyai</title>
-      <link>http://localhost:1313/tags/writtenbyai/</link>
-      <pubDate>Fri, 26 Apr 2024 12:08:48 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/writtenbyai/</guid>
       <description></description>
     </item>
     
