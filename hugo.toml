@@ -2,7 +2,7 @@ baseURL = 'https://obsidiannotes.artefaktas.eu/'
 languageCode = 'en-us'
 title = 'Obsidian'
 theme = 'hugo-paper'
-ignoreFiles = ["/content/posts/templates.*","/content/posts/notion","/content/posts/wp_posts"]
+ignoreFiles = ["/content/posts/templates.*","/content/posts/kanban/*","/content/posts/notion","/content/posts/wp_posts"]
 disqusShortname = "obsidian-1"
 
 [params]
@@ -29,7 +29,7 @@ disqusShortname = "obsidian-1"
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
-    url = "/tags/new_post/"
+    url = "/tags/newpost/"
     weight = 2
   [[menu.main]]
     identifier = "contacts"
