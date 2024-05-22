@@ -6,29 +6,47 @@
     <description>Recent content in Tags on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Thu, 16 May 2024 18:43:25 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 May 2024 16:05:18 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ai</title>
       <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Thu, 16 May 2024 18:43:25 +0300</pubDate>
+      <pubDate>Wed, 22 May 2024 16:05:18 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/ai/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Creative</title>
-      <link>http://localhost:1313/tags/creative/</link>
-      <pubDate>Thu, 16 May 2024 18:43:25 +0300</pubDate>
+      <title>Attract</title>
+      <link>http://localhost:1313/tags/attract/</link>
+      <pubDate>Wed, 22 May 2024 16:05:18 +0300</pubDate>
       
-      <guid>http://localhost:1313/tags/creative/</guid>
+      <guid>http://localhost:1313/tags/attract/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Audience</title>
+      <link>http://localhost:1313/tags/audience/</link>
+      <pubDate>Wed, 22 May 2024 16:05:18 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/audience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>http://localhost:1313/tags/blog/</link>
+      <pubDate>Wed, 22 May 2024 16:05:18 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How</title>
       <link>http://localhost:1313/tags/how/</link>
-      <pubDate>Thu, 16 May 2024 18:43:25 +0300</pubDate>
+      <pubDate>Wed, 22 May 2024 16:05:18 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/how/</guid>
       <description></description>
@@ -37,7 +55,7 @@
     <item>
       <title>Newpost</title>
       <link>http://localhost:1313/tags/newpost/</link>
-      <pubDate>Thu, 16 May 2024 18:43:25 +0300</pubDate>
+      <pubDate>Wed, 22 May 2024 16:05:18 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/newpost/</guid>
       <description></description>
@@ -46,25 +64,16 @@
     <item>
       <title>On</title>
       <link>http://localhost:1313/tags/on/</link>
-      <pubDate>Thu, 16 May 2024 18:43:25 +0300</pubDate>
+      <pubDate>Wed, 22 May 2024 16:05:18 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/on/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Stay</title>
-      <link>http://localhost:1313/tags/stay/</link>
-      <pubDate>Thu, 16 May 2024 18:43:25 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/stay/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>To</title>
       <link>http://localhost:1313/tags/to/</link>
-      <pubDate>Thu, 16 May 2024 18:43:25 +0300</pubDate>
+      <pubDate>Wed, 22 May 2024 16:05:18 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/to/</guid>
       <description></description>
@@ -73,9 +82,18 @@
     <item>
       <title>Writtenbyai</title>
       <link>http://localhost:1313/tags/writtenbyai/</link>
-      <pubDate>Thu, 16 May 2024 18:43:25 +0300</pubDate>
+      <pubDate>Wed, 22 May 2024 16:05:18 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/writtenbyai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Your</title>
+      <link>http://localhost:1313/tags/your/</link>
+      <pubDate>Wed, 22 May 2024 16:05:18 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/your/</guid>
       <description></description>
     </item>
     
@@ -130,15 +148,6 @@
       <pubDate>Fri, 10 May 2024 19:19:33 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/advice/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>http://localhost:1313/tags/blog/</link>
-      <pubDate>Fri, 10 May 2024 19:19:33 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/blog/</guid>
       <description></description>
     </item>
     
@@ -211,6 +220,15 @@
       <pubDate>Fri, 26 Apr 2024 12:08:48 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/songwriting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Creative</title>
+      <link>http://localhost:1313/tags/creative/</link>
+      <pubDate>Thu, 25 Apr 2024 16:50:25 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/creative/</guid>
       <description></description>
     </item>
     
@@ -472,6 +490,15 @@
       <pubDate>Fri, 29 Mar 2024 22:05:17 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/positive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stay</title>
+      <link>http://localhost:1313/tags/stay/</link>
+      <pubDate>Thu, 28 Mar 2024 12:15:07 +0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/stay/</guid>
       <description></description>
     </item>
     
@@ -949,51 +976,6 @@
       <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
       
       <guid>http://localhost:1313/tags/support/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>2022</title>
-      <link>http://localhost:1313/tags/2022/</link>
-      <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/2022/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bard</title>
-      <link>http://localhost:1313/tags/bard/</link>
-      <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/bard/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jul</title>
-      <link>http://localhost:1313/tags/jul/</link>
-      <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/jul/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kanban</title>
-      <link>http://localhost:1313/tags/kanban/</link>
-      <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/kanban/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>New_post</title>
-      <link>http://localhost:1313/tags/new_post/</link>
-      <pubDate>Fri, 15 Jul 2022 13:58:39 +0300</pubDate>
-      
-      <guid>http://localhost:1313/tags/new_post/</guid>
       <description></description>
     </item>
     
