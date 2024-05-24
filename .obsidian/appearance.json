@@ -1,5 +1,6 @@
 {
   "accentColor": "#04b462",
-  "baseFontSize": 26,
-  "theme": "obsidian"
+  "baseFontSize": 21,
+  "theme": "moonstone",
+  "cssTheme": "GitHub Theme"
 }

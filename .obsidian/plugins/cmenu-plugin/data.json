@@ -1,11 +1,6 @@
 {
-  "aestheticStyle": "glass",
+  "aestheticStyle": "default",
   "menuCommands": [
-    {
-      "id": "editor:set-heading",
-      "name": "Toggle heading",
-      "icon": "heading-glyph"
-    },
     {
       "id": "cmenu-plugin:editor:toggle-bold",
       "name": "cMenu: Toggle bold",
@@ -27,6 +22,16 @@
       "icon": "underline-glyph"
     },
     {
+      "id": "cmenu-plugin:superscript",
+      "name": "cMenu: Toggle superscript",
+      "icon": "superscript-glyph"
+    },
+    {
+      "id": "cmenu-plugin:subscript",
+      "name": "cMenu: Toggle subscript",
+      "icon": "subscript-glyph"
+    },
+    {
       "id": "cmenu-plugin:editor:toggle-code",
       "name": "cMenu: Toggle code",
       "icon": "code-glyph"
@@ -42,45 +47,19 @@
       "icon": "quote-glyph"
     },
     {
-      "id": "insert-template",
-      "name": "Templates: Insert template",
-      "icon": "duplicate-glyph"
+      "id": "workspace:open-in-new-window",
+      "name": "Open current tab in new window",
+      "icon": "lucide-maximize"
     },
     {
-      "id": "notetweet:post-tweet",
-      "name": "NoteTweet🐦: Post Tweet",
-      "icon": "feather-twitter"
-    },
-    {
-      "id": "obsidian-wordpress:defaultPublish",
-      "name": "WordPress: Publish current document with default options",
-      "icon": "paper-plane-glyph"
-    },
-    {
-      "id": "obsidian-shellcommands:shell-command-aus006fdqv",
-      "name": "Shell commands: Execute: Localpost to Github",
-      "icon": "remix-GithubFill"
-    },
-    {
-      "id": "obsidian-to-notion:share-to-notion",
-      "name": "Obsidian shared to Notion: share to notion",
-      "icon": "remix-BookFill"
-    },
-    {
-      "id": "obsidian-emoji-toolbar:emoji-picker:open-picker",
-      "name": "Emoji Toolbar: Open emoji picker",
-      "hotkeys": [],
+      "id": "emoji-magic:insert",
+      "name": "Emoji Magic: Insert emoji...",
       "icon": "remix-EmotionFill"
-    },
-    {
-      "id": "audio-recorder:start",
-      "name": "Audio recorder: Start recording audio",
-      "icon": "play-audio-glyph"
     }
   ],
-  "appendMethod": "body",
+  "appendMethod": "workspace",
   "shouldShowMenuOnSelect": false,
   "cMenuVisibility": true,
   "cMenuBottomValue": 4.25,
-  "cMenuNumRows": 8
+  "cMenuNumRows": 11
 }

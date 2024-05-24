@@ -1,9 +1,10 @@
 {
 	"id": "obsidian-wordpress",
 	"name": "WordPress",
-	"version": "0.5.0",
-	"minAppVersion": "0.12.0",
+	"version": "0.18.0",
+	"minAppVersion": "1.1.1",
 	"description": "A plugin for publishing Obsidian documents to WordPress.",
 	"author": "devbean",
-	"isDesktopOnly": false
+	"isDesktopOnly": false,
+	"fundingUrl": "https://www.buymeacoffee.com/devbean"
 }

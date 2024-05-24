@@ -1,1 +1,26 @@
-{}
+{
+  "obsidian-hotkeys-for-templates:Base template.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "B"
+    }
+  ],
+  "obsidian-hotkeys-for-templates:Raw html.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "R"
+    }
+  ],
+  "obsidian-hotkeys-for-templates:Remote Theme Image.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "I"
+    }
+  ]
+}

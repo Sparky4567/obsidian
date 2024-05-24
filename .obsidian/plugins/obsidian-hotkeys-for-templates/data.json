@@ -1,0 +1,11 @@
+{
+  "files": [
+    "Base template.md",
+    "Remote Theme Image.md",
+    "Raw html.md"
+  ],
+  "templaterFiles": [],
+  "newFileTemplates": [],
+  "openNewFileTemplateInNewPane": true,
+  "useNewFileTemplateOnFileCreation": false
+}

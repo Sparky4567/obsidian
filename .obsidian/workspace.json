@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/journal/2024-03/Mar 7_10_07_51.md",
+                "file": "content/posts/journal/2024-04/Apr 26.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/journal/2024-03/Mar 7_10_07_51.md",
+                "file": "content/posts/journal/2024-04/Apr 26.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/journal/2024-03/Mar 7_10_07_51.md",
+                "file": "content/posts/journal/2024-04/Apr 26.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/journal/2024-03/Mar 7_10_07_51.md"
+                "file": "content/posts/journal/2024-04/Apr 26.md"
               }
             }
           },
@@ -149,11 +149,11 @@
         ]
       },
       {
-        "id": "8afd41a3ccdff80d",
+        "id": "d0c70b0e57521f11",
         "type": "tabs",
         "children": [
           {
-            "id": "30a94eaab6e6af4f",
+            "id": "3b026764bfca52f2",
             "type": "leaf",
             "state": {
               "type": "map-of-content",
@@ -169,6 +169,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-shellcommands:Shell commands: Custom variables": false,
+      "ai_llm:Sample Plugin": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -176,18 +178,38 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "audio-recorder:Start/stop recording": false,
-      "obsidian-to-notion:Share to notion": false,
       "obsidian-wordpress:WordPress Publish": false,
+      "obsidian-to-notion:Share to notion": false,
       "map-of-content:Update Map of Content": false
     }
   },
   "active": "e2d375cc380cc1c9",
   "lastOpenFiles": [
-    "content/posts/journal/2024-03/Mar 7_10_05_11.md",
-    "public/tags/newpost/page/2/index.html",
-    "public/tags/newpost/page/2",
-    "content/posts/journal/2024-03/Mar 7_09_59_05.md",
+    "content/posts/templates/Raw html.md",
+    "content/posts/journal/2024-05/2024-05-24.md",
+    "content/posts/journal/2024-05/May 22.md",
+    "content/posts/journal/2024-05/May 12.md",
+    "content/posts/journal/2024-05/May 16.md",
+    "content/posts/journal/2024-05/May 10_19_19_33.md",
+    "public/posts/journal/2024-05/may-10_19_19_33/index.html",
+    "public/posts/journal/2024-05/may-10_19_19_33",
+    "content/posts/journal/2024-04/Apr 26.md",
+    "public/tags/songwriting/page/1/index.html",
+    "public/tags/songwriting/page/1",
+    "public/tags/songwriting/page",
+    "public/tags/songwriting/index.xml",
+    "public/tags/songwriting/index.html",
+    "public/tags/songwriting",
+    "public/tags/newpost/page/4/index.html",
+    "public/tags/newpost/page/4",
+    "content/posts/journal/2024-04/Apr 25.md",
+    "content/posts/journal/2024-04/Apr 12.md",
+    "content/posts/journal/2024-03/Mar 30.md",
+    "content/posts/journal/2024-03/Mar 26.md",
+    "content/posts/journal/2024-03/Mar 25.md",
     "content/posts/journal/2024-03/Mar 7_10_07_51.md",
+    "content/posts/journal/2024-03/Mar 7_10_05_11.md",
+    "content/posts/journal/2024-03/Mar 7_09_59_05.md",
     "content/posts/wp_posts/2022-10/Informacija blogo postams.md",
     "content/posts/wp_posts/2022-10/Apie temas.md",
     "content/about.md",

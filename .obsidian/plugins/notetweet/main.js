@@ -1,3889 +1,6093 @@
 'use strict';
 
 var obsidian = require('obsidian');
-var crypto = require('crypto');
-var http = require('http');
-var https = require('https');
-var url_1 = require('url');
-var querystring = require('querystring');
-var require$$0 = require('buffer');
-var EventEmitter = require('events');
-var util_1 = require('util');
-var require$$0$2 = require('stream');
 var fs = require('fs');
-var require$$0$1 = require('dns');
-var os = require('os');
+var EventEmitter = require('events');
+var https = require('https');
 var zlib = require('zlib');
+var require$$0$2 = require('crypto');
+var url_1 = require('url');
+var util_1 = require('util');
+var require$$0$4 = require('stream');
+var http = require('http');
+var require$$0$3 = require('dns');
+var os = require('os');
+var require$$0$5 = require('buffer');
 var http2 = require('http2');
 var tls = require('tls');
 var net = require('net');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-var crypto__default = /*#__PURE__*/_interopDefaultLegacy(crypto);
-var http__default = /*#__PURE__*/_interopDefaultLegacy(http);
-var https__default = /*#__PURE__*/_interopDefaultLegacy(https);
-var url_1__default = /*#__PURE__*/_interopDefaultLegacy(url_1);
-var querystring__default = /*#__PURE__*/_interopDefaultLegacy(querystring);
-var require$$0__default = /*#__PURE__*/_interopDefaultLegacy(require$$0);
-var EventEmitter__default = /*#__PURE__*/_interopDefaultLegacy(EventEmitter);
-var util_1__default = /*#__PURE__*/_interopDefaultLegacy(util_1);
-var require$$0__default$2 = /*#__PURE__*/_interopDefaultLegacy(require$$0$2);
+function _interopNamespace(e) {
+    if (e && e.__esModule) return e;
+    var n = Object.create(null);
+    if (e) {
+        Object.keys(e).forEach(function (k) {
+            if (k !== 'default') {
+                var d = Object.getOwnPropertyDescriptor(e, k);
+                Object.defineProperty(n, k, d.get ? d : {
+                    enumerable: true,
+                    get: function () { return e[k]; }
+                });
+            }
+        });
+    }
+    n["default"] = e;
+    return Object.freeze(n);
+}
+
+var fs__namespace = /*#__PURE__*/_interopNamespace(fs);
 var fs__default = /*#__PURE__*/_interopDefaultLegacy(fs);
-var require$$0__default$1 = /*#__PURE__*/_interopDefaultLegacy(require$$0$1);
-var os__default = /*#__PURE__*/_interopDefaultLegacy(os);
+var EventEmitter__default = /*#__PURE__*/_interopDefaultLegacy(EventEmitter);
+var https__default = /*#__PURE__*/_interopDefaultLegacy(https);
+var zlib__namespace = /*#__PURE__*/_interopNamespace(zlib);
 var zlib__default = /*#__PURE__*/_interopDefaultLegacy(zlib);
+var require$$0__namespace = /*#__PURE__*/_interopNamespace(require$$0$2);
+var require$$0__default = /*#__PURE__*/_interopDefaultLegacy(require$$0$2);
+var url_1__default = /*#__PURE__*/_interopDefaultLegacy(url_1);
+var util_1__default = /*#__PURE__*/_interopDefaultLegacy(util_1);
+var require$$0__default$2 = /*#__PURE__*/_interopDefaultLegacy(require$$0$4);
+var http__default = /*#__PURE__*/_interopDefaultLegacy(http);
+var require$$0__default$1 = /*#__PURE__*/_interopDefaultLegacy(require$$0$3);
+var os__default = /*#__PURE__*/_interopDefaultLegacy(os);
+var require$$0__default$3 = /*#__PURE__*/_interopDefaultLegacy(require$$0$5);
 var http2__default = /*#__PURE__*/_interopDefaultLegacy(http2);
 var tls__default = /*#__PURE__*/_interopDefaultLegacy(tls);
 var net__default = /*#__PURE__*/_interopDefaultLegacy(net);
 
-var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+const API_V2_PREFIX = 'https://api.twitter.com/2/';
+const API_V2_LABS_PREFIX = 'https://api.twitter.com/labs/2/';
+const API_V1_1_PREFIX = 'https://api.twitter.com/1.1/';
+const API_V1_1_UPLOAD_PREFIX = 'https://upload.twitter.com/1.1/';
+const API_V1_1_STREAM_PREFIX = 'https://stream.twitter.com/1.1/';
 
-function getDefaultExportFromCjs (x) {
-	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
-}
-
-function createCommonjsModule(fn, basedir, module) {
-	return module = {
-		path: basedir,
-		exports: {},
-		require: function (path, base) {
-			return commonjsRequire(path, (base === undefined || base === null) ? module.path : base);
-		}
-	}, fn(module, module.exports), module.exports;
-}
-
-function commonjsRequire () {
-	throw new Error('Dynamic requires are not currently supported by @rollup/plugin-commonjs');
-}
-
-/*
- * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
- * in FIPS 180-1
- * Version 2.2 Copyright Paul Johnston 2000 - 2009.
- * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
- * Distributed under the BSD License
- * See http://pajhome.org.uk/crypt/md5 for details.
- */
-var b64pad  = "="; /* base-64 pad character. "=" for strict RFC compliance   */
-function b64_hmac_sha1(k, d)
-  { return rstr2b64(rstr_hmac_sha1(str2rstr_utf8(k), str2rstr_utf8(d))); }
-
-/*
- * Calculate the HMAC-SHA1 of a key and some data (raw strings)
- */
-function rstr_hmac_sha1(key, data)
-{
-  var bkey = rstr2binb(key);
-  if(bkey.length > 16) bkey = binb_sha1(bkey, key.length * 8);
-
-  var ipad = Array(16), opad = Array(16);
-  for(var i = 0; i < 16; i++)
-  {
-    ipad[i] = bkey[i] ^ 0x36363636;
-    opad[i] = bkey[i] ^ 0x5C5C5C5C;
-  }
-
-  var hash = binb_sha1(ipad.concat(rstr2binb(data)), 512 + data.length * 8);
-  return binb2rstr(binb_sha1(opad.concat(hash), 512 + 160));
-}
-
-/*
- * Convert a raw string to a base-64 string
- */
-function rstr2b64(input)
-{
-  try { b64pad; } catch(e) { b64pad=''; }
-  var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-  var output = "";
-  var len = input.length;
-  for(var i = 0; i < len; i += 3)
-  {
-    var triplet = (input.charCodeAt(i) << 16)
-                | (i + 1 < len ? input.charCodeAt(i+1) << 8 : 0)
-                | (i + 2 < len ? input.charCodeAt(i+2)      : 0);
-    for(var j = 0; j < 4; j++)
-    {
-      if(i * 8 + j * 6 > input.length * 8) output += b64pad;
-      else output += tab.charAt((triplet >>> 6*(3-j)) & 0x3F);
+/** TwitterPaginator: able to get consume data from initial request, then fetch next data sequentially. */
+class TwitterPaginator {
+    // noinspection TypeScriptAbstractClassConstructorCanBeMadeProtected
+    constructor({ realData, rateLimit, instance, queryParams, sharedParams }) {
+        this._maxResultsWhenFetchLast = 100;
+        this._realData = realData;
+        this._rateLimit = rateLimit;
+        this._instance = instance;
+        this._queryParams = queryParams;
+        this._sharedParams = sharedParams;
     }
-  }
-  return output;
-}
-
-/*
- * Encode a string as utf-8.
- * For efficiency, this assumes the input is valid utf-16.
- */
-function str2rstr_utf8(input)
-{
-  var output = "";
-  var i = -1;
-  var x, y;
-
-  while(++i < input.length)
-  {
-    /* Decode utf-16 surrogate pairs */
-    x = input.charCodeAt(i);
-    y = i + 1 < input.length ? input.charCodeAt(i + 1) : 0;
-    if(0xD800 <= x && x <= 0xDBFF && 0xDC00 <= y && y <= 0xDFFF)
-    {
-      x = 0x10000 + ((x & 0x03FF) << 10) + (y & 0x03FF);
-      i++;
-    }
-
-    /* Encode output as utf-8 */
-    if(x <= 0x7F)
-      output += String.fromCharCode(x);
-    else if(x <= 0x7FF)
-      output += String.fromCharCode(0xC0 | ((x >>> 6 ) & 0x1F),
-                                    0x80 | ( x         & 0x3F));
-    else if(x <= 0xFFFF)
-      output += String.fromCharCode(0xE0 | ((x >>> 12) & 0x0F),
-                                    0x80 | ((x >>> 6 ) & 0x3F),
-                                    0x80 | ( x         & 0x3F));
-    else if(x <= 0x1FFFFF)
-      output += String.fromCharCode(0xF0 | ((x >>> 18) & 0x07),
-                                    0x80 | ((x >>> 12) & 0x3F),
-                                    0x80 | ((x >>> 6 ) & 0x3F),
-                                    0x80 | ( x         & 0x3F));
-  }
-  return output;
-}
-
-/*
- * Convert a raw string to an array of big-endian words
- * Characters >255 have their high-byte silently ignored.
- */
-function rstr2binb(input)
-{
-  var output = Array(input.length >> 2);
-  for(var i = 0; i < output.length; i++)
-    output[i] = 0;
-  for(var i = 0; i < input.length * 8; i += 8)
-    output[i>>5] |= (input.charCodeAt(i / 8) & 0xFF) << (24 - i % 32);
-  return output;
-}
-
-/*
- * Convert an array of big-endian words to a string
- */
-function binb2rstr(input)
-{
-  var output = "";
-  for(var i = 0; i < input.length * 32; i += 8)
-    output += String.fromCharCode((input[i>>5] >>> (24 - i % 32)) & 0xFF);
-  return output;
-}
-
-/*
- * Calculate the SHA-1 of an array of big-endian words, and a bit length
- */
-function binb_sha1(x, len)
-{
-  /* append padding */
-  x[len >> 5] |= 0x80 << (24 - len % 32);
-  x[((len + 64 >> 9) << 4) + 15] = len;
-
-  var w = Array(80);
-  var a =  1732584193;
-  var b = -271733879;
-  var c = -1732584194;
-  var d =  271733878;
-  var e = -1009589776;
-
-  for(var i = 0; i < x.length; i += 16)
-  {
-    var olda = a;
-    var oldb = b;
-    var oldc = c;
-    var oldd = d;
-    var olde = e;
-
-    for(var j = 0; j < 80; j++)
-    {
-      if(j < 16) w[j] = x[i + j];
-      else w[j] = bit_rol(w[j-3] ^ w[j-8] ^ w[j-14] ^ w[j-16], 1);
-      var t = safe_add(safe_add(bit_rol(a, 5), sha1_ft(j, b, c, d)),
-                       safe_add(safe_add(e, w[j]), sha1_kt(j)));
-      e = d;
-      d = c;
-      c = bit_rol(b, 30);
-      b = a;
-      a = t;
-    }
-
-    a = safe_add(a, olda);
-    b = safe_add(b, oldb);
-    c = safe_add(c, oldc);
-    d = safe_add(d, oldd);
-    e = safe_add(e, olde);
-  }
-  return Array(a, b, c, d, e);
-
-}
-
-/*
- * Perform the appropriate triplet combination function for the current
- * iteration
- */
-function sha1_ft(t, b, c, d)
-{
-  if(t < 20) return (b & c) | ((~b) & d);
-  if(t < 40) return b ^ c ^ d;
-  if(t < 60) return (b & c) | (b & d) | (c & d);
-  return b ^ c ^ d;
-}
-
-/*
- * Determine the appropriate additive constant for the current iteration
- */
-function sha1_kt(t)
-{
-  return (t < 20) ?  1518500249 : (t < 40) ?  1859775393 :
-         (t < 60) ? -1894007588 : -899497514;
-}
-
-/*
- * Add integers, wrapping at 2^32. This uses 16-bit operations internally
- * to work around bugs in some JS interpreters.
- */
-function safe_add(x, y)
-{
-  var lsw = (x & 0xFFFF) + (y & 0xFFFF);
-  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
-  return (msw << 16) | (lsw & 0xFFFF);
-}
-
-/*
- * Bitwise rotate a 32-bit number to the left.
- */
-function bit_rol(num, cnt)
-{
-  return (num << cnt) | (num >>> (32 - cnt));
-}
-
-var HMACSHA1= function(key, data) {
-  return b64_hmac_sha1(key, data);
-};
-
-var sha1 = {
-	HMACSHA1: HMACSHA1
-};
-
-// Returns true if this is a host that closes *before* it ends?!?!
-var isAnEarlyCloseHost= function( hostName ) {
-  return hostName && hostName.match(".*google(apis)?.com$")
-};
-
-var _utils = {
-	isAnEarlyCloseHost: isAnEarlyCloseHost
-};
-
-var oauth$1 = createCommonjsModule(function (module, exports) {
-exports.OAuth= function(requestUrl, accessUrl, consumerKey, consumerSecret, version, authorize_callback, signatureMethod, nonceSize, customHeaders) {
-  this._isEcho = false;
-
-  this._requestUrl= requestUrl;
-  this._accessUrl= accessUrl;
-  this._consumerKey= consumerKey;
-  this._consumerSecret= this._encodeData( consumerSecret );
-  if (signatureMethod == "RSA-SHA1") {
-    this._privateKey = consumerSecret;
-  }
-  this._version= version;
-  if( authorize_callback === undefined ) {
-    this._authorize_callback= "oob";
-  }
-  else {
-    this._authorize_callback= authorize_callback;
-  }
-
-  if( signatureMethod != "PLAINTEXT" && signatureMethod != "HMAC-SHA1" && signatureMethod != "RSA-SHA1")
-    throw new Error("Un-supported signature method: " + signatureMethod )
-  this._signatureMethod= signatureMethod;
-  this._nonceSize= nonceSize || 32;
-  this._headers= customHeaders || {"Accept" : "*/*",
-                                   "Connection" : "close",
-                                   "User-Agent" : "Node authentication"};
-  this._clientOptions= this._defaultClientOptions= {"requestTokenHttpMethod": "POST",
-                                                    "accessTokenHttpMethod": "POST",
-                                                    "followRedirects": true};
-  this._oauthParameterSeperator = ",";
-};
-
-exports.OAuthEcho= function(realm, verify_credentials, consumerKey, consumerSecret, version, signatureMethod, nonceSize, customHeaders) {
-  this._isEcho = true;
-
-  this._realm= realm;
-  this._verifyCredentials = verify_credentials;
-  this._consumerKey= consumerKey;
-  this._consumerSecret= this._encodeData( consumerSecret );
-  if (signatureMethod == "RSA-SHA1") {
-    this._privateKey = consumerSecret;
-  }
-  this._version= version;
-
-  if( signatureMethod != "PLAINTEXT" && signatureMethod != "HMAC-SHA1" && signatureMethod != "RSA-SHA1")
-    throw new Error("Un-supported signature method: " + signatureMethod );
-  this._signatureMethod= signatureMethod;
-  this._nonceSize= nonceSize || 32;
-  this._headers= customHeaders || {"Accept" : "*/*",
-                                   "Connection" : "close",
-                                   "User-Agent" : "Node authentication"};
-  this._oauthParameterSeperator = ",";
-};
-
-exports.OAuthEcho.prototype = exports.OAuth.prototype;
-
-exports.OAuth.prototype._getTimestamp= function() {
-  return Math.floor( (new Date()).getTime() / 1000 );
-};
-
-exports.OAuth.prototype._encodeData= function(toEncode){
- if( toEncode == null || toEncode == "" ) return ""
- else {
-    var result= encodeURIComponent(toEncode);
-    // Fix the mismatch between OAuth's  RFC3986's and Javascript's beliefs in what is right and wrong ;)
-    return result.replace(/\!/g, "%21")
-                 .replace(/\'/g, "%27")
-                 .replace(/\(/g, "%28")
-                 .replace(/\)/g, "%29")
-                 .replace(/\*/g, "%2A");
- }
-};
-
-exports.OAuth.prototype._decodeData= function(toDecode) {
-  if( toDecode != null ) {
-    toDecode = toDecode.replace(/\+/g, " ");
-  }
-  return decodeURIComponent( toDecode);
-};
-
-exports.OAuth.prototype._getSignature= function(method, url, parameters, tokenSecret) {
-  var signatureBase= this._createSignatureBase(method, url, parameters);
-  return this._createSignature( signatureBase, tokenSecret );
-};
-
-exports.OAuth.prototype._normalizeUrl= function(url) {
-  var parsedUrl= url_1__default['default'].parse(url, true);
-   var port ="";
-   if( parsedUrl.port ) {
-     if( (parsedUrl.protocol == "http:" && parsedUrl.port != "80" ) ||
-         (parsedUrl.protocol == "https:" && parsedUrl.port != "443") ) {
-           port= ":" + parsedUrl.port;
-         }
-   }
-
-  if( !parsedUrl.pathname  || parsedUrl.pathname == "" ) parsedUrl.pathname ="/";
-
-  return parsedUrl.protocol + "//" + parsedUrl.hostname + port + parsedUrl.pathname;
-};
-
-// Is the parameter considered an OAuth parameter
-exports.OAuth.prototype._isParameterNameAnOAuthParameter= function(parameter) {
-  var m = parameter.match('^oauth_');
-  if( m && ( m[0] === "oauth_" ) ) {
-    return true;
-  }
-  else {
-    return false;
-  }
-};
-
-// build the OAuth request authorization header
-exports.OAuth.prototype._buildAuthorizationHeaders= function(orderedParameters) {
-  var authHeader="OAuth ";
-  if( this._isEcho ) {
-    authHeader += 'realm="' + this._realm + '",';
-  }
-
-  for( var i= 0 ; i < orderedParameters.length; i++) {
-     // Whilst the all the parameters should be included within the signature, only the oauth_ arguments
-     // should appear within the authorization header.
-     if( this._isParameterNameAnOAuthParameter(orderedParameters[i][0]) ) {
-      authHeader+= "" + this._encodeData(orderedParameters[i][0])+"=\""+ this._encodeData(orderedParameters[i][1])+"\""+ this._oauthParameterSeperator;
-     }
-  }
-
-  authHeader= authHeader.substring(0, authHeader.length-this._oauthParameterSeperator.length);
-  return authHeader;
-};
-
-// Takes an object literal that represents the arguments, and returns an array
-// of argument/value pairs.
-exports.OAuth.prototype._makeArrayOfArgumentsHash= function(argumentsHash) {
-  var argument_pairs= [];
-  for(var key in argumentsHash ) {
-    if (argumentsHash.hasOwnProperty(key)) {
-       var value= argumentsHash[key];
-       if( Array.isArray(value) ) {
-         for(var i=0;i<value.length;i++) {
-           argument_pairs[argument_pairs.length]= [key, value[i]];
-         }
-       }
-       else {
-         argument_pairs[argument_pairs.length]= [key, value];
-       }
-    }
-  }
-  return argument_pairs;
-};
-
-// Sorts the encoded key value pairs by encoded name, then encoded value
-exports.OAuth.prototype._sortRequestParams= function(argument_pairs) {
-  // Sort by name, then value.
-  argument_pairs.sort(function(a,b) {
-      if ( a[0]== b[0] )  {
-        return a[1] < b[1] ? -1 : 1;
-      }
-      else return a[0] < b[0] ? -1 : 1;
-  });
-
-  return argument_pairs;
-};
-
-exports.OAuth.prototype._normaliseRequestParams= function(args) {
-  var argument_pairs= this._makeArrayOfArgumentsHash(args);
-  // First encode them #3.4.1.3.2 .1
-  for(var i=0;i<argument_pairs.length;i++) {
-    argument_pairs[i][0]= this._encodeData( argument_pairs[i][0] );
-    argument_pairs[i][1]= this._encodeData( argument_pairs[i][1] );
-  }
-
-  // Then sort them #3.4.1.3.2 .2
-  argument_pairs= this._sortRequestParams( argument_pairs );
-
-  // Then concatenate together #3.4.1.3.2 .3 & .4
-  var args= "";
-  for(var i=0;i<argument_pairs.length;i++) {
-      args+= argument_pairs[i][0];
-      args+= "=";
-      args+= argument_pairs[i][1];
-      if( i < argument_pairs.length-1 ) args+= "&";
-  }
-  return args;
-};
-
-exports.OAuth.prototype._createSignatureBase= function(method, url, parameters) {
-  url= this._encodeData( this._normalizeUrl(url) );
-  parameters= this._encodeData( parameters );
-  return method.toUpperCase() + "&" + url + "&" + parameters;
-};
-
-exports.OAuth.prototype._createSignature= function(signatureBase, tokenSecret) {
-   if( tokenSecret === undefined ) var tokenSecret= "";
-   else tokenSecret= this._encodeData( tokenSecret );
-   // consumerSecret is already encoded
-   var key= this._consumerSecret + "&" + tokenSecret;
-
-   var hash= "";
-   if( this._signatureMethod == "PLAINTEXT" ) {
-     hash= key;
-   }
-   else if (this._signatureMethod == "RSA-SHA1") {
-     key = this._privateKey || "";
-     hash= crypto__default['default'].createSign("RSA-SHA1").update(signatureBase).sign(key, 'base64');
-   }
-   else {
-       if( crypto__default['default'].Hmac ) {
-         hash = crypto__default['default'].createHmac("sha1", key).update(signatureBase).digest("base64");
-       }
-       else {
-         hash= sha1.HMACSHA1(key, signatureBase);
-       }
-   }
-   return hash;
-};
-exports.OAuth.prototype.NONCE_CHARS= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n',
-              'o','p','q','r','s','t','u','v','w','x','y','z','A','B',
-              'C','D','E','F','G','H','I','J','K','L','M','N','O','P',
-              'Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3',
-              '4','5','6','7','8','9'];
-
-exports.OAuth.prototype._getNonce= function(nonceSize) {
-   var result = [];
-   var chars= this.NONCE_CHARS;
-   var char_pos;
-   var nonce_chars_length= chars.length;
-
-   for (var i = 0; i < nonceSize; i++) {
-       char_pos= Math.floor(Math.random() * nonce_chars_length);
-       result[i]=  chars[char_pos];
-   }
-   return result.join('');
-};
-
-exports.OAuth.prototype._createClient= function( port, hostname, method, path, headers, sslEnabled ) {
-  var options = {
-    host: hostname,
-    port: port,
-    path: path,
-    method: method,
-    headers: headers
-  };
-  var httpModel;
-  if( sslEnabled ) {
-    httpModel= https__default['default'];
-  } else {
-    httpModel= http__default['default'];
-  }
-  return httpModel.request(options);
-};
-
-exports.OAuth.prototype._prepareParameters= function( oauth_token, oauth_token_secret, method, url, extra_params ) {
-  var oauthParameters= {
-      "oauth_timestamp":        this._getTimestamp(),
-      "oauth_nonce":            this._getNonce(this._nonceSize),
-      "oauth_version":          this._version,
-      "oauth_signature_method": this._signatureMethod,
-      "oauth_consumer_key":     this._consumerKey
-  };
-
-  if( oauth_token ) {
-    oauthParameters["oauth_token"]= oauth_token;
-  }
-
-  var sig;
-  if( this._isEcho ) {
-    sig = this._getSignature( "GET",  this._verifyCredentials,  this._normaliseRequestParams(oauthParameters), oauth_token_secret);
-  }
-  else {
-    if( extra_params ) {
-      for( var key in extra_params ) {
-        if (extra_params.hasOwnProperty(key)) oauthParameters[key]= extra_params[key];
-      }
-    }
-    var parsedUrl= url_1__default['default'].parse( url, false );
-
-    if( parsedUrl.query ) {
-      var key2;
-      var extraParameters= querystring__default['default'].parse(parsedUrl.query);
-      for(var key in extraParameters ) {
-        var value= extraParameters[key];
-          if( typeof value == "object" ){
-            // TODO: This probably should be recursive
-            for(key2 in value){
-              oauthParameters[key + "[" + key2 + "]"] = value[key2];
-            }
-          } else {
-            oauthParameters[key]= value;
-          }
-        }
-    }
-
-    sig = this._getSignature( method,  url,  this._normaliseRequestParams(oauthParameters), oauth_token_secret);
-  }
-
-  var orderedParameters= this._sortRequestParams( this._makeArrayOfArgumentsHash(oauthParameters) );
-  orderedParameters[orderedParameters.length]= ["oauth_signature", sig];
-  return orderedParameters;
-};
-
-exports.OAuth.prototype._performSecureRequest= function( oauth_token, oauth_token_secret, method, url, extra_params, post_body, post_content_type,  callback ) {
-  var orderedParameters= this._prepareParameters(oauth_token, oauth_token_secret, method, url, extra_params);
-
-  if( !post_content_type ) {
-    post_content_type= "application/x-www-form-urlencoded";
-  }
-  var parsedUrl= url_1__default['default'].parse( url, false );
-  if( parsedUrl.protocol == "http:" && !parsedUrl.port ) parsedUrl.port= 80;
-  if( parsedUrl.protocol == "https:" && !parsedUrl.port ) parsedUrl.port= 443;
-
-  var headers= {};
-  var authorization = this._buildAuthorizationHeaders(orderedParameters);
-  if ( this._isEcho ) {
-    headers["X-Verify-Credentials-Authorization"]= authorization;
-  }
-  else {
-    headers["Authorization"]= authorization;
-  }
-
-  headers["Host"] = parsedUrl.host;
-
-  for( var key in this._headers ) {
-    if (this._headers.hasOwnProperty(key)) {
-      headers[key]= this._headers[key];
-    }
-  }
-
-  // Filter out any passed extra_params that are really to do with OAuth
-  for(var key in extra_params) {
-    if( this._isParameterNameAnOAuthParameter( key ) ) {
-      delete extra_params[key];
-    }
-  }
-
-  if( (method == "POST" || method == "PUT")  && ( post_body == null && extra_params != null) ) {
-    // Fix the mismatch between the output of querystring.stringify() and this._encodeData()
-    post_body= querystring__default['default'].stringify(extra_params)
-                       .replace(/\!/g, "%21")
-                       .replace(/\'/g, "%27")
-                       .replace(/\(/g, "%28")
-                       .replace(/\)/g, "%29")
-                       .replace(/\*/g, "%2A");
-  }
-
-  if( post_body ) {
-      if ( Buffer.isBuffer(post_body) ) {
-          headers["Content-length"]= post_body.length;
-      } else {
-          headers["Content-length"]= Buffer.byteLength(post_body);
-      }
-  } else {
-      headers["Content-length"]= 0;
-  }
-
-  headers["Content-Type"]= post_content_type;
-
-  var path;
-  if( !parsedUrl.pathname  || parsedUrl.pathname == "" ) parsedUrl.pathname ="/";
-  if( parsedUrl.query ) path= parsedUrl.pathname + "?"+ parsedUrl.query ;
-  else path= parsedUrl.pathname;
-
-  var request;
-  if( parsedUrl.protocol == "https:" ) {
-    request= this._createClient(parsedUrl.port, parsedUrl.hostname, method, path, headers, true);
-  }
-  else {
-    request= this._createClient(parsedUrl.port, parsedUrl.hostname, method, path, headers);
-  }
-
-  var clientOptions = this._clientOptions;
-  if( callback ) {
-    var data="";
-    var self= this;
-
-    // Some hosts *cough* google appear to close the connection early / send no content-length header
-    // allow this behaviour.
-    var allowEarlyClose= _utils.isAnEarlyCloseHost( parsedUrl.hostname );
-    var callbackCalled= false;
-    var passBackControl = function( response ) {
-      if(!callbackCalled) {
-        callbackCalled= true;
-        if ( response.statusCode >= 200 && response.statusCode <= 299 ) {
-          callback(null, data, response);
-        } else {
-          // Follow 301 or 302 redirects with Location HTTP header
-          if((response.statusCode == 301 || response.statusCode == 302) && clientOptions.followRedirects && response.headers && response.headers.location) {
-            self._performSecureRequest( oauth_token, oauth_token_secret, method, response.headers.location, extra_params, post_body, post_content_type,  callback);
-          }
-          else {
-            callback({ statusCode: response.statusCode, data: data }, data, response);
-          }
-        }
-      }
-    };
-
-    request.on('response', function (response) {
-      response.setEncoding('utf8');
-      response.on('data', function (chunk) {
-        data+=chunk;
-      });
-      response.on('end', function () {
-        passBackControl( response );
-      });
-      response.on('close', function () {
-        if( allowEarlyClose ) {
-          passBackControl( response );
-        }
-      });
-    });
-
-    request.on("error", function(err) {
-      if(!callbackCalled) {
-        callbackCalled= true;
-        callback( err );
-      }
-    });
-
-    if( (method == "POST" || method =="PUT") && post_body != null && post_body != "" ) {
-      request.write(post_body);
-    }
-    request.end();
-  }
-  else {
-    if( (method == "POST" || method =="PUT") && post_body != null && post_body != "" ) {
-      request.write(post_body);
-    }
-    return request;
-  }
-
-  return;
-};
-
-exports.OAuth.prototype.setClientOptions= function(options) {
-  var key,
-      mergedOptions= {},
-      hasOwnProperty= Object.prototype.hasOwnProperty;
-
-  for( key in this._defaultClientOptions ) {
-    if( !hasOwnProperty.call(options, key) ) {
-      mergedOptions[key]= this._defaultClientOptions[key];
-    } else {
-      mergedOptions[key]= options[key];
-    }
-  }
-
-  this._clientOptions= mergedOptions;
-};
-
-exports.OAuth.prototype.getOAuthAccessToken= function(oauth_token, oauth_token_secret, oauth_verifier,  callback) {
-  var extraParams= {};
-  if( typeof oauth_verifier == "function" ) {
-    callback= oauth_verifier;
-  } else {
-    extraParams.oauth_verifier= oauth_verifier;
-  }
-
-   this._performSecureRequest( oauth_token, oauth_token_secret, this._clientOptions.accessTokenHttpMethod, this._accessUrl, extraParams, null, null, function(error, data, response) {
-         if( error ) callback(error);
-         else {
-           var results= querystring__default['default'].parse( data );
-           var oauth_access_token= results["oauth_token"];
-           delete results["oauth_token"];
-           var oauth_access_token_secret= results["oauth_token_secret"];
-           delete results["oauth_token_secret"];
-           callback(null, oauth_access_token, oauth_access_token_secret, results );
-         }
-   });
-};
-
-// Deprecated
-exports.OAuth.prototype.getProtectedResource= function(url, method, oauth_token, oauth_token_secret, callback) {
-  this._performSecureRequest( oauth_token, oauth_token_secret, method, url, null, "", null, callback );
-};
-
-exports.OAuth.prototype.delete= function(url, oauth_token, oauth_token_secret, callback) {
-  return this._performSecureRequest( oauth_token, oauth_token_secret, "DELETE", url, null, "", null, callback );
-};
-
-exports.OAuth.prototype.get= function(url, oauth_token, oauth_token_secret, callback) {
-  return this._performSecureRequest( oauth_token, oauth_token_secret, "GET", url, null, "", null, callback );
-};
-
-exports.OAuth.prototype._putOrPost= function(method, url, oauth_token, oauth_token_secret, post_body, post_content_type, callback) {
-  var extra_params= null;
-  if( typeof post_content_type == "function" ) {
-    callback= post_content_type;
-    post_content_type= null;
-  }
-  if ( typeof post_body != "string" && !Buffer.isBuffer(post_body) ) {
-    post_content_type= "application/x-www-form-urlencoded";
-    extra_params= post_body;
-    post_body= null;
-  }
-  return this._performSecureRequest( oauth_token, oauth_token_secret, method, url, extra_params, post_body, post_content_type, callback );
-};
-
-
-exports.OAuth.prototype.put= function(url, oauth_token, oauth_token_secret, post_body, post_content_type, callback) {
-  return this._putOrPost("PUT", url, oauth_token, oauth_token_secret, post_body, post_content_type, callback);
-};
-
-exports.OAuth.prototype.post= function(url, oauth_token, oauth_token_secret, post_body, post_content_type, callback) {
-  return this._putOrPost("POST", url, oauth_token, oauth_token_secret, post_body, post_content_type, callback);
-};
-
-/**
- * Gets a request token from the OAuth provider and passes that information back
- * to the calling code.
- *
- * The callback should expect a function of the following form:
- *
- * function(err, token, token_secret, parsedQueryString) {}
- *
- * This method has optional parameters so can be called in the following 2 ways:
- *
- * 1) Primary use case: Does a basic request with no extra parameters
- *  getOAuthRequestToken( callbackFunction )
- *
- * 2) As above but allows for provision of extra parameters to be sent as part of the query to the server.
- *  getOAuthRequestToken( extraParams, callbackFunction )
- *
- * N.B. This method will HTTP POST verbs by default, if you wish to override this behaviour you will
- * need to provide a requestTokenHttpMethod option when creating the client.
- *
- **/
-exports.OAuth.prototype.getOAuthRequestToken= function( extraParams, callback ) {
-   if( typeof extraParams == "function" ){
-     callback = extraParams;
-     extraParams = {};
-   }
-  // Callbacks are 1.0A related
-  if( this._authorize_callback ) {
-    extraParams["oauth_callback"]= this._authorize_callback;
-  }
-  this._performSecureRequest( null, null, this._clientOptions.requestTokenHttpMethod, this._requestUrl, extraParams, null, null, function(error, data, response) {
-    if( error ) callback(error);
-    else {
-      var results= querystring__default['default'].parse(data);
-
-      var oauth_token= results["oauth_token"];
-      var oauth_token_secret= results["oauth_token_secret"];
-      delete results["oauth_token"];
-      delete results["oauth_token_secret"];
-      callback(null, oauth_token, oauth_token_secret,  results );
-    }
-  });
-};
-
-exports.OAuth.prototype.signUrl= function(url, oauth_token, oauth_token_secret, method) {
-
-  if( method === undefined ) {
-    var method= "GET";
-  }
-
-  var orderedParameters= this._prepareParameters(oauth_token, oauth_token_secret, method, url, {});
-  var parsedUrl= url_1__default['default'].parse( url, false );
-
-  var query="";
-  for( var i= 0 ; i < orderedParameters.length; i++) {
-    query+= orderedParameters[i][0]+"="+ this._encodeData(orderedParameters[i][1]) + "&";
-  }
-  query= query.substring(0, query.length-1);
-
-  return parsedUrl.protocol + "//"+ parsedUrl.host + parsedUrl.pathname + "?" + query;
-};
-
-exports.OAuth.prototype.authHeader= function(url, oauth_token, oauth_token_secret, method) {
-  if( method === undefined ) {
-    var method= "GET";
-  }
-
-  var orderedParameters= this._prepareParameters(oauth_token, oauth_token_secret, method, url, {});
-  return this._buildAuthorizationHeaders(orderedParameters);
-};
-});
-
-var oauth2 = createCommonjsModule(function (module, exports) {
-exports.OAuth2= function(clientId, clientSecret, baseSite, authorizePath, accessTokenPath, customHeaders) {
-  this._clientId= clientId;
-  this._clientSecret= clientSecret;
-  this._baseSite= baseSite;
-  this._authorizeUrl= authorizePath || "/oauth/authorize";
-  this._accessTokenUrl= accessTokenPath || "/oauth/access_token";
-  this._accessTokenName= "access_token";
-  this._authMethod= "Bearer";
-  this._customHeaders = customHeaders || {};
-  this._useAuthorizationHeaderForGET= false;
-
-  //our agent
-  this._agent = undefined;
-};
-
-// Allows you to set an agent to use instead of the default HTTP or
-// HTTPS agents. Useful when dealing with your own certificates.
-exports.OAuth2.prototype.setAgent = function(agent) {
-  this._agent = agent;
-};
-
-// This 'hack' method is required for sites that don't use
-// 'access_token' as the name of the access token (for requests).
-// ( http://tools.ietf.org/html/draft-ietf-oauth-v2-16#section-7 )
-// it isn't clear what the correct value should be atm, so allowing
-// for specific (temporary?) override for now.
-exports.OAuth2.prototype.setAccessTokenName= function ( name ) {
-  this._accessTokenName= name;
-};
-
-// Sets the authorization method for Authorization header.
-// e.g. Authorization: Bearer <token>  # "Bearer" is the authorization method.
-exports.OAuth2.prototype.setAuthMethod = function ( authMethod ) {
-  this._authMethod = authMethod;
-};
-
-
-// If you use the OAuth2 exposed 'get' method (and don't construct your own _request call )
-// this will specify whether to use an 'Authorize' header instead of passing the access_token as a query parameter
-exports.OAuth2.prototype.useAuthorizationHeaderforGET = function(useIt) {
-  this._useAuthorizationHeaderForGET= useIt;
-};
-
-exports.OAuth2.prototype._getAccessTokenUrl= function() {
-  return this._baseSite + this._accessTokenUrl; /* + "?" + querystring.stringify(params); */
-};
-
-// Build the authorization header. In particular, build the part after the colon.
-// e.g. Authorization: Bearer <token>  # Build "Bearer <token>"
-exports.OAuth2.prototype.buildAuthHeader= function(token) {
-  return this._authMethod + ' ' + token;
-};
-
-exports.OAuth2.prototype._chooseHttpLibrary= function( parsedUrl ) {
-  var http_library= https__default['default'];
-  // As this is OAUth2, we *assume* https unless told explicitly otherwise.
-  if( parsedUrl.protocol != "https:" ) {
-    http_library= http__default['default'];
-  }
-  return http_library;
-};
-
-exports.OAuth2.prototype._request= function(method, url, headers, post_body, access_token, callback) {
-
-  var parsedUrl= url_1__default['default'].parse( url, true );
-  if( parsedUrl.protocol == "https:" && !parsedUrl.port ) {
-    parsedUrl.port= 443;
-  }
-
-  var http_library= this._chooseHttpLibrary( parsedUrl );
-
-
-  var realHeaders= {};
-  for( var key in this._customHeaders ) {
-    realHeaders[key]= this._customHeaders[key];
-  }
-  if( headers ) {
-    for(var key in headers) {
-      realHeaders[key] = headers[key];
-    }
-  }
-  realHeaders['Host']= parsedUrl.host;
-
-  if (!realHeaders['User-Agent']) {
-    realHeaders['User-Agent'] = 'Node-oauth';
-  }
-
-  if( post_body ) {
-      if ( Buffer.isBuffer(post_body) ) {
-          realHeaders["Content-Length"]= post_body.length;
-      } else {
-          realHeaders["Content-Length"]= Buffer.byteLength(post_body);
-      }
-  } else {
-      realHeaders["Content-length"]= 0;
-  }
-
-  if( access_token && !('Authorization' in realHeaders)) {
-    if( ! parsedUrl.query ) parsedUrl.query= {};
-    parsedUrl.query[this._accessTokenName]= access_token;
-  }
-
-  var queryStr= querystring__default['default'].stringify(parsedUrl.query);
-  if( queryStr ) queryStr=  "?" + queryStr;
-  var options = {
-    host:parsedUrl.hostname,
-    port: parsedUrl.port,
-    path: parsedUrl.pathname + queryStr,
-    method: method,
-    headers: realHeaders
-  };
-
-  this._executeRequest( http_library, options, post_body, callback );
-};
-
-exports.OAuth2.prototype._executeRequest= function( http_library, options, post_body, callback ) {
-  // Some hosts *cough* google appear to close the connection early / send no content-length header
-  // allow this behaviour.
-  var allowEarlyClose= _utils.isAnEarlyCloseHost(options.host);
-  var callbackCalled= false;
-  function passBackControl( response, result ) {
-    if(!callbackCalled) {
-      callbackCalled=true;
-      if( !(response.statusCode >= 200 && response.statusCode <= 299) && (response.statusCode != 301) && (response.statusCode != 302) ) {
-        callback({ statusCode: response.statusCode, data: result });
-      } else {
-        callback(null, result, response);
-      }
-    }
-  }
-
-  var result= "";
-
-  //set the agent on the request options
-  if (this._agent) {
-    options.agent = this._agent;
-  }
-
-  var request = http_library.request(options);
-  request.on('response', function (response) {
-    response.on("data", function (chunk) {
-      result+= chunk;
-    });
-    response.on("close", function (err) {
-      if( allowEarlyClose ) {
-        passBackControl( response, result );
-      }
-    });
-    response.addListener("end", function () {
-      passBackControl( response, result );
-    });
-  });
-  request.on('error', function(e) {
-    callbackCalled= true;
-    callback(e);
-  });
-
-  if( (options.method == 'POST' || options.method == 'PUT') && post_body ) {
-     request.write(post_body);
-  }
-  request.end();
-};
-
-exports.OAuth2.prototype.getAuthorizeUrl= function( params ) {
-  var params= params || {};
-  params['client_id'] = this._clientId;
-  return this._baseSite + this._authorizeUrl + "?" + querystring__default['default'].stringify(params);
-};
-
-exports.OAuth2.prototype.getOAuthAccessToken= function(code, params, callback) {
-  var params= params || {};
-  params['client_id'] = this._clientId;
-  params['client_secret'] = this._clientSecret;
-  var codeParam = (params.grant_type === 'refresh_token') ? 'refresh_token' : 'code';
-  params[codeParam]= code;
-
-  var post_data= querystring__default['default'].stringify( params );
-  var post_headers= {
-       'Content-Type': 'application/x-www-form-urlencoded'
-   };
-
-
-  this._request("POST", this._getAccessTokenUrl(), post_headers, post_data, null, function(error, data, response) {
-    if( error )  callback(error);
-    else {
-      var results;
-      try {
-        // As of http://tools.ietf.org/html/draft-ietf-oauth-v2-07
-        // responses should be in JSON
-        results= JSON.parse( data );
-      }
-      catch(e) {
-        // .... However both Facebook + Github currently use rev05 of the spec
-        // and neither seem to specify a content-type correctly in their response headers :(
-        // clients of these services will suffer a *minor* performance cost of the exception
-        // being thrown
-        results= querystring__default['default'].parse( data );
-      }
-      var access_token= results["access_token"];
-      var refresh_token= results["refresh_token"];
-      delete results["refresh_token"];
-      callback(null, access_token, refresh_token, results); // callback results =-=
-    }
-  });
-};
-
-// Deprecated
-exports.OAuth2.prototype.getProtectedResource= function(url, access_token, callback) {
-  this._request("GET", url, {}, "", access_token, callback );
-};
-
-exports.OAuth2.prototype.get= function(url, access_token, callback) {
-  if( this._useAuthorizationHeaderForGET ) {
-    var headers= {'Authorization': this.buildAuthHeader(access_token) };
-    access_token= null;
-  }
-  else {
-    headers= {};
-  }
-  this._request("GET", url, headers, "", access_token, callback );
-};
-});
-
-var OAuth = oauth$1.OAuth;
-var OAuthEcho = oauth$1.OAuthEcho;
-var OAuth2 = oauth2.OAuth2;
-
-var oauth = {
-	OAuth: OAuth,
-	OAuthEcho: OAuthEcho,
-	OAuth2: OAuth2
-};
-
-/**
- * Byte sizes are taken from ECMAScript Language Specification
- * http://www.ecma-international.org/ecma-262/5.1/
- * http://bclary.com/2004/11/07/#a-4.3.16
- */
-
-var byte_size = {
-  STRING: 2,
-  BOOLEAN: 4,
-  NUMBER: 8
-};
-
-var Buffer$1 = require$$0__default['default'].Buffer;
-
-function allProperties(obj) {
-  const stringProperties = [];
-  for (var prop in obj) { 
-      stringProperties.push(prop);
-  }
-  if (Object.getOwnPropertySymbols) {
-      var symbolProperties = Object.getOwnPropertySymbols(obj);
-      Array.prototype.push.apply(stringProperties, symbolProperties);
-  }
-  return stringProperties
-}
-
-function sizeOfObject (seen, object) {
-  if (object == null) {
-    return 0
-  }
-
-  var bytes = 0;
-  var properties = allProperties(object);
-  for (var i = 0; i < properties.length; i++) {
-    var key = properties[i];
-    // Do not recalculate circular references
-    if (typeof object[key] === 'object' && object[key] !== null) {
-      if (seen.has(object[key])) {
-        continue
-      }
-      seen.add(object[key]);
-    }
-
-    bytes += getCalculator(seen)(key);
-    try {
-      bytes += getCalculator(seen)(object[key]);
-    } catch (ex) {
-      if (ex instanceof RangeError) {
-        // circular reference detected, final result might be incorrect
-        // let's be nice and not throw an exception
-        bytes = 0;
-      }
-    }
-  }
-
-  return bytes
-}
-
-function getCalculator (seen) {
-  return function calculator(object) {
-    if (Buffer$1.isBuffer(object)) {
-      return object.length
-    }
-
-    var objectType = typeof (object);
-    switch (objectType) {
-      case 'string':
-        return object.length * byte_size.STRING
-      case 'boolean':
-        return byte_size.BOOLEAN
-      case 'number':
-        return byte_size.NUMBER
-      case 'symbol':
-        const isGlobalSymbol = Symbol.keyFor && Symbol.keyFor(object);
-        return isGlobalSymbol ? Symbol.keyFor(object).length * byte_size.STRING : (object.toString().length - 8) * byte_size.STRING 
-      case 'object':
-        if (Array.isArray(object)) {
-          return object.map(getCalculator(seen)).reduce(function (acc, curr) {
-            return acc + curr
-          }, 0)
-        } else {
-          return sizeOfObject(seen, object)
-        }
-      default:
-        return 0
-    }
-  }
-}
-
-/**
- * Main module's entry point
- * Calculates Bytes for the provided parameter
- * @param object - handles object/string/boolean/buffer
- * @returns {*}
- */
-function sizeof (object) {
-  return getCalculator(new WeakSet())(object)
-}
-
-var objectSizeof = sizeof;
-
-var utils = createCommonjsModule(function (module, exports) {
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.parse = exports.formatURL = exports.generateHash = exports.createParams = void 0;
-exports.createParams = function (params) {
-    if (!params) {
-        return '';
-    }
-    var searchParams = new URLSearchParams();
-    Object.entries(params).forEach(function (_a) {
-        var key = _a[0], value = _a[1];
-        if (typeof value === 'boolean') {
-            searchParams.append(key, value ? 'true' : 'false');
-            return;
-        }
-        searchParams.append(key, "" + value);
-    });
-    return "?" + searchParams.toString();
-};
-exports.generateHash = function (token) {
-    var seed = 56852;
-    var h1 = 0xdeadbeef ^ seed;
-    var h2 = 0x41c6ce57 ^ seed;
-    for (var i = 0, ch = void 0; i < token.length; i++) {
-        ch = token.charCodeAt(i);
-        h1 = Math.imul(h1 ^ ch, 2654435761);
-        h2 = Math.imul(h2 ^ ch, 1597334677);
-    }
-    h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909);
-    h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909);
-    return (4294967296 * (2097151 & h2) + (h1 >>> 0)).toString(16);
-};
-exports.formatURL = function (url) {
-    return url
-        .replace(/!/g, '%21')
-        .replace(/'/g, '%27')
-        .replace(/\(/g, '%28')
-        .replace(/\)/g, '%29')
-        .replace(/\*/g, '%2A');
-};
-exports.parse = function (body) {
-    var parsed = undefined;
-    try {
-        parsed = JSON.parse(body);
-    }
-    catch (error) { }
-    if (parsed) {
-        return parsed;
-    }
-    try {
-        parsed = JSON.parse('{"' + decodeURI(body).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
-    }
-    catch (error) { }
-    if (parsed) {
-        return parsed;
-    }
-    return body;
-};
-});
-
-var Cache_1 = createCommonjsModule(function (module, exports) {
-var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var object_sizeof_1 = __importDefault(objectSizeof);
-
-var windowSessionStorage = typeof sessionStorage !== 'undefined' ? sessionStorage : undefined;
-var Cache = /** @class */ (function () {
-    function Cache(ttl, maxByteSize) {
-        if (ttl === void 0) { ttl = 360; }
-        if (maxByteSize === void 0) { maxByteSize = 16000000; }
-        this.cache = new Map();
-        this.ttl = ttl;
-        this.maxByteSize = maxByteSize;
-    }
-    Cache.prototype.add = function (query, data) {
-        var hashedKey = utils.generateHash(query);
-        var added = new Date();
-        var entry = {
-            added: added,
-            data: data,
-        };
-        this.cache.set(hashedKey, entry);
-        windowSessionStorage === null || windowSessionStorage === void 0 ? void 0 : windowSessionStorage.setItem(hashedKey, JSON.stringify(entry));
-        this.clearSpace();
-    };
-    Cache.prototype.get = function (query) {
-        var hashedKey = utils.generateHash(query);
-        if (!this.has(query)) {
-            return null;
-        }
-        try {
-            var entry = this.cache.get(hashedKey);
-            if (!entry) {
-                var sessionData = windowSessionStorage === null || windowSessionStorage === void 0 ? void 0 : windowSessionStorage.getItem(hashedKey);
-                if (!sessionData) {
-                    return;
-                }
-                return JSON.parse(sessionData);
-            }
-            return entry.data;
-        }
-        catch (error) {
-            return null;
-        }
-    };
-    Cache.prototype.has = function (query) {
-        var hashedKey = utils.generateHash(query);
-        try {
-            var now = new Date();
-            var data = this.cache.get(hashedKey);
-            if (!data) {
-                var sessionData = windowSessionStorage === null || windowSessionStorage === void 0 ? void 0 : windowSessionStorage.getItem(hashedKey);
-                if (!sessionData) {
-                    return false;
-                }
-                data = JSON.parse(sessionData);
-            }
-            var entryAdded = new Date(data.added);
-            if (now.getTime() > entryAdded.getTime() + this.ttl * 1000) {
-                windowSessionStorage === null || windowSessionStorage === void 0 ? void 0 : windowSessionStorage.removeItem(hashedKey);
-                this.cache.delete(hashedKey);
-                return false;
-            }
+    get _isRateLimitOk() {
+        if (!this._rateLimit) {
             return true;
         }
-        catch (error) {
+        const resetDate = this._rateLimit.reset * 1000;
+        if (resetDate < Date.now()) {
+            return true;
+        }
+        return this._rateLimit.remaining > 0;
+    }
+    makeRequest(queryParams) {
+        return this._instance.get(this.getEndpoint(), queryParams, { fullResponse: true, params: this._sharedParams });
+    }
+    makeNewInstanceFromResult(result, queryParams) {
+        // Construct a subclass
+        return new this.constructor({
+            realData: result.data,
+            rateLimit: result.rateLimit,
+            instance: this._instance,
+            queryParams,
+            sharedParams: this._sharedParams,
+        });
+    }
+    getEndpoint() {
+        return this._endpoint;
+    }
+    injectQueryParams(maxResults) {
+        return {
+            ...(maxResults ? { max_results: maxResults } : {}),
+            ...this._queryParams,
+        };
+    }
+    /* ---------------------- */
+    /* Real paginator methods */
+    /* ---------------------- */
+    /**
+     * Next page.
+     */
+    async next(maxResults) {
+        const queryParams = this.getNextQueryParams(maxResults);
+        const result = await this.makeRequest(queryParams);
+        return this.makeNewInstanceFromResult(result, queryParams);
+    }
+    /**
+     * Next page, but store it in current instance.
+     */
+    async fetchNext(maxResults) {
+        const queryParams = this.getNextQueryParams(maxResults);
+        const result = await this.makeRequest(queryParams);
+        // Await in case of async sub-methods
+        await this.refreshInstanceFromResult(result, true);
+        return this;
+    }
+    /**
+     * Fetch up to {count} items after current page,
+     * as long as rate limit is not hit and Twitter has some results
+     */
+    async fetchLast(count = Infinity) {
+        let queryParams = this.getNextQueryParams(this._maxResultsWhenFetchLast);
+        let resultCount = 0;
+        // Break at rate limit limit
+        while (resultCount < count && this._isRateLimitOk) {
+            const response = await this.makeRequest(queryParams);
+            await this.refreshInstanceFromResult(response, true);
+            resultCount += this.getPageLengthFromRequest(response);
+            if (this.isFetchLastOver(response)) {
+                break;
+            }
+            queryParams = this.getNextQueryParams(this._maxResultsWhenFetchLast);
+        }
+        return this;
+    }
+    get rateLimit() {
+        var _a;
+        return { ...(_a = this._rateLimit) !== null && _a !== void 0 ? _a : {} };
+    }
+    /** Get raw data returned by Twitter API. */
+    get data() {
+        return this._realData;
+    }
+    get done() {
+        return !this.canFetchNextPage(this._realData);
+    }
+    /**
+     * Iterate over currently fetched items.
+     */
+    *[Symbol.iterator]() {
+        yield* this.getItemArray();
+    }
+    /**
+     * Iterate over items "indefinitely" (until rate limit is hit / they're no more items available)
+     * This will **mutate the current instance** and fill data, metas, etc. inside this instance.
+     *
+     * If you need to handle concurrent requests, or you need to rely on immutability, please use `.fetchAndIterate()` instead.
+     */
+    async *[Symbol.asyncIterator]() {
+        yield* this.getItemArray();
+        // eslint-disable-next-line @typescript-eslint/no-this-alias
+        let paginator = this;
+        let canFetchNextPage = this.canFetchNextPage(this._realData);
+        while (canFetchNextPage && this._isRateLimitOk && paginator.getItemArray().length > 0) {
+            const next = await paginator.next(this._maxResultsWhenFetchLast);
+            // Store data into current instance [needed to access includes and meta]
+            this.refreshInstanceFromResult({ data: next._realData, headers: {}, rateLimit: next._rateLimit }, true);
+            canFetchNextPage = this.canFetchNextPage(next._realData);
+            const items = next.getItemArray();
+            yield* items;
+            paginator = next;
+        }
+    }
+    /**
+     * Iterate over items "indefinitely" without modifying the current instance (until rate limit is hit / they're no more items available)
+     *
+     * This will **NOT** mutate the current instance, meaning that current instance will not inherit from `includes` and `meta` (v2 API only).
+     * Use `Symbol.asyncIterator` (`for-await of`) to directly access items with current instance mutation.
+     */
+    async *fetchAndIterate() {
+        for (const item of this.getItemArray()) {
+            yield [item, this];
+        }
+        // eslint-disable-next-line @typescript-eslint/no-this-alias
+        let paginator = this;
+        let canFetchNextPage = this.canFetchNextPage(this._realData);
+        while (canFetchNextPage && this._isRateLimitOk && paginator.getItemArray().length > 0) {
+            const next = await paginator.next(this._maxResultsWhenFetchLast);
+            // Store data into current instance [needed to access includes and meta]
+            this.refreshInstanceFromResult({ data: next._realData, headers: {}, rateLimit: next._rateLimit }, true);
+            canFetchNextPage = this.canFetchNextPage(next._realData);
+            for (const item of next.getItemArray()) {
+                yield [item, next];
+            }
+            this._rateLimit = next._rateLimit;
+            paginator = next;
+        }
+    }
+}
+/** PreviousableTwitterPaginator: a TwitterPaginator able to get consume data from both side, next and previous. */
+class PreviousableTwitterPaginator extends TwitterPaginator {
+    /**
+     * Previous page (new tweets)
+     */
+    async previous(maxResults) {
+        const queryParams = this.getPreviousQueryParams(maxResults);
+        const result = await this.makeRequest(queryParams);
+        return this.makeNewInstanceFromResult(result, queryParams);
+    }
+    /**
+     * Previous page, but in current instance.
+     */
+    async fetchPrevious(maxResults) {
+        const queryParams = this.getPreviousQueryParams(maxResults);
+        const result = await this.makeRequest(queryParams);
+        await this.refreshInstanceFromResult(result, false);
+        return this;
+    }
+}
+
+class CursoredV1Paginator extends TwitterPaginator {
+    getNextQueryParams(maxResults) {
+        var _a;
+        return {
+            ...this._queryParams,
+            cursor: (_a = this._realData.next_cursor_str) !== null && _a !== void 0 ? _a : this._realData.next_cursor,
+            ...(maxResults ? { count: maxResults } : {}),
+        };
+    }
+    isFetchLastOver(result) {
+        // If we cant fetch next page
+        return !this.canFetchNextPage(result.data);
+    }
+    canFetchNextPage(result) {
+        // If one of cursor is valid
+        return !this.isNextCursorInvalid(result.next_cursor) || !this.isNextCursorInvalid(result.next_cursor_str);
+    }
+    isNextCursorInvalid(value) {
+        return value === undefined
+            || value === 0
+            || value === -1
+            || value === '0'
+            || value === '-1';
+    }
+}
+
+class DmEventsV1Paginator extends CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'direct_messages/events/list.json';
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.events.push(...result.events);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.events.length;
+    }
+    getItemArray() {
+        return this.events;
+    }
+    /**
+     * Events returned by paginator.
+     */
+    get events() {
+        return this._realData.events;
+    }
+}
+class WelcomeDmV1Paginator extends CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'direct_messages/welcome_messages/list.json';
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.welcome_messages.push(...result.welcome_messages);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.welcome_messages.length;
+    }
+    getItemArray() {
+        return this.welcomeMessages;
+    }
+    get welcomeMessages() {
+        return this._realData.welcome_messages;
+    }
+}
+
+var EUploadMimeType;
+(function (EUploadMimeType) {
+    EUploadMimeType["Jpeg"] = "image/jpeg";
+    EUploadMimeType["Mp4"] = "video/mp4";
+    EUploadMimeType["Mov"] = "video/quicktime";
+    EUploadMimeType["Gif"] = "image/gif";
+    EUploadMimeType["Png"] = "image/png";
+    EUploadMimeType["Srt"] = "text/plain";
+    EUploadMimeType["Webp"] = "image/webp";
+})(EUploadMimeType || (EUploadMimeType = {}));
+
+// Creation of DMs
+var EDirectMessageEventTypeV1;
+(function (EDirectMessageEventTypeV1) {
+    EDirectMessageEventTypeV1["Create"] = "message_create";
+    EDirectMessageEventTypeV1["WelcomeCreate"] = "welcome_message";
+})(EDirectMessageEventTypeV1 || (EDirectMessageEventTypeV1 = {}));
+
+var ETwitterApiError;
+(function (ETwitterApiError) {
+    ETwitterApiError["Request"] = "request";
+    ETwitterApiError["PartialResponse"] = "partial-response";
+    ETwitterApiError["Response"] = "response";
+})(ETwitterApiError || (ETwitterApiError = {}));
+/* ERRORS INSTANCES */
+class ApiError extends Error {
+    constructor() {
+        super(...arguments);
+        this.error = true;
+    }
+}
+class ApiRequestError extends ApiError {
+    constructor(message, options) {
+        super(message);
+        this.type = ETwitterApiError.Request;
+        Error.captureStackTrace(this, this.constructor);
+        // Do not show on Node stack trace
+        Object.defineProperty(this, '_options', { value: options });
+    }
+    get request() {
+        return this._options.request;
+    }
+    get requestError() {
+        return this._options.requestError;
+    }
+    toJSON() {
+        return {
+            type: this.type,
+            error: this.requestError,
+        };
+    }
+}
+class ApiPartialResponseError extends ApiError {
+    constructor(message, options) {
+        super(message);
+        this.type = ETwitterApiError.PartialResponse;
+        Error.captureStackTrace(this, this.constructor);
+        // Do not show on Node stack trace
+        Object.defineProperty(this, '_options', { value: options });
+    }
+    get request() {
+        return this._options.request;
+    }
+    get response() {
+        return this._options.response;
+    }
+    get responseError() {
+        return this._options.responseError;
+    }
+    get rawContent() {
+        return this._options.rawContent;
+    }
+    toJSON() {
+        return {
+            type: this.type,
+            error: this.responseError,
+        };
+    }
+}
+class ApiResponseError extends ApiError {
+    constructor(message, options) {
+        super(message);
+        this.type = ETwitterApiError.Response;
+        Error.captureStackTrace(this, this.constructor);
+        // Do not show on Node stack trace
+        Object.defineProperty(this, '_options', { value: options });
+        this.code = options.code;
+        this.headers = options.headers;
+        this.rateLimit = options.rateLimit;
+        // Fix bad error data payload on some v1 endpoints (see https://github.com/PLhery/node-twitter-api-v2/issues/342)
+        if (options.data && typeof options.data === 'object' && 'error' in options.data && !options.data.errors) {
+            const data = { ...options.data };
+            data.errors = [{
+                    code: EApiV1ErrorCode.InternalError,
+                    message: data.error,
+                }];
+            this.data = data;
+        }
+        else {
+            this.data = options.data;
+        }
+    }
+    get request() {
+        return this._options.request;
+    }
+    get response() {
+        return this._options.response;
+    }
+    /** Check for presence of one of given v1/v2 error codes. */
+    hasErrorCode(...codes) {
+        const errors = this.errors;
+        // No errors
+        if (!(errors === null || errors === void 0 ? void 0 : errors.length)) {
             return false;
         }
+        // v1 errors
+        if ('code' in errors[0]) {
+            const v1errors = errors;
+            return v1errors.some(error => codes.includes(error.code));
+        }
+        // v2 error
+        const v2error = this.data;
+        return codes.includes(v2error.type);
+    }
+    get errors() {
+        var _a;
+        return (_a = this.data) === null || _a === void 0 ? void 0 : _a.errors;
+    }
+    get rateLimitError() {
+        return this.code === 420 || this.code === 429;
+    }
+    get isAuthError() {
+        if (this.code === 401) {
+            return true;
+        }
+        return this.hasErrorCode(EApiV1ErrorCode.AuthTimestampInvalid, EApiV1ErrorCode.AuthenticationFail, EApiV1ErrorCode.BadAuthenticationData, EApiV1ErrorCode.InvalidOrExpiredToken);
+    }
+    toJSON() {
+        return {
+            type: this.type,
+            code: this.code,
+            error: this.data,
+            rateLimit: this.rateLimit,
+            headers: this.headers,
+        };
+    }
+}
+var EApiV1ErrorCode;
+(function (EApiV1ErrorCode) {
+    // Location errors
+    EApiV1ErrorCode[EApiV1ErrorCode["InvalidCoordinates"] = 3] = "InvalidCoordinates";
+    EApiV1ErrorCode[EApiV1ErrorCode["NoLocationFound"] = 13] = "NoLocationFound";
+    // Authentication failures
+    EApiV1ErrorCode[EApiV1ErrorCode["AuthenticationFail"] = 32] = "AuthenticationFail";
+    EApiV1ErrorCode[EApiV1ErrorCode["InvalidOrExpiredToken"] = 89] = "InvalidOrExpiredToken";
+    EApiV1ErrorCode[EApiV1ErrorCode["UnableToVerifyCredentials"] = 99] = "UnableToVerifyCredentials";
+    EApiV1ErrorCode[EApiV1ErrorCode["AuthTimestampInvalid"] = 135] = "AuthTimestampInvalid";
+    EApiV1ErrorCode[EApiV1ErrorCode["BadAuthenticationData"] = 215] = "BadAuthenticationData";
+    // Resources not found or visible
+    EApiV1ErrorCode[EApiV1ErrorCode["NoUserMatch"] = 17] = "NoUserMatch";
+    EApiV1ErrorCode[EApiV1ErrorCode["UserNotFound"] = 50] = "UserNotFound";
+    EApiV1ErrorCode[EApiV1ErrorCode["ResourceNotFound"] = 34] = "ResourceNotFound";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetNotFound"] = 144] = "TweetNotFound";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetNotVisible"] = 179] = "TweetNotVisible";
+    EApiV1ErrorCode[EApiV1ErrorCode["NotAllowedResource"] = 220] = "NotAllowedResource";
+    EApiV1ErrorCode[EApiV1ErrorCode["MediaIdNotFound"] = 325] = "MediaIdNotFound";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetNoLongerAvailable"] = 421] = "TweetNoLongerAvailable";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetViolatedRules"] = 422] = "TweetViolatedRules";
+    // Account errors
+    EApiV1ErrorCode[EApiV1ErrorCode["TargetUserSuspended"] = 63] = "TargetUserSuspended";
+    EApiV1ErrorCode[EApiV1ErrorCode["YouAreSuspended"] = 64] = "YouAreSuspended";
+    EApiV1ErrorCode[EApiV1ErrorCode["AccountUpdateFailed"] = 120] = "AccountUpdateFailed";
+    EApiV1ErrorCode[EApiV1ErrorCode["NoSelfSpamReport"] = 36] = "NoSelfSpamReport";
+    EApiV1ErrorCode[EApiV1ErrorCode["NoSelfMute"] = 271] = "NoSelfMute";
+    EApiV1ErrorCode[EApiV1ErrorCode["AccountLocked"] = 326] = "AccountLocked";
+    // Application live errors / Twitter errors
+    EApiV1ErrorCode[EApiV1ErrorCode["RateLimitExceeded"] = 88] = "RateLimitExceeded";
+    EApiV1ErrorCode[EApiV1ErrorCode["NoDMRightForApp"] = 93] = "NoDMRightForApp";
+    EApiV1ErrorCode[EApiV1ErrorCode["OverCapacity"] = 130] = "OverCapacity";
+    EApiV1ErrorCode[EApiV1ErrorCode["InternalError"] = 131] = "InternalError";
+    EApiV1ErrorCode[EApiV1ErrorCode["TooManyFollowings"] = 161] = "TooManyFollowings";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetLimitExceeded"] = 185] = "TweetLimitExceeded";
+    EApiV1ErrorCode[EApiV1ErrorCode["DuplicatedTweet"] = 187] = "DuplicatedTweet";
+    EApiV1ErrorCode[EApiV1ErrorCode["TooManySpamReports"] = 205] = "TooManySpamReports";
+    EApiV1ErrorCode[EApiV1ErrorCode["RequestLooksLikeSpam"] = 226] = "RequestLooksLikeSpam";
+    EApiV1ErrorCode[EApiV1ErrorCode["NoWriteRightForApp"] = 261] = "NoWriteRightForApp";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetActionsDisabled"] = 425] = "TweetActionsDisabled";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetRepliesRestricted"] = 433] = "TweetRepliesRestricted";
+    // Invalid request parameters
+    EApiV1ErrorCode[EApiV1ErrorCode["NamedParameterMissing"] = 38] = "NamedParameterMissing";
+    EApiV1ErrorCode[EApiV1ErrorCode["InvalidAttachmentUrl"] = 44] = "InvalidAttachmentUrl";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetTextTooLong"] = 186] = "TweetTextTooLong";
+    EApiV1ErrorCode[EApiV1ErrorCode["MissingUrlParameter"] = 195] = "MissingUrlParameter";
+    EApiV1ErrorCode[EApiV1ErrorCode["NoMultipleGifs"] = 323] = "NoMultipleGifs";
+    EApiV1ErrorCode[EApiV1ErrorCode["InvalidMediaIds"] = 324] = "InvalidMediaIds";
+    EApiV1ErrorCode[EApiV1ErrorCode["InvalidUrl"] = 407] = "InvalidUrl";
+    EApiV1ErrorCode[EApiV1ErrorCode["TooManyTweetAttachments"] = 386] = "TooManyTweetAttachments";
+    // Already sent/deleted item
+    EApiV1ErrorCode[EApiV1ErrorCode["StatusAlreadyFavorited"] = 139] = "StatusAlreadyFavorited";
+    EApiV1ErrorCode[EApiV1ErrorCode["FollowRequestAlreadySent"] = 160] = "FollowRequestAlreadySent";
+    EApiV1ErrorCode[EApiV1ErrorCode["CannotUnmuteANonMutedAccount"] = 272] = "CannotUnmuteANonMutedAccount";
+    EApiV1ErrorCode[EApiV1ErrorCode["TweetAlreadyRetweeted"] = 327] = "TweetAlreadyRetweeted";
+    EApiV1ErrorCode[EApiV1ErrorCode["ReplyToDeletedTweet"] = 385] = "ReplyToDeletedTweet";
+    // DM Errors
+    EApiV1ErrorCode[EApiV1ErrorCode["DMReceiverNotFollowingYou"] = 150] = "DMReceiverNotFollowingYou";
+    EApiV1ErrorCode[EApiV1ErrorCode["UnableToSendDM"] = 151] = "UnableToSendDM";
+    EApiV1ErrorCode[EApiV1ErrorCode["MustAllowDMFromAnyone"] = 214] = "MustAllowDMFromAnyone";
+    EApiV1ErrorCode[EApiV1ErrorCode["CannotSendDMToThisUser"] = 349] = "CannotSendDMToThisUser";
+    EApiV1ErrorCode[EApiV1ErrorCode["DMTextTooLong"] = 354] = "DMTextTooLong";
+    // Application misconfiguration
+    EApiV1ErrorCode[EApiV1ErrorCode["SubscriptionAlreadyExists"] = 355] = "SubscriptionAlreadyExists";
+    EApiV1ErrorCode[EApiV1ErrorCode["CallbackUrlNotApproved"] = 415] = "CallbackUrlNotApproved";
+    EApiV1ErrorCode[EApiV1ErrorCode["SuspendedApplication"] = 416] = "SuspendedApplication";
+    EApiV1ErrorCode[EApiV1ErrorCode["OobOauthIsNotAllowed"] = 417] = "OobOauthIsNotAllowed";
+})(EApiV1ErrorCode || (EApiV1ErrorCode = {}));
+var EApiV2ErrorCode;
+(function (EApiV2ErrorCode) {
+    // Request errors
+    EApiV2ErrorCode["InvalidRequest"] = "https://api.twitter.com/2/problems/invalid-request";
+    EApiV2ErrorCode["ClientForbidden"] = "https://api.twitter.com/2/problems/client-forbidden";
+    EApiV2ErrorCode["UnsupportedAuthentication"] = "https://api.twitter.com/2/problems/unsupported-authentication";
+    // Stream rules errors
+    EApiV2ErrorCode["InvalidRules"] = "https://api.twitter.com/2/problems/invalid-rules";
+    EApiV2ErrorCode["TooManyRules"] = "https://api.twitter.com/2/problems/rule-cap";
+    EApiV2ErrorCode["DuplicatedRules"] = "https://api.twitter.com/2/problems/duplicate-rules";
+    // Twitter errors
+    EApiV2ErrorCode["RateLimitExceeded"] = "https://api.twitter.com/2/problems/usage-capped";
+    EApiV2ErrorCode["ConnectionError"] = "https://api.twitter.com/2/problems/streaming-connection";
+    EApiV2ErrorCode["ClientDisconnected"] = "https://api.twitter.com/2/problems/client-disconnected";
+    EApiV2ErrorCode["TwitterDisconnectedYou"] = "https://api.twitter.com/2/problems/operational-disconnect";
+    // Resource errors
+    EApiV2ErrorCode["ResourceNotFound"] = "https://api.twitter.com/2/problems/resource-not-found";
+    EApiV2ErrorCode["ResourceUnauthorized"] = "https://api.twitter.com/2/problems/not-authorized-for-resource";
+    EApiV2ErrorCode["DisallowedResource"] = "https://api.twitter.com/2/problems/disallowed-resource";
+})(EApiV2ErrorCode || (EApiV2ErrorCode = {}));
+
+var ETwitterStreamEvent;
+(function (ETwitterStreamEvent) {
+    ETwitterStreamEvent["Connected"] = "connected";
+    ETwitterStreamEvent["ConnectError"] = "connect error";
+    ETwitterStreamEvent["ConnectionError"] = "connection error";
+    ETwitterStreamEvent["ConnectionClosed"] = "connection closed";
+    ETwitterStreamEvent["ConnectionLost"] = "connection lost";
+    ETwitterStreamEvent["ReconnectAttempt"] = "reconnect attempt";
+    ETwitterStreamEvent["Reconnected"] = "reconnected";
+    ETwitterStreamEvent["ReconnectError"] = "reconnect error";
+    ETwitterStreamEvent["ReconnectLimitExceeded"] = "reconnect limit exceeded";
+    ETwitterStreamEvent["DataKeepAlive"] = "data keep-alive";
+    ETwitterStreamEvent["Data"] = "data event content";
+    ETwitterStreamEvent["DataError"] = "data twitter error";
+    ETwitterStreamEvent["TweetParseError"] = "data tweet parse error";
+    ETwitterStreamEvent["Error"] = "stream error";
+})(ETwitterStreamEvent || (ETwitterStreamEvent = {}));
+
+class TwitterApiPluginResponseOverride {
+    constructor(value) {
+        this.value = value;
+    }
+}
+
+const TwitterApiV2Settings = {
+    debug: false,
+    deprecationWarnings: true,
+    logger: { log: console.log.bind(console) },
+};
+
+function sharedPromise(getter) {
+    const sharedPromise = {
+        value: undefined,
+        promise: getter().then(val => {
+            sharedPromise.value = val;
+            return val;
+        }),
     };
-    Cache.prototype.clearSpace = function () {
-        var cacheArray = Array.from(this.cache);
-        if (object_sizeof_1.default(cacheArray) < this.maxByteSize) {
+    return sharedPromise;
+}
+function arrayWrap(value) {
+    if (Array.isArray(value)) {
+        return value;
+    }
+    return [value];
+}
+function trimUndefinedProperties(object) {
+    // Delete undefined parameters
+    for (const parameter in object) {
+        if (object[parameter] === undefined)
+            delete object[parameter];
+    }
+}
+function isTweetStreamV2ErrorPayload(payload) {
+    // Is error only if 'errors' is present and 'data' does not exists
+    return typeof payload === 'object'
+        && 'errors' in payload
+        && !('data' in payload);
+}
+function hasMultipleItems(item) {
+    if (Array.isArray(item) && item.length > 1) {
+        return true;
+    }
+    return item.toString().includes(',');
+}
+const deprecationWarningsCache = new Set();
+function safeDeprecationWarning(message) {
+    if (typeof console === 'undefined' || !console.warn || !TwitterApiV2Settings.deprecationWarnings) {
+        return;
+    }
+    const hash = `${message.instance}-${message.method}-${message.problem}`;
+    if (deprecationWarningsCache.has(hash)) {
+        return;
+    }
+    const formattedMsg = `[twitter-api-v2] Deprecation warning: In ${message.instance}.${message.method}() call` +
+        `, ${message.problem}.\n${message.resolution}.`;
+    console.warn(formattedMsg);
+    console.warn('To disable this message, import variable TwitterApiV2Settings from twitter-api-v2 and set TwitterApiV2Settings.deprecationWarnings to false.');
+    deprecationWarningsCache.add(hash);
+}
+
+class RequestHandlerHelper {
+    constructor(requestData) {
+        this.requestData = requestData;
+        this.requestErrorHandled = false;
+        this.responseData = [];
+    }
+    /* Request helpers */
+    get hrefPathname() {
+        const url = this.requestData.url;
+        return url.hostname + url.pathname;
+    }
+    isCompressionDisabled() {
+        return !this.requestData.compression || this.requestData.compression === 'identity';
+    }
+    isFormEncodedEndpoint() {
+        return this.requestData.url.href.startsWith('https://api.twitter.com/oauth/');
+    }
+    /* Error helpers */
+    createRequestError(error) {
+        return new ApiRequestError('Request failed.', {
+            request: this.req,
+            error,
+        });
+    }
+    createPartialResponseError(error, abortClose) {
+        const res = this.res;
+        let message = `Request failed with partial response with HTTP code ${res.statusCode}`;
+        if (abortClose) {
+            message += ' (connection abruptly closed)';
+        }
+        else {
+            message += ' (parse error)';
+        }
+        return new ApiPartialResponseError(message, {
+            request: this.req,
+            response: this.res,
+            responseError: error,
+            rawContent: Buffer.concat(this.responseData).toString(),
+        });
+    }
+    formatV1Errors(errors) {
+        return errors
+            .map(({ code, message }) => `${message} (Twitter code ${code})`)
+            .join(', ');
+    }
+    formatV2Error(error) {
+        return `${error.title}: ${error.detail} (see ${error.type})`;
+    }
+    createResponseError({ res, data, rateLimit, code }) {
+        var _a;
+        // Errors formatting.
+        let errorString = `Request failed with code ${code}`;
+        if ((_a = data === null || data === void 0 ? void 0 : data.errors) === null || _a === void 0 ? void 0 : _a.length) {
+            const errors = data.errors;
+            if ('code' in errors[0]) {
+                errorString += ' - ' + this.formatV1Errors(errors);
+            }
+            else {
+                errorString += ' - ' + this.formatV2Error(data);
+            }
+        }
+        return new ApiResponseError(errorString, {
+            code,
+            data,
+            headers: res.headers,
+            request: this.req,
+            response: res,
+            rateLimit,
+        });
+    }
+    /* Response helpers */
+    getResponseDataStream(res) {
+        if (this.isCompressionDisabled()) {
+            return res;
+        }
+        const contentEncoding = (res.headers['content-encoding'] || 'identity').trim().toLowerCase();
+        if (contentEncoding === 'br') {
+            const brotli = zlib__namespace.createBrotliDecompress({
+                flush: zlib__namespace.constants.BROTLI_OPERATION_FLUSH,
+                finishFlush: zlib__namespace.constants.BROTLI_OPERATION_FLUSH,
+            });
+            res.pipe(brotli);
+            return brotli;
+        }
+        if (contentEncoding === 'gzip') {
+            const gunzip = zlib__namespace.createGunzip({
+                flush: zlib__namespace.constants.Z_SYNC_FLUSH,
+                finishFlush: zlib__namespace.constants.Z_SYNC_FLUSH,
+            });
+            res.pipe(gunzip);
+            return gunzip;
+        }
+        if (contentEncoding === 'deflate') {
+            const inflate = zlib__namespace.createInflate({
+                flush: zlib__namespace.constants.Z_SYNC_FLUSH,
+                finishFlush: zlib__namespace.constants.Z_SYNC_FLUSH,
+            });
+            res.pipe(inflate);
+            return inflate;
+        }
+        return res;
+    }
+    detectResponseType(res) {
+        var _a, _b;
+        // Auto parse if server responds with JSON body
+        if (((_a = res.headers['content-type']) === null || _a === void 0 ? void 0 : _a.includes('application/json')) || ((_b = res.headers['content-type']) === null || _b === void 0 ? void 0 : _b.includes('application/problem+json'))) {
+            return 'json';
+        }
+        // f-e oauth token endpoints
+        else if (this.isFormEncodedEndpoint()) {
+            return 'url';
+        }
+        return 'text';
+    }
+    getParsedResponse(res) {
+        const data = this.responseData;
+        const mode = this.requestData.forceParseMode || this.detectResponseType(res);
+        if (mode === 'buffer') {
+            return Buffer.concat(data);
+        }
+        else if (mode === 'text') {
+            return Buffer.concat(data).toString();
+        }
+        else if (mode === 'json') {
+            const asText = Buffer.concat(data).toString();
+            return asText.length ? JSON.parse(asText) : undefined;
+        }
+        else if (mode === 'url') {
+            const asText = Buffer.concat(data).toString();
+            const formEntries = {};
+            for (const [item, value] of new URLSearchParams(asText)) {
+                formEntries[item] = value;
+            }
+            return formEntries;
+        }
+        else {
+            // mode === 'none'
+            return undefined;
+        }
+    }
+    getRateLimitFromResponse(res) {
+        let rateLimit = undefined;
+        if (res.headers['x-rate-limit-limit']) {
+            rateLimit = {
+                limit: Number(res.headers['x-rate-limit-limit']),
+                remaining: Number(res.headers['x-rate-limit-remaining']),
+                reset: Number(res.headers['x-rate-limit-reset']),
+            };
+            if (res.headers['x-app-limit-24hour-limit']) {
+                rateLimit.day = {
+                    limit: Number(res.headers['x-app-limit-24hour-limit']),
+                    remaining: Number(res.headers['x-app-limit-24hour-remaining']),
+                    reset: Number(res.headers['x-app-limit-24hour-reset']),
+                };
+            }
+            if (this.requestData.rateLimitSaver) {
+                this.requestData.rateLimitSaver(rateLimit);
+            }
+        }
+        return rateLimit;
+    }
+    /* Request event handlers */
+    onSocketEventHandler(reject, cleanupListener, socket) {
+        const onClose = this.onSocketCloseHandler.bind(this, reject);
+        socket.on('close', onClose);
+        cleanupListener.on('complete', () => socket.off('close', onClose));
+    }
+    onSocketCloseHandler(reject) {
+        this.req.removeAllListeners('timeout');
+        const res = this.res;
+        if (res) {
+            // Response ok, res.close/res.end can handle request ending
             return;
         }
-        cacheArray.sort(function (a, b) { return a[1].added.getTime() - b[1].added.getTime(); });
-        var reducedCacheArray = cacheArray.slice(1);
-        this.cache = new Map(reducedCacheArray);
-        this.clearSpace();
-    };
-    return Cache;
-}());
-exports.default = Cache;
-});
-
-var Transport_1 = createCommonjsModule(function (module, exports) {
-var __awaiter = (commonjsGlobal && commonjsGlobal.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (commonjsGlobal && commonjsGlobal.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-var __rest = (commonjsGlobal && commonjsGlobal.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
+        if (!this.requestErrorHandled) {
+            return reject(this.createRequestError(new Error('Socket closed without any information.')));
         }
-    return t;
-};
-var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var oauth_1 = __importDefault(oauth);
-var Cache_1$1 = __importDefault(Cache_1);
-
-var Transport = /** @class */ (function () {
-    function Transport(options) {
-        this.credentials = options;
-        this.oauth = new oauth_1.default.OAuth('https://api.twitter.com/oauth/request_token', 'https://api.twitter.com/oauth/access_token', this.credentials.apiKey, this.credentials.apiSecret, '1.0A', null, 'HMAC-SHA1');
-        if (!(options === null || options === void 0 ? void 0 : options.disableCache)) {
-            this.cache = new Cache_1$1.default(options === null || options === void 0 ? void 0 : options.ttl, options.maxByteSize);
+        // else: other situation
+    }
+    requestErrorHandler(reject, requestError) {
+        var _a, _b;
+        (_b = (_a = this.requestData).requestEventDebugHandler) === null || _b === void 0 ? void 0 : _b.call(_a, 'request-error', { requestError });
+        this.requestErrorHandled = true;
+        reject(this.createRequestError(requestError));
+    }
+    timeoutErrorHandler() {
+        this.requestErrorHandled = true;
+        this.req.destroy(new Error('Request timeout.'));
+    }
+    /* Response event handlers */
+    classicResponseHandler(resolve, reject, res) {
+        this.res = res;
+        const dataStream = this.getResponseDataStream(res);
+        // Register the response data
+        dataStream.on('data', chunk => this.responseData.push(chunk));
+        dataStream.on('end', this.onResponseEndHandler.bind(this, resolve, reject));
+        dataStream.on('close', this.onResponseCloseHandler.bind(this, resolve, reject));
+        // Debug handlers
+        if (this.requestData.requestEventDebugHandler) {
+            this.requestData.requestEventDebugHandler('response', { res });
+            res.on('aborted', error => this.requestData.requestEventDebugHandler('response-aborted', { error }));
+            res.on('error', error => this.requestData.requestEventDebugHandler('response-error', { error }));
+            res.on('close', () => this.requestData.requestEventDebugHandler('response-close', { data: this.responseData }));
+            res.on('end', () => this.requestData.requestEventDebugHandler('response-end'));
         }
     }
-    Transport.prototype.updateOptions = function (options) {
-        var _this = this;
-        options.apiKey; options.apiSecret; var rest = __rest(options, ["apiKey", "apiSecret"]);
-        var cleanOptions = rest;
-        Object.keys(cleanOptions).forEach(function (key) {
-            if (cleanOptions[key]) {
-                _this.credentials[key] = cleanOptions[key];
+    onResponseEndHandler(resolve, reject) {
+        const rateLimit = this.getRateLimitFromResponse(this.res);
+        let data;
+        try {
+            data = this.getParsedResponse(this.res);
+        }
+        catch (e) {
+            reject(this.createPartialResponseError(e, false));
+            return;
+        }
+        // Handle bad error codes
+        const code = this.res.statusCode;
+        if (code >= 400) {
+            reject(this.createResponseError({ data, res: this.res, rateLimit, code }));
+            return;
+        }
+        resolve({
+            data,
+            headers: this.res.headers,
+            rateLimit,
+        });
+    }
+    onResponseCloseHandler(resolve, reject) {
+        const res = this.res;
+        if (res.aborted) {
+            // Try to parse the request (?)
+            try {
+                this.getParsedResponse(this.res);
+                // Ok, try to resolve normally the request
+                return this.onResponseEndHandler(resolve, reject);
             }
-        });
-    };
-    Transport.prototype.doDeleteRequest = function (url) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                if (!this.oauth) {
-                    throw Error('Unable to make request. Authentication has not been established');
-                }
-                return [2 /*return*/, new Promise(function (resolve, reject) {
-                        if (!_this.credentials.accessToken || !_this.credentials.accessTokenSecret) {
-                            reject(new Error('Unable to make request. Authentication has not been established'));
-                            return;
-                        }
-                        var formattedUrl = utils.formatURL(url);
-                        _this.oauth.delete(formattedUrl, _this.credentials.accessToken, _this.credentials.accessTokenSecret, function (err, body) {
-                            if (err) {
-                                reject(err);
-                                return;
-                            }
-                            if (!body) {
-                                resolve({});
-                                return;
-                            }
-                            var result = utils.parse(body.toString());
-                            resolve(result);
-                        });
-                    })];
-            });
-        });
-    };
-    Transport.prototype.doGetRequest = function (url) {
+            catch (e) {
+                // Parse error, just drop with content
+                return reject(this.createPartialResponseError(e, true));
+            }
+        }
+        if (!res.complete) {
+            return reject(this.createPartialResponseError(new Error('Response has been interrupted before response could be parsed.'), true));
+        }
+        // else: end has been called
+    }
+    streamResponseHandler(resolve, reject, res) {
+        const code = res.statusCode;
+        if (code < 400) {
+            const dataStream = this.getResponseDataStream(res);
+            // HTTP code ok, consume stream
+            resolve({ req: this.req, res: dataStream, originalResponse: res, requestData: this.requestData });
+        }
+        else {
+            // Handle response normally, can only rejects
+            this.classicResponseHandler(() => undefined, reject, res);
+        }
+    }
+    /* Wrappers for request lifecycle */
+    debugRequest() {
+        const url = this.requestData.url;
+        TwitterApiV2Settings.logger.log(`[${this.requestData.options.method} ${this.hrefPathname}]`, this.requestData.options);
+        if (url.search) {
+            TwitterApiV2Settings.logger.log('Request parameters:', [...url.searchParams.entries()].map(([key, value]) => `${key}: ${value}`));
+        }
+        if (this.requestData.body) {
+            TwitterApiV2Settings.logger.log('Request body:', this.requestData.body);
+        }
+    }
+    buildRequest() {
         var _a;
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_b) {
-                if (!this.oauth) {
-                    throw Error('Unable to make request. Authentication has not been established');
-                }
-                if ((_a = this.cache) === null || _a === void 0 ? void 0 : _a.has(url)) {
-                    return [2 /*return*/, this.cache.get(url)];
-                }
-                return [2 /*return*/, new Promise(function (resolve, reject) {
-                        if (!_this.credentials.accessToken || !_this.credentials.accessTokenSecret) {
-                            reject(new Error('Unable to make request. Authentication has not been established'));
-                            return;
-                        }
-                        var formattedUrl = utils.formatURL(url);
-                        _this.oauth.get(formattedUrl, _this.credentials.accessToken, _this.credentials.accessTokenSecret, function (err, body) {
-                            var _a;
-                            if (err) {
-                                reject(err);
-                                return;
-                            }
-                            if (!body) {
-                                resolve({});
-                                return;
-                            }
-                            var result = utils.parse(body.toString());
-                            (_a = _this.cache) === null || _a === void 0 ? void 0 : _a.add(url, result);
-                            resolve(result);
-                        });
-                    })];
-            });
-        });
-    };
-    Transport.prototype.doPostRequest = function (url, body, contentType) {
-        if (contentType === void 0) { contentType = 'application/x-www-form-urlencoded'; }
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                if (!this.oauth || !this.credentials) {
-                    throw Error('Unable to make request. Authentication has not been established');
-                }
-                return [2 /*return*/, new Promise(function (resolve, reject) {
-                        if (!_this.credentials.accessToken || !_this.credentials.accessTokenSecret) {
-                            reject(new Error('Unable to make request. Authentication has not been established'));
-                            return;
-                        }
-                        var formattedUrl = utils.formatURL(url);
-                        var formattedBody = contentType === 'application/json' ? JSON.stringify(body) : body;
-                        _this.oauth.post(formattedUrl, _this.credentials.accessToken, _this.credentials.accessTokenSecret, formattedBody, contentType, function (err, body) {
-                            if (err) {
-                                reject(err);
-                                return;
-                            }
-                            if (!body) {
-                                resolve({});
-                                return;
-                            }
-                            var result = utils.parse(body.toString());
-                            resolve(result);
-                        });
-                    })];
-            });
-        });
-    };
-    return Transport;
-}());
-exports.default = Transport;
-});
-
-var BasicsClient_1 = createCommonjsModule(function (module, exports) {
-var __awaiter = (commonjsGlobal && commonjsGlobal.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (commonjsGlobal && commonjsGlobal.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-
-var BasicsClient = /** @class */ (function () {
-    function BasicsClient(transport) {
-        if (!transport) {
-            throw Error('Transport class needs to be provided.');
+        const url = this.requestData.url;
+        const auth = url.username ? `${url.username}:${url.password}` : undefined;
+        const headers = (_a = this.requestData.options.headers) !== null && _a !== void 0 ? _a : {};
+        if (this.requestData.compression === true || this.requestData.compression === 'brotli') {
+            headers['accept-encoding'] = 'br;q=1.0, gzip;q=0.8, deflate;q=0.5, *;q=0.1';
         }
-        this.transport = transport;
-    }
-    /**
-     * Allows a Consumer application to use an OAuth request_token to request user authorization.  This method is a replacement of Section 6.2 of the OAuth 1.0 authentication flow for applications  using the callback authentication flow. The method will use the currently logged in user as the account  for access authorization unless the force_login parameter is set to true.This method differs from  GET oauth / authorize in that if the user has already granted the application permission,  the redirect will occur without the user having to re-approve the application.  To realize this behavior, you must enable the Use Sign in with Twitter setting on your application record.
-     *
-     * @link https://developer.twitter.com/en/docs/basics/authentication/api-reference/authenticate
-     * @param parameters
-     */
-    BasicsClient.prototype.oauthAuthenticate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/oauth/authenticate' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Allows a Consumer application to use an OAuth Request Token to request user authorization.  This method fulfills Section 6.2 of the OAuth 1.0 authentication flow.  Desktop applications must use this method (and cannot use GET oauth / authenticate). Usage Note: An oauth_callback is never sent to this method, provide it to POST oauth / request_token instead.
-     *
-     * @link https://developer.twitter.com/en/docs/basics/authentication/api-reference/authorize
-     * @param parameters
-     */
-    BasicsClient.prototype.oauthAuthorize = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/oauth/authorize' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Allows a Consumer application to exchange the OAuth Request Token for an OAuth Access Token. This method fulfills Section 6.3 of the OAuth 1.0 authentication flow.
-     *
-     * @link https://developer.twitter.com/en/docs/basics/authentication/api-reference/access_token
-     * @param parameters
-     */
-    BasicsClient.prototype.oauthAccessToken = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/oauth/access_token', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Allows a registered application to revoke an issued OAuth access_token  by presenting its client credentials. Once an access_token has been invalidated,  new creation attempts will yield a different Access Token and usage of  the invalidated token will no longer be allowed.
-     *
-     * @link https://developer.twitter.com/en/docs/basics/authentication/api-reference/invalidate_access_token
-     * @param parameters
-     */
-    BasicsClient.prototype.oauthInvalidateToken = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/oauth/invalidate_token', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Allows a registered application to revoke an issued oAuth 2.0 Bearer Token by presenting  its client credentials. Once a Bearer Token has been invalidated, new creation  attempts will yield a different Bearer Token and usage of the invalidated  token will no longer be allowed.Successful responses include a  JSON-structure describing the revoked Bearer Token.
-     *
-     * @link https://developer.twitter.com/en/docs/basics/authentication/api-reference/invalidate_bearer_token
-     * @param parameters
-     */
-    BasicsClient.prototype.oauth2InvalidateToken = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/oauth2/invalidate_token', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Allows a Consumer application to obtain an OAuth Request Token to request user authorization.  This method fulfills Section 6.1 of the OAuth 1.0 authentication flow.
-     *
-     * @link https://developer.twitter.com/en/docs/basics/authentication/api-reference/request_token
-     * @param parameters
-     */
-    BasicsClient.prototype.oauthRequestToken = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/oauth/request_token', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Allows a registered application to obtain an OAuth 2 Bearer Token,  which can be used to make API requests on an application's own behalf,  without a user context. This is called Application-only authentication. A Bearer Token may be invalidated using oauth2/invalidate_token.  Once a Bearer Token has been invalidated, new creation attempts will yield a different Bearer Token and  usage of the previous token will no longer be allowed. Only one bearer token may exist outstanding for an application, and repeated requests to this method  will yield the same already-existent token until it has been invalidated. Successful responses include a JSON-structure describing the awarded Bearer Token. Tokens received by this method should be cached.  If attempted too frequently, requests will be rejected with a HTTP 403 with code 99.
-     *
-     * @link https://developer.twitter.com/en/docs/basics/authentication/api-reference/token
-     * @param parameters
-     */
-    BasicsClient.prototype.oauth2Token = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/oauth2/token', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    return BasicsClient;
-}());
-exports.default = BasicsClient;
-});
-
-var AccountsAndUsersClient_1 = createCommonjsModule(function (module, exports) {
-var __awaiter = (commonjsGlobal && commonjsGlobal.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (commonjsGlobal && commonjsGlobal.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-
-var AccountsAndUsersClient = /** @class */ (function () {
-    function AccountsAndUsersClient(transport) {
-        if (!transport) {
-            throw Error('Transport class needs to be provided.');
+        else if (this.requestData.compression === 'gzip') {
+            headers['accept-encoding'] = 'gzip;q=1, deflate;q=0.5, *;q=0.1';
         }
-        this.transport = transport;
+        else if (this.requestData.compression === 'deflate') {
+            headers['accept-encoding'] = 'deflate;q=1, *;q=0.1';
+        }
+        this.req = https.request({
+            ...this.requestData.options,
+            // Define URL params manually, addresses dependencies error https://github.com/PLhery/node-twitter-api-v2/issues/94
+            host: url.hostname,
+            port: url.port || undefined,
+            path: url.pathname + url.search,
+            protocol: url.protocol,
+            auth,
+            headers,
+        });
+    }
+    registerRequestEventDebugHandlers(req) {
+        req.on('close', () => this.requestData.requestEventDebugHandler('close'));
+        req.on('abort', () => this.requestData.requestEventDebugHandler('abort'));
+        req.on('socket', socket => {
+            this.requestData.requestEventDebugHandler('socket', { socket });
+            socket.on('error', error => this.requestData.requestEventDebugHandler('socket-error', { socket, error }));
+            socket.on('connect', () => this.requestData.requestEventDebugHandler('socket-connect', { socket }));
+            socket.on('close', withError => this.requestData.requestEventDebugHandler('socket-close', { socket, withError }));
+            socket.on('end', () => this.requestData.requestEventDebugHandler('socket-end', { socket }));
+            socket.on('lookup', (...data) => this.requestData.requestEventDebugHandler('socket-lookup', { socket, data }));
+            socket.on('timeout', () => this.requestData.requestEventDebugHandler('socket-timeout', { socket }));
+        });
+    }
+    makeRequest() {
+        this.buildRequest();
+        return new Promise((_resolve, _reject) => {
+            // Hooks to call when promise is fulfulled to cleanup the socket (shared between requests)
+            const resolve = value => {
+                cleanupListener.emit('complete');
+                _resolve(value);
+            };
+            const reject = value => {
+                cleanupListener.emit('complete');
+                _reject(value);
+            };
+            const cleanupListener = new EventEmitter.EventEmitter();
+            const req = this.req;
+            // Handle request errors
+            req.on('error', this.requestErrorHandler.bind(this, reject));
+            req.on('socket', this.onSocketEventHandler.bind(this, reject, cleanupListener));
+            req.on('response', this.classicResponseHandler.bind(this, resolve, reject));
+            if (this.requestData.options.timeout) {
+                req.on('timeout', this.timeoutErrorHandler.bind(this));
+            }
+            // Debug handlers
+            if (this.requestData.requestEventDebugHandler) {
+                this.registerRequestEventDebugHandlers(req);
+            }
+            if (this.requestData.body) {
+                req.write(this.requestData.body);
+            }
+            req.end();
+        });
+    }
+    async makeRequestAsStream() {
+        const { req, res, requestData, originalResponse } = await this.makeRequestAndResolveWhenReady();
+        return new TweetStream(requestData, { req, res, originalResponse });
+    }
+    makeRequestAndResolveWhenReady() {
+        this.buildRequest();
+        return new Promise((resolve, reject) => {
+            const req = this.req;
+            // Handle request errors
+            req.on('error', this.requestErrorHandler.bind(this, reject));
+            req.on('response', this.streamResponseHandler.bind(this, resolve, reject));
+            if (this.requestData.body) {
+                req.write(this.requestData.body);
+            }
+            req.end();
+        });
+    }
+}
+
+class TweetStreamEventCombiner extends EventEmitter.EventEmitter {
+    constructor(stream) {
+        super();
+        this.stream = stream;
+        this.stack = [];
+        this.onStreamData = this.onStreamData.bind(this);
+        this.onStreamError = this.onStreamError.bind(this);
+        this.onceNewEvent = this.once.bind(this, 'event');
+        // Init events from stream
+        stream.on(ETwitterStreamEvent.Data, this.onStreamData);
+        // Ignore reconnect errors: Don't close event combiner until connection error/closed
+        stream.on(ETwitterStreamEvent.ConnectionError, this.onStreamError);
+        stream.on(ETwitterStreamEvent.TweetParseError, this.onStreamError);
+        stream.on(ETwitterStreamEvent.ConnectionClosed, this.onStreamError);
+    }
+    /** Returns a new `Promise` that will `resolve` on next event (`data` or any sort of error). */
+    nextEvent() {
+        return new Promise(this.onceNewEvent);
+    }
+    /** Returns `true` if there's something in the stack. */
+    hasStack() {
+        return this.stack.length > 0;
+    }
+    /** Returns stacked data events, and clean the stack. */
+    popStack() {
+        const stack = this.stack;
+        this.stack = [];
+        return stack;
+    }
+    /** Cleanup all the listeners attached on stream. */
+    destroy() {
+        this.removeAllListeners();
+        this.stream.off(ETwitterStreamEvent.Data, this.onStreamData);
+        this.stream.off(ETwitterStreamEvent.ConnectionError, this.onStreamError);
+        this.stream.off(ETwitterStreamEvent.TweetParseError, this.onStreamError);
+        this.stream.off(ETwitterStreamEvent.ConnectionClosed, this.onStreamError);
+    }
+    emitEvent(type, payload) {
+        this.emit('event', { type, payload });
+    }
+    onStreamError(payload) {
+        this.emitEvent('error', payload);
+    }
+    onStreamData(payload) {
+        this.stack.push(payload);
+        this.emitEvent('data', payload);
+    }
+}
+
+class TweetStreamParser extends EventEmitter.EventEmitter {
+    constructor() {
+        super(...arguments);
+        this.currentMessage = '';
+    }
+    // Code partially belongs to twitter-stream-api for this
+    // https://github.com/trygve-lie/twitter-stream-api/blob/master/lib/parser.js
+    push(chunk) {
+        this.currentMessage += chunk;
+        chunk = this.currentMessage;
+        const size = chunk.length;
+        let start = 0;
+        let offset = 0;
+        while (offset < size) {
+            // Take [offset, offset+1] inside a new string
+            if (chunk.slice(offset, offset + 2) === '\r\n') {
+                // If chunk contains \r\n after current offset,
+                // parse [start, ..., offset] as a tweet
+                const piece = chunk.slice(start, offset);
+                start = offset += 2;
+                // If empty object
+                if (!piece.length) {
+                    continue;
+                }
+                try {
+                    const payload = JSON.parse(piece);
+                    if (payload) {
+                        this.emit(EStreamParserEvent.ParsedData, payload);
+                        continue;
+                    }
+                }
+                catch (error) {
+                    this.emit(EStreamParserEvent.ParseError, error);
+                }
+            }
+            offset++;
+        }
+        this.currentMessage = chunk.slice(start, size);
+    }
+    /** Reset the currently stored message (f.e. on connection reset) */
+    reset() {
+        this.currentMessage = '';
+    }
+}
+var EStreamParserEvent;
+(function (EStreamParserEvent) {
+    EStreamParserEvent["ParsedData"] = "parsed data";
+    EStreamParserEvent["ParseError"] = "parse error";
+})(EStreamParserEvent || (EStreamParserEvent = {}));
+
+// In seconds
+const basicRetriesAttempt = [5, 15, 30, 60, 90, 120, 180, 300, 600, 900];
+// Default retry function
+const basicReconnectRetry = tryOccurrence => tryOccurrence > basicRetriesAttempt.length
+    ? 901000
+    : basicRetriesAttempt[tryOccurrence - 1] * 1000;
+class TweetStream extends EventEmitter.EventEmitter {
+    constructor(requestData, connection) {
+        super();
+        this.requestData = requestData;
+        this.autoReconnect = false;
+        this.autoReconnectRetries = 5;
+        // 2 minutes without any Twitter signal
+        this.keepAliveTimeoutMs = 1000 * 120;
+        this.nextRetryTimeout = basicReconnectRetry;
+        this.parser = new TweetStreamParser();
+        this.connectionProcessRunning = false;
+        this.onKeepAliveTimeout = this.onKeepAliveTimeout.bind(this);
+        this.initEventsFromParser();
+        if (connection) {
+            this.req = connection.req;
+            this.res = connection.res;
+            this.originalResponse = connection.originalResponse;
+            this.initEventsFromRequest();
+        }
+    }
+    on(event, handler) {
+        return super.on(event, handler);
+    }
+    initEventsFromRequest() {
+        if (!this.req || !this.res) {
+            throw new Error('TweetStream error: You cannot init TweetStream without a request and response object.');
+        }
+        const errorHandler = (err) => {
+            this.emit(ETwitterStreamEvent.ConnectionError, err);
+            this.emit(ETwitterStreamEvent.Error, {
+                type: ETwitterStreamEvent.ConnectionError,
+                error: err,
+                message: 'Connection lost or closed by Twitter.',
+            });
+            this.onConnectionError();
+        };
+        this.req.on('error', errorHandler);
+        this.res.on('error', errorHandler);
+        // Usually, connection should not be closed by Twitter!
+        this.res.on('close', () => errorHandler(new Error('Connection closed by Twitter.')));
+        this.res.on('data', (chunk) => {
+            this.resetKeepAliveTimeout();
+            if (chunk.toString() === '\r\n') {
+                return this.emit(ETwitterStreamEvent.DataKeepAlive);
+            }
+            this.parser.push(chunk.toString());
+        });
+        // Starts the keep alive timeout
+        this.resetKeepAliveTimeout();
+    }
+    initEventsFromParser() {
+        const payloadIsError = this.requestData.payloadIsError;
+        this.parser.on(EStreamParserEvent.ParsedData, (eventData) => {
+            if (payloadIsError && payloadIsError(eventData)) {
+                this.emit(ETwitterStreamEvent.DataError, eventData);
+                this.emit(ETwitterStreamEvent.Error, {
+                    type: ETwitterStreamEvent.DataError,
+                    error: eventData,
+                    message: 'Twitter sent a payload that is detected as an error payload.',
+                });
+            }
+            else {
+                this.emit(ETwitterStreamEvent.Data, eventData);
+            }
+        });
+        this.parser.on(EStreamParserEvent.ParseError, (error) => {
+            this.emit(ETwitterStreamEvent.TweetParseError, error);
+            this.emit(ETwitterStreamEvent.Error, {
+                type: ETwitterStreamEvent.TweetParseError,
+                error,
+                message: 'Failed to parse stream data.',
+            });
+        });
+    }
+    resetKeepAliveTimeout() {
+        this.unbindKeepAliveTimeout();
+        if (this.keepAliveTimeoutMs !== Infinity) {
+            this.keepAliveTimeout = setTimeout(this.onKeepAliveTimeout, this.keepAliveTimeoutMs);
+        }
+    }
+    onKeepAliveTimeout() {
+        this.emit(ETwitterStreamEvent.ConnectionLost);
+        this.onConnectionError();
+    }
+    unbindTimeouts() {
+        this.unbindRetryTimeout();
+        this.unbindKeepAliveTimeout();
+    }
+    unbindKeepAliveTimeout() {
+        if (this.keepAliveTimeout) {
+            clearTimeout(this.keepAliveTimeout);
+            this.keepAliveTimeout = undefined;
+        }
+    }
+    unbindRetryTimeout() {
+        if (this.retryTimeout) {
+            clearTimeout(this.retryTimeout);
+            this.retryTimeout = undefined;
+        }
+    }
+    closeWithoutEmit() {
+        this.unbindTimeouts();
+        if (this.res) {
+            this.res.removeAllListeners();
+            // Close response silently
+            this.res.destroy();
+        }
+        if (this.req) {
+            this.req.removeAllListeners();
+            // Close connection silently
+            this.req.destroy();
+        }
+    }
+    /** Terminate connection to Twitter. */
+    close() {
+        this.emit(ETwitterStreamEvent.ConnectionClosed);
+        this.closeWithoutEmit();
+    }
+    /** Unbind all listeners, and close connection. */
+    destroy() {
+        this.removeAllListeners();
+        this.close();
     }
     /**
-     * Returns all lists the authenticating or specified user subscribes to,  including their own. The user is specified using the user_id or screen_name parameters.  If no user is given, the authenticating user is used.A maximum of 100 results will be  returned by this call. Subscribed lists are returned first, followed by owned lists.  This means that if a user subscribes to 90 lists and owns 20 lists, this method returns  90 subscriptions and 10 owned lists. The reverse method returns owned lists first,  so with reverse=true, 20 owned lists and 80 subscriptions would be returned.  If your goal is to obtain every list a user owns or subscribes to,  use GET lists / ownerships and/or GET lists / subscriptions instead.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/get-lists-list
-     * @param parameters
+     * Make a new request that creates a new `TweetStream` instance with
+     * the same parameters, and bind current listeners to new stream.
      */
-    AccountsAndUsersClient.prototype.listsList = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/lists/list.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
+    async clone() {
+        const newRequest = new RequestHandlerHelper(this.requestData);
+        const newStream = await newRequest.makeRequestAsStream();
+        // Clone attached listeners
+        const listenerNames = this.eventNames();
+        for (const listener of listenerNames) {
+            const callbacks = this.listeners(listener);
+            for (const callback of callbacks) {
+                newStream.on(listener, callback);
+            }
+        }
+        return newStream;
+    }
+    /** Start initial stream connection, setup options on current instance and returns itself. */
+    async connect(options = {}) {
+        if (typeof options.autoReconnect !== 'undefined') {
+            this.autoReconnect = options.autoReconnect;
+        }
+        if (typeof options.autoReconnectRetries !== 'undefined') {
+            this.autoReconnectRetries = options.autoReconnectRetries === 'unlimited'
+                ? Infinity
+                : options.autoReconnectRetries;
+        }
+        if (typeof options.keepAliveTimeout !== 'undefined') {
+            this.keepAliveTimeoutMs = options.keepAliveTimeout === 'disable'
+                ? Infinity
+                : options.keepAliveTimeout;
+        }
+        if (typeof options.nextRetryTimeout !== 'undefined') {
+            this.nextRetryTimeout = options.nextRetryTimeout;
+        }
+        // Make the connection
+        this.unbindTimeouts();
+        try {
+            await this.reconnect();
+        }
+        catch (e) {
+            this.emit(ETwitterStreamEvent.ConnectError, 0);
+            this.emit(ETwitterStreamEvent.Error, {
+                type: ETwitterStreamEvent.ConnectError,
+                error: e,
+                message: 'Connect error - Initial connection just failed.',
             });
+            // Only make a reconnection attempt if autoReconnect is true!
+            // Otherwise, let error be propagated
+            if (this.autoReconnect) {
+                this.makeAutoReconnectRetry(0, e);
+            }
+            else {
+                throw e;
+            }
+        }
+        return this;
+    }
+    /** Make a new request to (re)connect to Twitter. */
+    async reconnect() {
+        if (this.connectionProcessRunning) {
+            throw new Error('Connection process is already running.');
+        }
+        this.connectionProcessRunning = true;
+        try {
+            let initialConnection = true;
+            if (this.req) {
+                initialConnection = false;
+                this.closeWithoutEmit();
+            }
+            const { req, res, originalResponse } = await new RequestHandlerHelper(this.requestData).makeRequestAndResolveWhenReady();
+            this.req = req;
+            this.res = res;
+            this.originalResponse = originalResponse;
+            this.emit(initialConnection ? ETwitterStreamEvent.Connected : ETwitterStreamEvent.Reconnected);
+            this.parser.reset();
+            this.initEventsFromRequest();
+        }
+        finally {
+            this.connectionProcessRunning = false;
+        }
+    }
+    async onConnectionError(retryOccurrence = 0) {
+        this.unbindTimeouts();
+        // Close the request if necessary
+        this.closeWithoutEmit();
+        // Terminate stream by events if necessary (no auto-reconnect or retries exceeded)
+        if (!this.autoReconnect) {
+            this.emit(ETwitterStreamEvent.ConnectionClosed);
+            return;
+        }
+        if (retryOccurrence >= this.autoReconnectRetries) {
+            this.emit(ETwitterStreamEvent.ReconnectLimitExceeded);
+            this.emit(ETwitterStreamEvent.ConnectionClosed);
+            return;
+        }
+        // If all other conditions fails, do a reconnect attempt
+        try {
+            this.emit(ETwitterStreamEvent.ReconnectAttempt, retryOccurrence);
+            await this.reconnect();
+        }
+        catch (e) {
+            this.emit(ETwitterStreamEvent.ReconnectError, retryOccurrence);
+            this.emit(ETwitterStreamEvent.Error, {
+                type: ETwitterStreamEvent.ReconnectError,
+                error: e,
+                message: `Reconnect error - ${retryOccurrence + 1} attempts made yet.`,
+            });
+            this.makeAutoReconnectRetry(retryOccurrence, e);
+        }
+    }
+    makeAutoReconnectRetry(retryOccurrence, error) {
+        const nextRetry = this.nextRetryTimeout(retryOccurrence + 1, error);
+        this.retryTimeout = setTimeout(() => {
+            this.onConnectionError(retryOccurrence + 1);
+        }, nextRetry);
+    }
+    async *[Symbol.asyncIterator]() {
+        const eventCombiner = new TweetStreamEventCombiner(this);
+        try {
+            while (true) {
+                if (!this.req || this.req.aborted) {
+                    throw new Error('Connection closed');
+                }
+                if (eventCombiner.hasStack()) {
+                    yield* eventCombiner.popStack();
+                }
+                const { type, payload } = await eventCombiner.nextEvent();
+                if (type === 'error') {
+                    throw payload;
+                }
+            }
+        }
+        finally {
+            eventCombiner.destroy();
+        }
+    }
+}
+
+/* Plugin helpers */
+function hasRequestErrorPlugins(client) {
+    var _a;
+    if (!((_a = client.clientSettings.plugins) === null || _a === void 0 ? void 0 : _a.length)) {
+        return false;
+    }
+    for (const plugin of client.clientSettings.plugins) {
+        if (plugin.onRequestError || plugin.onResponseError) {
+            return true;
+        }
+    }
+    return false;
+}
+async function applyResponseHooks(requestParams, computedParams, requestOptions, error) {
+    let override;
+    if (error instanceof ApiRequestError || error instanceof ApiPartialResponseError) {
+        override = await this.applyPluginMethod('onRequestError', {
+            client: this,
+            url: this.getUrlObjectFromUrlString(requestParams.url),
+            params: requestParams,
+            computedParams,
+            requestOptions,
+            error,
         });
+    }
+    else if (error instanceof ApiResponseError) {
+        override = await this.applyPluginMethod('onResponseError', {
+            client: this,
+            url: this.getUrlObjectFromUrlString(requestParams.url),
+            params: requestParams,
+            computedParams,
+            requestOptions,
+            error,
+        });
+    }
+    if (override && override instanceof TwitterApiPluginResponseOverride) {
+        return override.value;
+    }
+    return Promise.reject(error);
+}
+
+class OAuth1Helper {
+    constructor(options) {
+        this.nonceLength = 32;
+        this.consumerKeys = options.consumerKeys;
+    }
+    static percentEncode(str) {
+        return encodeURIComponent(str)
+            .replace(/!/g, '%21')
+            .replace(/\*/g, '%2A')
+            .replace(/'/g, '%27')
+            .replace(/\(/g, '%28')
+            .replace(/\)/g, '%29');
+    }
+    hash(base, key) {
+        return require$$0__namespace
+            .createHmac('sha1', key)
+            .update(base)
+            .digest('base64');
+    }
+    authorize(request, accessTokens = {}) {
+        const oauthInfo = {
+            oauth_consumer_key: this.consumerKeys.key,
+            oauth_nonce: this.getNonce(),
+            oauth_signature_method: 'HMAC-SHA1',
+            oauth_timestamp: this.getTimestamp(),
+            oauth_version: '1.0',
+        };
+        if (accessTokens.key !== undefined) {
+            oauthInfo.oauth_token = accessTokens.key;
+        }
+        if (!request.data) {
+            request.data = {};
+        }
+        oauthInfo.oauth_signature = this.getSignature(request, accessTokens.secret, oauthInfo);
+        return oauthInfo;
+    }
+    toHeader(oauthInfo) {
+        const sorted = sortObject(oauthInfo);
+        let header_value = 'OAuth ';
+        for (const element of sorted) {
+            if (element.key.indexOf('oauth_') !== 0) {
+                continue;
+            }
+            header_value += OAuth1Helper.percentEncode(element.key) + '="' + OAuth1Helper.percentEncode(element.value) + '",';
+        }
+        return {
+            // Remove the last ,
+            Authorization: header_value.slice(0, header_value.length - 1),
+        };
+    }
+    getNonce() {
+        const wordCharacters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let result = '';
+        for (let i = 0; i < this.nonceLength; i++) {
+            result += wordCharacters[Math.trunc(Math.random() * wordCharacters.length)];
+        }
+        return result;
+    }
+    getTimestamp() {
+        return Math.trunc(new Date().getTime() / 1000);
+    }
+    getSignature(request, tokenSecret, oauthInfo) {
+        return this.hash(this.getBaseString(request, oauthInfo), this.getSigningKey(tokenSecret));
+    }
+    getSigningKey(tokenSecret) {
+        return OAuth1Helper.percentEncode(this.consumerKeys.secret) + '&' + OAuth1Helper.percentEncode(tokenSecret || '');
+    }
+    getBaseString(request, oauthInfo) {
+        return request.method.toUpperCase() + '&'
+            + OAuth1Helper.percentEncode(this.getBaseUrl(request.url)) + '&'
+            + OAuth1Helper.percentEncode(this.getParameterString(request, oauthInfo));
+    }
+    getParameterString(request, oauthInfo) {
+        const baseStringData = sortObject(percentEncodeData(mergeObject(oauthInfo, mergeObject(request.data, deParamUrl(request.url)))));
+        let dataStr = '';
+        for (const { key, value } of baseStringData) {
+            // check if the value is an array
+            // this means that this key has multiple values
+            if (value && Array.isArray(value)) {
+                // sort the array first
+                value.sort();
+                let valString = '';
+                // serialize all values for this key: e.g. formkey=formvalue1&formkey=formvalue2
+                value.forEach((item, i) => {
+                    valString += key + '=' + item;
+                    if (i < value.length) {
+                        valString += '&';
+                    }
+                });
+                dataStr += valString;
+            }
+            else {
+                dataStr += key + '=' + value + '&';
+            }
+        }
+        // Remove the last character
+        return dataStr.slice(0, dataStr.length - 1);
+    }
+    getBaseUrl(url) {
+        return url.split('?')[0];
+    }
+}
+// Helper functions //
+function mergeObject(obj1, obj2) {
+    return {
+        ...obj1 || {},
+        ...obj2 || {},
     };
+}
+function sortObject(data) {
+    return Object.keys(data)
+        .sort()
+        .map(key => ({ key, value: data[key] }));
+}
+function deParam(string) {
+    const split = string.split('&');
+    const data = {};
+    for (const coupleKeyValue of split) {
+        const [key, value = ''] = coupleKeyValue.split('=');
+        // check if the key already exists
+        // this can occur if the QS part of the url contains duplicate keys like this: ?formkey=formvalue1&formkey=formvalue2
+        if (data[key]) {
+            // the key exists already
+            if (!Array.isArray(data[key])) {
+                // replace the value with an array containing the already present value
+                data[key] = [data[key]];
+            }
+            // and add the new found value to it
+            data[key].push(decodeURIComponent(value));
+        }
+        else {
+            // it doesn't exist, just put the found value in the data object
+            data[key] = decodeURIComponent(value);
+        }
+    }
+    return data;
+}
+function deParamUrl(url) {
+    const tmp = url.split('?');
+    if (tmp.length === 1)
+        return {};
+    return deParam(tmp[1]);
+}
+function percentEncodeData(data) {
+    const result = {};
+    for (const key in data) {
+        let value = data[key];
+        // check if the value is an array
+        if (value && Array.isArray(value)) {
+            value = value.map(v => OAuth1Helper.percentEncode(v));
+        }
+        else {
+            value = OAuth1Helper.percentEncode(value);
+        }
+        result[OAuth1Helper.percentEncode(key)] = value;
+    }
+    return result;
+}
+
+// This class is partially inspired by https://github.com/form-data/form-data/blob/master/lib/form_data.js
+// All credits to their authors.
+class FormDataHelper {
+    constructor() {
+        this._boundary = '';
+        this._chunks = [];
+    }
+    bodyAppend(...values) {
+        const allAsBuffer = values.map(val => val instanceof Buffer ? val : Buffer.from(val));
+        this._chunks.push(...allAsBuffer);
+    }
+    append(field, value, contentType) {
+        const convertedValue = value instanceof Buffer ? value : value.toString();
+        const header = this.getMultipartHeader(field, convertedValue, contentType);
+        this.bodyAppend(header, convertedValue, FormDataHelper.LINE_BREAK);
+    }
+    getHeaders() {
+        return {
+            'content-type': 'multipart/form-data; boundary=' + this.getBoundary(),
+        };
+    }
+    /** Length of form-data (including footer length). */
+    getLength() {
+        return this._chunks.reduce((acc, cur) => acc + cur.length, this.getMultipartFooter().length);
+    }
+    getBuffer() {
+        const allChunks = [...this._chunks, this.getMultipartFooter()];
+        const totalBuffer = Buffer.alloc(this.getLength());
+        let i = 0;
+        for (const chunk of allChunks) {
+            for (let j = 0; j < chunk.length; i++, j++) {
+                totalBuffer[i] = chunk[j];
+            }
+        }
+        return totalBuffer;
+    }
+    getBoundary() {
+        if (!this._boundary) {
+            this.generateBoundary();
+        }
+        return this._boundary;
+    }
+    generateBoundary() {
+        // This generates a 50 character boundary similar to those used by Firefox.
+        let boundary = '--------------------------';
+        for (let i = 0; i < 24; i++) {
+            boundary += Math.floor(Math.random() * 10).toString(16);
+        }
+        this._boundary = boundary;
+    }
+    getMultipartHeader(field, value, contentType) {
+        // In this lib no need to guess more the content type, octet stream is ok of buffers
+        if (!contentType) {
+            contentType = value instanceof Buffer ? FormDataHelper.DEFAULT_CONTENT_TYPE : '';
+        }
+        const headers = {
+            'Content-Disposition': ['form-data', `name="${field}"`],
+            'Content-Type': contentType,
+        };
+        let contents = '';
+        for (const [prop, header] of Object.entries(headers)) {
+            // skip nullish headers.
+            if (!header.length) {
+                continue;
+            }
+            contents += prop + ': ' + arrayWrap(header).join('; ') + FormDataHelper.LINE_BREAK;
+        }
+        return '--' + this.getBoundary() + FormDataHelper.LINE_BREAK + contents + FormDataHelper.LINE_BREAK;
+    }
+    getMultipartFooter() {
+        if (this._footerChunk) {
+            return this._footerChunk;
+        }
+        return this._footerChunk = Buffer.from('--' + this.getBoundary() + '--' + FormDataHelper.LINE_BREAK);
+    }
+}
+FormDataHelper.LINE_BREAK = '\r\n';
+FormDataHelper.DEFAULT_CONTENT_TYPE = 'application/octet-stream';
+
+/* Helpers functions that are specific to this class but do not depends on instance */
+class RequestParamHelpers {
+    static formatQueryToString(query) {
+        const formattedQuery = {};
+        for (const prop in query) {
+            if (typeof query[prop] === 'string') {
+                formattedQuery[prop] = query[prop];
+            }
+            else if (typeof query[prop] !== 'undefined') {
+                formattedQuery[prop] = String(query[prop]);
+            }
+        }
+        return formattedQuery;
+    }
+    static autoDetectBodyType(url) {
+        if (url.pathname.startsWith('/2/') || url.pathname.startsWith('/labs/2/')) {
+            // oauth2 takes url encoded
+            if (url.password.startsWith('/2/oauth2')) {
+                return 'url';
+            }
+            // Twitter API v2 has JSON-encoded requests for everything else
+            return 'json';
+        }
+        if (url.hostname === 'upload.twitter.com') {
+            if (url.pathname === '/1.1/media/upload.json') {
+                return 'form-data';
+            }
+            // json except for media/upload command, that is form-data.
+            return 'json';
+        }
+        const endpoint = url.pathname.split('/1.1/', 2)[1];
+        if (this.JSON_1_1_ENDPOINTS.has(endpoint)) {
+            return 'json';
+        }
+        return 'url';
+    }
+    static addQueryParamsToUrl(url, query) {
+        const queryEntries = Object.entries(query);
+        if (queryEntries.length) {
+            let search = '';
+            for (const [key, value] of queryEntries) {
+                search += (search.length ? '&' : '?') + `${OAuth1Helper.percentEncode(key)}=${OAuth1Helper.percentEncode(value)}`;
+            }
+            url.search = search;
+        }
+    }
+    static constructBodyParams(body, headers, mode) {
+        if (body instanceof Buffer) {
+            return body;
+        }
+        if (mode === 'json') {
+            if (!headers['content-type']) {
+                headers['content-type'] = 'application/json;charset=UTF-8';
+            }
+            return JSON.stringify(body);
+        }
+        else if (mode === 'url') {
+            if (!headers['content-type']) {
+                headers['content-type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
+            }
+            if (Object.keys(body).length) {
+                return new URLSearchParams(body)
+                    .toString()
+                    .replace(/\*/g, '%2A'); // URLSearchParams doesnt encode '*', but Twitter wants it encoded.
+            }
+            return '';
+        }
+        else if (mode === 'raw') {
+            throw new Error('You can only use raw body mode with Buffers. To give a string, use Buffer.from(str).');
+        }
+        else {
+            const form = new FormDataHelper();
+            for (const parameter in body) {
+                form.append(parameter, body[parameter]);
+            }
+            if (!headers['content-type']) {
+                const formHeaders = form.getHeaders();
+                headers['content-type'] = formHeaders['content-type'];
+            }
+            return form.getBuffer();
+        }
+    }
+    static setBodyLengthHeader(options, body) {
+        var _a;
+        options.headers = (_a = options.headers) !== null && _a !== void 0 ? _a : {};
+        if (typeof body === 'string') {
+            options.headers['content-length'] = Buffer.byteLength(body);
+        }
+        else {
+            options.headers['content-length'] = body.length;
+        }
+    }
+    static isOAuthSerializable(item) {
+        return !(item instanceof Buffer);
+    }
+    static mergeQueryAndBodyForOAuth(query, body) {
+        const parameters = {};
+        for (const prop in query) {
+            parameters[prop] = query[prop];
+        }
+        if (this.isOAuthSerializable(body)) {
+            for (const prop in body) {
+                const bodyProp = body[prop];
+                if (this.isOAuthSerializable(bodyProp)) {
+                    parameters[prop] = typeof bodyProp === 'object' && bodyProp !== null && 'toString' in bodyProp
+                        ? bodyProp.toString()
+                        : bodyProp;
+                }
+            }
+        }
+        return parameters;
+    }
+    static moveUrlQueryParamsIntoObject(url, query) {
+        for (const [param, value] of url.searchParams) {
+            query[param] = value;
+        }
+        // Remove the query string
+        url.search = '';
+        return url;
+    }
     /**
-     * members/* Returns the members of the specified list. Private list members will only be shown if the authenticated user owns the specified list.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/get-lists-members
-     * @param parameters
+     * Replace URL parameters available in pathname, like `:id`, with data given in `parameters`:
+     * `https://twitter.com/:id.json` + `{ id: '20' }` => `https://twitter.com/20.json`
      */
-    AccountsAndUsersClient.prototype.listsMembers = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/lists/members.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    static applyRequestParametersToUrl(url, parameters) {
+        url.pathname = url.pathname.replace(/:([A-Z_-]+)/ig, (fullMatch, paramName) => {
+            if (parameters[paramName] !== undefined) {
+                return String(parameters[paramName]);
+            }
+            return fullMatch;
         });
-    };
+        return url;
+    }
+}
+RequestParamHelpers.JSON_1_1_ENDPOINTS = new Set([
+    'direct_messages/events/new.json',
+    'direct_messages/welcome_messages/new.json',
+    'direct_messages/welcome_messages/rules/new.json',
+    'media/metadata/create.json',
+    'collections/entries/curate.json',
+]);
+
+class OAuth2Helper {
+    static getCodeVerifier() {
+        return this.generateRandomString(128);
+    }
+    static getCodeChallengeFromVerifier(verifier) {
+        return this.escapeBase64Url(require$$0__namespace
+            .createHash('sha256')
+            .update(verifier)
+            .digest('base64'));
+    }
+    static getAuthHeader(clientId, clientSecret) {
+        const key = encodeURIComponent(clientId) + ':' + encodeURIComponent(clientSecret);
+        return Buffer.from(key).toString('base64');
+    }
+    static generateRandomString(length) {
+        let text = '';
+        const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~';
+        for (let i = 0; i < length; i++) {
+            text += possible[Math.floor(Math.random() * possible.length)];
+        }
+        return text;
+    }
+    static escapeBase64Url(string) {
+        return string.replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
+    }
+}
+
+class ClientRequestMaker {
+    constructor(settings) {
+        this.rateLimits = {};
+        this.clientSettings = {};
+        if (settings) {
+            this.clientSettings = settings;
+        }
+    }
+    /** @deprecated - Switch to `@twitter-api-v2/plugin-rate-limit` */
+    getRateLimits() {
+        return this.rateLimits;
+    }
+    saveRateLimit(originalUrl, rateLimit) {
+        this.rateLimits[originalUrl] = rateLimit;
+    }
+    /** Send a new request and returns a wrapped `Promise<TwitterResponse<T>`. */
+    async send(requestParams) {
+        var _a, _b, _c, _d, _e;
+        // Pre-request config hooks
+        if ((_a = this.clientSettings.plugins) === null || _a === void 0 ? void 0 : _a.length) {
+            const possibleResponse = await this.applyPreRequestConfigHooks(requestParams);
+            if (possibleResponse) {
+                return possibleResponse;
+            }
+        }
+        const args = this.getHttpRequestArgs(requestParams);
+        const options = {
+            method: args.method,
+            headers: args.headers,
+            timeout: requestParams.timeout,
+            agent: this.clientSettings.httpAgent,
+        };
+        const enableRateLimitSave = requestParams.enableRateLimitSave !== false;
+        if (args.body) {
+            RequestParamHelpers.setBodyLengthHeader(options, args.body);
+        }
+        // Pre-request hooks
+        if ((_b = this.clientSettings.plugins) === null || _b === void 0 ? void 0 : _b.length) {
+            await this.applyPreRequestHooks(requestParams, args, options);
+        }
+        let request = new RequestHandlerHelper({
+            url: args.url,
+            options,
+            body: args.body,
+            rateLimitSaver: enableRateLimitSave ? this.saveRateLimit.bind(this, args.rawUrl) : undefined,
+            requestEventDebugHandler: requestParams.requestEventDebugHandler,
+            compression: (_d = (_c = requestParams.compression) !== null && _c !== void 0 ? _c : this.clientSettings.compression) !== null && _d !== void 0 ? _d : true,
+            forceParseMode: requestParams.forceParseMode,
+        })
+            .makeRequest();
+        if (hasRequestErrorPlugins(this)) {
+            request = this.applyResponseErrorHooks(requestParams, args, options, request);
+        }
+        const response = await request;
+        // Post-request hooks
+        if ((_e = this.clientSettings.plugins) === null || _e === void 0 ? void 0 : _e.length) {
+            const responseOverride = await this.applyPostRequestHooks(requestParams, args, options, response);
+            if (responseOverride) {
+                return responseOverride.value;
+            }
+        }
+        return response;
+    }
+    sendStream(requestParams) {
+        var _a, _b;
+        // Pre-request hooks
+        if (this.clientSettings.plugins) {
+            this.applyPreStreamRequestConfigHooks(requestParams);
+        }
+        const args = this.getHttpRequestArgs(requestParams);
+        const options = {
+            method: args.method,
+            headers: args.headers,
+            agent: this.clientSettings.httpAgent,
+        };
+        const enableRateLimitSave = requestParams.enableRateLimitSave !== false;
+        const enableAutoConnect = requestParams.autoConnect !== false;
+        if (args.body) {
+            RequestParamHelpers.setBodyLengthHeader(options, args.body);
+        }
+        const requestData = {
+            url: args.url,
+            options,
+            body: args.body,
+            rateLimitSaver: enableRateLimitSave ? this.saveRateLimit.bind(this, args.rawUrl) : undefined,
+            payloadIsError: requestParams.payloadIsError,
+            compression: (_b = (_a = requestParams.compression) !== null && _a !== void 0 ? _a : this.clientSettings.compression) !== null && _b !== void 0 ? _b : true,
+        };
+        const stream = new TweetStream(requestData);
+        if (!enableAutoConnect) {
+            return stream;
+        }
+        return stream.connect();
+    }
+    /* Token helpers */
+    initializeToken(token) {
+        if (typeof token === 'string') {
+            this.bearerToken = token;
+        }
+        else if (typeof token === 'object' && 'appKey' in token) {
+            this.consumerToken = token.appKey;
+            this.consumerSecret = token.appSecret;
+            if (token.accessToken && token.accessSecret) {
+                this.accessToken = token.accessToken;
+                this.accessSecret = token.accessSecret;
+            }
+            this._oauth = this.buildOAuth();
+        }
+        else if (typeof token === 'object' && 'username' in token) {
+            const key = encodeURIComponent(token.username) + ':' + encodeURIComponent(token.password);
+            this.basicToken = Buffer.from(key).toString('base64');
+        }
+        else if (typeof token === 'object' && 'clientId' in token) {
+            this.clientId = token.clientId;
+            this.clientSecret = token.clientSecret;
+        }
+    }
+    getActiveTokens() {
+        if (this.bearerToken) {
+            return {
+                type: 'oauth2',
+                bearerToken: this.bearerToken,
+            };
+        }
+        else if (this.basicToken) {
+            return {
+                type: 'basic',
+                token: this.basicToken,
+            };
+        }
+        else if (this.consumerSecret && this._oauth) {
+            return {
+                type: 'oauth-1.0a',
+                appKey: this.consumerToken,
+                appSecret: this.consumerSecret,
+                accessToken: this.accessToken,
+                accessSecret: this.accessSecret,
+            };
+        }
+        else if (this.clientId) {
+            return {
+                type: 'oauth2-user',
+                clientId: this.clientId,
+            };
+        }
+        return { type: 'none' };
+    }
+    buildOAuth() {
+        if (!this.consumerSecret || !this.consumerToken)
+            throw new Error('Invalid consumer tokens');
+        return new OAuth1Helper({
+            consumerKeys: { key: this.consumerToken, secret: this.consumerSecret },
+        });
+    }
+    getOAuthAccessTokens() {
+        if (!this.accessSecret || !this.accessToken)
+            return;
+        return {
+            key: this.accessToken,
+            secret: this.accessSecret,
+        };
+    }
+    /* Plugin helpers */
+    getPlugins() {
+        var _a;
+        return (_a = this.clientSettings.plugins) !== null && _a !== void 0 ? _a : [];
+    }
+    hasPlugins() {
+        var _a;
+        return !!((_a = this.clientSettings.plugins) === null || _a === void 0 ? void 0 : _a.length);
+    }
+    async applyPluginMethod(method, args) {
+        var _a;
+        let returnValue;
+        for (const plugin of this.getPlugins()) {
+            const value = await ((_a = plugin[method]) === null || _a === void 0 ? void 0 : _a.call(plugin, args));
+            if (value && value instanceof TwitterApiPluginResponseOverride) {
+                returnValue = value;
+            }
+        }
+        return returnValue;
+    }
+    /* Request helpers */
+    writeAuthHeaders({ headers, bodyInSignature, url, method, query, body }) {
+        headers = { ...headers };
+        if (this.bearerToken) {
+            headers.Authorization = 'Bearer ' + this.bearerToken;
+        }
+        else if (this.basicToken) {
+            // Basic auth, to request a bearer token
+            headers.Authorization = 'Basic ' + this.basicToken;
+        }
+        else if (this.clientId && this.clientSecret) {
+            // Basic auth with clientId + clientSecret
+            headers.Authorization = 'Basic ' + OAuth2Helper.getAuthHeader(this.clientId, this.clientSecret);
+        }
+        else if (this.consumerSecret && this._oauth) {
+            // Merge query and body
+            const data = bodyInSignature ? RequestParamHelpers.mergeQueryAndBodyForOAuth(query, body) : query;
+            const auth = this._oauth.authorize({
+                url: url.toString(),
+                method,
+                data,
+            }, this.getOAuthAccessTokens());
+            headers = { ...headers, ...this._oauth.toHeader(auth) };
+        }
+        return headers;
+    }
+    getUrlObjectFromUrlString(url) {
+        // Add protocol to URL if needed
+        if (!url.startsWith('http')) {
+            url = 'https://' + url;
+        }
+        // Convert URL to object that will receive all URL modifications
+        return new URL(url);
+    }
+    getHttpRequestArgs({ url: stringUrl, method, query: rawQuery = {}, body: rawBody = {}, headers, forceBodyMode, enableAuth, params, }) {
+        let body = undefined;
+        method = method.toUpperCase();
+        headers = headers !== null && headers !== void 0 ? headers : {};
+        // Add user agent header (Twitter recommends it)
+        if (!headers['x-user-agent']) {
+            headers['x-user-agent'] = 'Node.twitter-api-v2';
+        }
+        const url = this.getUrlObjectFromUrlString(stringUrl);
+        // URL without query string to save as endpoint name
+        const rawUrl = url.origin + url.pathname;
+        // Apply URL parameters
+        if (params) {
+            RequestParamHelpers.applyRequestParametersToUrl(url, params);
+        }
+        // Build a URL without anything in QS, and QSP in query
+        const query = RequestParamHelpers.formatQueryToString(rawQuery);
+        RequestParamHelpers.moveUrlQueryParamsIntoObject(url, query);
+        // Delete undefined parameters
+        if (!(rawBody instanceof Buffer)) {
+            trimUndefinedProperties(rawBody);
+        }
+        // OAuth signature should not include parameters when using multipart.
+        const bodyType = forceBodyMode !== null && forceBodyMode !== void 0 ? forceBodyMode : RequestParamHelpers.autoDetectBodyType(url);
+        // If undefined or true, enable auth by headers
+        if (enableAuth !== false) {
+            // OAuth needs body signature only if body is URL encoded.
+            const bodyInSignature = ClientRequestMaker.BODY_METHODS.has(method) && bodyType === 'url';
+            headers = this.writeAuthHeaders({ headers, bodyInSignature, method, query, url, body: rawBody });
+        }
+        if (ClientRequestMaker.BODY_METHODS.has(method)) {
+            body = RequestParamHelpers.constructBodyParams(rawBody, headers, bodyType) || undefined;
+        }
+        RequestParamHelpers.addQueryParamsToUrl(url, query);
+        return {
+            rawUrl,
+            url,
+            method,
+            headers,
+            body,
+        };
+    }
+    /* Plugin helpers */
+    async applyPreRequestConfigHooks(requestParams) {
+        var _a;
+        const url = this.getUrlObjectFromUrlString(requestParams.url);
+        for (const plugin of this.getPlugins()) {
+            const result = await ((_a = plugin.onBeforeRequestConfig) === null || _a === void 0 ? void 0 : _a.call(plugin, {
+                client: this,
+                url,
+                params: requestParams,
+            }));
+            if (result) {
+                return result;
+            }
+        }
+    }
+    applyPreStreamRequestConfigHooks(requestParams) {
+        var _a;
+        const url = this.getUrlObjectFromUrlString(requestParams.url);
+        for (const plugin of this.getPlugins()) {
+            (_a = plugin.onBeforeStreamRequestConfig) === null || _a === void 0 ? void 0 : _a.call(plugin, {
+                client: this,
+                url,
+                params: requestParams,
+            });
+        }
+    }
+    async applyPreRequestHooks(requestParams, computedParams, requestOptions) {
+        await this.applyPluginMethod('onBeforeRequest', {
+            client: this,
+            url: this.getUrlObjectFromUrlString(requestParams.url),
+            params: requestParams,
+            computedParams,
+            requestOptions,
+        });
+    }
+    async applyPostRequestHooks(requestParams, computedParams, requestOptions, response) {
+        return await this.applyPluginMethod('onAfterRequest', {
+            client: this,
+            url: this.getUrlObjectFromUrlString(requestParams.url),
+            params: requestParams,
+            computedParams,
+            requestOptions,
+            response,
+        });
+    }
+    applyResponseErrorHooks(requestParams, computedParams, requestOptions, promise) {
+        return promise.catch(applyResponseHooks.bind(this, requestParams, computedParams, requestOptions));
+    }
+}
+ClientRequestMaker.BODY_METHODS = new Set(['POST', 'PUT', 'PATCH']);
+
+/**
+ * Base class for Twitter instances
+ */
+class TwitterApiBase {
+    constructor(token, settings = {}) {
+        this._currentUser = null;
+        this._currentUserV2 = null;
+        if (token instanceof TwitterApiBase) {
+            this._requestMaker = token._requestMaker;
+        }
+        else {
+            this._requestMaker = new ClientRequestMaker(settings);
+            this._requestMaker.initializeToken(token);
+        }
+    }
+    /* Prefix/Token handling */
+    setPrefix(prefix) {
+        this._prefix = prefix;
+    }
+    cloneWithPrefix(prefix) {
+        const clone = this.constructor(this);
+        clone.setPrefix(prefix);
+        return clone;
+    }
+    getActiveTokens() {
+        return this._requestMaker.getActiveTokens();
+    }
+    /* Rate limit cache / Plugins */
+    getPlugins() {
+        return this._requestMaker.getPlugins();
+    }
+    getPluginOfType(type) {
+        return this.getPlugins().find(plugin => plugin instanceof type);
+    }
     /**
-     * Check if the specified user is a member of the specified list.
+     * @deprecated - Migrate to plugin `@twitter-api-v2/plugin-rate-limit`
      *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/get-lists-members-show
-     * @param parameters
+     * Tells if you hit the Twitter rate limit for {endpoint}.
+     * (local data only, this should not ask anything to Twitter)
      */
-    AccountsAndUsersClient.prototype.listsMembersShow = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/lists/members/show.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    hasHitRateLimit(endpoint) {
+        var _a;
+        if (this.isRateLimitStatusObsolete(endpoint)) {
+            return false;
+        }
+        return ((_a = this.getLastRateLimitStatus(endpoint)) === null || _a === void 0 ? void 0 : _a.remaining) === 0;
+    }
     /**
-     * Returns the lists the specified user has been added to.  If user_id or screen_name are not provided,  the memberships for the authenticating user are returned.
+     * @deprecated - Migrate to plugin `@twitter-api-v2/plugin-rate-limit`
      *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/get-lists-memberships
-     * @param parameters
+     * Tells if you hit the returned Twitter rate limit for {endpoint} has expired.
+     * If client has no saved rate limit data for {endpoint}, this will gives you `true`.
      */
-    AccountsAndUsersClient.prototype.listsMemberships = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/lists/memberships.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    isRateLimitStatusObsolete(endpoint) {
+        const rateLimit = this.getLastRateLimitStatus(endpoint);
+        if (rateLimit === undefined) {
+            return true;
+        }
+        // Timestamps are exprimed in seconds, JS works with ms
+        return (rateLimit.reset * 1000) < Date.now();
+    }
     /**
-     * Returns the lists owned by the specified Twitter user.  Private lists will only be shown if the authenticated user is also the owner of the lists.
+     * @deprecated - Migrate to plugin `@twitter-api-v2/plugin-rate-limit`
      *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/get-lists-ownerships
-     * @param parameters
+     * Get the last obtained Twitter rate limit information for {endpoint}.
+     * (local data only, this should not ask anything to Twitter)
      */
-    AccountsAndUsersClient.prototype.listsOwnerships = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/lists/ownerships.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    getLastRateLimitStatus(endpoint) {
+        const endpointWithPrefix = endpoint.match(/^https?:\/\//) ? endpoint : (this._prefix + endpoint);
+        return this._requestMaker.getRateLimits()[endpointWithPrefix];
+    }
+    /* Current user cache */
+    /** Get cached current user. */
+    getCurrentUserObject(forceFetch = false) {
+        if (!forceFetch && this._currentUser) {
+            if (this._currentUser.value) {
+                return Promise.resolve(this._currentUser.value);
+            }
+            return this._currentUser.promise;
+        }
+        this._currentUser = sharedPromise(() => this.get('account/verify_credentials.json', { tweet_mode: 'extended' }, { prefix: API_V1_1_PREFIX }));
+        return this._currentUser.promise;
+    }
     /**
-     * Returns the specified list. Private lists will only be shown if the authenticated user owns the specified list.
+     * Get cached current user from v2 API.
+     * This can only be the slimest available `UserV2` object, with only `id`, `name` and `username` properties defined.
      *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/get-lists-show
-     * @param parameters
+     * To get a customized `UserV2Result`, use `.v2.me()`
+     *
+     * OAuth2 scopes: `tweet.read` & `users.read`
      */
-    AccountsAndUsersClient.prototype.listsShow = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/lists/show.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    getCurrentUserV2Object(forceFetch = false) {
+        if (!forceFetch && this._currentUserV2) {
+            if (this._currentUserV2.value) {
+                return Promise.resolve(this._currentUserV2.value);
+            }
+            return this._currentUserV2.promise;
+        }
+        this._currentUserV2 = sharedPromise(() => this.get('users/me', undefined, { prefix: API_V2_PREFIX }));
+        return this._currentUserV2.promise;
+    }
+    async get(url, query = {}, { fullResponse, prefix = this._prefix, ...rest } = {}) {
+        if (prefix)
+            url = prefix + url;
+        const resp = await this._requestMaker.send({
+            url,
+            method: 'GET',
+            query,
+            ...rest,
         });
-    };
+        return fullResponse ? resp : resp.data;
+    }
+    async delete(url, query = {}, { fullResponse, prefix = this._prefix, ...rest } = {}) {
+        if (prefix)
+            url = prefix + url;
+        const resp = await this._requestMaker.send({
+            url,
+            method: 'DELETE',
+            query,
+            ...rest,
+        });
+        return fullResponse ? resp : resp.data;
+    }
+    async post(url, body, { fullResponse, prefix = this._prefix, ...rest } = {}) {
+        if (prefix)
+            url = prefix + url;
+        const resp = await this._requestMaker.send({
+            url,
+            method: 'POST',
+            body,
+            ...rest,
+        });
+        return fullResponse ? resp : resp.data;
+    }
+    async put(url, body, { fullResponse, prefix = this._prefix, ...rest } = {}) {
+        if (prefix)
+            url = prefix + url;
+        const resp = await this._requestMaker.send({
+            url,
+            method: 'PUT',
+            body,
+            ...rest,
+        });
+        return fullResponse ? resp : resp.data;
+    }
+    async patch(url, body, { fullResponse, prefix = this._prefix, ...rest } = {}) {
+        if (prefix)
+            url = prefix + url;
+        const resp = await this._requestMaker.send({
+            url,
+            method: 'PATCH',
+            body,
+            ...rest,
+        });
+        return fullResponse ? resp : resp.data;
+    }
+    getStream(url, query, { prefix = this._prefix, ...rest } = {}) {
+        return this._requestMaker.sendStream({
+            url: prefix ? prefix + url : url,
+            method: 'GET',
+            query,
+            ...rest,
+        });
+    }
+    postStream(url, body, { prefix = this._prefix, ...rest } = {}) {
+        return this._requestMaker.sendStream({
+            url: prefix ? prefix + url : url,
+            method: 'POST',
+            body,
+            ...rest,
+        });
+    }
+}
+
+/**
+ * Base subclient for every v1 and v2 client.
+ */
+class TwitterApiSubClient extends TwitterApiBase {
+    constructor(instance) {
+        if (!(instance instanceof TwitterApiBase)) {
+            throw new Error('You must instance SubTwitterApi instance from existing TwitterApi instance.');
+        }
+        super(instance);
+    }
+}
+
+/** A generic TwitterPaginator able to consume TweetV1 timelines. */
+class TweetTimelineV1Paginator extends TwitterPaginator {
+    constructor() {
+        super(...arguments);
+        this.hasFinishedFetch = false;
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.push(...result);
+            // HINT: This is an approximation, as "end" of pagination cannot be safely determined without cursors.
+            this.hasFinishedFetch = result.length === 0;
+        }
+    }
+    getNextQueryParams(maxResults) {
+        const latestId = BigInt(this._realData[this._realData.length - 1].id_str);
+        return {
+            ...this.injectQueryParams(maxResults),
+            max_id: (latestId - BigInt(1)).toString(),
+        };
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.length;
+    }
+    isFetchLastOver(result) {
+        return !result.data.length;
+    }
+    canFetchNextPage(result) {
+        return result.length > 0;
+    }
+    getItemArray() {
+        return this.tweets;
+    }
     /**
-     * Returns a timeline of tweets authored by members of the specified list.  Retweets are included by default. Use the include_rts=false parameter to omit retweets. Embedded Timelines is a great way to embed list timelines on your website.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/get-lists-statuses
-     * @param parameters
+     * Tweets returned by paginator.
      */
-    AccountsAndUsersClient.prototype.listsStatuses = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/lists/statuses.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    get tweets() {
+        return this._realData;
+    }
+    get done() {
+        return super.done || this.hasFinishedFetch;
+    }
+}
+// Timelines
+// Home
+class HomeTimelineV1Paginator extends TweetTimelineV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'statuses/home_timeline.json';
+    }
+}
+// Mention
+class MentionTimelineV1Paginator extends TweetTimelineV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'statuses/mentions_timeline.json';
+    }
+}
+// User
+class UserTimelineV1Paginator extends TweetTimelineV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'statuses/user_timeline.json';
+    }
+}
+// Lists
+class ListTimelineV1Paginator extends TweetTimelineV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/statuses.json';
+    }
+}
+// Favorites
+class UserFavoritesV1Paginator extends TweetTimelineV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'favorites/list.json';
+    }
+}
+
+class MuteUserListV1Paginator extends CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'mutes/users/list.json';
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.users.push(...result.users);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.users.length;
+    }
+    getItemArray() {
+        return this.users;
+    }
     /**
-     * subscribers/* Returns the subscribers of the specified list.  Private list subscribers will only be shown if the authenticated user owns the specified list.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/get-lists-subscribers
-     * @param parameters
+     * Users returned by paginator.
      */
-    AccountsAndUsersClient.prototype.listsSubscribers = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/lists/subscribers.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    get users() {
+        return this._realData.users;
+    }
+}
+class MuteUserIdsV1Paginator extends CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'mutes/users/ids.json';
+        this._maxResultsWhenFetchLast = 5000;
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.ids.push(...result.ids);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.ids.length;
+    }
+    getItemArray() {
+        return this.ids;
+    }
     /**
-     * Check if the specified user is a subscriber of the specified list.  Returns the user if they are a subscriber.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/get-lists-subscribers-show
-     * @param parameters
+     * Users IDs returned by paginator.
      */
-    AccountsAndUsersClient.prototype.listsSubscribersShow = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/lists/subscribers/show.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    get ids() {
+        return this._realData.ids;
+    }
+}
+
+class UserFollowerListV1Paginator extends CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'followers/list.json';
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.users.push(...result.users);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.users.length;
+    }
+    getItemArray() {
+        return this.users;
+    }
     /**
-     * Obtain a collection of the lists the specified user is subscribed to,  20 lists per page by default. Does not include the user's own lists.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/get-lists-subscriptions
-     * @param parameters
+     * Users returned by paginator.
      */
-    AccountsAndUsersClient.prototype.listsSubscriptions = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/lists/subscriptions.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    get users() {
+        return this._realData.users;
+    }
+}
+class UserFollowerIdsV1Paginator extends CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'followers/ids.json';
+        this._maxResultsWhenFetchLast = 5000;
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.ids.push(...result.ids);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.ids.length;
+    }
+    getItemArray() {
+        return this.ids;
+    }
     /**
-     * Creates a new list for the authenticated user. Note that you can create up to 1000 lists per account.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/post-lists-create
-     * @param parameters
+     * Users IDs returned by paginator.
      */
-    AccountsAndUsersClient.prototype.listsCreate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/lists/create.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    get ids() {
+        return this._realData.ids;
+    }
+}
+
+class UserFriendListV1Paginator extends CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'friends/list.json';
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.users.push(...result.users);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.users.length;
+    }
+    getItemArray() {
+        return this.users;
+    }
     /**
-     * Deletes the specified list. The authenticated user must own the list to be able to destroy it.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/post-lists-destroy
-     * @param parameters
+     * Users returned by paginator.
      */
-    AccountsAndUsersClient.prototype.listsDestroy = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/lists/destroy.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    get users() {
+        return this._realData.users;
+    }
+}
+class UserFollowersIdsV1Paginator extends CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'friends/ids.json';
+        this._maxResultsWhenFetchLast = 5000;
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.ids.push(...result.ids);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.ids.length;
+    }
+    getItemArray() {
+        return this.ids;
+    }
     /**
-     * Add a member to a list.  The authenticated user must own the list to be able to add members to it.  Note that lists cannot have more than 5,000 members.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/post-lists-members-create
-     * @param parameters
+     * Users IDs returned by paginator.
      */
-    AccountsAndUsersClient.prototype.listsMembersCreate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/lists/members/create.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    get ids() {
+        return this._realData.ids;
+    }
+}
+
+/** A generic TwitterPaginator able to consume TweetV1 timelines. */
+class UserSearchV1Paginator extends TwitterPaginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/search.json';
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.push(...result);
+        }
+    }
+    getNextQueryParams(maxResults) {
+        var _a;
+        const previousPage = Number((_a = this._queryParams.page) !== null && _a !== void 0 ? _a : '1');
+        return {
+            ...this._queryParams,
+            page: previousPage + 1,
+            ...maxResults ? { count: maxResults } : {},
+        };
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.length;
+    }
+    isFetchLastOver(result) {
+        return !result.data.length;
+    }
+    canFetchNextPage(result) {
+        return result.length > 0;
+    }
+    getItemArray() {
+        return this.users;
+    }
     /**
-     * Adds multiple members to a list, by specifying a comma-separated  list of member ids or screen names. The authenticated user must own the  list to be able to add members to it. Note that lists can't have more  than 5,000 members, and you are limited to adding up to 100 members  to a list at a time with this method.Please note that there can be  issues with lists that rapidly remove and add memberships. Take care when  using these methods such that you are not too rapidly switching between  removals and adds on the same list.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/post-lists-members-create_all
-     * @param parameters
+     * Users returned by paginator.
      */
-    AccountsAndUsersClient.prototype.listsMembersCreateAll = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/lists/members/create_all.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    get users() {
+        return this._realData;
+    }
+}
+class FriendshipsIncomingV1Paginator extends CursoredV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'friendships/incoming.json';
+        this._maxResultsWhenFetchLast = 5000;
+    }
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.ids.push(...result.ids);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.ids.length;
+    }
+    getItemArray() {
+        return this.ids;
+    }
     /**
-     * Removes the specified member from the list. The authenticated user must be the list's owner to remove members from the list.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/post-lists-members-destroy
-     * @param parameters
+     * Users IDs returned by paginator.
      */
-    AccountsAndUsersClient.prototype.listsMembersDestroy = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/lists/members/destroy.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    get ids() {
+        return this._realData.ids;
+    }
+}
+class FriendshipsOutgoingV1Paginator extends FriendshipsIncomingV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'friendships/outgoing.json';
+    }
+}
+
+class ListListsV1Paginator extends CursoredV1Paginator {
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.lists.push(...result.lists);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.lists.length;
+    }
+    getItemArray() {
+        return this.lists;
+    }
     /**
-     * Removes multiple members from a list, by specifying a comma-separated list  of member ids or screen names. The authenticated user must own the list to  be able to remove members from it. Note that lists can't have more  than 500 members, and you are limited to removing up to 100 members to a  list at a time with this method.Please note that there can be issues with  lists that rapidly remove and add memberships. Take care when using these methods  such that you are not too rapidly switching between removals and adds on the same list.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/post-lists-members-destroy_all
-     * @param parameters
+     * Lists returned by paginator.
      */
-    AccountsAndUsersClient.prototype.listsMembersDestroyAll = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/lists/members/destroy_all.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    get lists() {
+        return this._realData.lists;
+    }
+}
+class ListMembershipsV1Paginator extends ListListsV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/memberships.json';
+    }
+}
+class ListOwnershipsV1Paginator extends ListListsV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/ownerships.json';
+    }
+}
+class ListSubscriptionsV1Paginator extends ListListsV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/subscriptions.json';
+    }
+}
+class ListUsersV1Paginator extends CursoredV1Paginator {
+    refreshInstanceFromResult(response, isNextPage) {
+        const result = response.data;
+        this._rateLimit = response.rateLimit;
+        if (isNextPage) {
+            this._realData.users.push(...result.users);
+            this._realData.next_cursor = result.next_cursor;
+        }
+    }
+    getPageLengthFromRequest(result) {
+        return result.data.users.length;
+    }
+    getItemArray() {
+        return this.users;
+    }
     /**
-     * Subscribes the authenticated user to the specified list.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/post-lists-subscribers-create
-     * @param parameters
+     * Users returned by paginator.
      */
-    AccountsAndUsersClient.prototype.listsSubscribersCreate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/lists/subscribers/create.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    get users() {
+        return this._realData.users;
+    }
+}
+class ListMembersV1Paginator extends ListUsersV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/members.json';
+    }
+}
+class ListSubscribersV1Paginator extends ListUsersV1Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/subscribers.json';
+    }
+}
+
+/**
+ * Base Twitter v1 client with only read right.
+ */
+class TwitterApiv1ReadOnly extends TwitterApiSubClient {
+    constructor() {
+        super(...arguments);
+        this._prefix = API_V1_1_PREFIX;
+    }
+    /* Tweets */
     /**
-     * Unsubscribes the authenticated user from the specified list.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/post-lists-subscribers-destroy
-     * @param parameters
+     * Returns a single Tweet, specified by the id parameter. The Tweet's author will also be embedded within the Tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/get-statuses-show-id
      */
-    AccountsAndUsersClient.prototype.listsSubscribersDestroy = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/lists/subscribers/destroy.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    singleTweet(tweetId, options = {}) {
+        return this.get('statuses/show.json', { tweet_mode: 'extended', id: tweetId, ...options });
+    }
+    tweets(ids, options = {}) {
+        return this.post('statuses/lookup.json', { tweet_mode: 'extended', id: ids, ...options });
+    }
     /**
-     * Updates the specified list. The authenticated user must own the list to be able to update it.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists/api-reference/post-lists-update
-     * @param parameters
+     * Returns a single Tweet, specified by either a Tweet web URL or the Tweet ID, in an oEmbed-compatible format.
+     * The returned HTML snippet will be automatically recognized as an Embedded Tweet when Twitter's widget JavaScript is included on the page.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/get-statuses-oembed
      */
-    AccountsAndUsersClient.prototype.listsUpdate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/lists/update.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    oembedTweet(tweetId, options = {}) {
+        return this.get('oembed', {
+            url: `https://twitter.com/i/statuses/${tweetId}`,
+            ...options,
+        }, { prefix: 'https://publish.twitter.com/' });
+    }
+    /* Tweets timelines */
     /**
-     * Returns a cursored collection of user IDs for every user following the specified user. At this time, results are ordered with the most recent following first — however,  this ordering is subject to unannounced change and eventual consistency issues. Results are  given in groups of 5,000 user IDs and multiple "pages" of results can be navigated through  using the next_cursor value in subsequent requests. See Using cursors to navigate  collections for more information.This method is especially powerful when used in  conjunction with GET users / lookup, a method that allows  you to convert user IDs into full user objects in bulk.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-followers-ids
-     * @param parameters
+     * Returns a collection of the most recent Tweets and Retweets posted by the authenticating user and the users they follow.
+     * The home timeline is central to how most users interact with the Twitter service.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/timelines/api-reference/get-statuses-home_timeline
      */
-    AccountsAndUsersClient.prototype.followersIds = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/followers/ids.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    async homeTimeline(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('statuses/home_timeline.json', queryParams, { fullResponse: true });
+        return new HomeTimelineV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
         });
-    };
+    }
     /**
-     * Returns a cursored collection of user objects for users following the specified user. At this time, results are ordered with the most recent following first — however,  this ordering is subject to unannounced change and eventual consistency issues.  Results are given in groups of 20 users and multiple "pages" of results can be  navigated through using the next_cursor value in subsequent requests.  See Using cursors to navigate collections for more information.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-followers-list
-     * @param parameters
+     * Returns the 20 most recent mentions (Tweets containing a users's @screen_name) for the authenticating user.
+     * The timeline returned is the equivalent of the one seen when you view your mentions on twitter.com.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/timelines/api-reference/get-statuses-mentions_timeline
      */
-    AccountsAndUsersClient.prototype.followersList = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/followers/list.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    async mentionTimeline(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('statuses/mentions_timeline.json', queryParams, { fullResponse: true });
+        return new MentionTimelineV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
         });
-    };
+    }
     /**
-     * Returns a cursored collection of user IDs for every user the specified  user is following (otherwise known as their "friends").At this time, results  are ordered with the most recent following first — however, this ordering  is subject to unannounced change and eventual consistency issues.  Results are given in groups of 5,000 user IDs and multiple "pages"  of results can be navigated through using the next_cursor value in subsequent requests.  See Using cursors to navigate collections for more information.This method is  especially powerful when used in conjunction with GET users / lookup, a method  that allows you to convert user IDs into full user objects in bulk.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-friends-ids
-     * @param parameters
+     * Returns a collection of the most recent Tweets posted by the user indicated by the user_id parameters.
+     * User timelines belonging to protected users may only be requested when the authenticated user either "owns" the timeline or is an approved follower of the owner.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/timelines/api-reference/get-statuses-user_timeline
      */
-    AccountsAndUsersClient.prototype.friendsIds = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/friends/ids.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    async userTimeline(userId, options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            user_id: userId,
+            ...options,
+        };
+        const initialRq = await this.get('statuses/user_timeline.json', queryParams, { fullResponse: true });
+        return new UserTimelineV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
         });
-    };
+    }
     /**
-     * Returns a cursored collection of user objects for every user the  specified user is following (otherwise known as their "friends").At this time,  results are ordered with the most recent following first — however, this  ordering is subject to unannounced change and eventual consistency issues.  Results are given in groups of 20 users and multiple "pages" of results can  be navigated through using the next_cursor value in subsequent requests.  See Using cursors to navigate collections for more information.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-friends-list
-     * @param parameters
+     * Returns a collection of the most recent Tweets posted by the user indicated by the screen_name parameters.
+     * User timelines belonging to protected users may only be requested when the authenticated user either "owns" the timeline or is an approved follower of the owner.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/timelines/api-reference/get-statuses-user_timeline
      */
-    AccountsAndUsersClient.prototype.friendsList = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/friends/list.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    async userTimelineByUsername(username, options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            screen_name: username,
+            ...options,
+        };
+        const initialRq = await this.get('statuses/user_timeline.json', queryParams, { fullResponse: true });
+        return new UserTimelineV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
         });
-    };
+    }
     /**
-     * Returns a collection of numeric IDs for every user who has a pending request to follow the authenticating user.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-friendships-incoming
-     * @param parameters
+     * Returns the most recent Tweets liked by the authenticating or specified user, 20 tweets by default.
+     * Note: favorites are now known as likes.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/get-favorites-list
      */
-    AccountsAndUsersClient.prototype.friendshipsIncoming = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/friendships/incoming.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    async favoriteTimeline(userId, options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            user_id: userId,
+            ...options,
+        };
+        const initialRq = await this.get('favorites/list.json', queryParams, { fullResponse: true });
+        return new UserFavoritesV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
         });
-    };
+    }
     /**
-     * Returns the relationships of the authenticating user to the comma-separated  list of up to 100 screen_names or user_ids provided. Values for connections can be:  following, following_requested, followed_by, none, blocking, muting.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-friendships-lookup
-     * @param parameters
+     * Returns the most recent Tweets liked by the authenticating or specified user, 20 tweets by default.
+     * Note: favorites are now known as likes.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/get-favorites-list
      */
-    AccountsAndUsersClient.prototype.friendshipsLookup = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/friendships/lookup.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    async favoriteTimelineByUsername(username, options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            screen_name: username,
+            ...options,
+        };
+        const initialRq = await this.get('favorites/list.json', queryParams, { fullResponse: true });
+        return new UserFavoritesV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
         });
-    };
+    }
+    /* Users */
     /**
-     * Returns a collection of user_ids that the currently authenticated user does  not want to receive retweets from.Use POST friendships / update to set the  "no retweets" status for a given user account on behalf of the current user.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-friendships-no_retweets-ids
-     * @param parameters
+     * Returns a variety of information about the user specified by the required user_id or screen_name parameter.
+     * The author's most recent Tweet will be returned inline when possible.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-users-show
      */
-    AccountsAndUsersClient.prototype.friendshipsNoRetweetsIds = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/friendships/no_retweets/ids.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    user(user) {
+        return this.get('users/show.json', { tweet_mode: 'extended', ...user });
+    }
     /**
-     * Returns a collection of numeric IDs for every protected user for  whom the authenticating user has a pending follow request.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-friendships-outgoing
-     * @param parameters
+     * Returns fully-hydrated user objects for up to 100 users per request,
+     * as specified by comma-separated values passed to the user_id and/or screen_name parameters.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-users-lookup
      */
-    AccountsAndUsersClient.prototype.friendshipsOutgoing = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/friendships/outgoing.format' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    users(query) {
+        return this.get('users/lookup.json', { tweet_mode: 'extended', ...query });
+    }
     /**
-     * Returns detailed information about the relationship between two arbitrary users.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-friendships-show
-     * @param parameters
+     * Returns an HTTP 200 OK response code and a representation of the requesting user if authentication was successful;
+     * returns a 401 status code and an error message if not.
+     * Use this method to test if supplied user credentials are valid.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/get-account-verify_credentials
      */
-    AccountsAndUsersClient.prototype.friendshipsShow = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/friendships/show.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns fully-hydrated user objects for up to 100 users per request, as specified by comma-separated values passed to the user_id and/or screen_name parameters.This method is especially useful when used in conjunction with collections of user IDs returned from GET friends / ids and GET followers / ids.GET users / show is used to retrieve a single user object.There are a few things to note when using this method. You must be following a protected user to be able to see their most recent status update. If you don't follow a protected user their status will be removed. The order of user IDs or screen names may not match the order of users in the returned array. If a requested user is unknown, suspended, or deleted, then that user will not be returned in the results list. If none of your lookup criteria can be satisfied by returning a user object, a HTTP 404 will be thrown. You are strongly encouraged to use a POST for larger requests.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-users-lookup
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.usersLookup = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/users/lookup.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Provides a simple, relevance-based search interface  to public user accounts on Twitter. Try querying by topical interest,  full name, company name, location, or other criteria. Exact match searches  are not supported.Only the first 1,000 matching results are available.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-users-search
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.usersSearch = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/users/search.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns a variety of information about the user specified by  the required user_id or screen_name parameter.  The author's most recent Tweet will be returned inline when possible.GET users / lookup  is used to retrieve a bulk collection of user objects.You must be following a  protected user to be able to see their most recent Tweet. If you don't follow a  protected user, the user's Tweet will be removed. A Tweet will not always be  returned in the current_status field.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-users-show
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.usersShow = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/users/show.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Allows the authenticating user to follow (friend) the user  specified in the ID parameter.Returns the followed user when successful.  Returns a string describing the failure condition when unsuccessful.  If the user is already friends with the user a HTTP 403 may be returned,  though for performance reasons this method may also return a HTTP 200 OK  message even if the follow relationship already exists.Actions taken in  this method are asynchronous. Changes will be eventually consistent.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/post-friendships-create
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.friendshipsCreate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/friendships/create.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Allows the authenticating user to unfollow the user specified  in the ID parameter. Returns the unfollowed user when successful.  Returns a string describing the failure condition when unsuccessful. Actions taken in this method are asynchronous.  Changes will be eventually consistent.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/post-friendships-destroy
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.friendshipsDestroy = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/friendships/destroy.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Enable or disable Retweets and device notifications from the specified user.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/post-friendships-update
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.friendshipsUpdate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/friendships/update.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns settings (including current trend, geo and sleep time information) for the authenticating user.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/get-account-settings
-     */
-    AccountsAndUsersClient.prototype.accountSettings = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/account/settings.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns an HTTP 200 OK response code and a representation of the requesting user if authentication was successful; returns a 401 status code and an error message if not. Use this method to test if supplied user credentials are valid.
-     *
-     * @link https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/get-account-verify_credentials
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.accountVerifyCredentials = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/account/verify_credentials.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns the authenticated user's saved search queries.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/get-saved_searches-list
-     */
-    AccountsAndUsersClient.prototype.savedSearchesList = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/saved_searches/list.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Retrieve the information for the saved search represented by the given id. The authenticating user must be the owner of saved search ID being requested.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/get-saved_searches-show-id
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.savedSearchesShowById = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/saved_searches/show/' + parameters.id + '.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns a map of the available size variations of the specified user's profile banner. If the user has not uploaded a profile banner, a HTTP 404 will be served instead. This method can be used instead of string manipulation on the profile_banner_url returned in user objects as described in Profile Images and Banners. The profile banner data available at each size variant's URL is in PNG format.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/get-users-profile_banner
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.usersProfileBanner = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/users/profile_banner.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Removes the uploaded profile banner for the authenticating user. Returns HTTP 200 upon success.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/post-account-remove_profile_banner
-     */
-    AccountsAndUsersClient.prototype.accountRemoveProfileBanner = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/account/remove_profile_banner.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Sets some values that users are able to set under the "Account"  tab of their settings page. Only the parameters specified will be updated.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/post-account-update_profile
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.accountUpdateProfile = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/account/update_profile.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Updates the authenticating user's profile background image.  This method can also be used to enable or disable the profile  background image.Although each parameter is marked as optional, at least one of  image or media_id must be provided when making this request.Learn more about the  deprecation of this endpoint via our forum post.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/post-account-update_profile_background_image
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.accountUpdateProfileBackgroundImageRetired = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/account/update_profile_background_image.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Uploads a profile banner on behalf of the authenticating user. More information about sizing variations can be found in User Profile Images and Banners and GET users / profile_banner.Profile banner images are processed asynchronously. The profile_banner_url and its variant sizes will not necessary be available directly after upload.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/post-account-update_profile_banner
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.accountUpdateProfileBanner = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/account/update_profile_banner.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Updates the authenticating user's profile image.  Note that this method expects raw multipart data, not a URL to an image. This method asynchronously processes the uploaded file before updating the  user's profile image URL. You can either update your local cache the next  time you request the user's information, or, at least 5 seconds after  uploading the image, ask for the updated URL using GET users / show.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/post-account-update_profile_image
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.accountUpdateProfileImage = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/account/update_profile_image.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Create a new saved search for the authenticated user. A user may only have 25 saved searches.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/post-saved_searches-create
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.savedSearchesCreate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/saved_searches/create.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Destroys a saved search for the authenticating user. The authenticating user must be the owner of saved search id being destroyed.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/post-saved_searches-destroy-id
-     * @param parameters
-     */
-    AccountsAndUsersClient.prototype.savedSearchesDestroyById = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/saved_searches/destroy/' + parameters.id + '.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns an array of numeric user ids the authenticating user is blocking. Important This method is cursored, meaning your app must make  multiple requests in order to receive all blocks correctly. See Using cursors to navigate  collections for more details on how cursoring works.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/mute-block-report-users/api-reference/get-blocks-ids
-     */
-    AccountsAndUsersClient.prototype.blocksIds = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/blocks/ids.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns a collection of user objects that the authenticating user is blocking. Important This method is cursored, meaning your app must make multiple  requests in order to receive all blocks correctly. See Using cursors to  navigate collections for more details on how cursoring works.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/mute-block-report-users/api-reference/get-blocks-list
-     */
-    AccountsAndUsersClient.prototype.blocksList = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/blocks/list.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns an array of numeric user ids the authenticating user has muted.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/mute-block-report-users/api-reference/get-mutes-users-ids
-     */
-    AccountsAndUsersClient.prototype.mutesUsersIds = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/mutes/users/ids.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    verifyCredentials(options = {}) {
+        return this.get('account/verify_credentials.json', options);
+    }
     /**
      * Returns an array of user objects the authenticating user has muted.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/mute-block-report-users/api-reference/get-mutes-users-list
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/mute-block-report-users/api-reference/get-mutes-users-list
      */
-    AccountsAndUsersClient.prototype.mutesUsersList = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/mutes/users/list.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    async listMutedUsers(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('mutes/users/list.json', queryParams, { fullResponse: true });
+        return new MuteUserListV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
         });
-    };
+    }
     /**
-     * Blocks the specified user from following the authenticating user.  In addition the blocked user will not show in the authenticating users mentions  or timeline (unless retweeted by another user). If a follow or friend  relationship exists it is destroyed.The URL pattern  /version/block/create/:screen_name_or_user_id.format is still accepted but not  recommended. As a sequence of numbers is a valid screen name we recommend using  the screen_name or user_id parameter instead.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/mute-block-report-users/api-reference/post-blocks-create
-     * @param parameters
+     * Returns an array of numeric user ids the authenticating user has muted.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/mute-block-report-users/api-reference/get-mutes-users-ids
      */
-    AccountsAndUsersClient.prototype.blocksCreate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/blocks/create.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    async listMutedUserIds(options = {}) {
+        const queryParams = {
+            stringify_ids: true,
+            ...options,
+        };
+        const initialRq = await this.get('mutes/users/ids.json', queryParams, { fullResponse: true });
+        return new MuteUserIdsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
         });
-    };
+    }
     /**
-     * Mutes the user specified in the ID parameter for the authenticating user. Returns the muted user when successful. Returns a string describing the  failure condition when unsuccessful.Actions taken in this method are asynchronous.  Changes will be eventually consistent.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/mute-block-report-users/api-reference/post-mutes-users-create
-     * @param parameters
+     * Returns an array of user objects of friends of the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friends-list
      */
-    AccountsAndUsersClient.prototype.mutesUsersCreate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/mutes/users/create.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    async userFriendList(options = {}) {
+        const queryParams = {
+            ...options,
+        };
+        const initialRq = await this.get('friends/list.json', queryParams, { fullResponse: true });
+        return new UserFriendListV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
         });
-    };
+    }
     /**
-     * Un-mutes the user specified in the ID parameter for the authenticating user. Returns the unmuted user when successful. Returns a string describing the  failure condition when unsuccessful.Actions taken in this method are asynchronous.  Changes will be eventually consistent.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/mute-block-report-users/api-reference/post-mutes-users-destroy
-     * @param parameters
+     * Returns an array of user objects of followers of the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-followers-list
      */
-    AccountsAndUsersClient.prototype.mutesUsersDestroy = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/mutes/users/destroy.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    async userFollowerList(options = {}) {
+        const queryParams = {
+            ...options,
+        };
+        const initialRq = await this.get('followers/list.json', queryParams, { fullResponse: true });
+        return new UserFollowerListV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
         });
-    };
+    }
     /**
-     * Report the specified user as a spam account to Twitter.  Additionally, optionally performs the equivalent of POST blocks / create  on behalf of the authenticated user.
-     *
-     * @link https://developer.twitter.com/en/docs/accounts-and-users/mute-block-report-users/api-reference/post-users-report_spam
-     * @param parameters
+     * Returns an array of numeric user ids of followers of the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-followers-ids
      */
-    AccountsAndUsersClient.prototype.usersReportSpam = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/users/report_spam.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    async userFollowerIds(options = {}) {
+        const queryParams = {
+            stringify_ids: true,
+            ...options,
+        };
+        const initialRq = await this.get('followers/ids.json', queryParams, { fullResponse: true });
+        return new UserFollowerIdsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
         });
-    };
-    return AccountsAndUsersClient;
-}());
-exports.default = AccountsAndUsersClient;
-});
-
-var TweetsClient_1 = createCommonjsModule(function (module, exports) {
-var __awaiter = (commonjsGlobal && commonjsGlobal.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (commonjsGlobal && commonjsGlobal.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
+    }
+    /**
+     * Returns an array of numeric user ids of friends of the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friends-ids
+     */
+    async userFollowingIds(options = {}) {
+        const queryParams = {
+            stringify_ids: true,
+            ...options,
+        };
+        const initialRq = await this.get('friends/ids.json', queryParams, { fullResponse: true });
+        return new UserFollowersIdsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Provides a simple, relevance-based search interface to public user accounts on Twitter.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-users-search
+     */
+    async searchUsers(query, options = {}) {
+        const queryParams = {
+            q: query,
+            tweet_mode: 'extended',
+            page: 1,
+            ...options,
+        };
+        const initialRq = await this.get('users/search.json', queryParams, { fullResponse: true });
+        return new UserSearchV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /* Friendship API */
+    /**
+     * Returns detailed information about the relationship between two arbitrary users.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friendships-show
+     */
+    friendship(sources) {
+        return this.get('friendships/show.json', sources);
+    }
+    /**
+     * Returns the relationships of the authenticating user to the comma-separated list of up to 100 screen_names or user_ids provided.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friendships-lookup
+     */
+    friendships(friendships) {
+        return this.get('friendships/lookup.json', friendships);
+    }
+    /**
+     * Returns a collection of user_ids that the currently authenticated user does not want to receive retweets from.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friendships-no_retweets-ids
+     */
+    friendshipsNoRetweets() {
+        return this.get('friendships/no_retweets/ids.json', { stringify_ids: true });
+    }
+    /**
+     * Returns a collection of numeric IDs for every user who has a pending request to follow the authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friendships-incoming
+     */
+    async friendshipsIncoming(options = {}) {
+        const queryParams = {
+            stringify_ids: true,
+            ...options,
+        };
+        const initialRq = await this.get('friendships/incoming.json', queryParams, { fullResponse: true });
+        return new FriendshipsIncomingV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns a collection of numeric IDs for every protected user for whom the authenticating user has a pending follow request.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/get-friendships-outgoing
+     */
+    async friendshipsOutgoing(options = {}) {
+        const queryParams = {
+            stringify_ids: true,
+            ...options,
+        };
+        const initialRq = await this.get('friendships/outgoing.json', queryParams, { fullResponse: true });
+        return new FriendshipsOutgoingV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /* Account/user API */
+    /**
+     * Get current account settings for authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/get-account-settings
+     */
+    accountSettings() {
+        return this.get('account/settings.json');
+    }
+    /**
+     * Returns a map of the available size variations of the specified user's profile banner.
+     * If the user has not uploaded a profile banner, a HTTP 404 will be served instead.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/get-users-profile_banner
+     */
+    userProfileBannerSizes(params) {
+        return this.get('users/profile_banner.json', params);
+    }
+    /* Lists */
+    /**
+     * Returns the specified list. Private lists will only be shown if the authenticated user owns the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-show
+     */
+    list(options) {
+        return this.get('lists/show.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Returns all lists the authenticating or specified user subscribes to, including their own.
+     * If no user is given, the authenticating user is used.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-list
+     */
+    lists(options = {}) {
+        return this.get('lists/list.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Returns the members of the specified list. Private list members will only be shown if the authenticated user owns the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-members
+     */
+    async listMembers(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('lists/members.json', queryParams, { fullResponse: true });
+        return new ListMembersV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Check if the specified user is a member of the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-members-show
+     */
+    listGetMember(options) {
+        return this.get('lists/members/show.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Returns the lists the specified user has been added to.
+     * If user_id or screen_name are not provided, the memberships for the authenticating user are returned.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-memberships
+     */
+    async listMemberships(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('lists/memberships.json', queryParams, { fullResponse: true });
+        return new ListMembershipsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns the lists owned by the specified Twitter user. Private lists will only be shown if the authenticated user is also the owner of the lists.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-ownerships
+     */
+    async listOwnerships(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('lists/ownerships.json', queryParams, { fullResponse: true });
+        return new ListOwnershipsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns a timeline of tweets authored by members of the specified list. Retweets are included by default.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-statuses
+     */
+    async listStatuses(options) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('lists/statuses.json', queryParams, { fullResponse: true });
+        return new ListTimelineV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns the subscribers of the specified list. Private list subscribers will only be shown if the authenticated user owns the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-subscribers
+     */
+    async listSubscribers(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('lists/subscribers.json', queryParams, { fullResponse: true });
+        return new ListSubscribersV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Check if the specified user is a subscriber of the specified list. Returns the user if they are a subscriber.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-subscribers-show
+     */
+    listGetSubscriber(options) {
+        return this.get('lists/subscribers/show.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Obtain a collection of the lists the specified user is subscribed to, 20 lists per page by default.
+     * Does not include the user's own lists.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/get-lists-subscriptions
+     */
+    async listSubscriptions(options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            ...options,
+        };
+        const initialRq = await this.get('lists/subscriptions.json', queryParams, { fullResponse: true });
+        return new ListSubscriptionsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /* Media upload API */
+    /**
+     * The STATUS command (this method) is used to periodically poll for updates of media processing operation.
+     * After the STATUS command response returns succeeded, you can move on to the next step which is usually create Tweet with media_id.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/get-media-upload-status
+     */
+    mediaInfo(mediaId) {
+        return this.get('media/upload.json', {
+            command: 'STATUS',
+            media_id: mediaId,
+        }, { prefix: API_V1_1_UPLOAD_PREFIX });
+    }
+    filterStream({ autoConnect, ...params } = {}) {
+        const parameters = {};
+        for (const [key, value] of Object.entries(params)) {
+            if (key === 'follow' || key === 'track') {
+                parameters[key] = value.toString();
             }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-
-var TweetsClient = /** @class */ (function () {
-    function TweetsClient(transport) {
-        if (!transport) {
-            throw Error('Transport class needs to be provided.');
-        }
-        this.transport = transport;
-    }
-    /**
-     * Retrieve the identified Collection, presented as a list of the Tweets curated within. The response structure of this method differs significantly from timelines you  may be used to working with elsewhere in the Twitter API.To navigate a Collection,  use the position object of a response, which includes attributes for max_position,  min_position, and was_truncated. was_truncated indicates whether additional  Tweets exist in the collection outside of the range of the current request.  To retrieve Tweets further back in time, use the value of min_position found  in the current response as the max_position parameter in the next call to this endpoint.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/curate-a-collection/api-reference/get-collections-entries
-     * @param parameters
-     */
-    TweetsClient.prototype.collectionsEntries = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/collections/entries.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Find Collections created by a specific user or containing a  specific curated Tweet.Results are organized in a cursored collection.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/curate-a-collection/api-reference/get-collections-list
-     * @param parameters
-     */
-    TweetsClient.prototype.collectionsList = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/collections/list.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Retrieve information associated with a specific Collection.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/curate-a-collection/api-reference/get-collections-show
-     * @param parameters
-     */
-    TweetsClient.prototype.collectionsShow = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/collections/show.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Create a Collection owned by the currently authenticated user. The API endpoint may refuse to complete the request if the authenticated  user has exceeded the total number of allowed collections for their account.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/curate-a-collection/api-reference/post-collections-create
-     * @param parameters
-     */
-    TweetsClient.prototype.collectionsCreate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/collections/create.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Permanently delete a Collection owned by the currently authenticated user.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/curate-a-collection/api-reference/post-collections-destroy
-     * @param parameters
-     */
-    TweetsClient.prototype.collectionsDestroy = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/collections/destroy.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Add a specified Tweet to a Collection.A collection will store up  to a few thousand Tweets. Adding a Tweet to a collection beyond its  allowed capacity will remove the oldest Tweet in the collection based  on the time it was added to the collection.Use POST collections / entries / curate  to add Tweets to a Collection in bulk.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/curate-a-collection/api-reference/post-collections-entries-add
-     * @param parameters
-     */
-    TweetsClient.prototype.collectionsEntriesAdd = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/collections/entries/add.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Curate a Collection by adding or removing Tweets in bulk.  Updates must be limited to 100 cumulative additions or removals per request. Use POST collections / entries / add and POST collections / entries / remove  to add or remove a single Tweet.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/curate-a-collection/api-reference/post-collections-entries-curate
-     */
-    TweetsClient.prototype.collectionsEntriesCurate = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/collections/entries/curate.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Move a specified Tweet to a new position in a curation_reverse_chron ordered collection.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/curate-a-collection/api-reference/post-collections-entries-move
-     * @param parameters
-     */
-    TweetsClient.prototype.collectionsEntriesMove = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/collections/entries/move.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Remove the specified Tweet from a Collection.Use POST  collections / entries / curate to remove Tweets from a Collection in bulk.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/curate-a-collection/api-reference/post-collections-entries-remove
-     * @param parameters
-     */
-    TweetsClient.prototype.collectionsEntriesRemove = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/collections/entries/remove.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Update information concerning a Collection owned by the currently authenticated user. Partial updates are not currently supported: please provide name, description,  and url whenever using this method. Omitted description or url parameters will  be treated as if an empty string was passed, overwriting  any previously stored value for the Collection.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/curate-a-collection/api-reference/post-collections-update
-     * @param parameters
-     */
-    TweetsClient.prototype.collectionsUpdate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/collections/update.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns a collection of the most recent Tweets and Retweets posted  by the authenticating user and the users they follow. The home timeline is  central to how most users interact with the Twitter service.Up to 800  Tweets are obtainable on the home timeline. It is more volatile for  users that follow many users or follow users who Tweet frequently. See Working with Timelines for instructions on traversing timelines efficiently.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-home_timeline
-     * @param parameters
-     */
-    TweetsClient.prototype.statusesHomeTimeline = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/statuses/home_timeline.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Important notice: On June 19, 2019, we began enforcing a  limit of 100,000 requests per day to the /statuses/mentions_timeline endpoint.  This is in addition to existing user-level rate limits (75 requests / 15-minutes).  This limit is enforced on a per-application basis, meaning that a  single developer app can make up to 100,000 calls during any  single 24-hour period.Returns the 20 most recent mentions  (Tweets containing a users's @screen_name) for the authenticating user. The timeline returned is the equivalent of the one seen when you view  your mentions on twitter.com.This method can only return up to 800 tweets. See Working with Timelines for instructions on traversing timelines.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-mentions_timeline
-     * @param parameters
-     */
-    TweetsClient.prototype.statusesMentionsTimeline = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/statuses/mentions_timeline.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Important notice: On June 19, 2019, we began enforcing a limit of  100,000 requests per day to the /statuses/user_timeline endpoint,  in addition to existing user-level and app-level rate limits. This limit is applied on a per-application basis, meaning that a single developer app  can make up to 100,000 calls during any single 24-hour period.Returns a collection  of the most recent Tweets posted by the user indicated by the screen_name or  user_id parameters.User timelines belonging to protected users may only be  requested when the authenticated user either "owns" the timeline or is an  approved follower of the owner.The timeline returned is the equivalent of  the one seen as a user's profile on Twitter.This method can only return up  to 3,200 of a user's most recent Tweets. Native retweets of other statuses  by the user is included in this total, regardless of whether include_rts  is set to false when requesting this resource.See Working with Timelines  for instructions on traversing timelines.See Embedded Timelines,  Embedded Tweets, and GET statuses/oembed for tools to render  Tweets according to Display Requirements.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline
-     * @param parameters
-     */
-    TweetsClient.prototype.statusesUserTimeline = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/statuses/user_timeline.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Note: favorites are now known as likes. Returns the 20 most recent Tweets liked by the authenticating or specified user.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/get-favorites-list
-     * @param parameters
-     */
-    TweetsClient.prototype.favoritesList = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/favorites/list.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns fully-hydrated Tweet objects for up to 100 Tweets per request, as specified by comma-separated values passed to the id parameter.This method is especially useful to get the details (hydrate) a collection of Tweet IDs.GET statuses / show / :id is used to retrieve a single Tweet object.There are a few things to note when using this method. You must be following a protected user to be able to see their most recent Tweets. If you don't follow a protected user their status will be removed. The order of Tweet IDs may not match the order of Tweets in the returned array. If a requested Tweet is unknown or deleted, then that Tweet will not be returned in the results list, unless the map parameter is set to true, in which case it will be returned with a value of null. If none of your lookup criteria matches valid Tweet IDs an empty array will be returned for map=false. You are strongly encouraged to use a POST for larger requests.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/get-statuses-lookup
-     * @param parameters
-     */
-    TweetsClient.prototype.statusesLookup = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/statuses/lookup.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns a collection of up to 100 user IDs belonging to users who have retweeted the Tweet specified by the id parameter. This method offers similar data to GET statuses / retweets / :id.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/get-statuses-retweeters-ids
-     * @param parameters
-     */
-    TweetsClient.prototype.statusesRetweetersIds = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/statuses/retweeters/ids.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns a collection of the 100 most recent retweets of the Tweet specified by the id parameter.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/get-statuses-retweets-id
-     * @param parameters
-     */
-    TweetsClient.prototype.statusesRetweetsById = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/statuses/retweets/' + parameters.id + '.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns the most recent Tweets authored by the authenticating user  that have been retweeted by others. This timeline is a subset of the user's GET statuses / user_timeline.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/get-statuses-retweets_of_me
-     * @param parameters
-     */
-    TweetsClient.prototype.statusesRetweetsOfMe = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/statuses/retweets_of_me.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns a single Tweet, specified by the id parameter. The Tweet's author will also be embedded within the Tweet. See GET statuses / lookup for getting Tweets in bulk (up to 100 per call). See also Embedded Timelines, Embedded Tweets, and GET statuses/oembed for tools to render Tweets according to Display Requirements. About GeoIf there is no geotag for a status, then there will be an  empty <geo></geo> or "geo" : {}.  This can only be populated if the user has used the Geotagging API to send a statuses/update. The JSON response mostly uses conventions laid out in GeoJSON.  The coordinates that Twitter renders are reversed from the GeoJSON specification  (GeoJSON specifies a longitude then a latitude, whereas Twitter represents it as  a latitude then a longitude), eg: "geo":  { "type":"Point", "coordinates":[37.78029, -122.39697] }
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/get-statuses-show-id
-     * @param parameters
-     */
-    TweetsClient.prototype.statusesShowById = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/statuses/show.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Note: favorites are now known as likes.Favorites (likes) the Tweet  specified in the ID parameter as the authenticating user.  Returns the favorite Tweet when successful.The process invoked by  this method is asynchronous. The immediately returned Tweet object may not indicate  the resultant favorited status of the Tweet. A 200 OK response from this method  will indicate whether the intended action was successful or not.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-favorites-create
-     * @param parameters
-     */
-    TweetsClient.prototype.favoritesCreate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/favorites/create.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Note: favorites are now known as likes.Unfavorites (un-likes) the Tweet  specified in the ID parameter as the authenticating user.  Returns the un-liked Tweet when successful.The process invoked by this method is asynchronous.  The immediately returned Tweet object may not indicate the resultant favorited status of the Tweet.  A 200 OK response from this method will indicate whether the intended action was successful or not.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-favorites-destroy
-     * @param parameters
-     */
-    TweetsClient.prototype.favoritesDestroy = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/favorites/destroy.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Destroys the status specified by the required ID parameter. The authenticating user must be the author of the specified status. Returns the destroyed status if successful.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-destroy-id
-     * @param parameters
-     */
-    TweetsClient.prototype.statusesDestroyById = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/statuses/destroy/' + parameters.id + '.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns a single Tweet, specified by either a Tweet web URL or the Tweet ID, in an oEmbed-compatible format. The returned HTML snippet will be automatically recognized as an Embedded Tweet when Twitter's widget JavaScript is included on the page. The oEmbed endpoint allows customization of the final appearance of an Embedded Tweet by setting the corresponding properties in HTML markup to b einterpreted by Twitter's JavaScript bundled with the HTML response by default. The format of the returned markup may change over time as Twitter adds new features or adjusts its Tweet representation. The Tweet fallback markup is meant to be cached on your servers for upt o the suggested cache lifetime specified in the cache_age.
-     *
-     * @link https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/get-statuses-oembed
-     * @param parameters
-     */
-    TweetsClient.prototype.statusesOembed = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://publish.twitter.com/oembed' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Retweets a tweet. Returns the original Tweet with Retweet details embedded.Usage Notes: This method is subject to update limits. A HTTP 403 will be returned if this limit as been hit. Twitter will ignore attempts to perform duplicate retweets. The retweet_count will be current as of when the payload is generated and may not reflect the exact count. It is intended as an approximation.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-retweet-id
-     * @param parameters
-     */
-    TweetsClient.prototype.statusesRetweetById = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/statuses/retweet/' + parameters.id + '.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Untweets a retweeted status. Returns the original Tweet with Retweet details embedded.Usage Notes: This method is subject to update limits. A HTTP 429 will be returned if this limit has been hit. The untweeted retweet status ID must be authored by the user backing the authentication token. An application must have write privileges to POST. A HTTP 401 will be returned for read-only applications. When passing a source status ID instead of the retweet status ID a HTTP 200 response will be returned with the same Tweet object but no action.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-unretweet-id
-     * @param parameters
-     */
-    TweetsClient.prototype.statusesUnretweetById = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/statuses/unretweet/' + parameters.id + '.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Updates the authenticating user's current status, also known as Tweeting. For each update attempt, the update text is compared with the authenticating  user's recent Tweets. Any attempt that would result in duplication will be  blocked, resulting in a 403 error. A user cannot submit the same status twice in a row. While not rate limited by the API, a user is limited in the number of Tweets they  can create at a time. If the number of updates posted by the user reaches the current  allowed limit this method will return an HTTP 403 error.About Geo Any geo-tagging parameters in the update will be ignored if geo_enabled for the user  is false (this is the default setting for all users, unless the user has enabled geolocation in their settings) The number of digits after the decimal separator passed to lat (up to 8) is tracked so that  when the lat is returned in a status object it will have the same number of digits  after the decimal separator. Use a decimal point as the separator (and not a decimal comma) for the latitude and the longitude  - usage of a decimal comma will cause the geo-tagged portion of the status update to be dropped. For JSON, the response mostly uses conventions described in GeoJSON. However,  the geo object coordinates that Twitter renders are reversed from the GeoJSON specification.  GeoJSON specifies a longitude then a latitude, whereas Twitter represents it as a latitude then  a longitude: "geo": { "type":"Point", "coordinates":[37.78217, -122.40062] } The coordinates object is replacing the geo object (no deprecation date has been set for the geo  object yet) -- the difference is that the coordinates object, in JSON, is now rendered correctly in GeoJSON. If a place_id is passed into the status update, then that place will be attached  to the status. If no place_id was explicitly provided, but latitude and longitude  are, the API attempts to implicitly provide a place by calling geo/reverse_geocode. Users have the ability to remove all geotags from all their Tweets en masse via the  user settings page. Currently there is no method to remove geotags from individual Tweets.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update
-     * @param parameters
-     */
-    TweetsClient.prototype.statusesUpdate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/statuses/update.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns a collection of relevant Tweets matching a specified query. Please note that Twitter's search service and, by extension, the  Search API is not meant to be an exhaustive source of Tweets.  Not all Tweets will be indexed or made available via the search interface. To learn how to use Twitter Search effectively, please see the Standard search  operators page for a list of available filter operators. Also, see the Working with  Timelines page to learn best practices for navigating results by since_id and max_id.
-     *
-     * @link https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets
-     * @param parameters
-     */
-    TweetsClient.prototype.search = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/search/tweets.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    return TweetsClient;
-}());
-exports.default = TweetsClient;
-});
-
-var DirectMessagesClient_1 = createCommonjsModule(function (module, exports) {
-var __awaiter = (commonjsGlobal && commonjsGlobal.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (commonjsGlobal && commonjsGlobal.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
+            else if (key === 'locations') {
+                const locations = value;
+                parameters.locations = arrayWrap(locations).map(loc => `${loc.lng},${loc.lat}`).join(',');
             }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-
-var DirectMessagesClient = /** @class */ (function () {
-    function DirectMessagesClient(transport) {
-        if (!transport) {
-            throw Error('Transport class needs to be provided.');
+            else {
+                parameters[key] = value;
+            }
         }
-        this.transport = transport;
+        const streamClient = this.stream;
+        return streamClient.postStream('statuses/filter.json', parameters, { autoConnect });
+    }
+    sampleStream({ autoConnect, ...params } = {}) {
+        const streamClient = this.stream;
+        return streamClient.getStream('statuses/sample.json', params, { autoConnect });
     }
     /**
-     * Returns a custom profile that was created with POST custom_profiles/new.json.
-     *
-     * @link https://developer.twitter.com/en/docs/direct-messages/custom-profiles/api-reference/get-profile
-     * @param parameters
+     * Create a client that is prefixed with `https//stream.twitter.com` instead of classic API URL.
      */
-    DirectMessagesClient.prototype.customProfilesById = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/custom_profiles/' + parameters.id + '.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    get stream() {
+        const copiedClient = new TwitterApiv1(this);
+        copiedClient.setPrefix(API_V1_1_STREAM_PREFIX);
+        return copiedClient;
+    }
+    /* Trends API */
     /**
-     * Deletes the direct message specified in the required ID parameter.  The authenticating user must be the recipient of the specified direct message.  Direct Messages are only removed from the interface of the user context provided.  Other members of the conversation can still access the Direct Messages.  A successful delete will return a 204 http response code with no body content. Important: This method requires an access token with RWD  (read, write & direct message) permissions.
-     *
-     * @link https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/delete-message-event
-     * @param parameters
+     * Returns the top 50 trending topics for a specific id, if trending information is available for it.
+     * Note: The id parameter for this endpoint is the "where on earth identifier" or WOEID, which is a legacy identifier created by Yahoo and has been deprecated.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/trends/trends-for-location/api-reference/get-trends-place
      */
-    DirectMessagesClient.prototype.eventsDestroy = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doDeleteRequest('https://api.twitter.com/1.1/direct_messages/events/destroy.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
+    trendsByPlace(woeId, options = {}) {
+        return this.get('trends/place.json', { id: woeId, ...options });
+    }
+    /**
+     * Returns the locations that Twitter has trending topic information for.
+     * The response is an array of "locations" that encode the location's WOEID
+     * and some other human-readable information such as a canonical name and country the location belongs in.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/trends/locations-with-trending-topics/api-reference/get-trends-available
+     */
+    trendsAvailable() {
+        return this.get('trends/available.json');
+    }
+    /**
+     * Returns the locations that Twitter has trending topic information for, closest to a specified location.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/trends/locations-with-trending-topics/api-reference/get-trends-closest
+     */
+    trendsClosest(lat, long) {
+        return this.get('trends/closest.json', { lat, long });
+    }
+    /* Geo API */
+    /**
+     * Returns all the information about a known place.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/geo/place-information/api-reference/get-geo-id-place_id
+     */
+    geoPlace(placeId) {
+        return this.get('geo/id/:place_id.json', undefined, { params: { place_id: placeId } });
+    }
+    /**
+     * Search for places that can be attached to a Tweet via POST statuses/update.
+     * This request will return a list of all the valid places that can be used as the place_id when updating a status.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/geo/places-near-location/api-reference/get-geo-search
+     */
+    geoSearch(options) {
+        return this.get('geo/search.json', options);
+    }
+    /**
+     * Given a latitude and a longitude, searches for up to 20 places that can be used as a place_id when updating a status.
+     * This request is an informative call and will deliver generalized results about geography.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/geo/places-near-location/api-reference/get-geo-reverse_geocode
+     */
+    geoReverseGeoCode(options) {
+        return this.get('geo/reverse_geocode.json', options);
+    }
+    /* Developer utilities */
+    /**
+     * Returns the current rate limits for methods belonging to the specified resource families.
+     * Each API resource belongs to a "resource family" which is indicated in its method documentation.
+     * The method's resource family can be determined from the first component of the path after the resource version.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/developer-utilities/rate-limit-status/api-reference/get-application-rate_limit_status
+     */
+    rateLimitStatuses(...resources) {
+        return this.get('application/rate_limit_status.json', { resources });
+    }
+    /**
+     * Returns the list of languages supported by Twitter along with the language code supported by Twitter.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/developer-utilities/supported-languages/api-reference/get-help-languages
+     */
+    supportedLanguages() {
+        return this.get('help/languages.json');
+    }
+}
+
+async function readFileIntoBuffer(file) {
+    const handle = await getFileHandle(file);
+    if (typeof handle === 'number') {
+        return new Promise((resolve, reject) => {
+            fs__namespace.readFile(handle, (err, data) => {
+                if (err) {
+                    return reject(err);
                 }
+                resolve(data);
             });
         });
-    };
+    }
+    else if (handle instanceof Buffer) {
+        return handle;
+    }
+    else {
+        return handle.readFile();
+    }
+}
+function getFileHandle(file) {
+    if (typeof file === 'string') {
+        return fs__namespace.promises.open(file, 'r');
+    }
+    else if (typeof file === 'number') {
+        return file;
+    }
+    else if (typeof file === 'object' && !(file instanceof Buffer)) {
+        return file;
+    }
+    else if (!(file instanceof Buffer)) {
+        throw new Error('Given file is not valid, please check its type.');
+    }
+    else {
+        return file;
+    }
+}
+async function getFileSizeFromFileHandle(fileHandle) {
+    // Get the file size
+    if (typeof fileHandle === 'number') {
+        const stats = await new Promise((resolve, reject) => {
+            fs__namespace.fstat(fileHandle, (err, stats) => {
+                if (err)
+                    reject(err);
+                resolve(stats);
+            });
+        });
+        return stats.size;
+    }
+    else if (fileHandle instanceof Buffer) {
+        return fileHandle.length;
+    }
+    else {
+        return (await fileHandle.stat()).size;
+    }
+}
+function getMimeType(file, type, mimeType) {
+    if (typeof mimeType === 'string') {
+        return mimeType;
+    }
+    else if (typeof file === 'string' && !type) {
+        return getMimeByName(file);
+    }
+    else if (typeof type === 'string') {
+        return getMimeByType(type);
+    }
+    throw new Error('You must specify type if file is a file handle or Buffer.');
+}
+function getMimeByName(name) {
+    if (name.endsWith('.jpeg') || name.endsWith('.jpg'))
+        return EUploadMimeType.Jpeg;
+    if (name.endsWith('.png'))
+        return EUploadMimeType.Png;
+    if (name.endsWith('.webp'))
+        return EUploadMimeType.Webp;
+    if (name.endsWith('.gif'))
+        return EUploadMimeType.Gif;
+    if (name.endsWith('.mpeg4') || name.endsWith('.mp4'))
+        return EUploadMimeType.Mp4;
+    if (name.endsWith('.mov') || name.endsWith('.mov'))
+        return EUploadMimeType.Mov;
+    if (name.endsWith('.srt'))
+        return EUploadMimeType.Srt;
+    safeDeprecationWarning({
+        instance: 'TwitterApiv1ReadWrite',
+        method: 'uploadMedia',
+        problem: 'options.mimeType is missing and filename couldn\'t help to resolve MIME type, so it will fallback to image/jpeg',
+        resolution: 'If you except to give filenames without extensions, please specify explicitlty the MIME type using options.mimeType',
+    });
+    return EUploadMimeType.Jpeg;
+}
+function getMimeByType(type) {
+    safeDeprecationWarning({
+        instance: 'TwitterApiv1ReadWrite',
+        method: 'uploadMedia',
+        problem: 'you\'re using options.type',
+        resolution: 'Remove options.type argument and migrate to options.mimeType which takes the real MIME type. ' +
+            'If you\'re using type=longmp4, add options.longVideo alongside of mimeType=EUploadMimeType.Mp4',
+    });
+    if (type === 'gif')
+        return EUploadMimeType.Gif;
+    if (type === 'jpg')
+        return EUploadMimeType.Jpeg;
+    if (type === 'png')
+        return EUploadMimeType.Png;
+    if (type === 'webp')
+        return EUploadMimeType.Webp;
+    if (type === 'srt')
+        return EUploadMimeType.Srt;
+    if (type === 'mp4' || type === 'longmp4')
+        return EUploadMimeType.Mp4;
+    if (type === 'mov')
+        return EUploadMimeType.Mov;
+    return type;
+}
+function getMediaCategoryByMime(name, target) {
+    if (name === EUploadMimeType.Mp4 || name === EUploadMimeType.Mov)
+        return target === 'tweet' ? 'TweetVideo' : 'DmVideo';
+    if (name === EUploadMimeType.Gif)
+        return target === 'tweet' ? 'TweetGif' : 'DmGif';
+    if (name === EUploadMimeType.Srt)
+        return 'Subtitles';
+    else
+        return target === 'tweet' ? 'TweetImage' : 'DmImage';
+}
+function sleepSecs(seconds) {
+    return new Promise(resolve => setTimeout(resolve, seconds * 1000));
+}
+async function readNextPartOf(file, chunkLength, bufferOffset = 0, buffer) {
+    if (file instanceof Buffer) {
+        const rt = file.slice(bufferOffset, bufferOffset + chunkLength);
+        return [rt, rt.length];
+    }
+    if (!buffer) {
+        throw new Error('Well, we will need a buffer to store file content.');
+    }
+    let bytesRead;
+    if (typeof file === 'number') {
+        bytesRead = await new Promise((resolve, reject) => {
+            fs__namespace.read(file, buffer, 0, chunkLength, bufferOffset, (err, nread) => {
+                if (err)
+                    reject(err);
+                resolve(nread);
+            });
+        });
+    }
+    else {
+        const res = await file.read(buffer, 0, chunkLength, bufferOffset);
+        bytesRead = res.bytesRead;
+    }
+    return [buffer, bytesRead];
+}
+
+const UPLOAD_ENDPOINT = 'media/upload.json';
+/**
+ * Base Twitter v1 client with read/write rights.
+ */
+class TwitterApiv1ReadWrite extends TwitterApiv1ReadOnly {
+    constructor() {
+        super(...arguments);
+        this._prefix = API_V1_1_PREFIX;
+    }
+    /**
+     * Get a client with only read rights.
+     */
+    get readOnly() {
+        return this;
+    }
+    /* Tweet API */
+    /**
+     * Post a new tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/post-statuses-update
+     */
+    tweet(status, payload = {}) {
+        const queryParams = {
+            status,
+            tweet_mode: 'extended',
+            ...payload,
+        };
+        return this.post('statuses/update.json', queryParams);
+    }
+    /**
+     * Quote an existing tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/post-statuses-update
+     */
+    async quote(status, quotingStatusId, payload = {}) {
+        const url = 'https://twitter.com/i/statuses/' + quotingStatusId;
+        return this.tweet(status, { ...payload, attachment_url: url });
+    }
+    /**
+     * Post a series of tweets.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/post-statuses-update
+     */
+    async tweetThread(tweets) {
+        const postedTweets = [];
+        for (const tweet of tweets) {
+            // Retrieve the last sent tweet
+            const lastTweet = postedTweets.length ? postedTweets[postedTweets.length - 1] : null;
+            // Build the tweet query params
+            const queryParams = { ...(typeof tweet === 'string' ? ({ status: tweet }) : tweet) };
+            // Reply to an existing tweet if needed
+            const inReplyToId = lastTweet ? lastTweet.id_str : queryParams.in_reply_to_status_id;
+            const status = queryParams.status;
+            if (inReplyToId) {
+                postedTweets.push(await this.reply(status, inReplyToId, queryParams));
+            }
+            else {
+                postedTweets.push(await this.tweet(status, queryParams));
+            }
+        }
+        return postedTweets;
+    }
+    /**
+     * Reply to an existing tweet. Shortcut to `.tweet` with tweaked parameters.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/post-statuses-update
+     */
+    reply(status, in_reply_to_status_id, payload = {}) {
+        return this.tweet(status, {
+            auto_populate_reply_metadata: true,
+            in_reply_to_status_id,
+            ...payload,
+        });
+    }
+    /**
+     * Delete an existing tweet belonging to you.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/post-statuses-destroy-id
+     */
+    deleteTweet(tweetId) {
+        return this.post('statuses/destroy/:id.json', { tweet_mode: 'extended' }, { params: { id: tweetId } });
+    }
+    /* User API */
+    /**
+     * Report the specified user as a spam account to Twitter.
+     * Additionally, optionally performs the equivalent of POST blocks/create on behalf of the authenticated user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/mute-block-report-users/api-reference/post-users-report_spam
+     */
+    reportUserAsSpam(options) {
+        return this.post('users/report_spam.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Turn on/off Retweets and device notifications from the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/post-friendships-update
+     */
+    updateFriendship(options) {
+        return this.post('friendships/update.json', options);
+    }
+    /**
+     * Follow the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/post-friendships-create
+     */
+    createFriendship(options) {
+        return this.post('friendships/create.json', options);
+    }
+    /**
+     * Unfollow the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/follow-search-get-users/api-reference/post-friendships-destroy
+     */
+    destroyFriendship(options) {
+        return this.post('friendships/destroy.json', options);
+    }
+    /* Account API */
+    /**
+     * Update current account settings for authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/get-account-settings
+     */
+    updateAccountSettings(options) {
+        return this.post('account/settings.json', options);
+    }
+    /**
+     * Sets some values that users are able to set under the "Account" tab of their settings page.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/post-account-update_profile
+     */
+    updateAccountProfile(options) {
+        return this.post('account/update_profile.json', options);
+    }
+    /**
+     * Uploads a profile banner on behalf of the authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/post-account-update_profile_banner
+     */
+    async updateAccountProfileBanner(file, options = {}) {
+        const queryParams = {
+            banner: await readFileIntoBuffer(file),
+            ...options,
+        };
+        return this.post('account/update_profile_banner.json', queryParams, { forceBodyMode: 'form-data' });
+    }
+    /**
+     * Updates the authenticating user's profile image.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/post-account-update_profile_image
+     */
+    async updateAccountProfileImage(file, options = {}) {
+        const queryParams = {
+            tweet_mode: 'extended',
+            image: await readFileIntoBuffer(file),
+            ...options,
+        };
+        return this.post('account/update_profile_image.json', queryParams, { forceBodyMode: 'form-data' });
+    }
+    /**
+     * Removes the uploaded profile banner for the authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/manage-account-settings/api-reference/post-account-remove_profile_banner
+     */
+    removeAccountProfileBanner() {
+        return this.post('account/remove_profile_banner.json');
+    }
+    /* Lists */
+    /**
+     * Creates a new list for the authenticated user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-create
+     */
+    createList(options) {
+        return this.post('lists/create.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Updates the specified list. The authenticated user must own the list to be able to update it.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-update
+     */
+    updateList(options) {
+        return this.post('lists/update.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Deletes the specified list. The authenticated user must own the list to be able to destroy it.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-destroy
+     */
+    removeList(options) {
+        return this.post('lists/destroy.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Adds multiple members to a list, by specifying a comma-separated list of member ids or screen names.
+     * If you add a single `user_id` or `screen_name`, it will target `lists/members/create.json`, otherwise
+     * it will target `lists/members/create_all.json`.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-members-create_all
+     */
+    addListMembers(options) {
+        const hasMultiple = (options.user_id && hasMultipleItems(options.user_id)) || (options.screen_name && hasMultipleItems(options.screen_name));
+        const endpoint = hasMultiple ? 'lists/members/create_all.json' : 'lists/members/create.json';
+        return this.post(endpoint, options);
+    }
+    /**
+     * Removes multiple members to a list, by specifying a comma-separated list of member ids or screen names.
+     * If you add a single `user_id` or `screen_name`, it will target `lists/members/destroy.json`, otherwise
+     * it will target `lists/members/destroy_all.json`.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-members-destroy_all
+     */
+    removeListMembers(options) {
+        const hasMultiple = (options.user_id && hasMultipleItems(options.user_id)) || (options.screen_name && hasMultipleItems(options.screen_name));
+        const endpoint = hasMultiple ? 'lists/members/destroy_all.json' : 'lists/members/destroy.json';
+        return this.post(endpoint, options);
+    }
+    /**
+     * Subscribes the authenticated user to the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-subscribers-create
+     */
+    subscribeToList(options) {
+        return this.post('lists/subscribers/create.json', { tweet_mode: 'extended', ...options });
+    }
+    /**
+     * Unsubscribes the authenticated user of the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/accounts-and-users/create-manage-lists/api-reference/post-lists-subscribers-destroy
+     */
+    unsubscribeOfList(options) {
+        return this.post('lists/subscribers/destroy.json', { tweet_mode: 'extended', ...options });
+    }
+    /* Media upload API */
+    /**
+     * This endpoint can be used to provide additional information about the uploaded media_id.
+     * This feature is currently only supported for images and GIFs.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/post-media-metadata-create
+     */
+    createMediaMetadata(mediaId, metadata) {
+        return this.post('media/metadata/create.json', { media_id: mediaId, ...metadata }, { prefix: API_V1_1_UPLOAD_PREFIX, forceBodyMode: 'json' });
+    }
+    /**
+     * Use this endpoint to associate uploaded subtitles to an uploaded video. You can associate subtitles to video before or after Tweeting.
+     * **To obtain subtitle media ID, you must upload each subtitle file separately using `.uploadMedia()` method.**
+     *
+     * https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/post-media-subtitles-create
+     */
+    createMediaSubtitles(mediaId, subtitles) {
+        return this.post('media/subtitles/create.json', { media_id: mediaId, media_category: 'TweetVideo', subtitle_info: { subtitles } }, { prefix: API_V1_1_UPLOAD_PREFIX, forceBodyMode: 'json' });
+    }
+    /**
+     * Use this endpoint to dissociate subtitles from a video and delete the subtitles. You can dissociate subtitles from a video before or after Tweeting.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/post-media-subtitles-delete
+     */
+    deleteMediaSubtitles(mediaId, ...languages) {
+        return this.post('media/subtitles/delete.json', {
+            media_id: mediaId,
+            media_category: 'TweetVideo',
+            subtitle_info: { subtitles: languages.map(lang => ({ language_code: lang })) },
+        }, { prefix: API_V1_1_UPLOAD_PREFIX, forceBodyMode: 'json' });
+    }
+    /**
+     * Upload a media (JPG/PNG/GIF/MP4/MOV/WEBP) or subtitle (SRT) to Twitter and return the media_id to use in tweet/DM send.
+     *
+     * @param file If `string`, filename is supposed.
+     * A `Buffer` is a raw file.
+     * `fs.promises.FileHandle` or `number` are file pointers.
+     *
+     * @param options.type File type (Enum 'jpg' | 'longmp4' | 'mp4' | 'mov | 'png' | 'gif' | 'srt' | 'webp').
+     * If filename is given, it could be guessed with file extension, otherwise this parameter is mandatory.
+     * If type is not part of the enum, it will be used as mime type.
+     *
+     * Type `longmp4` is **required** is you try to upload a video higher than 140 seconds.
+     *
+     * @param options.chunkLength Maximum chunk length sent to Twitter. Default goes to 1 MB.
+     *
+     * @param options.additionalOwners Other user IDs allowed to use the returned media_id. Default goes to none.
+     *
+     * @param options.maxConcurrentUploads Maximum uploaded chunks in the same time. Default goes to 3.
+     *
+     * @param options.target Target type `tweet` or `dm`. Defaults to `tweet`.
+     * You must specify it if you send a media to use in DMs.
+     */
+    async uploadMedia(file, options = {}) {
+        var _a;
+        const chunkLength = (_a = options.chunkLength) !== null && _a !== void 0 ? _a : (1024 * 1024);
+        const { fileHandle, mediaCategory, fileSize, mimeType } = await this.getUploadMediaRequirements(file, options);
+        // Get the file handle (if not buffer)
+        try {
+            // Finally! We can send INIT message.
+            const mediaData = await this.post(UPLOAD_ENDPOINT, {
+                command: 'INIT',
+                total_bytes: fileSize,
+                media_type: mimeType,
+                media_category: mediaCategory,
+                additional_owners: options.additionalOwners,
+                shared: options.shared ? true : undefined,
+            }, { prefix: API_V1_1_UPLOAD_PREFIX });
+            // Upload the media chunk by chunk
+            await this.mediaChunkedUpload(fileHandle, chunkLength, mediaData.media_id_string, options.maxConcurrentUploads);
+            // Finalize media
+            const fullMediaData = await this.post(UPLOAD_ENDPOINT, {
+                command: 'FINALIZE',
+                media_id: mediaData.media_id_string,
+            }, { prefix: API_V1_1_UPLOAD_PREFIX });
+            if (fullMediaData.processing_info && fullMediaData.processing_info.state !== 'succeeded') {
+                // Must wait if video is still computed
+                await this.awaitForMediaProcessingCompletion(fullMediaData);
+            }
+            // Video is ready, return media_id
+            return fullMediaData.media_id_string;
+        }
+        finally {
+            // Close file if any
+            if (typeof file === 'number') {
+                // eslint-disable-next-line @typescript-eslint/no-empty-function
+                fs__namespace.close(file, () => { });
+            }
+            else if (typeof fileHandle === 'object' && !(fileHandle instanceof Buffer)) {
+                fileHandle.close();
+            }
+        }
+    }
+    async awaitForMediaProcessingCompletion(fullMediaData) {
+        var _a;
+        // eslint-disable-next-line no-constant-condition
+        while (true) {
+            fullMediaData = await this.mediaInfo(fullMediaData.media_id_string);
+            const { processing_info } = fullMediaData;
+            if (!processing_info || processing_info.state === 'succeeded') {
+                // Ok, completed!
+                return;
+            }
+            if ((_a = processing_info.error) === null || _a === void 0 ? void 0 : _a.code) {
+                const { name, message } = processing_info.error;
+                throw new Error(`Failed to process media: ${name} - ${message}.`);
+            }
+            if (processing_info.state === 'failed') {
+                // No error data
+                throw new Error('Failed to process the media.');
+            }
+            if (processing_info.check_after_secs) {
+                // Await for given seconds
+                await sleepSecs(processing_info.check_after_secs);
+            }
+            else {
+                // No info; Await for 5 seconds
+                await sleepSecs(5);
+            }
+        }
+    }
+    async getUploadMediaRequirements(file, { mimeType, type, target, longVideo } = {}) {
+        // Get the file handle (if not buffer)
+        let fileHandle;
+        try {
+            fileHandle = await getFileHandle(file);
+            // Get the mimetype
+            const realMimeType = getMimeType(file, type, mimeType);
+            // Get the media category
+            let mediaCategory;
+            // If explicit longmp4 OR explicit MIME type and not DM target
+            if (realMimeType === EUploadMimeType.Mp4 && ((!mimeType && !type && target !== 'dm') || longVideo)) {
+                mediaCategory = 'amplify_video';
+            }
+            else {
+                mediaCategory = getMediaCategoryByMime(realMimeType, target !== null && target !== void 0 ? target : 'tweet');
+            }
+            return {
+                fileHandle,
+                mediaCategory,
+                fileSize: await getFileSizeFromFileHandle(fileHandle),
+                mimeType: realMimeType,
+            };
+        }
+        catch (e) {
+            // Close file if any
+            if (typeof file === 'number') {
+                // eslint-disable-next-line @typescript-eslint/no-empty-function
+                fs__namespace.close(file, () => { });
+            }
+            else if (typeof fileHandle === 'object' && !(fileHandle instanceof Buffer)) {
+                fileHandle.close();
+            }
+            throw e;
+        }
+    }
+    async mediaChunkedUpload(fileHandle, chunkLength, mediaId, maxConcurrentUploads = 3) {
+        // Send chunk by chunk
+        let chunkIndex = 0;
+        if (maxConcurrentUploads < 1) {
+            throw new RangeError('Bad maxConcurrentUploads parameter.');
+        }
+        // Creating a buffer for doing file stuff (if we don't have one)
+        const buffer = fileHandle instanceof Buffer ? undefined : Buffer.alloc(chunkLength);
+        // Sliced/filled buffer returned for each part
+        let readBuffer;
+        // Needed to know when we should stop reading the file
+        let nread;
+        // Needed to use the buffer object (file handles always "remembers" file position)
+        let offset = 0;
+        [readBuffer, nread] = await readNextPartOf(fileHandle, chunkLength, offset, buffer);
+        offset += nread;
+        // Handle max concurrent uploads
+        const currentUploads = new Set();
+        // Read buffer until file is completely read
+        while (nread) {
+            const mediaBufferPart = readBuffer.slice(0, nread);
+            // Sent part if part has something inside
+            if (mediaBufferPart.length) {
+                const request = this.post(UPLOAD_ENDPOINT, {
+                    command: 'APPEND',
+                    media_id: mediaId,
+                    segment_index: chunkIndex,
+                    media: mediaBufferPart,
+                }, { prefix: API_V1_1_UPLOAD_PREFIX });
+                currentUploads.add(request);
+                request.then(() => {
+                    currentUploads.delete(request);
+                });
+                chunkIndex++;
+            }
+            if (currentUploads.size >= maxConcurrentUploads) {
+                // Await for first promise to be finished
+                await Promise.race(currentUploads);
+            }
+            [readBuffer, nread] = await readNextPartOf(fileHandle, chunkLength, offset, buffer);
+            offset += nread;
+        }
+        await Promise.all([...currentUploads]);
+    }
+}
+
+/**
+ * Twitter v1.1 API client with read/write/DMs rights.
+ */
+class TwitterApiv1 extends TwitterApiv1ReadWrite {
+    constructor() {
+        super(...arguments);
+        this._prefix = API_V1_1_PREFIX;
+    }
+    /**
+     * Get a client with read/write rights.
+     */
+    get readWrite() {
+        return this;
+    }
+    /* Direct messages */
+    // Part: Sending and receiving events
+    /**
+     * Publishes a new message_create event resulting in a Direct Message sent to a specified user from the authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/new-event
+     */
+    sendDm({ recipient_id, custom_profile_id, ...params }) {
+        const args = {
+            event: {
+                type: EDirectMessageEventTypeV1.Create,
+                [EDirectMessageEventTypeV1.Create]: {
+                    target: { recipient_id },
+                    message_data: params,
+                },
+            },
+        };
+        if (custom_profile_id) {
+            args.event[EDirectMessageEventTypeV1.Create].custom_profile_id = custom_profile_id;
+        }
+        return this.post('direct_messages/events/new.json', args, {
+            forceBodyMode: 'json',
+        });
+    }
     /**
      * Returns a single Direct Message event by the given id.
      *
-     * @link https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/get-event
-     * @param parameters
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/get-event
      */
-    DirectMessagesClient.prototype.eventsShow = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/direct_messages/events/show.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    getDmEvent(id) {
+        return this.get('direct_messages/events/show.json', { id });
+    }
     /**
-     * Publishes a new message_create event resulting in a Direct Message sent to a  specified user from the authenticating user. Returns an event if successful.  Supports publishing Direct Messages with optional Quick Reply and media attachment.  Replaces behavior currently provided by POST direct_messages/new.Requires a  JSON POST body and Content-Type header to be set to application/json.  Setting Content-Length may also be required if it is not automatically.
-     *
-     * @link https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/new-event
-     * @param parameters
+     * Deletes the direct message specified in the required ID parameter.
+     * The authenticating user must be the recipient of the specified direct message.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/delete-message-event
      */
-    DirectMessagesClient.prototype.eventsNew = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/direct_messages/events/new.json', parameters, 'application/json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
+    deleteDm(id) {
+        return this.delete('direct_messages/events/destroy.json', { id });
+    }
     /**
-     * Displays a visual typing indicator in the recipient’s  Direct Message conversation view with the sender.  Each request triggers a typing indicator animation  with a duration of ~3 seconds.
+     * Returns all Direct Message events (both sent and received) within the last 30 days.
+     * Sorted in reverse-chronological order.
      *
-     * @link https://developer.twitter.com/en/docs/direct-messages/typing-indicator-and-read-receipts/api-reference/new-typing-indicator
-     * @param parameters
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/list-events
      */
-    DirectMessagesClient.prototype.indicateTyping = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/direct_messages/indicate_typing.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    async listDmEvents(args = {}) {
+        const queryParams = { ...args };
+        const initialRq = await this.get('direct_messages/events/list.json', queryParams, { fullResponse: true });
+        return new DmEventsV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
         });
-    };
+    }
+    // Part: Welcome messages (events)
     /**
-     * Returns a Welcome Message Rule by the given id.
-     *
-     * @link https://developer.twitter.com/en/docs/direct-messages/welcome-messages/api-reference/get-welcome-message-rule
-     * @param parameters
+     * Creates a new Welcome Message that will be stored and sent in the future from the authenticating user in defined circumstances.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/new-welcome-message
      */
-    DirectMessagesClient.prototype.welcomeMessagesRulesShow = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/direct_messages/welcome_messages/rules/show.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    newWelcomeDm(name, data) {
+        const args = {
+            [EDirectMessageEventTypeV1.WelcomeCreate]: {
+                name,
+                message_data: data,
+            },
+        };
+        return this.post('direct_messages/welcome_messages/new.json', args, {
+            forceBodyMode: 'json',
         });
-    };
+    }
     /**
      * Returns a Welcome Message by the given id.
-     *
-     * @link https://developer.twitter.com/en/docs/direct-messages/welcome-messages/api-reference/get-welcome-message
-     * @param parameters
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/get-welcome-message
      */
-    DirectMessagesClient.prototype.welcomeMessagesShow = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/direct_messages/welcome_messages/show.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Creates a new Welcome Message that will be stored and sent in the future  from the authenticating user in defined circumstances.  Returns the message template if successful. Supports publishing with the same  elements as Direct Messages (e.g. Quick Replies, media attachments). Requires a JSON POST body and Content-Type header to be set to application/json.  Setting Content-Length may also be required if it is not automatically. See the Welcome Messages overview to learn how to work with Welcome Messages.
-     *
-     * @link https://developer.twitter.com/en/docs/direct-messages/welcome-messages/api-reference/new-welcome-message
-     * @param parameters
-     */
-    DirectMessagesClient.prototype.welcomeMessagesNew = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/direct_messages/welcome_messages/new.json', parameters, 'application/json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Creates a new Welcome Message Rule that determines which Welcome Message will be  shown in a given conversation. Returns the created rule if successful. Requires a JSON POST body and Content-Type header to be set to application/json.  Setting Content-Length may also be required if it is not automatically. Additional rule configurations are forthcoming. For the initial beta release, the most recently created Rule will always take precedence, and the assigned  Welcome Message will be displayed in the conversation.See the Welcome Messages  overview to learn how to work with Welcome Messages.
-     *
-     * @link https://developer.twitter.com/en/docs/direct-messages/welcome-messages/api-reference/new-welcome-message-rule
-     * @param parameters
-     */
-    DirectMessagesClient.prototype.welcomeMessagesRulesNew = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://api.twitter.com/1.1/direct_messages/welcome_messages/rules/new.json', parameters, 'application/json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    return DirectMessagesClient;
-}());
-exports.default = DirectMessagesClient;
-});
-
-var MediaClient_1 = createCommonjsModule(function (module, exports) {
-var __awaiter = (commonjsGlobal && commonjsGlobal.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (commonjsGlobal && commonjsGlobal.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-
-var MediaClient = /** @class */ (function () {
-    function MediaClient(transport) {
-        if (!transport) {
-            throw Error('Transport class needs to be provided.');
-        }
-        this.transport = transport;
+    getWelcomeDm(id) {
+        return this.get('direct_messages/welcome_messages/show.json', { id });
     }
     /**
-     * The INIT command request is used to initiate a file upload session. It returns a media_id which should be used to execute all subsequent requests. The next step after a successful return from INIT command is the APPEND command. See the Uploading media guide for constraints and requirements on media files.
-     *
-     * @link https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/post-media-upload-init
-     * @param parameters
+     * Deletes a Welcome Message by the given id.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/delete-welcome-message
      */
-    MediaClient.prototype.mediaUploadInit = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://upload.twitter.com/1.1/media/upload.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * The APPEND command is used to upload a chunk (consecutive byte range) of the media file. For example, a 3 MB file could be split into 3 chunks of size 1 MB, and uploaded using 3 APPEND command requests. After the entire file is uploaded, the next step is to call the FINALIZE command.
-     *
-     * @link https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/post-media-upload-append
-     * @param parameters
-     */
-    MediaClient.prototype.mediaUploadAppend = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://upload.twitter.com/1.1/media/upload.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * The STATUS command is used to periodically poll for updates of media processing operation. After the STATUS command response returns succeeded, you can move on to the next step which is usually create Tweet with media_id.
-     *
-     * @link https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/get-media-upload-status
-     * @param parameters
-     */
-    MediaClient.prototype.mediaUploadStatus = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://upload.twitter.com/1.1/media/upload.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * The FINALIZE command should be called after the entire media file is uploaded using APPEND commands. If and (only if) the response of the FINALIZE command contains a processing_info field, it may also be necessary to use a STATUS command and wait for it to return success before proceeding to Tweet creation.
-     *
-     * @link https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/post-media-upload-finalize
-     * @param parameters
-     */
-    MediaClient.prototype.mediaUploadFinalize = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://upload.twitter.com/1.1/media/upload.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Use this endpoint to upload images to Twitter. This endpoint returns a media_id by default and can optionally return a media_key when a media_category is specified. These values are used by Twitter endpoints that accept images. For example, a media_id value can be used to create a Tweet with an attached photo using the POST statuses/update endpoint. All Ads API endpoints require a media_key. For example, a media_key value can be used to create a Draft Tweet with a photo using the POST accounts/:account_id/draft_tweets endpoint.
-     *
-     * @link https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/post-media-upload
-     * @param parameters
-     */
-    MediaClient.prototype.mediaUpload = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://upload.twitter.com/1.1/media/upload.json', parameters)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * This endpoint can be used to provide additional information about the uploaded media_id. This feature is currently only supported for images and GIFs.
-     *
-     * @link https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/post-media-metadata-create
-     * @param parameters
-     */
-    MediaClient.prototype.mediaMetadataCreate = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://upload.twitter.com/1.1/media/metadata/create.json', parameters, 'application/json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Use this endpoint to dissociate subtitles from a video and delete the subtitles. You can dissociate subtitles from a video before or after Tweeting.
-     *
-     * @link https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/post-media-subtitles-delete
-     */
-    MediaClient.prototype.mediaSubtitlesDelete = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://upload.twitter.com/1.1/media/subtitles/delete.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Use this endpoint to associate uploaded subtitles to an uploaded video. You can associate subtitles to video before or after Tweeting. Request flow for associating subtitle to video before the video is Tweeted : 1. Upload video using the chunked upload endpoint and get the video media_id. 2. Upload subtitle using the chunked upload endpoint with media category set to “Subtitles” and get the subtitle media_id.  3. Call this endpoint to associate the subtitle to the video. 4. Create Tweet with the video media_id.
-     *
-     * @link https://developer.twitter.com/en/docs/twitter-api/v1/media/upload-media/api-reference/post-media-subtitles-create
-     */
-    MediaClient.prototype.mediaSubtitlesCreate = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doPostRequest('https://upload.twitter.com/1.1/media/subtitles/create.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    return MediaClient;
-}());
-exports.default = MediaClient;
-});
-
-var TrendsClient_1 = createCommonjsModule(function (module, exports) {
-var __awaiter = (commonjsGlobal && commonjsGlobal.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (commonjsGlobal && commonjsGlobal.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-
-var TrendsClient = /** @class */ (function () {
-    function TrendsClient(transport) {
-        if (!transport) {
-            throw Error('Transport class needs to be provided.');
-        }
-        this.transport = transport;
+    deleteWelcomeDm(id) {
+        return this.delete('direct_messages/welcome_messages/destroy.json', { id });
     }
     /**
-     * Returns the locations that Twitter has trending topic information for.The response is an array of "locations" that encode the location's WOEID and some other human-readable information such as a canonical name and country the location belongs in.A WOEID is a Yahoo! Where On Earth ID.
-     *
-     * @link https://developer.twitter.com/en/docs/trends/locations-with-trending-topics/api-reference/get-trends-available
+     * Updates a Welcome Message by the given ID.
+     * Updates to the welcome_message object are atomic.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/update-welcome-message
      */
-    TrendsClient.prototype.trendsAvailable = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/trends/available.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    updateWelcomeDm(id, data) {
+        const args = { message_data: data };
+        return this.put('direct_messages/welcome_messages/update.json', args, {
+            forceBodyMode: 'json',
+            query: { id },
         });
-    };
-    /**
-     * Returns the locations that Twitter has trending topic information for,  closest to a specified location.The response is an array of "locations"  that encode the location's WOEID and some other human-readable information  such as a canonical name and country the location belongs in.A WOEID is a Yahoo!  Where On Earth ID.
-     *
-     * @link https://developer.twitter.com/en/docs/trends/locations-with-trending-topics/api-reference/get-trends-closest
-     * @param parameters
-     */
-    TrendsClient.prototype.trendsClosest = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/trends/closest.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Returns the top 50 trending topics for a specific WOEID, if trending  information is available for it.The response is an array of trend  objects that encode the name of the trending topic, the query  parameter that can be used to search for the topic on Twitter Search, and the Twitter Search URL.This information is cached for 5 minutes.  Requesting more frequently than that will not return any more data, and  will count against rate limit usage.The tweet_volume for the last 24 hours  is also returned for many trends if this is available.
-     *
-     * @link https://developer.twitter.com/en/docs/trends/trends-for-location/api-reference/get-trends-place
-     * @param parameters
-     */
-    TrendsClient.prototype.trendsPlace = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/trends/place.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    return TrendsClient;
-}());
-exports.default = TrendsClient;
-});
-
-var GeoClient_1 = createCommonjsModule(function (module, exports) {
-var __awaiter = (commonjsGlobal && commonjsGlobal.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (commonjsGlobal && commonjsGlobal.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-
-var GeoClient = /** @class */ (function () {
-    function GeoClient(transport) {
-        if (!transport) {
-            throw Error('Transport class needs to be provided.');
-        }
-        this.transport = transport;
     }
     /**
-     * Returns all the information about a known place.
+     * Returns all Direct Message events (both sent and received) within the last 30 days.
+     * Sorted in reverse-chronological order.
      *
-     * @link https://developer.twitter.com/en/docs/geo/place-information/api-reference/get-geo-id-place_id
-     * @param parameters
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/list-events
      */
-    GeoClient.prototype.geoIdByPlaceId = function (parameters) {
-        return __awaiter(this, void 0, void 0, function () {
-            var params;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        params = utils.createParams(parameters);
-                        return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/geo/id/:place_id.json' + params)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
+    async listWelcomeDms(args = {}) {
+        const queryParams = { ...args };
+        const initialRq = await this.get('direct_messages/welcome_messages/list.json', queryParams, { fullResponse: true });
+        return new WelcomeDmV1Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
         });
-    };
-    /**
-     * Given a latitude and a longitude, searches for up to 20 places that can be used as a place_id when updating a status.This request is an informative call and will deliver generalized results about geography.
-     *
-     * @link https://developer.twitter.com/en/docs/geo/places-near-location/api-reference/get-geo-reverse_geocode
-     */
-    GeoClient.prototype.geoReverseGeocode = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/geo/reverse_geocode.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    /**
-     * Search for places that can be attached to a Tweet via POST statuses/update. Given a latitude and a longitude pair, an IP address, or a name, this request will return a list of all the valid places that can be used as the place_id when updating a status.Conceptually, a query can be made from the user's location, retrieve a list of places, have the user validate the location they are at, and then send the ID of this location with a call to POST statuses/update.This is the recommended method to use find places that can be attached to statuses/update. Unlike GET geo/reverse_geocode which provides raw data access, this endpoint can potentially re-order places with regards to the user who is authenticated. This approach is also preferred for interactive place matching with the user.Some parameters in this method are only required based on the existence of other parameters. For instance, "lat" is required if "long" is provided, and vice-versa. Authentication is recommended, but not required with this method.
-     *
-     * @link https://developer.twitter.com/en/docs/geo/places-near-location/api-reference/get-geo-search
-     */
-    GeoClient.prototype.geoSearch = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.transport.doGetRequest('https://api.twitter.com/1.1/geo/search.json')];
-                    case 1: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    return GeoClient;
-}());
-exports.default = GeoClient;
-});
-
-var dist$2 = createCommonjsModule(function (module, exports) {
-var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TwitterClient = void 0;
-var Transport_1$1 = __importDefault(Transport_1);
-var BasicsClient_1$1 = __importDefault(BasicsClient_1);
-var AccountsAndUsersClient_1$1 = __importDefault(AccountsAndUsersClient_1);
-var TweetsClient_1$1 = __importDefault(TweetsClient_1);
-var DirectMessagesClient_1$1 = __importDefault(DirectMessagesClient_1);
-var MediaClient_1$1 = __importDefault(MediaClient_1);
-var TrendsClient_1$1 = __importDefault(TrendsClient_1);
-var GeoClient_1$1 = __importDefault(GeoClient_1);
-var TwitterClient = /** @class */ (function () {
-    /**
-     * Provide Twitter API Credentials and options
-     * @param options
-     */
-    function TwitterClient(options) {
-        if (!options.apiKey) {
-            throw Error('API KEY needs to be provided.');
-        }
-        if (!options.apiSecret) {
-            throw Error('API SECRET needs to be provided.');
-        }
-        if (!options.accessToken) {
-            throw Error('ACCESS TOKEN needs to be provided.');
-        }
-        if (!options.accessTokenSecret) {
-            throw Error('ACCESS TOKEN SECRET needs to be provided.');
-        }
-        this.transport = new Transport_1$1.default(options);
     }
-    Object.defineProperty(TwitterClient.prototype, "basics", {
-        get: function () {
-            if (!this.basicsClient) {
-                this.basicsClient = new BasicsClient_1$1.default(this.transport);
+    // Part: Welcome message (rules)
+    /**
+     * Creates a new Welcome Message Rule that determines which Welcome Message will be shown in a given conversation.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/new-welcome-message-rule
+     */
+    newWelcomeDmRule(welcomeMessageId) {
+        return this.post('direct_messages/welcome_messages/rules/new.json', {
+            welcome_message_rule: { welcome_message_id: welcomeMessageId },
+        }, {
+            forceBodyMode: 'json',
+        });
+    }
+    /**
+     * Returns a Welcome Message Rule by the given id.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/get-welcome-message-rule
+     */
+    getWelcomeDmRule(id) {
+        return this.get('direct_messages/welcome_messages/rules/show.json', { id });
+    }
+    /**
+     * Deletes a Welcome Message Rule by the given id.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/delete-welcome-message-rule
+     */
+    deleteWelcomeDmRule(id) {
+        return this.delete('direct_messages/welcome_messages/rules/destroy.json', { id });
+    }
+    /**
+     * Retrieves all welcome DM rules for this account.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/welcome-messages/api-reference/list-welcome-message-rules
+     */
+    async listWelcomeDmRules(args = {}) {
+        const queryParams = { ...args };
+        return this.get('direct_messages/welcome_messages/rules/list.json', queryParams);
+    }
+    /**
+     * Set the current showed welcome message for logged account ; wrapper for Welcome DM rules.
+     * Test if a rule already exists, delete if any, then create a rule for current message ID.
+     *
+     * If you don't have already a welcome message, create it with `.newWelcomeMessage`.
+     */
+    async setWelcomeDm(welcomeMessageId, deleteAssociatedWelcomeDmWhenDeletingRule = true) {
+        var _a;
+        const existingRules = await this.listWelcomeDmRules();
+        if ((_a = existingRules.welcome_message_rules) === null || _a === void 0 ? void 0 : _a.length) {
+            for (const rule of existingRules.welcome_message_rules) {
+                await this.deleteWelcomeDmRule(rule.id);
+                if (deleteAssociatedWelcomeDmWhenDeletingRule) {
+                    await this.deleteWelcomeDm(rule.welcome_message_id);
+                }
             }
-            return this.basicsClient;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(TwitterClient.prototype, "accountsAndUsers", {
-        get: function () {
-            if (!this.accountsAndUsersClient) {
-                this.accountsAndUsersClient = new AccountsAndUsersClient_1$1.default(this.transport);
+        }
+        return this.newWelcomeDmRule(welcomeMessageId);
+    }
+    // Part: Read indicator
+    /**
+     * Marks a message as read in the recipient’s Direct Message conversation view with the sender.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/typing-indicator-and-read-receipts/api-reference/new-read-receipt
+     */
+    markDmAsRead(lastEventId, recipientId) {
+        return this.post('direct_messages/mark_read.json', {
+            last_read_event_id: lastEventId,
+            recipient_id: recipientId,
+        }, { forceBodyMode: 'url' });
+    }
+    /**
+     * Displays a visual typing indicator in the recipient’s Direct Message conversation view with the sender.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/typing-indicator-and-read-receipts/api-reference/new-typing-indicator
+     */
+    indicateDmTyping(recipientId) {
+        return this.post('direct_messages/indicate_typing.json', {
+            recipient_id: recipientId,
+        }, { forceBodyMode: 'url' });
+    }
+    // Part: Images
+    /**
+     * Get a single image attached to a direct message. TwitterApi client must be logged with OAuth 1.0a.
+     * https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/message-attachments/guides/retrieving-media
+     */
+    async downloadDmImage(urlOrDm) {
+        if (typeof urlOrDm !== 'string') {
+            const attachment = urlOrDm[EDirectMessageEventTypeV1.Create].message_data.attachment;
+            if (!attachment) {
+                throw new Error('The given direct message doesn\'t contain any attachment');
             }
-            return this.accountsAndUsersClient;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(TwitterClient.prototype, "tweets", {
-        get: function () {
-            if (!this.tweetsClient) {
-                this.tweetsClient = new TweetsClient_1$1.default(this.transport);
+            urlOrDm = attachment.media.media_url_https;
+        }
+        const data = await this.get(urlOrDm, undefined, { forceParseMode: 'buffer', prefix: '' });
+        if (!data.length) {
+            throw new Error('Image not found. Make sure you are logged with credentials able to access direct messages, and check the URL.');
+        }
+        return data;
+    }
+}
+
+/**
+ * Provide helpers for `.includes` of a v2 API result.
+ * Needed expansions for a method to work are specified (*`like this`*).
+ */
+class TwitterV2IncludesHelper {
+    constructor(result) {
+        this.result = result;
+    }
+    /* Tweets */
+    get tweets() {
+        return TwitterV2IncludesHelper.tweets(this.result);
+    }
+    static tweets(result) {
+        var _a, _b;
+        return (_b = (_a = result.includes) === null || _a === void 0 ? void 0 : _a.tweets) !== null && _b !== void 0 ? _b : [];
+    }
+    tweetById(id) {
+        return TwitterV2IncludesHelper.tweetById(this.result, id);
+    }
+    static tweetById(result, id) {
+        return this.tweets(result).find(tweet => tweet.id === id);
+    }
+    /** Retweet associated with the given tweet (*`referenced_tweets.id`*) */
+    retweet(tweet) {
+        return TwitterV2IncludesHelper.retweet(this.result, tweet);
+    }
+    /** Retweet associated with the given tweet (*`referenced_tweets.id`*) */
+    static retweet(result, tweet) {
+        var _a;
+        const retweetIds = ((_a = tweet.referenced_tweets) !== null && _a !== void 0 ? _a : [])
+            .filter(ref => ref.type === 'retweeted')
+            .map(ref => ref.id);
+        return this.tweets(result).find(t => retweetIds.includes(t.id));
+    }
+    /** Quoted tweet associated with the given tweet (*`referenced_tweets.id`*) */
+    quote(tweet) {
+        return TwitterV2IncludesHelper.quote(this.result, tweet);
+    }
+    /** Quoted tweet associated with the given tweet (*`referenced_tweets.id`*) */
+    static quote(result, tweet) {
+        var _a;
+        const quoteIds = ((_a = tweet.referenced_tweets) !== null && _a !== void 0 ? _a : [])
+            .filter(ref => ref.type === 'quoted')
+            .map(ref => ref.id);
+        return this.tweets(result).find(t => quoteIds.includes(t.id));
+    }
+    /** Tweet whose has been answered by the given tweet (*`referenced_tweets.id`*) */
+    repliedTo(tweet) {
+        return TwitterV2IncludesHelper.repliedTo(this.result, tweet);
+    }
+    /** Tweet whose has been answered by the given tweet (*`referenced_tweets.id`*) */
+    static repliedTo(result, tweet) {
+        var _a;
+        const repliesIds = ((_a = tweet.referenced_tweets) !== null && _a !== void 0 ? _a : [])
+            .filter(ref => ref.type === 'replied_to')
+            .map(ref => ref.id);
+        return this.tweets(result).find(t => repliesIds.includes(t.id));
+    }
+    /** Tweet author user object of the given tweet (*`author_id`* or *`referenced_tweets.id.author_id`*) */
+    author(tweet) {
+        return TwitterV2IncludesHelper.author(this.result, tweet);
+    }
+    /** Tweet author user object of the given tweet (*`author_id`* or *`referenced_tweets.id.author_id`*) */
+    static author(result, tweet) {
+        const authorId = tweet.author_id;
+        return authorId ? this.users(result).find(u => u.id === authorId) : undefined;
+    }
+    /** Tweet author user object of the tweet answered by the given tweet (*`in_reply_to_user_id`*) */
+    repliedToAuthor(tweet) {
+        return TwitterV2IncludesHelper.repliedToAuthor(this.result, tweet);
+    }
+    /** Tweet author user object of the tweet answered by the given tweet (*`in_reply_to_user_id`*) */
+    static repliedToAuthor(result, tweet) {
+        const inReplyUserId = tweet.in_reply_to_user_id;
+        return inReplyUserId ? this.users(result).find(u => u.id === inReplyUserId) : undefined;
+    }
+    /* Users */
+    get users() {
+        return TwitterV2IncludesHelper.users(this.result);
+    }
+    static users(result) {
+        var _a, _b;
+        return (_b = (_a = result.includes) === null || _a === void 0 ? void 0 : _a.users) !== null && _b !== void 0 ? _b : [];
+    }
+    userById(id) {
+        return TwitterV2IncludesHelper.userById(this.result, id);
+    }
+    static userById(result, id) {
+        return this.users(result).find(u => u.id === id);
+    }
+    /** Pinned tweet of the given user (*`pinned_tweet_id`*) */
+    pinnedTweet(user) {
+        return TwitterV2IncludesHelper.pinnedTweet(this.result, user);
+    }
+    /** Pinned tweet of the given user (*`pinned_tweet_id`*) */
+    static pinnedTweet(result, user) {
+        return user.pinned_tweet_id ? this.tweets(result).find(t => t.id === user.pinned_tweet_id) : undefined;
+    }
+    /* Medias */
+    get media() {
+        return TwitterV2IncludesHelper.media(this.result);
+    }
+    static media(result) {
+        var _a, _b;
+        return (_b = (_a = result.includes) === null || _a === void 0 ? void 0 : _a.media) !== null && _b !== void 0 ? _b : [];
+    }
+    /** Medias associated with the given tweet (*`attachments.media_keys`*) */
+    medias(tweet) {
+        return TwitterV2IncludesHelper.medias(this.result, tweet);
+    }
+    /** Medias associated with the given tweet (*`attachments.media_keys`*) */
+    static medias(result, tweet) {
+        var _a, _b;
+        const keys = (_b = (_a = tweet.attachments) === null || _a === void 0 ? void 0 : _a.media_keys) !== null && _b !== void 0 ? _b : [];
+        return this.media(result).filter(m => keys.includes(m.media_key));
+    }
+    /* Polls */
+    get polls() {
+        return TwitterV2IncludesHelper.polls(this.result);
+    }
+    static polls(result) {
+        var _a, _b;
+        return (_b = (_a = result.includes) === null || _a === void 0 ? void 0 : _a.polls) !== null && _b !== void 0 ? _b : [];
+    }
+    /** Poll associated with the given tweet (*`attachments.poll_ids`*) */
+    poll(tweet) {
+        return TwitterV2IncludesHelper.poll(this.result, tweet);
+    }
+    /** Poll associated with the given tweet (*`attachments.poll_ids`*) */
+    static poll(result, tweet) {
+        var _a, _b;
+        const pollIds = (_b = (_a = tweet.attachments) === null || _a === void 0 ? void 0 : _a.poll_ids) !== null && _b !== void 0 ? _b : [];
+        if (pollIds.length) {
+            const pollId = pollIds[0];
+            return this.polls(result).find(p => p.id === pollId);
+        }
+        return undefined;
+    }
+    /* Places */
+    get places() {
+        return TwitterV2IncludesHelper.places(this.result);
+    }
+    static places(result) {
+        var _a, _b;
+        return (_b = (_a = result.includes) === null || _a === void 0 ? void 0 : _a.places) !== null && _b !== void 0 ? _b : [];
+    }
+    /** Place associated with the given tweet (*`geo.place_id`*) */
+    place(tweet) {
+        return TwitterV2IncludesHelper.place(this.result, tweet);
+    }
+    /** Place associated with the given tweet (*`geo.place_id`*) */
+    static place(result, tweet) {
+        var _a;
+        const placeId = (_a = tweet.geo) === null || _a === void 0 ? void 0 : _a.place_id;
+        return placeId ? this.places(result).find(p => p.id === placeId) : undefined;
+    }
+    /* Lists */
+    /** List owner of the given list (*`owner_id`*) */
+    listOwner(list) {
+        return TwitterV2IncludesHelper.listOwner(this.result, list);
+    }
+    /** List owner of the given list (*`owner_id`*) */
+    static listOwner(result, list) {
+        const creatorId = list.owner_id;
+        return creatorId ? this.users(result).find(p => p.id === creatorId) : undefined;
+    }
+    /* Spaces */
+    /** Creator of the given space (*`creator_id`*) */
+    spaceCreator(space) {
+        return TwitterV2IncludesHelper.spaceCreator(this.result, space);
+    }
+    /** Creator of the given space (*`creator_id`*) */
+    static spaceCreator(result, space) {
+        const creatorId = space.creator_id;
+        return creatorId ? this.users(result).find(p => p.id === creatorId) : undefined;
+    }
+    /** Current hosts of the given space (*`host_ids`*) */
+    spaceHosts(space) {
+        return TwitterV2IncludesHelper.spaceHosts(this.result, space);
+    }
+    /** Current hosts of the given space (*`host_ids`*) */
+    static spaceHosts(result, space) {
+        var _a;
+        const hostIds = (_a = space.host_ids) !== null && _a !== void 0 ? _a : [];
+        return this.users(result).filter(u => hostIds.includes(u.id));
+    }
+    /** Current speakers of the given space (*`speaker_ids`*) */
+    spaceSpeakers(space) {
+        return TwitterV2IncludesHelper.spaceSpeakers(this.result, space);
+    }
+    /** Current speakers of the given space (*`speaker_ids`*) */
+    static spaceSpeakers(result, space) {
+        var _a;
+        const speakerIds = (_a = space.speaker_ids) !== null && _a !== void 0 ? _a : [];
+        return this.users(result).filter(u => speakerIds.includes(u.id));
+    }
+    /** Current invited users of the given space (*`invited_user_ids`*) */
+    spaceInvitedUsers(space) {
+        return TwitterV2IncludesHelper.spaceInvitedUsers(this.result, space);
+    }
+    /** Current invited users of the given space (*`invited_user_ids`*) */
+    static spaceInvitedUsers(result, space) {
+        var _a;
+        const invitedUserIds = (_a = space.invited_user_ids) !== null && _a !== void 0 ? _a : [];
+        return this.users(result).filter(u => invitedUserIds.includes(u.id));
+    }
+}
+
+/** A generic PreviousableTwitterPaginator with common v2 helper methods. */
+class TwitterV2Paginator extends PreviousableTwitterPaginator {
+    updateIncludes(data) {
+        // Update errors
+        if (data.errors) {
+            if (!this._realData.errors) {
+                this._realData.errors = [];
             }
-            return this.tweetsClient;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(TwitterClient.prototype, "directMessages", {
-        get: function () {
-            if (!this.directMessagesClient) {
-                this.directMessagesClient = new DirectMessagesClient_1$1.default(this.transport);
+            this._realData.errors = [...this._realData.errors, ...data.errors];
+        }
+        // Update includes
+        if (!data.includes) {
+            return;
+        }
+        if (!this._realData.includes) {
+            this._realData.includes = {};
+        }
+        const includesRealData = this._realData.includes;
+        for (const [includeKey, includeArray] of Object.entries(data.includes)) {
+            if (!includesRealData[includeKey]) {
+                includesRealData[includeKey] = [];
             }
-            return this.directMessagesClient;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(TwitterClient.prototype, "media", {
-        get: function () {
-            if (!this.mediaClient) {
-                this.mediaClient = new MediaClient_1$1.default(this.transport);
+            includesRealData[includeKey] = [
+                ...includesRealData[includeKey],
+                ...includeArray,
+            ];
+        }
+    }
+    /** Throw if the current paginator is not usable. */
+    assertUsable() {
+        if (this.unusable) {
+            throw new Error('Unable to use this paginator to fetch more data, as it does not contain any metadata.' +
+                ' Check .errors property for more details.');
+        }
+    }
+    get meta() {
+        return this._realData.meta;
+    }
+    get includes() {
+        var _a;
+        if (!((_a = this._realData) === null || _a === void 0 ? void 0 : _a.includes)) {
+            return new TwitterV2IncludesHelper(this._realData);
+        }
+        if (this._includesInstance) {
+            return this._includesInstance;
+        }
+        return this._includesInstance = new TwitterV2IncludesHelper(this._realData);
+    }
+    get errors() {
+        var _a;
+        return (_a = this._realData.errors) !== null && _a !== void 0 ? _a : [];
+    }
+    /** `true` if this paginator only contains error payload and no metadata found to consume data. */
+    get unusable() {
+        return this.errors.length > 0 && !this._realData.meta && !this._realData.data;
+    }
+}
+/** A generic TwitterV2Paginator able to consume v2 timelines that use max_results and pagination tokens. */
+class TimelineV2Paginator extends TwitterV2Paginator {
+    refreshInstanceFromResult(response, isNextPage) {
+        var _a;
+        const result = response.data;
+        const resultData = (_a = result.data) !== null && _a !== void 0 ? _a : [];
+        this._rateLimit = response.rateLimit;
+        if (!this._realData.data) {
+            this._realData.data = [];
+        }
+        if (isNextPage) {
+            this._realData.meta.result_count += result.meta.result_count;
+            this._realData.meta.next_token = result.meta.next_token;
+            this._realData.data.push(...resultData);
+        }
+        else {
+            this._realData.meta.result_count += result.meta.result_count;
+            this._realData.meta.previous_token = result.meta.previous_token;
+            this._realData.data.unshift(...resultData);
+        }
+        this.updateIncludes(result);
+    }
+    getNextQueryParams(maxResults) {
+        this.assertUsable();
+        return {
+            ...this.injectQueryParams(maxResults),
+            pagination_token: this._realData.meta.next_token,
+        };
+    }
+    getPreviousQueryParams(maxResults) {
+        this.assertUsable();
+        return {
+            ...this.injectQueryParams(maxResults),
+            pagination_token: this._realData.meta.previous_token,
+        };
+    }
+    getPageLengthFromRequest(result) {
+        var _a, _b;
+        return (_b = (_a = result.data.data) === null || _a === void 0 ? void 0 : _a.length) !== null && _b !== void 0 ? _b : 0;
+    }
+    isFetchLastOver(result) {
+        var _a;
+        return !((_a = result.data.data) === null || _a === void 0 ? void 0 : _a.length) || !this.canFetchNextPage(result.data);
+    }
+    canFetchNextPage(result) {
+        var _a;
+        return !!((_a = result.meta) === null || _a === void 0 ? void 0 : _a.next_token);
+    }
+}
+
+/** A generic PreviousableTwitterPaginator able to consume TweetV2 timelines with since_id, until_id and next_token (when available). */
+class TweetTimelineV2Paginator extends TwitterV2Paginator {
+    refreshInstanceFromResult(response, isNextPage) {
+        var _a;
+        const result = response.data;
+        const resultData = (_a = result.data) !== null && _a !== void 0 ? _a : [];
+        this._rateLimit = response.rateLimit;
+        if (!this._realData.data) {
+            this._realData.data = [];
+        }
+        if (isNextPage) {
+            this._realData.meta.oldest_id = result.meta.oldest_id;
+            this._realData.meta.result_count += result.meta.result_count;
+            this._realData.meta.next_token = result.meta.next_token;
+            this._realData.data.push(...resultData);
+        }
+        else {
+            this._realData.meta.newest_id = result.meta.newest_id;
+            this._realData.meta.result_count += result.meta.result_count;
+            this._realData.data.unshift(...resultData);
+        }
+        this.updateIncludes(result);
+    }
+    getNextQueryParams(maxResults) {
+        this.assertUsable();
+        const params = { ...this.injectQueryParams(maxResults) };
+        if (this._realData.meta.next_token) {
+            params.next_token = this._realData.meta.next_token;
+        }
+        else {
+            if (params.start_time) {
+                // until_id and start_time are forbidden together for some reason, so convert start_time to a since_id.
+                params.since_id = this.dateStringToSnowflakeId(params.start_time);
+                delete params.start_time;
             }
-            return this.mediaClient;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(TwitterClient.prototype, "trends", {
-        get: function () {
-            if (!this.trendsClient) {
-                this.trendsClient = new TrendsClient_1$1.default(this.transport);
+            if (params.end_time) {
+                // until_id overrides end_time, so delete it
+                delete params.end_time;
             }
-            return this.trendsClient;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(TwitterClient.prototype, "geo", {
-        get: function () {
-            if (!this.geoClient) {
-                this.geoClient = new GeoClient_1$1.default(this.transport);
+            params.until_id = this._realData.meta.oldest_id;
+        }
+        return params;
+    }
+    getPreviousQueryParams(maxResults) {
+        this.assertUsable();
+        return {
+            ...this.injectQueryParams(maxResults),
+            since_id: this._realData.meta.newest_id,
+        };
+    }
+    getPageLengthFromRequest(result) {
+        var _a, _b;
+        return (_b = (_a = result.data.data) === null || _a === void 0 ? void 0 : _a.length) !== null && _b !== void 0 ? _b : 0;
+    }
+    isFetchLastOver(result) {
+        var _a;
+        return !((_a = result.data.data) === null || _a === void 0 ? void 0 : _a.length) || !this.canFetchNextPage(result.data);
+    }
+    canFetchNextPage(result) {
+        return !!result.meta.next_token;
+    }
+    getItemArray() {
+        return this.tweets;
+    }
+    dateStringToSnowflakeId(dateStr) {
+        const TWITTER_START_EPOCH = BigInt('1288834974657');
+        const date = new Date(dateStr);
+        if (isNaN(date.valueOf())) {
+            throw new Error('Unable to convert start_time/end_time to a valid date. A ISO 8601 DateTime is excepted, please check your input.');
+        }
+        const dateTimestamp = BigInt(date.valueOf());
+        return ((dateTimestamp - TWITTER_START_EPOCH) << BigInt('22')).toString();
+    }
+    /**
+     * Tweets returned by paginator.
+     */
+    get tweets() {
+        var _a;
+        return (_a = this._realData.data) !== null && _a !== void 0 ? _a : [];
+    }
+    get meta() {
+        return super.meta;
+    }
+}
+/** A generic PreviousableTwitterPaginator able to consume TweetV2 timelines with pagination_tokens. */
+class TweetPaginableTimelineV2Paginator extends TimelineV2Paginator {
+    refreshInstanceFromResult(response, isNextPage) {
+        super.refreshInstanceFromResult(response, isNextPage);
+        const result = response.data;
+        if (isNextPage) {
+            this._realData.meta.oldest_id = result.meta.oldest_id;
+        }
+        else {
+            this._realData.meta.newest_id = result.meta.newest_id;
+        }
+    }
+    getItemArray() {
+        return this.tweets;
+    }
+    /**
+     * Tweets returned by paginator.
+     */
+    get tweets() {
+        var _a;
+        return (_a = this._realData.data) !== null && _a !== void 0 ? _a : [];
+    }
+    get meta() {
+        return super.meta;
+    }
+}
+// ----------------
+// - Tweet search -
+// ----------------
+class TweetSearchRecentV2Paginator extends TweetTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'tweets/search/recent';
+    }
+}
+class TweetSearchAllV2Paginator extends TweetTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'tweets/search/all';
+    }
+}
+class QuotedTweetsTimelineV2Paginator extends TweetPaginableTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'tweets/:id/quote_tweets';
+    }
+}
+// -----------------
+// - Home timeline -
+// -----------------
+class TweetHomeTimelineV2Paginator extends TweetPaginableTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/timelines/reverse_chronological';
+    }
+}
+class TweetUserTimelineV2Paginator extends TweetPaginableTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/tweets';
+    }
+}
+class TweetUserMentionTimelineV2Paginator extends TweetPaginableTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/mentions';
+    }
+}
+// -------------
+// - Bookmarks -
+// -------------
+class TweetBookmarksTimelineV2Paginator extends TweetPaginableTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/bookmarks';
+    }
+}
+// ---------------------------------------------------------------------------------
+// - Tweet lists (consume tweets with pagination tokens instead of since/until id) -
+// ---------------------------------------------------------------------------------
+/** A generic TwitterPaginator able to consume TweetV2 timelines. */
+class TweetListV2Paginator extends TimelineV2Paginator {
+    /**
+     * Tweets returned by paginator.
+     */
+    get tweets() {
+        var _a;
+        return (_a = this._realData.data) !== null && _a !== void 0 ? _a : [];
+    }
+    get meta() {
+        return super.meta;
+    }
+    getItemArray() {
+        return this.tweets;
+    }
+}
+class TweetV2UserLikedTweetsPaginator extends TweetListV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/liked_tweets';
+    }
+}
+class TweetV2ListTweetsPaginator extends TweetListV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/:id/tweets';
+    }
+}
+
+/** A generic PreviousableTwitterPaginator able to consume UserV2 timelines. */
+class UserTimelineV2Paginator extends TimelineV2Paginator {
+    getItemArray() {
+        return this.users;
+    }
+    /**
+     * Users returned by paginator.
+     */
+    get users() {
+        var _a;
+        return (_a = this._realData.data) !== null && _a !== void 0 ? _a : [];
+    }
+    get meta() {
+        return super.meta;
+    }
+}
+class UserBlockingUsersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/blocking';
+    }
+}
+class UserMutingUsersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/muting';
+    }
+}
+class UserFollowersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/followers';
+    }
+}
+class UserFollowingV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/following';
+    }
+}
+class UserListMembersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/:id/members';
+    }
+}
+class UserListFollowersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'lists/:id/followers';
+    }
+}
+class TweetLikingUsersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'tweets/:id/liking_users';
+    }
+}
+class TweetRetweetersUsersV2Paginator extends UserTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'tweets/:id/retweeted_by';
+    }
+}
+
+class ListTimelineV2Paginator extends TimelineV2Paginator {
+    getItemArray() {
+        return this.lists;
+    }
+    /**
+     * Lists returned by paginator.
+     */
+    get lists() {
+        var _a;
+        return (_a = this._realData.data) !== null && _a !== void 0 ? _a : [];
+    }
+    get meta() {
+        return super.meta;
+    }
+}
+class UserOwnedListsV2Paginator extends ListTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/owned_lists';
+    }
+}
+class UserListMembershipsV2Paginator extends ListTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/list_memberships';
+    }
+}
+class UserListFollowedV2Paginator extends ListTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'users/:id/followed_lists';
+    }
+}
+
+/**
+ * Base Twitter v2 labs client with only read right.
+ */
+class TwitterApiv2LabsReadOnly extends TwitterApiSubClient {
+    constructor() {
+        super(...arguments);
+        this._prefix = API_V2_LABS_PREFIX;
+    }
+}
+
+class DMTimelineV2Paginator extends TimelineV2Paginator {
+    getItemArray() {
+        return this.events;
+    }
+    /**
+     * Events returned by paginator.
+     */
+    get events() {
+        var _a;
+        return (_a = this._realData.data) !== null && _a !== void 0 ? _a : [];
+    }
+    get meta() {
+        return super.meta;
+    }
+}
+class FullDMTimelineV2Paginator extends DMTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'dm_events';
+    }
+}
+class OneToOneDMTimelineV2Paginator extends DMTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'dm_conversations/with/:participant_id/dm_events';
+    }
+}
+class ConversationDMTimelineV2Paginator extends DMTimelineV2Paginator {
+    constructor() {
+        super(...arguments);
+        this._endpoint = 'dm_conversations/:dm_conversation_id/dm_events';
+    }
+}
+
+/**
+ * Base Twitter v2 client with only read right.
+ */
+class TwitterApiv2ReadOnly extends TwitterApiSubClient {
+    constructor() {
+        super(...arguments);
+        this._prefix = API_V2_PREFIX;
+    }
+    /* Sub-clients */
+    /**
+     * Get a client for v2 labs endpoints.
+     */
+    get labs() {
+        if (this._labs)
+            return this._labs;
+        return this._labs = new TwitterApiv2LabsReadOnly(this);
+    }
+    async search(queryOrOptions, options = {}) {
+        const queryParams = typeof queryOrOptions === 'string' ?
+            { ...options, query: queryOrOptions } :
+            { ...queryOrOptions };
+        const initialRq = await this.get('tweets/search/recent', queryParams, { fullResponse: true });
+        return new TweetSearchRecentV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * The full-archive search endpoint returns the complete history of public Tweets matching a search query;
+     * since the first Tweet was created March 26, 2006.
+     *
+     * This endpoint is only available to those users who have been approved for the Academic Research product track.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all
+     */
+    async searchAll(query, options = {}) {
+        const queryParams = { ...options, query };
+        const initialRq = await this.get('tweets/search/all', queryParams, { fullResponse: true });
+        return new TweetSearchAllV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams,
+        });
+    }
+    /**
+     * Returns a variety of information about a single Tweet specified by the requested ID.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/lookup/api-reference/get-tweets-id
+     *
+     * OAuth2 scope: `users.read`, `tweet.read`
+     */
+    singleTweet(tweetId, options = {}) {
+        return this.get('tweets/:id', options, { params: { id: tweetId } });
+    }
+    /**
+     * Returns a variety of information about tweets specified by list of IDs.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/lookup/api-reference/get-tweets
+     *
+     * OAuth2 scope: `users.read`, `tweet.read`
+     */
+    tweets(tweetIds, options = {}) {
+        return this.get('tweets', { ids: tweetIds, ...options });
+    }
+    /**
+     * The recent Tweet counts endpoint returns count of Tweets from the last seven days that match a search query.
+     * OAuth2 Bearer auth only.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/counts/api-reference/get-tweets-counts-recent
+     */
+    tweetCountRecent(query, options = {}) {
+        return this.get('tweets/counts/recent', { query, ...options });
+    }
+    /**
+     * This endpoint is only available to those users who have been approved for the Academic Research product track.
+     * The full-archive search endpoint returns the complete history of public Tweets matching a search query;
+     * since the first Tweet was created March 26, 2006.
+     * OAuth2 Bearer auth only.
+     * **This endpoint has pagination, yet it is not supported by bundled paginators. Use `next_token` to fetch next page.**
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/counts/api-reference/get-tweets-counts-all
+     */
+    tweetCountAll(query, options = {}) {
+        return this.get('tweets/counts/all', { query, ...options });
+    }
+    async tweetRetweetedBy(tweetId, options = {}) {
+        const { asPaginator, ...parameters } = options;
+        const initialRq = await this.get('tweets/:id/retweeted_by', parameters, {
+            fullResponse: true,
+            params: { id: tweetId },
+        });
+        if (!asPaginator) {
+            return initialRq.data;
+        }
+        return new TweetRetweetersUsersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: parameters,
+            sharedParams: { id: tweetId },
+        });
+    }
+    async tweetLikedBy(tweetId, options = {}) {
+        const { asPaginator, ...parameters } = options;
+        const initialRq = await this.get('tweets/:id/liking_users', parameters, {
+            fullResponse: true,
+            params: { id: tweetId },
+        });
+        if (!asPaginator) {
+            return initialRq.data;
+        }
+        return new TweetLikingUsersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: parameters,
+            sharedParams: { id: tweetId },
+        });
+    }
+    /**
+     * Allows you to retrieve a collection of the most recent Tweets and Retweets posted by you and users you follow, also known as home timeline.
+     * This endpoint returns up to the last 3200 Tweets.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/timelines/api-reference/get-users-id-reverse-chronological
+     *
+     * OAuth 2 scopes: `tweet.read` `users.read`
+     */
+    async homeTimeline(options = {}) {
+        const meUser = await this.getCurrentUserV2Object();
+        const initialRq = await this.get('users/:id/timelines/reverse_chronological', options, {
+            fullResponse: true,
+            params: { id: meUser.data.id },
+        });
+        return new TweetHomeTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: options,
+            sharedParams: { id: meUser.data.id },
+        });
+    }
+    /**
+     * Returns Tweets composed by a single user, specified by the requested user ID.
+     * By default, the most recent ten Tweets are returned per request.
+     * Using pagination, the most recent 3,200 Tweets can be retrieved.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/timelines/api-reference/get-users-id-tweets
+     */
+    async userTimeline(userId, options = {}) {
+        const initialRq = await this.get('users/:id/tweets', options, {
+            fullResponse: true,
+            params: { id: userId },
+        });
+        return new TweetUserTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: options,
+            sharedParams: { id: userId },
+        });
+    }
+    /**
+     * Returns Tweets mentioning a single user specified by the requested user ID.
+     * By default, the most recent ten Tweets are returned per request.
+     * Using pagination, up to the most recent 800 Tweets can be retrieved.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/timelines/api-reference/get-users-id-mentions
+     */
+    async userMentionTimeline(userId, options = {}) {
+        const initialRq = await this.get('users/:id/mentions', options, {
+            fullResponse: true,
+            params: { id: userId },
+        });
+        return new TweetUserMentionTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: options,
+            sharedParams: { id: userId },
+        });
+    }
+    /**
+     * Returns Quote Tweets for a Tweet specified by the requested Tweet ID.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/quote-tweets/api-reference/get-tweets-id-quote_tweets
+     *
+     * OAuth2 scopes: `users.read` `tweet.read`
+     */
+    async quotes(tweetId, options = {}) {
+        const initialRq = await this.get('tweets/:id/quote_tweets', options, {
+            fullResponse: true,
+            params: { id: tweetId },
+        });
+        return new QuotedTweetsTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: options,
+            sharedParams: { id: tweetId },
+        });
+    }
+    /* Bookmarks */
+    /**
+     * Allows you to get information about a authenticated user’s 800 most recent bookmarked Tweets.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/bookmarks/api-reference/get-users-id-bookmarks
+     *
+     * OAuth2 scopes: `users.read` `tweet.read` `bookmark.read`
+     */
+    async bookmarks(options = {}) {
+        const user = await this.getCurrentUserV2Object();
+        const initialRq = await this.get('users/:id/bookmarks', options, {
+            fullResponse: true,
+            params: { id: user.data.id },
+        });
+        return new TweetBookmarksTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: options,
+            sharedParams: { id: user.data.id },
+        });
+    }
+    /* Users */
+    /**
+     * Returns information about an authorized user.
+     * https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users-me
+     *
+     * OAuth2 scopes: `tweet.read` & `users.read`
+     */
+    me(options = {}) {
+        return this.get('users/me', options);
+    }
+    /**
+     * Returns a variety of information about a single user specified by the requested ID.
+     * https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users-id
+     */
+    user(userId, options = {}) {
+        return this.get('users/:id', options, { params: { id: userId } });
+    }
+    /**
+     * Returns a variety of information about one or more users specified by the requested IDs.
+     * https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users
+     */
+    users(userIds, options = {}) {
+        const ids = Array.isArray(userIds) ? userIds.join(',') : userIds;
+        return this.get('users', { ...options, ids });
+    }
+    /**
+     * Returns a variety of information about a single user specified by their username.
+     * https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users-by-username-username
+     */
+    userByUsername(username, options = {}) {
+        return this.get('users/by/username/:username', options, { params: { username } });
+    }
+    /**
+     * Returns a variety of information about one or more users specified by their usernames.
+     * https://developer.twitter.com/en/docs/twitter-api/users/lookup/api-reference/get-users-by
+     *
+     * OAuth2 scope: `users.read`, `tweet.read`
+     */
+    usersByUsernames(usernames, options = {}) {
+        usernames = Array.isArray(usernames) ? usernames.join(',') : usernames;
+        return this.get('users/by', { ...options, usernames });
+    }
+    async followers(userId, options = {}) {
+        const { asPaginator, ...parameters } = options;
+        const params = { id: userId };
+        if (!asPaginator) {
+            return this.get('users/:id/followers', parameters, { params });
+        }
+        const initialRq = await this.get('users/:id/followers', parameters, { fullResponse: true, params });
+        return new UserFollowersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: parameters,
+            sharedParams: params,
+        });
+    }
+    async following(userId, options = {}) {
+        const { asPaginator, ...parameters } = options;
+        const params = { id: userId };
+        if (!asPaginator) {
+            return this.get('users/:id/following', parameters, { params });
+        }
+        const initialRq = await this.get('users/:id/following', parameters, { fullResponse: true, params });
+        return new UserFollowingV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: parameters,
+            sharedParams: params,
+        });
+    }
+    /**
+     * Allows you to get information about a user’s liked Tweets.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/likes/api-reference/get-users-id-liked_tweets
+     */
+    async userLikedTweets(userId, options = {}) {
+        const params = { id: userId };
+        const initialRq = await this.get('users/:id/liked_tweets', options, { fullResponse: true, params });
+        return new TweetV2UserLikedTweetsPaginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns a list of users who are blocked by the authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/users/blocks/api-reference/get-users-blocking
+     */
+    async userBlockingUsers(userId, options = {}) {
+        const params = { id: userId };
+        const initialRq = await this.get('users/:id/blocking', options, { fullResponse: true, params });
+        return new UserBlockingUsersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns a list of users who are muted by the authenticating user.
+     * https://developer.twitter.com/en/docs/twitter-api/users/mutes/api-reference/get-users-muting
+     */
+    async userMutingUsers(userId, options = {}) {
+        const params = { id: userId };
+        const initialRq = await this.get('users/:id/muting', options, { fullResponse: true, params });
+        return new UserMutingUsersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /* Lists */
+    /**
+     * Returns the details of a specified List.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-lookup/api-reference/get-lists-id
+     */
+    list(id, options = {}) {
+        return this.get('lists/:id', options, { params: { id } });
+    }
+    /**
+     * Returns all Lists owned by the specified user.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-lookup/api-reference/get-users-id-owned_lists
+     */
+    async listsOwned(userId, options = {}) {
+        const params = { id: userId };
+        const initialRq = await this.get('users/:id/owned_lists', options, { fullResponse: true, params });
+        return new UserOwnedListsV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns all Lists a specified user is a member of.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-members/api-reference/get-users-id-list_memberships
+     */
+    async listMemberships(userId, options = {}) {
+        const params = { id: userId };
+        const initialRq = await this.get('users/:id/list_memberships', options, { fullResponse: true, params });
+        return new UserListMembershipsV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns all Lists a specified user follows.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-follows/api-reference/get-users-id-followed_lists
+     */
+    async listFollowed(userId, options = {}) {
+        const params = { id: userId };
+        const initialRq = await this.get('users/:id/followed_lists', options, { fullResponse: true, params });
+        return new UserListFollowedV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns a list of Tweets from the specified List.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-tweets/api-reference/get-lists-id-tweets
+     */
+    async listTweets(listId, options = {}) {
+        const params = { id: listId };
+        const initialRq = await this.get('lists/:id/tweets', options, { fullResponse: true, params });
+        return new TweetV2ListTweetsPaginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns a list of users who are members of the specified List.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-members/api-reference/get-lists-id-members
+     */
+    async listMembers(listId, options = {}) {
+        const params = { id: listId };
+        const initialRq = await this.get('lists/:id/members', options, { fullResponse: true, params });
+        return new UserListMembersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns a list of users who are followers of the specified List.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/list-follows/api-reference/get-lists-id-followers
+     */
+    async listFollowers(listId, options = {}) {
+        const params = { id: listId };
+        const initialRq = await this.get('lists/:id/followers', options, { fullResponse: true, params });
+        return new UserListFollowersV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /* Direct messages */
+    /**
+     * Returns a list of Direct Messages for the authenticated user, both sent and received.
+     * Direct Message events are returned in reverse chronological order.
+     * Supports retrieving events from the previous 30 days.
+     *
+     * OAuth 2 scopes: `dm.read`, `tweet.read`, `user.read`
+     *
+     * https://developer.twitter.com/en/docs/twitter-api/direct-messages/lookup/api-reference/get-dm_events
+     */
+    async listDmEvents(options = {}) {
+        const initialRq = await this.get('dm_events', options, { fullResponse: true });
+        return new FullDMTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+        });
+    }
+    /**
+     * Returns a list of Direct Messages (DM) events within a 1-1 conversation with the user specified in the participant_id path parameter.
+     * Messages are returned in reverse chronological order.
+     *
+     * OAuth 2 scopes: `dm.read`, `tweet.read`, `user.read`
+     *
+     * https://developer.twitter.com/en/docs/twitter-api/direct-messages/lookup/api-reference/get-dm_conversations-dm_conversation_id-dm_events
+     */
+    async listDmEventsWithParticipant(participantId, options = {}) {
+        const params = { participant_id: participantId };
+        const initialRq = await this.get('dm_conversations/with/:participant_id/dm_events', options, { fullResponse: true, params });
+        return new OneToOneDMTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /**
+     * Returns a list of Direct Messages within a conversation specified in the dm_conversation_id path parameter.
+     * Messages are returned in reverse chronological order.
+     *
+     * OAuth 2 scopes: `dm.read`, `tweet.read`, `user.read`
+     *
+     * https://developer.twitter.com/en/docs/twitter-api/direct-messages/lookup/api-reference/get-dm_conversations-dm_conversation_id-dm_events
+     */
+    async listDmEventsOfConversation(dmConversationId, options = {}) {
+        const params = { dm_conversation_id: dmConversationId };
+        const initialRq = await this.get('dm_conversations/:dm_conversation_id/dm_events', options, { fullResponse: true, params });
+        return new ConversationDMTimelineV2Paginator({
+            realData: initialRq.data,
+            rateLimit: initialRq.rateLimit,
+            instance: this,
+            queryParams: { ...options },
+            sharedParams: params,
+        });
+    }
+    /* Spaces */
+    /**
+     * Get a single space by ID.
+     * https://developer.twitter.com/en/docs/twitter-api/spaces/lookup/api-reference/get-spaces-id
+     *
+     * OAuth2 scopes: `tweet.read`, `users.read`, `space.read`.
+     */
+    space(spaceId, options = {}) {
+        return this.get('spaces/:id', options, { params: { id: spaceId } });
+    }
+    /**
+     * Get spaces using their IDs.
+     * https://developer.twitter.com/en/docs/twitter-api/spaces/lookup/api-reference/get-spaces
+     *
+     * OAuth2 scopes: `tweet.read`, `users.read`, `space.read`.
+     */
+    spaces(spaceIds, options = {}) {
+        return this.get('spaces', { ids: spaceIds, ...options });
+    }
+    /**
+     * Get spaces using their creator user ID(s). (no pagination available)
+     * https://developer.twitter.com/en/docs/twitter-api/spaces/lookup/api-reference/get-spaces-by-creator-ids
+     *
+     * OAuth2 scopes: `tweet.read`, `users.read`, `space.read`.
+     */
+    spacesByCreators(creatorIds, options = {}) {
+        return this.get('spaces/by/creator_ids', { user_ids: creatorIds, ...options });
+    }
+    /**
+     * Search through spaces using multiple params. (no pagination available)
+     * https://developer.twitter.com/en/docs/twitter-api/spaces/search/api-reference/get-spaces-search
+     */
+    searchSpaces(options) {
+        return this.get('spaces/search', options);
+    }
+    /**
+    * Returns a list of user who purchased a ticket to the requested Space.
+    * You must authenticate the request using the Access Token of the creator of the requested Space.
+    *
+    * **OAuth 2.0 Access Token required**
+    *
+    * https://developer.twitter.com/en/docs/twitter-api/spaces/lookup/api-reference/get-spaces-id-buyers
+    *
+    * OAuth2 scopes: `tweet.read`, `users.read`, `space.read`.
+    */
+    spaceBuyers(spaceId, options = {}) {
+        return this.get('spaces/:id/buyers', options, { params: { id: spaceId } });
+    }
+    /**
+     * Returns Tweets shared in the requested Spaces.
+     * https://developer.twitter.com/en/docs/twitter-api/spaces/lookup/api-reference/get-spaces-id-tweets
+     *
+     * OAuth2 scope: `users.read`, `tweet.read`, `space.read`
+     */
+    spaceTweets(spaceId, options = {}) {
+        return this.get('spaces/:id/tweets', options, { params: { id: spaceId } });
+    }
+    searchStream({ autoConnect, ...options } = {}) {
+        return this.getStream('tweets/search/stream', options, { payloadIsError: isTweetStreamV2ErrorPayload, autoConnect });
+    }
+    /**
+     * Return a list of rules currently active on the streaming endpoint, either as a list or individually.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/api-reference/get-tweets-search-stream-rules
+     */
+    streamRules(options = {}) {
+        return this.get('tweets/search/stream/rules', options);
+    }
+    updateStreamRules(options, query = {}) {
+        return this.post('tweets/search/stream/rules', options, { query });
+    }
+    sampleStream({ autoConnect, ...options } = {}) {
+        return this.getStream('tweets/sample/stream', options, { payloadIsError: isTweetStreamV2ErrorPayload, autoConnect });
+    }
+    sample10Stream({ autoConnect, ...options } = {}) {
+        return this.getStream('tweets/sample10/stream', options, { payloadIsError: isTweetStreamV2ErrorPayload, autoConnect });
+    }
+    /* Batch compliance */
+    /**
+     * Returns a list of recent compliance jobs.
+     * https://developer.twitter.com/en/docs/twitter-api/compliance/batch-compliance/api-reference/get-compliance-jobs
+     */
+    complianceJobs(options) {
+        return this.get('compliance/jobs', options);
+    }
+    /**
+     * Get a single compliance job with the specified ID.
+     * https://developer.twitter.com/en/docs/twitter-api/compliance/batch-compliance/api-reference/get-compliance-jobs-id
+     */
+    complianceJob(jobId) {
+        return this.get('compliance/jobs/:id', undefined, { params: { id: jobId } });
+    }
+    /**
+     * Creates a new compliance job for Tweet IDs or user IDs, send your file, await result and parse it into an array.
+     * You can run one batch job at a time. Returns the created job, but **not the job result!**.
+     *
+     * You can obtain the result (**after job is completed**) with `.complianceJobResult`.
+     * https://developer.twitter.com/en/docs/twitter-api/compliance/batch-compliance/api-reference/post-compliance-jobs
+     */
+    async sendComplianceJob(jobParams) {
+        const job = await this.post('compliance/jobs', { type: jobParams.type, name: jobParams.name });
+        // Send the IDs
+        const rawIdsBody = jobParams.ids instanceof Buffer ? jobParams.ids : Buffer.from(jobParams.ids.join('\n'));
+        // Upload the IDs
+        await this.put(job.data.upload_url, rawIdsBody, {
+            forceBodyMode: 'raw',
+            enableAuth: false,
+            headers: { 'Content-Type': 'text/plain' },
+            prefix: '',
+        });
+        return job;
+    }
+    /**
+     * Get the result of a running or completed job, obtained through `.complianceJob`, `.complianceJobs` or `.sendComplianceJob`.
+     * If job is still running (`in_progress`), it will await until job is completed. **This could be quite long!**
+     * https://developer.twitter.com/en/docs/twitter-api/compliance/batch-compliance/api-reference/post-compliance-jobs
+     */
+    async complianceJobResult(job) {
+        let runningJob = job;
+        while (runningJob.status !== 'complete') {
+            if (runningJob.status === 'expired' || runningJob.status === 'failed') {
+                throw new Error('Job failed to be completed.');
             }
-            return this.geoClient;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return TwitterClient;
-}());
-exports.TwitterClient = TwitterClient;
-});
+            await new Promise(resolve => setTimeout(resolve, 3500));
+            runningJob = (await this.complianceJob(job.id)).data;
+        }
+        // Download and parse result
+        const result = await this.get(job.download_url, undefined, {
+            enableAuth: false,
+            prefix: '',
+        });
+        return result
+            .trim()
+            .split('\n')
+            .filter(line => line)
+            .map(line => JSON.parse(line));
+    }
+}
+
+/**
+ * Base Twitter v2 labs client with read/write rights.
+ */
+class TwitterApiv2LabsReadWrite extends TwitterApiv2LabsReadOnly {
+    constructor() {
+        super(...arguments);
+        this._prefix = API_V2_LABS_PREFIX;
+    }
+    /**
+     * Get a client with only read rights.
+     */
+    get readOnly() {
+        return this;
+    }
+}
+
+/**
+ * Base Twitter v2 client with read/write rights.
+ */
+class TwitterApiv2ReadWrite extends TwitterApiv2ReadOnly {
+    constructor() {
+        super(...arguments);
+        this._prefix = API_V2_PREFIX;
+    }
+    /* Sub-clients */
+    /**
+     * Get a client with only read rights.
+     */
+    get readOnly() {
+        return this;
+    }
+    /**
+     * Get a client for v2 labs endpoints.
+     */
+    get labs() {
+        if (this._labs)
+            return this._labs;
+        return this._labs = new TwitterApiv2LabsReadWrite(this);
+    }
+    /* Tweets */
+    /**
+     * Hides or unhides a reply to a Tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/hide-replies/api-reference/put-tweets-id-hidden
+     */
+    hideReply(tweetId, makeHidden) {
+        return this.put('tweets/:id/hidden', { hidden: makeHidden }, { params: { id: tweetId } });
+    }
+    /**
+     * Causes the user ID identified in the path parameter to Like the target Tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/likes/api-reference/post-users-user_id-likes
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    like(loggedUserId, targetTweetId) {
+        return this.post('users/:id/likes', { tweet_id: targetTweetId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Allows a user or authenticated user ID to unlike a Tweet.
+     * The request succeeds with no action when the user sends a request to a user they're not liking the Tweet or have already unliked the Tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/likes/api-reference/delete-users-id-likes-tweet_id
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    unlike(loggedUserId, targetTweetId) {
+        return this.delete('users/:id/likes/:tweet_id', undefined, {
+            params: { id: loggedUserId, tweet_id: targetTweetId },
+        });
+    }
+    /**
+     * Causes the user ID identified in the path parameter to Retweet the target Tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/retweets/api-reference/post-users-id-retweets
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    retweet(loggedUserId, targetTweetId) {
+        return this.post('users/:id/retweets', { tweet_id: targetTweetId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Allows a user or authenticated user ID to remove the Retweet of a Tweet.
+     * The request succeeds with no action when the user sends a request to a user they're not Retweeting the Tweet or have already removed the Retweet of.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/retweets/api-reference/delete-users-id-retweets-tweet_id
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    unretweet(loggedUserId, targetTweetId) {
+        return this.delete('users/:id/retweets/:tweet_id', undefined, {
+            params: { id: loggedUserId, tweet_id: targetTweetId },
+        });
+    }
+    tweet(status, payload = {}) {
+        if (typeof status === 'object') {
+            payload = status;
+        }
+        else {
+            payload = { text: status, ...payload };
+        }
+        return this.post('tweets', payload);
+    }
+    /**
+     * Reply to a Tweet on behalf of an authenticated user.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/manage-tweets/api-reference/post-tweets
+     */
+    reply(status, toTweetId, payload = {}) {
+        var _a;
+        const reply = { in_reply_to_tweet_id: toTweetId, ...(_a = payload.reply) !== null && _a !== void 0 ? _a : {} };
+        return this.post('tweets', { text: status, ...payload, reply });
+    }
+    /**
+     * Quote an existing Tweet on behalf of an authenticated user.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/manage-tweets/api-reference/post-tweets
+     */
+    quote(status, quotedTweetId, payload = {}) {
+        return this.tweet(status, { ...payload, quote_tweet_id: quotedTweetId });
+    }
+    /**
+     * Post a series of tweets.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/manage-tweets/api-reference/post-tweets
+     */
+    async tweetThread(tweets) {
+        var _a, _b;
+        const postedTweets = [];
+        for (const tweet of tweets) {
+            // Retrieve the last sent tweet
+            const lastTweet = postedTweets.length ? postedTweets[postedTweets.length - 1] : null;
+            // Build the tweet query params
+            const queryParams = { ...(typeof tweet === 'string' ? ({ text: tweet }) : tweet) };
+            // Reply to an existing tweet if needed
+            const inReplyToId = lastTweet ? lastTweet.data.id : (_a = queryParams.reply) === null || _a === void 0 ? void 0 : _a.in_reply_to_tweet_id;
+            const status = (_b = queryParams.text) !== null && _b !== void 0 ? _b : '';
+            if (inReplyToId) {
+                postedTweets.push(await this.reply(status, inReplyToId, queryParams));
+            }
+            else {
+                postedTweets.push(await this.tweet(status, queryParams));
+            }
+        }
+        return postedTweets;
+    }
+    /**
+     * Allows a user or authenticated user ID to delete a Tweet
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/manage-tweets/api-reference/delete-tweets-id
+     */
+    deleteTweet(tweetId) {
+        return this.delete('tweets/:id', undefined, {
+            params: {
+                id: tweetId,
+            },
+        });
+    }
+    /* Bookmarks */
+    /**
+     * Causes the user ID of an authenticated user identified in the path parameter to Bookmark the target Tweet provided in the request body.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/bookmarks/api-reference/post-users-id-bookmarks
+     *
+     * OAuth2 scopes: `users.read` `tweet.read` `bookmark.write`
+     */
+    async bookmark(tweetId) {
+        const user = await this.getCurrentUserV2Object();
+        return this.post('users/:id/bookmarks', { tweet_id: tweetId }, { params: { id: user.data.id } });
+    }
+    /**
+     * Allows a user or authenticated user ID to remove a Bookmark of a Tweet.
+     * https://developer.twitter.com/en/docs/twitter-api/tweets/bookmarks/api-reference/delete-users-id-bookmarks-tweet_id
+     *
+     * OAuth2 scopes: `users.read` `tweet.read` `bookmark.write`
+     */
+    async deleteBookmark(tweetId) {
+        const user = await this.getCurrentUserV2Object();
+        return this.delete('users/:id/bookmarks/:tweet_id', undefined, { params: { id: user.data.id, tweet_id: tweetId } });
+    }
+    /* Users */
+    /**
+     * Allows a user ID to follow another user.
+     * If the target user does not have public Tweets, this endpoint will send a follow request.
+     * https://developer.twitter.com/en/docs/twitter-api/users/follows/api-reference/post-users-source_user_id-following
+     *
+     * OAuth2 scope: `follows.write`
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    follow(loggedUserId, targetUserId) {
+        return this.post('users/:id/following', { target_user_id: targetUserId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Allows a user ID to unfollow another user.
+     * https://developer.twitter.com/en/docs/twitter-api/users/follows/api-reference/delete-users-source_id-following
+     *
+     * OAuth2 scope: `follows.write`
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    unfollow(loggedUserId, targetUserId) {
+        return this.delete('users/:source_user_id/following/:target_user_id', undefined, {
+            params: { source_user_id: loggedUserId, target_user_id: targetUserId },
+        });
+    }
+    /**
+     * Causes the user (in the path) to block the target user.
+     * The user (in the path) must match the user context authorizing the request.
+     * https://developer.twitter.com/en/docs/twitter-api/users/blocks/api-reference/post-users-user_id-blocking
+     *
+     * **Note**: You must specify the currently logged user ID; you can obtain it through v1.1 API.
+     */
+    block(loggedUserId, targetUserId) {
+        return this.post('users/:id/blocking', { target_user_id: targetUserId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Allows a user or authenticated user ID to unblock another user.
+     * https://developer.twitter.com/en/docs/twitter-api/users/blocks/api-reference/delete-users-user_id-blocking
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    unblock(loggedUserId, targetUserId) {
+        return this.delete('users/:source_user_id/blocking/:target_user_id', undefined, {
+            params: { source_user_id: loggedUserId, target_user_id: targetUserId },
+        });
+    }
+    /**
+     * Allows an authenticated user ID to mute the target user.
+     * https://developer.twitter.com/en/docs/twitter-api/users/mutes/api-reference/post-users-user_id-muting
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    mute(loggedUserId, targetUserId) {
+        return this.post('users/:id/muting', { target_user_id: targetUserId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Allows an authenticated user ID to unmute the target user.
+     * The request succeeds with no action when the user sends a request to a user they're not muting or have already unmuted.
+     * https://developer.twitter.com/en/docs/twitter-api/users/mutes/api-reference/delete-users-user_id-muting
+     *
+     * **Note**: You must specify the currently logged user ID ; you can obtain it through v1.1 API.
+     */
+    unmute(loggedUserId, targetUserId) {
+        return this.delete('users/:source_user_id/muting/:target_user_id', undefined, {
+            params: { source_user_id: loggedUserId, target_user_id: targetUserId },
+        });
+    }
+    /* Lists */
+    /**
+     * Creates a new list for the authenticated user.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/post-lists
+     */
+    createList(options) {
+        return this.post('lists', options);
+    }
+    /**
+     * Updates the specified list. The authenticated user must own the list to be able to update it.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/put-lists-id
+     */
+    updateList(listId, options = {}) {
+        return this.put('lists/:id', options, { params: { id: listId } });
+    }
+    /**
+     * Deletes the specified list. The authenticated user must own the list to be able to destroy it.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/delete-lists-id
+     */
+    removeList(listId) {
+        return this.delete('lists/:id', undefined, { params: { id: listId } });
+    }
+    /**
+     * Adds a member to a list.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/post-lists-id-members
+     */
+    addListMember(listId, userId) {
+        return this.post('lists/:id/members', { user_id: userId }, { params: { id: listId } });
+    }
+    /**
+     * Remember a member to a list.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/delete-lists-id-members-user_id
+     */
+    removeListMember(listId, userId) {
+        return this.delete('lists/:id/members/:user_id', undefined, { params: { id: listId, user_id: userId } });
+    }
+    /**
+     * Subscribes the authenticated user to the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/post-users-id-followed-lists
+     */
+    subscribeToList(loggedUserId, listId) {
+        return this.post('users/:id/followed_lists', { list_id: listId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Unsubscribes the authenticated user to the specified list.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/delete-users-id-followed-lists-list_id
+     */
+    unsubscribeOfList(loggedUserId, listId) {
+        return this.delete('users/:id/followed_lists/:list_id', undefined, { params: { id: loggedUserId, list_id: listId } });
+    }
+    /**
+     * Enables the authenticated user to pin a List.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/post-users-id-pinned-lists
+     */
+    pinList(loggedUserId, listId) {
+        return this.post('users/:id/pinned_lists', { list_id: listId }, { params: { id: loggedUserId } });
+    }
+    /**
+     * Enables the authenticated user to unpin a List.
+     * https://developer.twitter.com/en/docs/twitter-api/lists/manage-lists/api-reference/delete-users-id-pinned-lists-list_id
+     */
+    unpinList(loggedUserId, listId) {
+        return this.delete('users/:id/pinned_lists/:list_id', undefined, { params: { id: loggedUserId, list_id: listId } });
+    }
+    /* Direct messages */
+    /**
+     * Creates a Direct Message on behalf of an authenticated user, and adds it to the specified conversation.
+     * https://developer.twitter.com/en/docs/twitter-api/direct-messages/manage/api-reference/post-dm_conversations-dm_conversation_id-messages
+     */
+    sendDmInConversation(conversationId, message) {
+        return this.post('dm_conversations/:dm_conversation_id/messages', message, { params: { dm_conversation_id: conversationId } });
+    }
+    /**
+     * Creates a one-to-one Direct Message and adds it to the one-to-one conversation.
+     * This method either creates a new one-to-one conversation or retrieves the current conversation and adds the Direct Message to it.
+     * https://developer.twitter.com/en/docs/twitter-api/direct-messages/manage/api-reference/post-dm_conversations-with-participant_id-messages
+     */
+    sendDmToParticipant(participantId, message) {
+        return this.post('dm_conversations/with/:participant_id/messages', message, { params: { participant_id: participantId } });
+    }
+    /**
+     * Creates a new group conversation and adds a Direct Message to it on behalf of an authenticated user.
+     * https://developer.twitter.com/en/docs/twitter-api/direct-messages/manage/api-reference/post-dm_conversations
+     */
+    createDmConversation(options) {
+        return this.post('dm_conversations', options);
+    }
+}
+
+/**
+ * Twitter v2 labs client with all rights (read/write/DMs)
+ */
+class TwitterApiv2Labs extends TwitterApiv2LabsReadWrite {
+    constructor() {
+        super(...arguments);
+        this._prefix = API_V2_LABS_PREFIX;
+    }
+    /**
+     * Get a client with read/write rights.
+     */
+    get readWrite() {
+        return this;
+    }
+}
+
+/**
+ * Twitter v2 client with all rights (read/write/DMs)
+ */
+class TwitterApiv2 extends TwitterApiv2ReadWrite {
+    constructor() {
+        super(...arguments);
+        this._prefix = API_V2_PREFIX;
+        /** API endpoints */
+    }
+    /* Sub-clients */
+    /**
+     * Get a client with read/write rights.
+     */
+    get readWrite() {
+        return this;
+    }
+    /**
+     * Get a client for v2 labs endpoints.
+     */
+    get labs() {
+        if (this._labs)
+            return this._labs;
+        return this._labs = new TwitterApiv2Labs(this);
+    }
+}
+
+/**
+ * Twitter v1.1 and v2 API client.
+ */
+class TwitterApiReadOnly extends TwitterApiBase {
+    /* Direct access to subclients */
+    get v1() {
+        if (this._v1)
+            return this._v1;
+        return this._v1 = new TwitterApiv1ReadOnly(this);
+    }
+    get v2() {
+        if (this._v2)
+            return this._v2;
+        return this._v2 = new TwitterApiv2ReadOnly(this);
+    }
+    /**
+     * Fetch and cache current user.
+     * This method can only be called with a OAuth 1.0a user authentication.
+     *
+     * You can use this method to test if authentication was successful.
+     * Next calls to this methods will use the cached user, unless `forceFetch: true` is given.
+     */
+    async currentUser(forceFetch = false) {
+        return await this.getCurrentUserObject(forceFetch);
+    }
+    /**
+     * Fetch and cache current user.
+     * This method can only be called with a OAuth 1.0a or OAuth2 user authentication.
+     *
+     * This can only be the slimest available `UserV2` object, with only id, name and username properties defined.
+     * To get a customized `UserV2Result`, use `.v2.me()`
+     *
+     * You can use this method to test if authentication was successful.
+     * Next calls to this methods will use the cached user, unless `forceFetch: true` is given.
+     *
+     * OAuth2 scopes: `tweet.read` & `users.read`
+     */
+    async currentUserV2(forceFetch = false) {
+        return await this.getCurrentUserV2Object(forceFetch);
+    }
+    /* Shortcuts to endpoints */
+    search(what, options) {
+        return this.v2.search(what, options);
+    }
+    /* Authentication */
+    /**
+     * Generate the OAuth request token link for user-based OAuth 1.0 auth.
+     *
+     * ```ts
+     * // Instantiate TwitterApi with consumer keys
+     * const client = new TwitterApi({ appKey: 'consumer_key', appSecret: 'consumer_secret' });
+     *
+     * const tokenRequest = await client.generateAuthLink('oob-or-your-callback-url');
+     * // redirect end-user to tokenRequest.url
+     *
+     * // Save tokenRequest.oauth_token_secret somewhere, it will be needed for next auth step.
+     * ```
+     */
+    async generateAuthLink(oauth_callback = 'oob', { authAccessType, linkMode = 'authenticate', forceLogin, screenName, } = {}) {
+        const oauthResult = await this.post('https://api.twitter.com/oauth/request_token', { oauth_callback, x_auth_access_type: authAccessType });
+        let url = `https://api.twitter.com/oauth/${linkMode}?oauth_token=${encodeURIComponent(oauthResult.oauth_token)}`;
+        if (forceLogin !== undefined) {
+            url += `&force_login=${encodeURIComponent(forceLogin)}`;
+        }
+        if (screenName !== undefined) {
+            url += `&screen_name=${encodeURIComponent(screenName)}`;
+        }
+        if (this._requestMaker.hasPlugins()) {
+            this._requestMaker.applyPluginMethod('onOAuth1RequestToken', {
+                client: this._requestMaker,
+                url,
+                oauthResult,
+            });
+        }
+        return {
+            url,
+            ...oauthResult,
+        };
+    }
+    /**
+     * Obtain access to user-based OAuth 1.0 auth.
+     *
+     * After user is redirect from your callback, use obtained oauth_token and oauth_verifier to
+     * instantiate the new TwitterApi instance.
+     *
+     * ```ts
+     * // Use the saved oauth_token_secret associated to oauth_token returned by callback
+     * const requestClient = new TwitterApi({
+     *  appKey: 'consumer_key',
+     *  appSecret: 'consumer_secret',
+     *  accessToken: 'oauth_token',
+     *  accessSecret: 'oauth_token_secret'
+     * });
+     *
+     * // Use oauth_verifier obtained from callback request
+     * const { client: userClient } = await requestClient.login('oauth_verifier');
+     *
+     * // {userClient} is a valid {TwitterApi} object you can use for future requests
+     * ```
+     */
+    async login(oauth_verifier) {
+        const tokens = this.getActiveTokens();
+        if (tokens.type !== 'oauth-1.0a')
+            throw new Error('You must setup TwitterApi instance with consumer keys to accept OAuth 1.0 login');
+        const oauth_result = await this.post('https://api.twitter.com/oauth/access_token', { oauth_token: tokens.accessToken, oauth_verifier });
+        const client = new TwitterApi({
+            appKey: tokens.appKey,
+            appSecret: tokens.appSecret,
+            accessToken: oauth_result.oauth_token,
+            accessSecret: oauth_result.oauth_token_secret,
+        }, this._requestMaker.clientSettings);
+        return {
+            accessToken: oauth_result.oauth_token,
+            accessSecret: oauth_result.oauth_token_secret,
+            userId: oauth_result.user_id,
+            screenName: oauth_result.screen_name,
+            client,
+        };
+    }
+    /**
+     * Enable application-only authentication.
+     *
+     * To make the request, instantiate TwitterApi with consumer and secret.
+     *
+     * ```ts
+     * const requestClient = new TwitterApi({ appKey: 'consumer', appSecret: 'secret' });
+     * const appClient = await requestClient.appLogin();
+     *
+     * // Use {appClient} to make requests
+     * ```
+     */
+    async appLogin() {
+        const tokens = this.getActiveTokens();
+        if (tokens.type !== 'oauth-1.0a')
+            throw new Error('You must setup TwitterApi instance with consumer keys to accept app-only login');
+        // Create a client with Basic authentication
+        const basicClient = new TwitterApi({ username: tokens.appKey, password: tokens.appSecret }, this._requestMaker.clientSettings);
+        const res = await basicClient.post('https://api.twitter.com/oauth2/token', { grant_type: 'client_credentials' });
+        // New object with Bearer token
+        return new TwitterApi(res.access_token, this._requestMaker.clientSettings);
+    }
+    /* OAuth 2 user authentication */
+    /**
+     * Generate the OAuth request token link for user-based OAuth 2.0 auth.
+     *
+     * - **You can only use v2 API endpoints with this authentication method.**
+     * - **You need to specify which scope you want to have when you create your auth link. Make sure it matches your needs.**
+     *
+     * See https://developer.twitter.com/en/docs/authentication/oauth-2-0/user-access-token for details.
+     *
+     * ```ts
+     * // Instantiate TwitterApi with client ID
+     * const client = new TwitterApi({ clientId: 'yourClientId' });
+     *
+     * // Generate a link to callback URL that will gives a token with tweet+user read access
+     * const link = client.generateOAuth2AuthLink('your-callback-url', { scope: ['tweet.read', 'users.read'] });
+     *
+     * // Extract props from generate link
+     * const { url, state, codeVerifier } = link;
+     *
+     * // redirect end-user to url
+     * // Save `state` and `codeVerifier` somewhere, it will be needed for next auth step.
+     * ```
+     */
+    generateOAuth2AuthLink(redirectUri, options = {}) {
+        var _a, _b;
+        if (!this._requestMaker.clientId) {
+            throw new Error('Twitter API instance is not initialized with client ID. You can find your client ID in Twitter Developer Portal. ' +
+                'Please build an instance with: new TwitterApi({ clientId: \'<yourClientId>\' })');
+        }
+        const state = (_a = options.state) !== null && _a !== void 0 ? _a : OAuth2Helper.generateRandomString(32);
+        const codeVerifier = OAuth2Helper.getCodeVerifier();
+        const codeChallenge = OAuth2Helper.getCodeChallengeFromVerifier(codeVerifier);
+        const rawScope = (_b = options.scope) !== null && _b !== void 0 ? _b : '';
+        const scope = Array.isArray(rawScope) ? rawScope.join(' ') : rawScope;
+        const url = new URL('https://twitter.com/i/oauth2/authorize');
+        const query = {
+            response_type: 'code',
+            client_id: this._requestMaker.clientId,
+            redirect_uri: redirectUri,
+            state,
+            code_challenge: codeChallenge,
+            code_challenge_method: 's256',
+            scope,
+        };
+        RequestParamHelpers.addQueryParamsToUrl(url, query);
+        const result = {
+            url: url.toString(),
+            state,
+            codeVerifier,
+            codeChallenge,
+        };
+        if (this._requestMaker.hasPlugins()) {
+            this._requestMaker.applyPluginMethod('onOAuth2RequestToken', {
+                client: this._requestMaker,
+                result,
+                redirectUri,
+            });
+        }
+        return result;
+    }
+    /**
+     * Obtain access to user-based OAuth 2.0 auth.
+     *
+     * After user is redirect from your callback, use obtained code to
+     * instantiate the new TwitterApi instance.
+     *
+     * You need to obtain `codeVerifier` from a call to `.generateOAuth2AuthLink`.
+     *
+     * ```ts
+     * // Use the saved codeVerifier associated to state (present in query string of callback)
+     * const requestClient = new TwitterApi({ clientId: 'yourClientId' });
+     *
+     * const { client: userClient, refreshToken } = await requestClient.loginWithOAuth2({
+     *  code: 'codeFromQueryString',
+     *  // the same URL given to generateOAuth2AuthLink
+     *  redirectUri,
+     *  // the verifier returned by generateOAuth2AuthLink
+     *  codeVerifier,
+     * });
+     *
+     * // {userClient} is a valid {TwitterApi} object you can use for future requests
+     * // {refreshToken} is defined if 'offline.access' is in scope.
+     * ```
+     */
+    async loginWithOAuth2({ code, codeVerifier, redirectUri }) {
+        if (!this._requestMaker.clientId) {
+            throw new Error('Twitter API instance is not initialized with client ID. ' +
+                'Please build an instance with: new TwitterApi({ clientId: \'<yourClientId>\' })');
+        }
+        const accessTokenResult = await this.post('https://api.twitter.com/2/oauth2/token', {
+            code,
+            code_verifier: codeVerifier,
+            redirect_uri: redirectUri,
+            grant_type: 'authorization_code',
+            client_id: this._requestMaker.clientId,
+            client_secret: this._requestMaker.clientSecret,
+        });
+        return this.parseOAuth2AccessTokenResult(accessTokenResult);
+    }
+    /**
+     * Obtain a new access token to user-based OAuth 2.0 auth from a refresh token.
+     *
+     * ```ts
+     * const requestClient = new TwitterApi({ clientId: 'yourClientId' });
+     *
+     * const { client: userClient } = await requestClient.refreshOAuth2Token('refreshToken');
+     * // {userClient} is a valid {TwitterApi} object you can use for future requests
+     * ```
+     */
+    async refreshOAuth2Token(refreshToken) {
+        if (!this._requestMaker.clientId) {
+            throw new Error('Twitter API instance is not initialized with client ID. ' +
+                'Please build an instance with: new TwitterApi({ clientId: \'<yourClientId>\' })');
+        }
+        const accessTokenResult = await this.post('https://api.twitter.com/2/oauth2/token', {
+            refresh_token: refreshToken,
+            grant_type: 'refresh_token',
+            client_id: this._requestMaker.clientId,
+            client_secret: this._requestMaker.clientSecret,
+        });
+        return this.parseOAuth2AccessTokenResult(accessTokenResult);
+    }
+    /**
+     * Revoke a single user-based OAuth 2.0 token.
+     *
+     * You must specify its source, access token (directly after login)
+     * or refresh token (if you've called `.refreshOAuth2Token` before).
+     */
+    async revokeOAuth2Token(token, tokenType = 'access_token') {
+        if (!this._requestMaker.clientId) {
+            throw new Error('Twitter API instance is not initialized with client ID. ' +
+                'Please build an instance with: new TwitterApi({ clientId: \'<yourClientId>\' })');
+        }
+        return await this.post('https://api.twitter.com/2/oauth2/revoke', {
+            client_id: this._requestMaker.clientId,
+            client_secret: this._requestMaker.clientSecret,
+            token,
+            token_type_hint: tokenType,
+        });
+    }
+    parseOAuth2AccessTokenResult(result) {
+        const client = new TwitterApi(result.access_token, this._requestMaker.clientSettings);
+        const scope = result.scope.split(' ').filter(e => e);
+        return {
+            client,
+            expiresIn: result.expires_in,
+            accessToken: result.access_token,
+            scope,
+            refreshToken: result.refresh_token,
+        };
+    }
+}
+
+/**
+ * Twitter v1.1 and v2 API client.
+ */
+class TwitterApiReadWrite extends TwitterApiReadOnly {
+    /* Direct access to subclients */
+    get v1() {
+        if (this._v1)
+            return this._v1;
+        return this._v1 = new TwitterApiv1ReadWrite(this);
+    }
+    get v2() {
+        if (this._v2)
+            return this._v2;
+        return this._v2 = new TwitterApiv2ReadWrite(this);
+    }
+    /**
+     * Get a client with read only rights.
+     */
+    get readOnly() {
+        return this;
+    }
+}
+
+// "Real" exported client for usage of TwitterApi.
+/**
+ * Twitter v1.1 and v2 API client.
+ */
+class TwitterApi extends TwitterApiReadWrite {
+    /* Direct access to subclients */
+    get v1() {
+        if (this._v1)
+            return this._v1;
+        return this._v1 = new TwitterApiv1(this);
+    }
+    get v2() {
+        if (this._v2)
+            return this._v2;
+        return this._v2 = new TwitterApiv2(this);
+    }
+    /**
+     * Get a client with read/write rights.
+     */
+    get readWrite() {
+        return this;
+    }
+    /* Static helpers */
+    static getErrors(error) {
+        var _a;
+        if (typeof error !== 'object')
+            return [];
+        if (!('data' in error))
+            return [];
+        return (_a = error.data.errors) !== null && _a !== void 0 ? _a : [];
+    }
+    /** Extract another image size than obtained in a `profile_image_url` or `profile_image_url_https` field of a user object. */
+    static getProfileImageInSize(profileImageUrl, size) {
+        const lastPart = profileImageUrl.split('/').pop();
+        const sizes = ['normal', 'bigger', 'mini'];
+        let originalUrl = profileImageUrl;
+        for (const availableSize of sizes) {
+            if (lastPart.includes(`_${availableSize}`)) {
+                originalUrl = profileImageUrl.replace(`_${availableSize}`, '');
+                break;
+            }
+        }
+        if (size === 'original') {
+            return originalUrl;
+        }
+        const extPos = originalUrl.lastIndexOf('.');
+        if (extPos !== -1) {
+            const ext = originalUrl.slice(extPos + 1);
+            return originalUrl.slice(0, extPos) + '_' + size + '.' + ext;
+        }
+        else {
+            return originalUrl + '_' + size;
+        }
+    }
+}
 
 class LogManager {
     register(logger) {
@@ -3911,11 +6115,11 @@ class TwitterHandler {
     }
     connectToTwitter(apiKey, apiSecret, accessToken, accessTokenSecret) {
         try {
-            this.twitterClient = new dist$2.TwitterClient({
-                apiKey,
-                apiSecret,
-                accessToken,
-                accessTokenSecret,
+            this.twitterClient = new TwitterApi({
+                appKey: apiKey,
+                appSecret: apiSecret,
+                accessToken: accessToken,
+                accessSecret: accessTokenSecret,
             });
             this.isConnectedToTwitter = true;
         }
@@ -3924,50 +6128,48 @@ class TwitterHandler {
         }
     }
     async postThread(threadContent) {
-        let postedTweets = [];
-        let previousPost;
+        let tweets = [];
         for (const threadTweet of threadContent) {
-            let isFirstTweet = threadContent.indexOf(threadTweet) == 0;
-            const { tweet, media_ids } = await this.getImagesInTweet(threadTweet);
-            previousPost = await this.twitterClient.tweets.statusesUpdate(Object.assign({ status: tweet.trim(), media_ids }, (!isFirstTweet && { in_reply_to_status_id: previousPost.id_str })));
-            postedTweets.push(previousPost);
+            const tweet = await this.constructTweet(threadTweet);
+            tweets.push(tweet);
         }
-        return postedTweets;
+        try {
+            return await this.twitterClient.v2.tweetThread(tweets);
+        }
+        catch (e) {
+            console.log(`error in posting tweet thread: ${e}`);
+        }
     }
-    async postTweet(tweet) {
-        const { tweet: processedTweet, media_ids } = await this.getImagesInTweet(tweet);
-        return await this.twitterClient.tweets.statusesUpdate({
-            status: processedTweet.trim(),
-            media_ids
-        });
+    async postTweet(tweetText) {
+        const tweet = await this.constructTweet(tweetText);
+        try {
+            return await this.twitterClient.v2.tweet(tweet);
+        }
+        catch (e) {
+            console.log(`error in posting tweet. ${e}`);
+        }
     }
-    async getImagesInTweet(tweet) {
+    async constructTweet(tweet) {
         let media_ids = [];
         let processedTweet = tweet;
         while (this.IMAGE_REGEX.test(processedTweet)) {
             const match = this.IMAGE_REGEX.exec(processedTweet);
             const fileName = match[1];
-            // Link in [[...]] might not be the actual path because of the attachment folder.
-            const file = this.plugin.app.vault.getFiles().find(f => f.name === fileName);
-            const fullPath = (await this.plugin.app.vault.readBinary(file));
-            const media_data = Buffer.from(fullPath).toString('base64');
-            const media_id = (await this.twitterClient.media.mediaUpload({ media_data, media_category: "tweet_image" }));
+            const media_id = await this.twitterClient.v1.uploadMedia(fileName);
             if (media_id) {
-                media_ids.push(media_id.media_id_string);
+                media_ids.push(media_id);
                 processedTweet = processedTweet.replace(this.IMAGE_REGEX, "");
             }
             else {
-                log.logWarning(`image '${fileName}' found but could not upload it to Twitter. Data is null/undefined: ${!!media_data}.`);
+                log.logWarning(`image '${fileName}' found but could not upload it to Twitter. Data is null/undefined: ${!!media_ids}.`);
             }
         }
-        return { tweet: processedTweet, media_ids: media_ids.join(",") };
+        return Object.assign({ text: processedTweet }, (media_ids.length > 0 ? { media: { media_ids } } : {}));
     }
     async deleteTweets(tweets) {
         try {
             for (const tweet of tweets)
-                await this.twitterClient.tweets.statusesDestroyById({
-                    id: tweet.id_str,
-                });
+                await this.twitterClient.v2.deleteTweet(tweet.id);
             return true;
         }
         catch (e) {
@@ -10158,6 +12360,10 @@ class NoteTweetScheduler {
 }
 
 class GenericInputPrompt extends obsidian.Modal {
+    static Prompt(app, header, placeholder, value) {
+        const newPromptModal = new GenericInputPrompt(app, header, placeholder, value);
+        return newPromptModal.waitForClose;
+    }
     constructor(app, header, placeholder, value) {
         super(app);
         this.header = header;
@@ -10168,10 +12374,6 @@ class GenericInputPrompt extends obsidian.Modal {
         });
         this.open();
         this.display();
-    }
-    static Prompt(app, header, placeholder, value) {
-        const newPromptModal = new GenericInputPrompt(app, header, placeholder, value);
-        return newPromptModal.waitForClose;
     }
     display() {
         this.contentEl.empty();
@@ -10215,6 +12417,26 @@ async function promptForDateTime(app) {
     return new Date(nldparsed).getTime();
 }
 
+var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+function getDefaultExportFromCjs (x) {
+	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
+}
+
+function createCommonjsModule(fn, basedir, module) {
+	return module = {
+		path: basedir,
+		exports: {},
+		require: function (path, base) {
+			return commonjsRequire(path, (base === undefined || base === null) ? module.path : base);
+		}
+	}, fn(module, module.exports), module.exports;
+}
+
+function commonjsRequire () {
+	throw new Error('Dynamic requires are not currently supported by @rollup/plugin-commonjs');
+}
+
 var rng_1 = createCommonjsModule(function (module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -10222,7 +12444,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = rng;
 
-var _crypto = _interopRequireDefault(crypto__default['default']);
+var _crypto = _interopRequireDefault(require$$0__default["default"]);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10554,7 +12776,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _crypto = _interopRequireDefault(crypto__default['default']);
+var _crypto = _interopRequireDefault(require$$0__default["default"]);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10636,7 +12858,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _crypto = _interopRequireDefault(crypto__default['default']);
+var _crypto = _interopRequireDefault(require$$0__default["default"]);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11072,14 +13294,14 @@ class PostTweetModal extends obsidian.Modal {
 }
 
 class UpdateScheduledTweetModal extends PostTweetModal {
-    constructor(app, tweet) {
-        super(app);
-        this.tweet = tweet;
-    }
     static Update(app, tweet) {
         const modal = new UpdateScheduledTweetModal(app, tweet);
         modal.open();
         return modal.newTweet;
+    }
+    constructor(app, tweet) {
+        super(app);
+        this.tweet = tweet;
     }
     createFirstTextarea() {
         const textarea = this.createTextarea(this.textZone);
@@ -11371,7 +13593,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (11:4) {:else}
+// (10:4) {:else}
 function create_else_block(ctx) {
 	let h2;
 
@@ -11389,7 +13611,7 @@ function create_else_block(ctx) {
 	};
 }
 
-// (9:4) {#if multiplePosts}
+// (8:4) {#if multiplePosts}
 function create_if_block(ctx) {
 	let h2;
 
@@ -11407,10 +13629,10 @@ function create_if_block(ctx) {
 	};
 }
 
-// (15:4) {#each posts as post}
+// (14:4) {#each posts as post}
 function create_each_block(ctx) {
 	let a;
-	let t0_value = /*post*/ ctx[4].text + "";
+	let t0_value = /*post*/ ctx[4].data.text + "";
 	let t0;
 	let a_href_value;
 	let t1;
@@ -11422,7 +13644,7 @@ function create_each_block(ctx) {
 			t0 = text(t0_value);
 			t1 = space();
 			br = element("br");
-			attr(a, "href", a_href_value = "https://twitter.com/" + /*post*/ ctx[4].user.screen_name + "/status/" + /*post*/ ctx[4].id_str);
+			attr(a, "href", a_href_value = "https://twitter.com/twitter/status/" + /*post*/ ctx[4].data.id);
 		},
 		m(target, anchor) {
 			insert(target, a, anchor);
@@ -11431,9 +13653,9 @@ function create_each_block(ctx) {
 			insert(target, br, anchor);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*posts*/ 1 && t0_value !== (t0_value = /*post*/ ctx[4].text + "")) set_data(t0, t0_value);
+			if (dirty & /*posts*/ 1 && t0_value !== (t0_value = /*post*/ ctx[4].data.text + "")) set_data(t0, t0_value);
 
-			if (dirty & /*posts*/ 1 && a_href_value !== (a_href_value = "https://twitter.com/" + /*post*/ ctx[4].user.screen_name + "/status/" + /*post*/ ctx[4].id_str)) {
+			if (dirty & /*posts*/ 1 && a_href_value !== (a_href_value = "https://twitter.com/twitter/status/" + /*post*/ ctx[4].data.id)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -11558,7 +13780,6 @@ function create_fragment$1(ctx) {
 }
 
 function instance$1($$self, $$props, $$invalidate) {
-	
 	let { posts } = $$props;
 	let { onDelete } = $$props;
 	let { onAccept } = $$props;
@@ -11599,7 +13820,14 @@ class TweetsPostedModal extends obsidian.Modal {
     }
     deleteTweets() {
         return async () => {
-            let didDeleteTweets = await this.twitterHandler.deleteTweets(this.posts);
+            let tweetsToDelete = [];
+            for (const tweet of this.posts) {
+                tweetsToDelete.push({
+                    id: tweet.data.id,
+                    text: tweet.data.text,
+                });
+            }
+            let didDeleteTweets = await this.twitterHandler.deleteTweets(tweetsToDelete);
             if (didDeleteTweets) {
                 this.userDeletedTweets = true;
                 this.close();
@@ -11842,6 +14070,7 @@ const objectTypeNames = [
     'Observable',
     'Array',
     'Buffer',
+    'Blob',
     'Object',
     'RegExp',
     'Date',
@@ -11855,6 +14084,8 @@ const objectTypeNames = [
     'DataView',
     'Promise',
     'URL',
+    'FormData',
+    'URLSearchParams',
     'HTMLElement',
     ...typedArrayTypeNames
 ];
@@ -11949,11 +14180,12 @@ is.array = (value, assertion) => {
     return value.every(assertion);
 };
 is.buffer = (value) => { var _a, _b, _c, _d; return (_d = (_c = (_b = (_a = value) === null || _a === void 0 ? void 0 : _a.constructor) === null || _b === void 0 ? void 0 : _b.isBuffer) === null || _c === void 0 ? void 0 : _c.call(_b, value)) !== null && _d !== void 0 ? _d : false; };
+is.blob = (value) => isObjectOfType('Blob')(value);
 is.nullOrUndefined = (value) => is.null_(value) || is.undefined(value);
 is.object = (value) => !is.null_(value) && (typeof value === 'object' || is.function_(value));
 is.iterable = (value) => { var _a; return is.function_((_a = value) === null || _a === void 0 ? void 0 : _a[Symbol.iterator]); };
 is.asyncIterable = (value) => { var _a; return is.function_((_a = value) === null || _a === void 0 ? void 0 : _a[Symbol.asyncIterator]); };
-is.generator = (value) => is.iterable(value) && is.function_(value.next) && is.function_(value.throw);
+is.generator = (value) => { var _a, _b; return is.iterable(value) && is.function_((_a = value) === null || _a === void 0 ? void 0 : _a.next) && is.function_((_b = value) === null || _b === void 0 ? void 0 : _b.throw); };
 is.asyncGenerator = (value) => is.asyncIterable(value) && is.function_(value.next) && is.function_(value.throw);
 is.nativePromise = (value) => isObjectOfType('Promise')(value);
 const hasPromiseAPI = (value) => {
@@ -11988,6 +14220,7 @@ is.bigUint64Array = isObjectOfType('BigUint64Array');
 is.arrayBuffer = isObjectOfType('ArrayBuffer');
 is.sharedArrayBuffer = isObjectOfType('SharedArrayBuffer');
 is.dataView = isObjectOfType('DataView');
+is.enumCase = (value, targetEnum) => Object.values(targetEnum).includes(value);
 is.directInstanceOf = (instance, class_) => Object.getPrototypeOf(instance) === class_.prototype;
 is.urlInstance = (value) => isObjectOfType('URL')(value);
 is.urlString = (value) => {
@@ -12002,7 +14235,6 @@ is.urlString = (value) => {
         return false;
     }
 };
-// TODO: Use the `not` operator with a type guard here when it's available.
 // Example: `is.truthy = (value: unknown): value is (not false | not 0 | not '' | not undefined | not null) => Boolean(value);`
 is.truthy = (value) => Boolean(value);
 // Example: `is.falsy = (value: unknown): value is (not true | 0 | '' | undefined | null) => Boolean(value);`
@@ -12068,10 +14300,12 @@ is.oddInteger = isAbsoluteMod2(1);
 is.emptyArray = (value) => is.array(value) && value.length === 0;
 is.nonEmptyArray = (value) => is.array(value) && value.length > 0;
 is.emptyString = (value) => is.string(value) && value.length === 0;
-// TODO: Use `not ''` when the `not` operator is available.
-is.nonEmptyString = (value) => is.string(value) && value.length > 0;
 const isWhiteSpaceString = (value) => is.string(value) && !/\S/.test(value);
 is.emptyStringOrWhitespace = (value) => is.emptyString(value) || isWhiteSpaceString(value);
+// TODO: Use `not ''` when the `not` operator is available.
+is.nonEmptyString = (value) => is.string(value) && value.length > 0;
+// TODO: Use `not ''` when the `not` operator is available.
+is.nonEmptyStringAndNotWhitespace = (value) => is.string(value) && !is.emptyStringOrWhitespace(value);
 is.emptyObject = (value) => is.object(value) && !is.map(value) && !is.set(value) && Object.keys(value).length === 0;
 // TODO: Use `not` operator here to remove `Map` and `Set` from type guard:
 // - https://github.com/Microsoft/TypeScript/pull/29317
@@ -12080,6 +14314,10 @@ is.emptySet = (value) => is.set(value) && value.size === 0;
 is.nonEmptySet = (value) => is.set(value) && value.size > 0;
 is.emptyMap = (value) => is.map(value) && value.size === 0;
 is.nonEmptyMap = (value) => is.map(value) && value.size > 0;
+// `PropertyKey` is any value that can be used as an object key (string, number, or symbol)
+is.propertyKey = (value) => is.any([is.string, is.number, is.symbol], value);
+is.formData = (value) => isObjectOfType('FormData')(value);
+is.urlSearchParams = (value) => isObjectOfType('URLSearchParams')(value);
 const predicateOnArray = (method, predicate, values) => {
     if (!is.function_(predicate)) {
         throw new TypeError(`Invalid predicate: ${JSON.stringify(predicate)}`);
@@ -12126,6 +14364,7 @@ exports.assert = {
         }
     },
     buffer: (value) => assertType(is.buffer(value), 'Buffer', value),
+    blob: (value) => assertType(is.blob(value), 'Blob', value),
     nullOrUndefined: (value) => assertType(is.nullOrUndefined(value), "null or undefined" /* nullOrUndefined */, value),
     object: (value) => assertType(is.object(value), 'Object', value),
     iterable: (value) => assertType(is.iterable(value), "Iterable" /* iterable */, value),
@@ -12161,6 +14400,7 @@ exports.assert = {
     arrayBuffer: (value) => assertType(is.arrayBuffer(value), 'ArrayBuffer', value),
     sharedArrayBuffer: (value) => assertType(is.sharedArrayBuffer(value), 'SharedArrayBuffer', value),
     dataView: (value) => assertType(is.dataView(value), 'DataView', value),
+    enumCase: (value, targetEnum) => assertType(is.enumCase(value, targetEnum), 'EnumCase', value),
     urlInstance: (value) => assertType(is.urlInstance(value), 'URL', value),
     urlString: (value) => assertType(is.urlString(value), "string with a URL" /* urlString */, value),
     truthy: (value) => assertType(is.truthy(value), "truthy" /* truthy */, value),
@@ -12179,14 +14419,18 @@ exports.assert = {
     emptyArray: (value) => assertType(is.emptyArray(value), "empty array" /* emptyArray */, value),
     nonEmptyArray: (value) => assertType(is.nonEmptyArray(value), "non-empty array" /* nonEmptyArray */, value),
     emptyString: (value) => assertType(is.emptyString(value), "empty string" /* emptyString */, value),
-    nonEmptyString: (value) => assertType(is.nonEmptyString(value), "non-empty string" /* nonEmptyString */, value),
     emptyStringOrWhitespace: (value) => assertType(is.emptyStringOrWhitespace(value), "empty string or whitespace" /* emptyStringOrWhitespace */, value),
+    nonEmptyString: (value) => assertType(is.nonEmptyString(value), "non-empty string" /* nonEmptyString */, value),
+    nonEmptyStringAndNotWhitespace: (value) => assertType(is.nonEmptyStringAndNotWhitespace(value), "non-empty string and not whitespace" /* nonEmptyStringAndNotWhitespace */, value),
     emptyObject: (value) => assertType(is.emptyObject(value), "empty object" /* emptyObject */, value),
     nonEmptyObject: (value) => assertType(is.nonEmptyObject(value), "non-empty object" /* nonEmptyObject */, value),
     emptySet: (value) => assertType(is.emptySet(value), "empty set" /* emptySet */, value),
     nonEmptySet: (value) => assertType(is.nonEmptySet(value), "non-empty set" /* nonEmptySet */, value),
     emptyMap: (value) => assertType(is.emptyMap(value), "empty map" /* emptyMap */, value),
     nonEmptyMap: (value) => assertType(is.nonEmptyMap(value), "non-empty map" /* nonEmptyMap */, value),
+    propertyKey: (value) => assertType(is.propertyKey(value), 'PropertyKey', value),
+    formData: (value) => assertType(is.formData(value), 'FormData', value),
+    urlSearchParams: (value) => assertType(is.urlSearchParams(value), 'URLSearchParams', value),
     // Numbers.
     evenInteger: (value) => assertType(is.evenInteger(value), "even integer" /* evenInteger */, value),
     oddInteger: (value) => assertType(is.oddInteger(value), "odd integer" /* oddInteger */, value),
@@ -12393,8 +14637,12 @@ module.exports.default = deferToConnect;
 var source$3 = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 
+
 const nodejsMajorVersion = Number(process.versions.node.split('.')[0]);
 const timer = (request) => {
+    if (request.timings) {
+        return request.timings;
+    }
     const timings = {
         start: Date.now(),
         socket: undefined,
@@ -12432,17 +14680,21 @@ const timer = (request) => {
         };
     };
     handleError(request);
-    request.prependOnceListener('abort', () => {
+    const onAbort = () => {
         timings.abort = Date.now();
         // Let the `end` response event be responsible for setting the total phase,
         // unless the Node.js major version is >= 13.
         if (!timings.response || nodejsMajorVersion >= 13) {
             timings.phases.total = Date.now() - timings.start;
         }
-    });
+    };
+    request.prependOnceListener('abort', onAbort);
     const onSocket = (socket) => {
         timings.socket = Date.now();
         timings.phases.wait = timings.socket - timings.start;
+        if (util_1__default["default"].types.isProxy(socket)) {
+            return;
+        }
         const lookupListener = () => {
             timings.lookup = Date.now();
             timings.phases.dns = timings.lookup - timings.socket;
@@ -12475,7 +14727,7 @@ const timer = (request) => {
     const onUpload = () => {
         var _a;
         timings.upload = Date.now();
-        timings.phases.request = timings.upload - (_a = timings.secureConnect, (_a !== null && _a !== void 0 ? _a : timings.connect));
+        timings.phases.request = timings.upload - ((_a = timings.secureConnect) !== null && _a !== void 0 ? _a : timings.connect);
     };
     const writableFinished = () => {
         if (typeof request.writableFinished === 'boolean') {
@@ -12500,6 +14752,7 @@ const timer = (request) => {
             timings.phases.download = timings.end - timings.response;
             timings.phases.total = timings.end - timings.start;
         });
+        response.prependOnceListener('aborted', onAbort);
     });
     return timings;
 };
@@ -12517,8 +14770,8 @@ const {
 		Resolver: AsyncResolver
 	},
 	lookup: dnsLookup
-} = require$$0__default$1['default'];
-const {promisify} = util_1__default['default'];
+} = require$$0__default$1["default"];
+const {promisify} = util_1__default["default"];
 
 
 const kCacheableLookupCreateConnection = Symbol('cacheableLookupCreateConnection');
@@ -12548,7 +14801,7 @@ const getIfaceInfo = () => {
 	let has4 = false;
 	let has6 = false;
 
-	for (const device of Object.values(os__default['default'].networkInterfaces())) {
+	for (const device of Object.values(os__default["default"].networkInterfaces())) {
 		for (const iface of device) {
 			if (iface.internal) {
 				continue;
@@ -13342,8 +15595,8 @@ var isFn = function (fn) {
 
 var isFS = function (stream) {
   if (!ancient) return false // newer node version do not need to care about fs is a special way
-  if (!fs__default['default']) return false // browser
-  return (stream instanceof (fs__default['default'].ReadStream || noop) || stream instanceof (fs__default['default'].WriteStream || noop)) && isFn(stream.close)
+  if (!fs__default["default"]) return false // browser
+  return (stream instanceof (fs__default["default"].ReadStream || noop) || stream instanceof (fs__default["default"].WriteStream || noop)) && isFn(stream.close)
 };
 
 var isRequest = function (stream) {
@@ -13412,7 +15665,7 @@ var pump = function () {
 
 var pump_1 = pump;
 
-const {PassThrough: PassThroughStream} = require$$0__default$2['default'];
+const {PassThrough: PassThroughStream} = require$$0__default$2["default"];
 
 var bufferStream = options => {
 	options = {...options};
@@ -13464,7 +15717,7 @@ var bufferStream = options => {
 	return stream;
 };
 
-const {constants: BufferConstants} = require$$0__default['default'];
+const {constants: BufferConstants} = require$$0__default$3["default"];
 
 
 
@@ -13536,6 +15789,7 @@ const statusCodeCacheableByDefault = new Set([
     206,
     300,
     301,
+    308,
     404,
     405,
     410,
@@ -13608,10 +15862,10 @@ function parseCacheControl(header) {
 
     // TODO: When there is more than one value present for a given directive (e.g., two Expires header fields, multiple Cache-Control: max-age directives),
     // the directive's value is considered invalid. Caches are encouraged to consider responses that have invalid freshness information to be stale
-    const parts = header.trim().split(/\s*,\s*/); // TODO: lame parsing
+    const parts = header.trim().split(/,/);
     for (const part of parts) {
-        const [k, v] = part.split(/\s*=\s*/, 2);
-        cc[k] = v === undefined ? true : v.replace(/^"|"$/g, ''); // TODO: lame unquoting
+        const [k, v] = part.split(/=/, 2);
+        cc[k.trim()] = v === undefined ? true : v.trim().replace(/^"|"$/g, '');
     }
 
     return cc;
@@ -14211,7 +16465,7 @@ var lowercaseKeys = object => {
 	return result;
 };
 
-const Readable$1 = require$$0__default$2['default'].Readable;
+const Readable$1 = require$$0__default$2["default"].Readable;
 
 
 class Response extends Readable$1 {
@@ -14275,7 +16529,7 @@ var mimicResponse$1 = (fromStream, toStream) => {
 	}
 };
 
-const PassThrough$1 = require$$0__default$2['default'].PassThrough;
+const PassThrough$1 = require$$0__default$2["default"].PassThrough;
 
 
 const cloneResponse = response => {
@@ -14355,63 +16609,166 @@ var jsonBuffer = {
 	parse: parse
 };
 
-const loadStore = opts => {
-	if (opts.adapter || opts.uri) {
-		opts.adapter || /^[^:]*/.exec(opts.uri)[0];
-		return new (commonjsRequire())(opts);
+const loadStore = options => {
+	if (options.adapter || options.uri) {
+		options.adapter || /^[^:+]*/.exec(options.uri)[0];
+		return new (commonjsRequire())(options);
 	}
 
 	return new Map();
 };
 
-class Keyv extends EventEmitter__default['default'] {
-	constructor(uri, opts) {
+const iterableAdapters = [
+	'sqlite',
+	'postgres',
+	'mysql',
+	'mongo',
+	'redis',
+	'tiered',
+];
+
+class Keyv extends EventEmitter__default["default"] {
+	constructor(uri, {emitErrors = true, ...options} = {}) {
 		super();
-		this.opts = Object.assign(
-			{
-				namespace: 'keyv',
-				serialize: jsonBuffer.stringify,
-				deserialize: jsonBuffer.parse
-			},
-			(typeof uri === 'string') ? { uri } : uri,
-			opts
-		);
+		this.opts = {
+			namespace: 'keyv',
+			serialize: jsonBuffer.stringify,
+			deserialize: jsonBuffer.parse,
+			...((typeof uri === 'string') ? {uri} : uri),
+			...options,
+		};
 
 		if (!this.opts.store) {
-			const adapterOpts = Object.assign({}, this.opts);
-			this.opts.store = loadStore(adapterOpts);
+			const adapterOptions = {...this.opts};
+			this.opts.store = loadStore(adapterOptions);
 		}
 
-		if (typeof this.opts.store.on === 'function') {
-			this.opts.store.on('error', err => this.emit('error', err));
+		if (this.opts.compression) {
+			const compression = this.opts.compression;
+			this.opts.serialize = compression.serialize.bind(compression);
+			this.opts.deserialize = compression.deserialize.bind(compression);
+		}
+
+		if (typeof this.opts.store.on === 'function' && emitErrors) {
+			this.opts.store.on('error', error => this.emit('error', error));
 		}
 
 		this.opts.store.namespace = this.opts.namespace;
+
+		const generateIterator = iterator => async function * () {
+			for await (const [key, raw] of typeof iterator === 'function'
+				? iterator(this.opts.store.namespace)
+				: iterator) {
+				const data = await this.opts.deserialize(raw);
+				if (this.opts.store.namespace && !key.includes(this.opts.store.namespace)) {
+					continue;
+				}
+
+				if (typeof data.expires === 'number' && Date.now() > data.expires) {
+					this.delete(key);
+					continue;
+				}
+
+				yield [this._getKeyUnprefix(key), data.value];
+			}
+		};
+
+		// Attach iterators
+		if (typeof this.opts.store[Symbol.iterator] === 'function' && this.opts.store instanceof Map) {
+			this.iterator = generateIterator(this.opts.store);
+		} else if (typeof this.opts.store.iterator === 'function' && this.opts.store.opts
+			&& this._checkIterableAdaptar()) {
+			this.iterator = generateIterator(this.opts.store.iterator.bind(this.opts.store));
+		}
+	}
+
+	_checkIterableAdaptar() {
+		return iterableAdapters.includes(this.opts.store.opts.dialect)
+			|| iterableAdapters.findIndex(element => this.opts.store.opts.url.includes(element)) >= 0;
 	}
 
 	_getKeyPrefix(key) {
 		return `${this.opts.namespace}:${key}`;
 	}
 
-	get(key, opts) {
-		const keyPrefixed = this._getKeyPrefix(key);
-		const { store } = this.opts;
+	_getKeyPrefixArray(keys) {
+		return keys.map(key => `${this.opts.namespace}:${key}`);
+	}
+
+	_getKeyUnprefix(key) {
+		return key
+			.split(':')
+			.splice(1)
+			.join(':');
+	}
+
+	get(key, options) {
+		const {store} = this.opts;
+		const isArray = Array.isArray(key);
+		const keyPrefixed = isArray ? this._getKeyPrefixArray(key) : this._getKeyPrefix(key);
+		if (isArray && store.getMany === undefined) {
+			const promises = [];
+			for (const key of keyPrefixed) {
+				promises.push(Promise.resolve()
+					.then(() => store.get(key))
+					.then(data => (typeof data === 'string') ? this.opts.deserialize(data) : (this.opts.compression ? this.opts.deserialize(data) : data))
+					.then(data => {
+						if (data === undefined || data === null) {
+							return undefined;
+						}
+
+						if (typeof data.expires === 'number' && Date.now() > data.expires) {
+							return this.delete(key).then(() => undefined);
+						}
+
+						return (options && options.raw) ? data : data.value;
+					}),
+				);
+			}
+
+			return Promise.allSettled(promises)
+				.then(values => {
+					const data = [];
+					for (const value of values) {
+						data.push(value.value);
+					}
+
+					return data;
+				});
+		}
+
 		return Promise.resolve()
-			.then(() => store.get(keyPrefixed))
+			.then(() => isArray ? store.getMany(keyPrefixed) : store.get(keyPrefixed))
+			.then(data => (typeof data === 'string') ? this.opts.deserialize(data) : (this.opts.compression ? this.opts.deserialize(data) : data))
 			.then(data => {
-				return (typeof data === 'string') ? this.opts.deserialize(data) : data;
-			})
-			.then(data => {
-				if (data === undefined) {
+				if (data === undefined || data === null) {
 					return undefined;
+				}
+
+				if (isArray) {
+					return data.map((row, index) => {
+						if ((typeof row === 'string')) {
+							row = this.opts.deserialize(row);
+						}
+
+						if (row === undefined || row === null) {
+							return undefined;
+						}
+
+						if (typeof row.expires === 'number' && Date.now() > row.expires) {
+							this.delete(key[index]).then(() => undefined);
+							return undefined;
+						}
+
+						return (options && options.raw) ? row : row.value;
+					});
 				}
 
 				if (typeof data.expires === 'number' && Date.now() > data.expires) {
-					this.delete(key);
-					return undefined;
+					return this.delete(key).then(() => undefined);
 				}
 
-				return (opts && opts.raw) ? data : data.value;
+				return (options && options.raw) ? data : data.value;
 			});
 	}
 
@@ -14425,12 +16782,16 @@ class Keyv extends EventEmitter__default['default'] {
 			ttl = undefined;
 		}
 
-		const { store } = this.opts;
+		const {store} = this.opts;
 
 		return Promise.resolve()
 			.then(() => {
 				const expires = (typeof ttl === 'number') ? (Date.now() + ttl) : null;
-				value = { value, expires };
+				if (typeof value === 'symbol') {
+					this.emit('error', 'symbol cannot be serialized');
+				}
+
+				value = {value, expires};
 				return this.opts.serialize(value);
 			})
 			.then(value => store.set(keyPrefixed, value, ttl))
@@ -14438,16 +16799,53 @@ class Keyv extends EventEmitter__default['default'] {
 	}
 
 	delete(key) {
+		const {store} = this.opts;
+		if (Array.isArray(key)) {
+			const keyPrefixed = this._getKeyPrefixArray(key);
+			if (store.deleteMany === undefined) {
+				const promises = [];
+				for (const key of keyPrefixed) {
+					promises.push(store.delete(key));
+				}
+
+				return Promise.allSettled(promises)
+					.then(values => values.every(x => x.value === true));
+			}
+
+			return Promise.resolve()
+				.then(() => store.deleteMany(keyPrefixed));
+		}
+
 		const keyPrefixed = this._getKeyPrefix(key);
-		const { store } = this.opts;
 		return Promise.resolve()
 			.then(() => store.delete(keyPrefixed));
 	}
 
 	clear() {
-		const { store } = this.opts;
+		const {store} = this.opts;
 		return Promise.resolve()
 			.then(() => store.clear());
+	}
+
+	has(key) {
+		const keyPrefixed = this._getKeyPrefix(key);
+		const {store} = this.opts;
+		return Promise.resolve()
+			.then(async () => {
+				if (typeof store.has === 'function') {
+					return store.has(keyPrefixed);
+				}
+
+				const value = await store.get(keyPrefixed);
+				return value !== undefined;
+			});
+	}
+
+	disconnect() {
+		const {store} = this.opts;
+		if (typeof store.disconnect === 'function') {
+			return store.disconnect();
+		}
 	}
 }
 
@@ -14472,10 +16870,10 @@ class CacheableRequest {
 		return (opts, cb) => {
 			let url;
 			if (typeof opts === 'string') {
-				url = normalizeUrlObject(url_1__default['default'].parse(opts));
+				url = normalizeUrlObject(url_1__default["default"].parse(opts));
 				opts = {};
-			} else if (opts instanceof url_1__default['default'].URL) {
-				url = normalizeUrlObject(url_1__default['default'].parse(opts.toString()));
+			} else if (opts instanceof url_1__default["default"].URL) {
+				url = normalizeUrlObject(url_1__default["default"].parse(opts.toString()));
 				opts = {};
 			} else {
 				const [pathname, ...searchParts] = (opts.path || '').split('?');
@@ -14496,9 +16894,9 @@ class CacheableRequest {
 			};
 			opts.headers = lowercaseKeys(opts.headers);
 
-			const ee = new EventEmitter__default['default']();
+			const ee = new EventEmitter__default["default"]();
 			const normalizedUrlString = normalizeUrl_1(
-				url_1__default['default'].format(url),
+				url_1__default["default"].format(url),
 				{
 					stripWWW: false,
 					removeTrailingSlash: false,
@@ -14769,7 +17167,7 @@ var mimicResponse = (fromStream, toStream) => {
 	return toStream;
 };
 
-const {Transform, PassThrough} = require$$0__default$2['default'];
+const {Transform, PassThrough} = require$$0__default$2["default"];
 
 
 
@@ -14782,7 +17180,7 @@ var decompressResponse = response => {
 
 	// TODO: Remove this when targeting Node.js 12.
 	const isBrotli = contentEncoding === 'br';
-	if (isBrotli && typeof zlib__default['default'].createBrotliDecompress !== 'function') {
+	if (isBrotli && typeof zlib__default["default"].createBrotliDecompress !== 'function') {
 		response.destroy(new Error('Brotli is not supported on Node.js < 12'));
 		return response;
 	}
@@ -14810,7 +17208,7 @@ var decompressResponse = response => {
 		}
 	});
 
-	const decompressStream = isBrotli ? zlib__default['default'].createBrotliDecompress() : zlib__default['default'].createUnzip();
+	const decompressStream = isBrotli ? zlib__default["default"].createBrotliDecompress() : zlib__default["default"].createUnzip();
 
 	decompressStream.once('error', error => {
 		if (isEmpty && !response.readable) {
@@ -15076,7 +17474,7 @@ const gracefullyClose = session => {
 	}
 };
 
-class Agent$1 extends EventEmitter__default['default'] {
+class Agent$1 extends EventEmitter__default["default"] {
 	constructor({timeout = 60000, maxSessions = Infinity, maxFreeSessions = 10, maxCachedTlsSessions = 100} = {}) {
 		super();
 
@@ -15284,7 +17682,7 @@ class Agent$1 extends EventEmitter__default['default'] {
 				let receivedSettings = false;
 
 				try {
-					const session = http2__default['default'].connect(origin, {
+					const session = http2__default["default"].connect(origin, {
 						createConnection: this.createConnection,
 						settings: this.settings,
 						session: this.tlsSessionCache.get(name),
@@ -15567,7 +17965,7 @@ class Agent$1 extends EventEmitter__default['default'] {
 			options.servername = host;
 		}
 
-		return tls__default['default'].connect(port, host, options);
+		return tls__default["default"].connect(port, host, options);
 	}
 
 	closeFreeSessions() {
@@ -15614,7 +18012,7 @@ var agent = {
 	globalAgent: new Agent$1()
 };
 
-const {Readable} = require$$0__default$2['default'];
+const {Readable} = require$$0__default$2["default"];
 
 class IncomingMessage extends Readable {
 	constructor(socket, highWaterMark) {
@@ -15762,7 +18160,7 @@ makeError(TypeError, 'ERR_INVALID_CHAR', args => {
 });
 });
 
-const {Writable} = require$$0__default$2['default'];
+const {Writable} = require$$0__default$2["default"];
 const {Agent, globalAgent} = agent;
 
 
@@ -15782,7 +18180,7 @@ const {
 	HTTP2_HEADER_METHOD,
 	HTTP2_HEADER_PATH,
 	HTTP2_METHOD_CONNECT
-} = http2__default['default'].constants;
+} = http2__default["default"].constants;
 
 const kHeaders = Symbol('headers');
 const kOrigin = Symbol('origin');
@@ -16206,10 +18604,14 @@ class ClientRequest extends Writable {
 
 var clientRequest = ClientRequest;
 
-var resolveAlpn = (options = {}) => new Promise((resolve, reject) => {
+var resolveAlpn = (options = {}, connect = tls__default["default"].connect) => new Promise((resolve, reject) => {
 	let timeout = false;
 
+	let socket;
+
 	const callback = async () => {
+		await socketPromise;
+
 		socket.off('timeout', onTimeout);
 		socket.off('error', reject);
 
@@ -16231,10 +18633,16 @@ var resolveAlpn = (options = {}) => new Promise((resolve, reject) => {
 		callback();
 	};
 
-	const socket = tls__default['default'].connect(options, callback);
+	const socketPromise = (async () => {
+		try {
+			socket = await connect(options, callback);
 
-	socket.on('error', reject);
-	socket.once('timeout', onTimeout);
+			socket.on('error', reject);
+			socket.once('timeout', onTimeout);
+		} catch (error) {
+			reject(error);
+		}
+	})();
 });
 
 /* istanbul ignore file: https://github.com/nodejs/node/blob/v13.0.1/lib/_http_agent.js */
@@ -16256,7 +18664,7 @@ var calculateServerName = options => {
 		}
 	}
 
-	if (net__default['default'].isIP(servername)) {
+	if (net__default["default"].isIP(servername)) {
 		return '';
 	}
 
@@ -16318,8 +18726,8 @@ const resolveProtocol = async options => {
 				// https://github.com/nodejs/node/issues/33343
 				socket.destroy();
 			} else {
-				const {globalAgent} = https__default['default'];
-				const defaultCreateConnection = https__default['default'].Agent.prototype.createConnection;
+				const {globalAgent} = https__default["default"];
+				const defaultCreateConnection = https__default["default"].Agent.prototype.createConnection;
 
 				if (agent) {
 					if (agent.createConnection === defaultCreateConnection) {
@@ -16375,7 +18783,7 @@ var auto = async (input, options, callback) => {
 	options.session = options.tlsSession;
 	options.servername = options.servername || calculateServerName(options);
 	options.port = options.port || (isHttps ? 443 : 80);
-	options._defaultAgent = isHttps ? https__default['default'].globalAgent : http__default['default'].globalAgent;
+	options._defaultAgent = isHttps ? https__default["default"].globalAgent : http__default["default"].globalAgent;
 
 	const agents = options.agent;
 
@@ -16399,7 +18807,7 @@ var auto = async (input, options, callback) => {
 		}
 	}
 
-	return http__default['default'].request(options, callback);
+	return http__default["default"].request(options, callback);
 };
 
 var protocolCache = cache;
@@ -16418,7 +18826,7 @@ const get = (url, options, callback) => {
 };
 
 var source$1 = {
-	...http2__default['default'],
+	...http2__default["default"],
 	ClientRequest: clientRequest,
 	IncomingMessage: incomingMessage,
 	...agent,
@@ -16427,11 +18835,15 @@ var source$1 = {
 	auto
 };
 
+var is_1 = dist;
+
 var isFormData = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 
-exports.default = (body) => dist.default.nodeStream(body) && dist.default.function_(body.getBoundary);
+exports.default = (body) => is_1.default.nodeStream(body) && is_1.default.function_(body.getBoundary);
 });
+
+var is_form_data_1 = isFormData;
 
 var getBodySize = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -16439,7 +18851,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 
 
-const statAsync = util_1__default['default'].promisify(fs__default['default'].stat);
+const statAsync = util_1__default["default"].promisify(fs__default["default"].stat);
 exports.default = async (body, headers) => {
     if (headers && 'content-length' in headers) {
         return Number(headers['content-length']);
@@ -16447,16 +18859,16 @@ exports.default = async (body, headers) => {
     if (!body) {
         return 0;
     }
-    if (dist.default.string(body)) {
+    if (is_1.default.string(body)) {
         return Buffer.byteLength(body);
     }
-    if (dist.default.buffer(body)) {
+    if (is_1.default.buffer(body)) {
         return body.length;
     }
-    if (isFormData.default(body)) {
-        return util_1__default['default'].promisify(body.getLength.bind(body))();
+    if (is_form_data_1.default(body)) {
+        return util_1__default["default"].promisify(body.getLength.bind(body))();
     }
-    if (body instanceof fs__default['default'].ReadStream) {
+    if (body instanceof fs__default["default"].ReadStream) {
         const { size } = await statAsync(body.path);
         if (size === 0) {
             return undefined;
@@ -16510,6 +18922,8 @@ exports.default = () => {
 };
 });
 
+var unhandle_1 = unhandle;
+
 var timedOut = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TimeoutError = void 0;
@@ -16532,7 +18946,7 @@ exports.default = (request, delays, options) => {
     }
     request[reentry] = true;
     const cancelers = [];
-    const { once, unhandleAll } = unhandle.default();
+    const { once, unhandleAll } = unhandle_1.default();
     const addTimeout = (delay, callback, event) => {
         var _a;
         const timeout = setTimeout(callback, delay, delay, event);
@@ -16585,7 +18999,7 @@ exports.default = (request, delays, options) => {
         const { socketPath } = request;
         /* istanbul ignore next: hard to test */
         if (socket.connecting) {
-            const hasPath = Boolean(socketPath !== null && socketPath !== void 0 ? socketPath : net__default['default'].isIP((_a = hostname !== null && hostname !== void 0 ? hostname : host) !== null && _a !== void 0 ? _a : '') !== 0);
+            const hasPath = Boolean(socketPath !== null && socketPath !== void 0 ? socketPath : net__default["default"].isIP((_a = hostname !== null && hostname !== void 0 ? hostname : host) !== null && _a !== void 0 ? _a : '') !== 0);
             if (typeof delays.lookup !== 'undefined' && !hasPath && typeof socket.address().address === 'undefined') {
                 const cancelTimeout = addTimeout(delays.lookup, timeoutHandler, 'lookup');
                 once(socket, 'lookup', cancelTimeout);
@@ -16641,7 +19055,7 @@ exports.default = (url) => {
     url = url;
     const options = {
         protocol: url.protocol,
-        hostname: dist.default.string(url.hostname) && url.hostname.startsWith('[') ? url.hostname.slice(1, -1) : url.hostname,
+        hostname: is_1.default.string(url.hostname) && url.hostname.startsWith('[') ? url.hostname.slice(1, -1) : url.hostname,
         host: url.host,
         hash: url.hash,
         search: url.search,
@@ -16649,7 +19063,7 @@ exports.default = (url) => {
         href: url.href,
         path: `${url.pathname || ''}${url.search || ''}`
     };
-    if (dist.default.string(url.port) && url.port.length > 0) {
+    if (is_1.default.string(url.port) && url.port.length > 0) {
         options.port = Number(url.port);
     }
     if (url.username || url.password) {
@@ -16693,7 +19107,7 @@ exports.default = (origin, options) => {
         }
         origin = `${options.protocol}//${(_b = (_a = options.hostname) !== null && _a !== void 0 ? _a : options.host) !== null && _b !== void 0 ? _b : ''}`;
     }
-    const url = new url_1__default['default'].URL(origin);
+    const url = new url_1__default["default"].URL(origin);
     if (options.path) {
         const searchIndex = options.path.indexOf('?');
         if (searchIndex === -1) {
@@ -16811,14 +19225,14 @@ var normalizeArguments_1 = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 
 const normalizeArguments = (options, defaults) => {
-    if (dist.default.null_(options.encoding)) {
+    if (is_1.default.null_(options.encoding)) {
         throw new TypeError('To get a Buffer, set `options.responseType` to `buffer` instead');
     }
-    dist.assert.any([dist.default.string, dist.default.undefined], options.encoding);
-    dist.assert.any([dist.default.boolean, dist.default.undefined], options.resolveBodyOnly);
-    dist.assert.any([dist.default.boolean, dist.default.undefined], options.methodRewriting);
-    dist.assert.any([dist.default.boolean, dist.default.undefined], options.isStream);
-    dist.assert.any([dist.default.string, dist.default.undefined], options.responseType);
+    is_1.assert.any([is_1.default.string, is_1.default.undefined], options.encoding);
+    is_1.assert.any([is_1.default.boolean, is_1.default.undefined], options.resolveBodyOnly);
+    is_1.assert.any([is_1.default.boolean, is_1.default.undefined], options.methodRewriting);
+    is_1.assert.any([is_1.default.boolean, is_1.default.undefined], options.isStream);
+    is_1.assert.any([is_1.default.string, is_1.default.undefined], options.responseType);
     // `options.responseType`
     if (options.responseType === undefined) {
         options.responseType = 'text';
@@ -16838,7 +19252,7 @@ const normalizeArguments = (options, defaults) => {
             maxRetryAfter: undefined
         };
     }
-    if (dist.default.object(retry)) {
+    if (is_1.default.object(retry)) {
         options.retry = {
             ...options.retry,
             ...retry
@@ -16847,17 +19261,17 @@ const normalizeArguments = (options, defaults) => {
         options.retry.statusCodes = [...new Set(options.retry.statusCodes)];
         options.retry.errorCodes = [...new Set(options.retry.errorCodes)];
     }
-    else if (dist.default.number(retry)) {
+    else if (is_1.default.number(retry)) {
         options.retry.limit = retry;
     }
-    if (dist.default.undefined(options.retry.maxRetryAfter)) {
+    if (is_1.default.undefined(options.retry.maxRetryAfter)) {
         options.retry.maxRetryAfter = Math.min(
         // TypeScript is not smart enough to handle `.filter(x => is.number(x))`.
         // eslint-disable-next-line unicorn/no-fn-reference-in-iterator
-        ...[options.timeout.request, options.timeout.connect].filter(dist.default.number));
+        ...[options.timeout.request, options.timeout.connect].filter(is_1.default.number));
     }
     // `options.pagination`
-    if (dist.default.object(options.pagination)) {
+    if (is_1.default.object(options.pagination)) {
         if (defaults) {
             options.pagination = {
                 ...defaults.pagination,
@@ -16865,16 +19279,16 @@ const normalizeArguments = (options, defaults) => {
             };
         }
         const { pagination } = options;
-        if (!dist.default.function_(pagination.transform)) {
+        if (!is_1.default.function_(pagination.transform)) {
             throw new Error('`options.pagination.transform` must be implemented');
         }
-        if (!dist.default.function_(pagination.shouldContinue)) {
+        if (!is_1.default.function_(pagination.shouldContinue)) {
             throw new Error('`options.pagination.shouldContinue` must be implemented');
         }
-        if (!dist.default.function_(pagination.filter)) {
+        if (!is_1.default.function_(pagination.filter)) {
             throw new TypeError('`options.pagination.filter` must be implemented');
         }
-        if (!dist.default.function_(pagination.paginate)) {
+        if (!is_1.default.function_(pagination.paginate)) {
             throw new Error('`options.pagination.paginate` must be implemented');
         }
     }
@@ -16918,6 +19332,30 @@ const calculateRetryDelay = ({ attemptCount, retryOptions, error, retryAfter }) 
 exports.default = calculateRetryDelay;
 });
 
+var get_body_size_1 = getBodySize;
+
+var proxy_events_1 = proxyEvents;
+
+var timed_out_1 = timedOut;
+
+var url_to_options_1 = urlToOptions;
+
+var options_to_url_1 = optionsToUrl;
+
+var weakable_map_1 = weakableMap;
+
+var get_buffer_1 = getBuffer_1;
+
+var dns_ip_version_1 = dnsIpVersion;
+
+var is_response_ok_1 = isResponseOk;
+
+var deprecation_warning_1 = deprecationWarning;
+
+var normalize_arguments_1 = normalizeArguments_1;
+
+var calculate_retry_delay_1 = calculateRetryDelay_1;
+
 var core = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UnsupportedProtocolError = exports.ReadError = exports.TimeoutError = exports.UploadError = exports.CacheError = exports.HTTPError = exports.MaxRedirectsError = exports.RequestError = exports.setNonEnumerableProperties = exports.knownHookEvents = exports.withoutBody = exports.kIsNormalizedAlready = void 0;
@@ -16926,7 +19364,7 @@ exports.UnsupportedProtocolError = exports.ReadError = exports.TimeoutError = ex
 
 
 
-const http_1 = http__default['default'];
+const http_1 = http__default["default"];
 
 
 
@@ -16968,7 +19406,7 @@ const kJobs = Symbol('jobs');
 const kOriginalResponse = Symbol('originalResponse');
 const kRetryTimeout = Symbol('retryTimeout');
 exports.kIsNormalizedAlready = Symbol('isNormalizedAlready');
-const supportsBrotli = dist.default.string(process.versions.brotli);
+const supportsBrotli = is_1.default.string(process.versions.brotli);
 exports.withoutBody = new Set(['GET', 'HEAD']);
 exports.knownHookEvents = [
     'init',
@@ -16983,15 +19421,15 @@ function validateSearchParameters(searchParameters) {
     // eslint-disable-next-line guard-for-in
     for (const key in searchParameters) {
         const value = searchParameters[key];
-        if (!dist.default.string(value) && !dist.default.number(value) && !dist.default.boolean(value) && !dist.default.null_(value) && !dist.default.undefined(value)) {
+        if (!is_1.default.string(value) && !is_1.default.number(value) && !is_1.default.boolean(value) && !is_1.default.null_(value) && !is_1.default.undefined(value)) {
             throw new TypeError(`The \`searchParams\` value '${String(value)}' must be a string, number, boolean or null`);
         }
     }
 }
 function isClientRequest(clientRequest) {
-    return dist.default.object(clientRequest) && !('statusCode' in clientRequest);
+    return is_1.default.object(clientRequest) && !('statusCode' in clientRequest);
 }
-const cacheableStore = new weakableMap.default();
+const cacheableStore = new weakable_map_1.default();
 const waitForOpenFile = async (file) => new Promise((resolve, reject) => {
     const onError = (error) => {
         reject(error);
@@ -17072,7 +19510,7 @@ class RequestError extends Error {
         }
         this.timings = (_a = this.request) === null || _a === void 0 ? void 0 : _a.timings;
         // Recover the original stacktrace
-        if (dist.default.string(error.stack) && dist.default.string(this.stack)) {
+        if (is_1.default.string(error.stack) && is_1.default.string(this.stack)) {
             const indexOfMessage = this.stack.indexOf(this.message) + this.message.length;
             const thisStackTrace = this.stack.slice(indexOfMessage).split('\n').reverse();
             const errorStackTrace = error.stack.slice(error.stack.indexOf(error.message) + error.message.length).split('\n').reverse();
@@ -17169,7 +19607,7 @@ const proxiedRequestEvents = [
     'upgrade',
     'timeout'
 ];
-class Request extends require$$0__default$2['default'].Duplex {
+class Request extends require$$0__default$2["default"].Duplex {
     constructor(url, options = {}, defaults) {
         super({
             // This must be false, to enable throwing after destroy
@@ -17225,7 +19663,7 @@ class Request extends require$$0__default$2['default'].Duplex {
             }
             catch (error) {
                 // TODO: Move this to `_destroy()`
-                if (dist.default.nodeStream(options.body)) {
+                if (is_1.default.nodeStream(options.body)) {
                     options.body.destroy();
                 }
                 this.destroy(error);
@@ -17235,7 +19673,7 @@ class Request extends require$$0__default$2['default'].Duplex {
         (async () => {
             var _a;
             try {
-                if (this.options.body instanceof fs__default['default'].ReadStream) {
+                if (this.options.body instanceof fs__default["default"].ReadStream) {
                     await waitForOpenFile(this.options.body);
                 }
                 const { url: normalizedURL } = this.options;
@@ -17273,7 +19711,7 @@ class Request extends require$$0__default$2['default'].Duplex {
     static normalizeArguments(url, options, defaults) {
         var _a, _b, _c, _d, _e;
         const rawOptions = options;
-        if (dist.default.object(url) && !dist.default.urlInstance(url)) {
+        if (is_1.default.object(url) && !is_1.default.urlInstance(url)) {
             options = { ...defaults, ...url, ...options };
         }
         else {
@@ -17284,8 +19722,8 @@ class Request extends require$$0__default$2['default'].Duplex {
             if (url !== undefined) {
                 options.url = url;
             }
-            if (dist.default.urlInstance(options.url)) {
-                options.url = new url_1__default['default'].URL(options.url.toString());
+            if (is_1.default.urlInstance(options.url)) {
+                options.url = new url_1__default["default"].URL(options.url.toString());
             }
         }
         // TODO: Deprecate URL options in Got 12.
@@ -17297,38 +19735,38 @@ class Request extends require$$0__default$2['default'].Duplex {
             options.dnsCache = undefined;
         }
         // Nice type assertions
-        dist.assert.any([dist.default.string, dist.default.undefined], options.method);
-        dist.assert.any([dist.default.object, dist.default.undefined], options.headers);
-        dist.assert.any([dist.default.string, dist.default.urlInstance, dist.default.undefined], options.prefixUrl);
-        dist.assert.any([dist.default.object, dist.default.undefined], options.cookieJar);
-        dist.assert.any([dist.default.object, dist.default.string, dist.default.undefined], options.searchParams);
-        dist.assert.any([dist.default.object, dist.default.string, dist.default.undefined], options.cache);
-        dist.assert.any([dist.default.object, dist.default.number, dist.default.undefined], options.timeout);
-        dist.assert.any([dist.default.object, dist.default.undefined], options.context);
-        dist.assert.any([dist.default.object, dist.default.undefined], options.hooks);
-        dist.assert.any([dist.default.boolean, dist.default.undefined], options.decompress);
-        dist.assert.any([dist.default.boolean, dist.default.undefined], options.ignoreInvalidCookies);
-        dist.assert.any([dist.default.boolean, dist.default.undefined], options.followRedirect);
-        dist.assert.any([dist.default.number, dist.default.undefined], options.maxRedirects);
-        dist.assert.any([dist.default.boolean, dist.default.undefined], options.throwHttpErrors);
-        dist.assert.any([dist.default.boolean, dist.default.undefined], options.http2);
-        dist.assert.any([dist.default.boolean, dist.default.undefined], options.allowGetBody);
-        dist.assert.any([dist.default.string, dist.default.undefined], options.localAddress);
-        dist.assert.any([dnsIpVersion.isDnsLookupIpVersion, dist.default.undefined], options.dnsLookupIpVersion);
-        dist.assert.any([dist.default.object, dist.default.undefined], options.https);
-        dist.assert.any([dist.default.boolean, dist.default.undefined], options.rejectUnauthorized);
+        is_1.assert.any([is_1.default.string, is_1.default.undefined], options.method);
+        is_1.assert.any([is_1.default.object, is_1.default.undefined], options.headers);
+        is_1.assert.any([is_1.default.string, is_1.default.urlInstance, is_1.default.undefined], options.prefixUrl);
+        is_1.assert.any([is_1.default.object, is_1.default.undefined], options.cookieJar);
+        is_1.assert.any([is_1.default.object, is_1.default.string, is_1.default.undefined], options.searchParams);
+        is_1.assert.any([is_1.default.object, is_1.default.string, is_1.default.undefined], options.cache);
+        is_1.assert.any([is_1.default.object, is_1.default.number, is_1.default.undefined], options.timeout);
+        is_1.assert.any([is_1.default.object, is_1.default.undefined], options.context);
+        is_1.assert.any([is_1.default.object, is_1.default.undefined], options.hooks);
+        is_1.assert.any([is_1.default.boolean, is_1.default.undefined], options.decompress);
+        is_1.assert.any([is_1.default.boolean, is_1.default.undefined], options.ignoreInvalidCookies);
+        is_1.assert.any([is_1.default.boolean, is_1.default.undefined], options.followRedirect);
+        is_1.assert.any([is_1.default.number, is_1.default.undefined], options.maxRedirects);
+        is_1.assert.any([is_1.default.boolean, is_1.default.undefined], options.throwHttpErrors);
+        is_1.assert.any([is_1.default.boolean, is_1.default.undefined], options.http2);
+        is_1.assert.any([is_1.default.boolean, is_1.default.undefined], options.allowGetBody);
+        is_1.assert.any([is_1.default.string, is_1.default.undefined], options.localAddress);
+        is_1.assert.any([dns_ip_version_1.isDnsLookupIpVersion, is_1.default.undefined], options.dnsLookupIpVersion);
+        is_1.assert.any([is_1.default.object, is_1.default.undefined], options.https);
+        is_1.assert.any([is_1.default.boolean, is_1.default.undefined], options.rejectUnauthorized);
         if (options.https) {
-            dist.assert.any([dist.default.boolean, dist.default.undefined], options.https.rejectUnauthorized);
-            dist.assert.any([dist.default.function_, dist.default.undefined], options.https.checkServerIdentity);
-            dist.assert.any([dist.default.string, dist.default.object, dist.default.array, dist.default.undefined], options.https.certificateAuthority);
-            dist.assert.any([dist.default.string, dist.default.object, dist.default.array, dist.default.undefined], options.https.key);
-            dist.assert.any([dist.default.string, dist.default.object, dist.default.array, dist.default.undefined], options.https.certificate);
-            dist.assert.any([dist.default.string, dist.default.undefined], options.https.passphrase);
-            dist.assert.any([dist.default.string, dist.default.buffer, dist.default.array, dist.default.undefined], options.https.pfx);
+            is_1.assert.any([is_1.default.boolean, is_1.default.undefined], options.https.rejectUnauthorized);
+            is_1.assert.any([is_1.default.function_, is_1.default.undefined], options.https.checkServerIdentity);
+            is_1.assert.any([is_1.default.string, is_1.default.object, is_1.default.array, is_1.default.undefined], options.https.certificateAuthority);
+            is_1.assert.any([is_1.default.string, is_1.default.object, is_1.default.array, is_1.default.undefined], options.https.key);
+            is_1.assert.any([is_1.default.string, is_1.default.object, is_1.default.array, is_1.default.undefined], options.https.certificate);
+            is_1.assert.any([is_1.default.string, is_1.default.undefined], options.https.passphrase);
+            is_1.assert.any([is_1.default.string, is_1.default.buffer, is_1.default.array, is_1.default.undefined], options.https.pfx);
         }
-        dist.assert.any([dist.default.object, dist.default.undefined], options.cacheOptions);
+        is_1.assert.any([is_1.default.object, is_1.default.undefined], options.cacheOptions);
         // `options.method`
-        if (dist.default.string(options.method)) {
+        if (is_1.default.string(options.method)) {
             options.method = options.method.toUpperCase();
         }
         else {
@@ -17353,12 +19791,12 @@ class Request extends require$$0__default$2['default'].Duplex {
         if ('searchParams' in options) {
             if (options.searchParams && options.searchParams !== (defaults === null || defaults === void 0 ? void 0 : defaults.searchParams)) {
                 let searchParameters;
-                if (dist.default.string(options.searchParams) || (options.searchParams instanceof url_1__default['default'].URLSearchParams)) {
-                    searchParameters = new url_1__default['default'].URLSearchParams(options.searchParams);
+                if (is_1.default.string(options.searchParams) || (options.searchParams instanceof url_1__default["default"].URLSearchParams)) {
+                    searchParameters = new url_1__default["default"].URLSearchParams(options.searchParams);
                 }
                 else {
                     validateSearchParameters(options.searchParams);
-                    searchParameters = new url_1__default['default'].URLSearchParams();
+                    searchParameters = new url_1__default["default"].URLSearchParams();
                     // eslint-disable-next-line guard-for-in
                     for (const key in options.searchParams) {
                         const value = options.searchParams[key];
@@ -17384,7 +19822,7 @@ class Request extends require$$0__default$2['default'].Duplex {
         options.username = (_b = options.username) !== null && _b !== void 0 ? _b : '';
         options.password = (_c = options.password) !== null && _c !== void 0 ? _c : '';
         // `options.prefixUrl` & `options.url`
-        if (dist.default.undefined(options.prefixUrl)) {
+        if (is_1.default.undefined(options.prefixUrl)) {
             options.prefixUrl = (_d = defaults === null || defaults === void 0 ? void 0 : defaults.prefixUrl) !== null && _d !== void 0 ? _d : '';
         }
         else {
@@ -17393,14 +19831,14 @@ class Request extends require$$0__default$2['default'].Duplex {
                 options.prefixUrl += '/';
             }
         }
-        if (dist.default.string(options.url)) {
+        if (is_1.default.string(options.url)) {
             if (options.url.startsWith('/')) {
                 throw new Error('`input` must not start with a slash when using `prefixUrl`');
             }
-            options.url = optionsToUrl.default(options.prefixUrl + options.url, options);
+            options.url = options_to_url_1.default(options.prefixUrl + options.url, options);
         }
-        else if ((dist.default.undefined(options.url) && options.prefixUrl !== '') || options.protocol) {
-            options.url = optionsToUrl.default(options.prefixUrl, options);
+        else if ((is_1.default.undefined(options.url) && options.prefixUrl !== '') || options.protocol) {
+            options.url = options_to_url_1.default(options.prefixUrl, options);
         }
         if (options.url) {
             if ('port' in options) {
@@ -17414,7 +19852,7 @@ class Request extends require$$0__default$2['default'].Duplex {
                     if (!url.href.startsWith(value)) {
                         throw new Error(`Cannot change \`prefixUrl\` from ${prefixUrl} to ${value}: ${url.href}`);
                     }
-                    options.url = new url_1__default['default'].URL(value + url.href.slice(prefixUrl.length));
+                    options.url = new url_1__default["default"].URL(value + url.href.slice(prefixUrl.length));
                     prefixUrl = value;
                 },
                 get: () => prefixUrl
@@ -17423,7 +19861,7 @@ class Request extends require$$0__default$2['default'].Duplex {
             let { protocol } = options.url;
             if (protocol === 'unix:') {
                 protocol = 'http:';
-                options.url = new url_1__default['default'].URL(`http://unix${options.url.pathname}${options.url.search}`);
+                options.url = new url_1__default["default"].URL(`http://unix${options.url.pathname}${options.url.search}`);
             }
             // Set search params
             if (options.searchParams) {
@@ -17453,12 +19891,12 @@ class Request extends require$$0__default$2['default'].Duplex {
         const { cookieJar } = options;
         if (cookieJar) {
             let { setCookie, getCookieString } = cookieJar;
-            dist.assert.function_(setCookie);
-            dist.assert.function_(getCookieString);
+            is_1.assert.function_(setCookie);
+            is_1.assert.function_(getCookieString);
             /* istanbul ignore next: Horrible `tough-cookie` v3 check */
             if (setCookie.length === 4 && getCookieString.length === 0) {
-                setCookie = util_1__default['default'].promisify(setCookie.bind(options.cookieJar));
-                getCookieString = util_1__default['default'].promisify(getCookieString.bind(options.cookieJar));
+                setCookie = util_1__default["default"].promisify(setCookie.bind(options.cookieJar));
+                getCookieString = util_1__default["default"].promisify(getCookieString.bind(options.cookieJar));
                 options.cookieJar = {
                     setCookie,
                     getCookieString: getCookieString
@@ -17472,7 +19910,7 @@ class Request extends require$$0__default$2['default'].Duplex {
                 cacheableStore.set(cache, new src(((requestOptions, handler) => {
                     const result = requestOptions[kRequest](requestOptions, handler);
                     // TODO: remove this when `cacheable-request` supports async request functions.
-                    if (dist.default.promise(result)) {
+                    if (is_1.default.promise(result)) {
                         // @ts-expect-error
                         // We only need to implement the error handler in order to support HTTP2 caching.
                         // The result will be a promise anyway.
@@ -17511,11 +19949,11 @@ class Request extends require$$0__default$2['default'].Duplex {
             }
             options.dnsCache = globalDnsCache;
         }
-        else if (!dist.default.undefined(options.dnsCache) && !options.dnsCache.lookup) {
-            throw new TypeError(`Parameter \`dnsCache\` must be a CacheableLookup instance or a boolean, got ${dist.default(options.dnsCache)}`);
+        else if (!is_1.default.undefined(options.dnsCache) && !options.dnsCache.lookup) {
+            throw new TypeError(`Parameter \`dnsCache\` must be a CacheableLookup instance or a boolean, got ${is_1.default(options.dnsCache)}`);
         }
         // `options.timeout`
-        if (dist.default.number(options.timeout)) {
+        if (is_1.default.number(options.timeout)) {
             options.timeout = { request: options.timeout };
         }
         else if (defaults && options.timeout !== defaults.timeout) {
@@ -17536,12 +19974,12 @@ class Request extends require$$0__default$2['default'].Duplex {
         options.hooks = { ...options.hooks };
         for (const event of exports.knownHookEvents) {
             if (event in options.hooks) {
-                if (dist.default.array(options.hooks[event])) {
+                if (is_1.default.array(options.hooks[event])) {
                     // See https://github.com/microsoft/TypeScript/issues/31445#issuecomment-576929044
                     options.hooks[event] = [...options.hooks[event]];
                 }
                 else {
-                    throw new TypeError(`Parameter \`${event}\` must be an Array, got ${dist.default(options.hooks[event])}`);
+                    throw new TypeError(`Parameter \`${event}\` must be an Array, got ${is_1.default(options.hooks[event])}`);
                 }
             }
             else {
@@ -17562,32 +20000,32 @@ class Request extends require$$0__default$2['default'].Duplex {
         }
         // DNS options
         if ('family' in options) {
-            deprecationWarning.default('"options.family" was never documented, please use "options.dnsLookupIpVersion"');
+            deprecation_warning_1.default('"options.family" was never documented, please use "options.dnsLookupIpVersion"');
         }
         // HTTPS options
         if (defaults === null || defaults === void 0 ? void 0 : defaults.https) {
             options.https = { ...defaults.https, ...options.https };
         }
         if ('rejectUnauthorized' in options) {
-            deprecationWarning.default('"options.rejectUnauthorized" is now deprecated, please use "options.https.rejectUnauthorized"');
+            deprecation_warning_1.default('"options.rejectUnauthorized" is now deprecated, please use "options.https.rejectUnauthorized"');
         }
         if ('checkServerIdentity' in options) {
-            deprecationWarning.default('"options.checkServerIdentity" was never documented, please use "options.https.checkServerIdentity"');
+            deprecation_warning_1.default('"options.checkServerIdentity" was never documented, please use "options.https.checkServerIdentity"');
         }
         if ('ca' in options) {
-            deprecationWarning.default('"options.ca" was never documented, please use "options.https.certificateAuthority"');
+            deprecation_warning_1.default('"options.ca" was never documented, please use "options.https.certificateAuthority"');
         }
         if ('key' in options) {
-            deprecationWarning.default('"options.key" was never documented, please use "options.https.key"');
+            deprecation_warning_1.default('"options.key" was never documented, please use "options.https.key"');
         }
         if ('cert' in options) {
-            deprecationWarning.default('"options.cert" was never documented, please use "options.https.certificate"');
+            deprecation_warning_1.default('"options.cert" was never documented, please use "options.https.certificate"');
         }
         if ('passphrase' in options) {
-            deprecationWarning.default('"options.passphrase" was never documented, please use "options.https.passphrase"');
+            deprecation_warning_1.default('"options.passphrase" was never documented, please use "options.https.passphrase"');
         }
         if ('pfx' in options) {
-            deprecationWarning.default('"options.pfx" was never documented, please use "options.https.pfx"');
+            deprecation_warning_1.default('"options.pfx" was never documented, please use "options.https.pfx"');
         }
         // Other options
         if ('followRedirects' in options) {
@@ -17603,7 +20041,7 @@ class Request extends require$$0__default$2['default'].Duplex {
         options.maxRedirects = (_e = options.maxRedirects) !== null && _e !== void 0 ? _e : 0;
         // Set non-enumerable properties
         exports.setNonEnumerableProperties([defaults, rawOptions], options);
-        return normalizeArguments_1.default(options, defaults);
+        return normalize_arguments_1.default(options, defaults);
     }
     _lockWrite() {
         const onLockedWrite = () => {
@@ -17619,9 +20057,9 @@ class Request extends require$$0__default$2['default'].Duplex {
     async _finalizeBody() {
         const { options } = this;
         const { headers } = options;
-        const isForm = !dist.default.undefined(options.form);
-        const isJSON = !dist.default.undefined(options.json);
-        const isBody = !dist.default.undefined(options.body);
+        const isForm = !is_1.default.undefined(options.form);
+        const isJSON = !is_1.default.undefined(options.json);
+        const isBody = !is_1.default.undefined(options.body);
         const hasPayload = isForm || isJSON || isBody;
         const cannotHaveBody = exports.withoutBody.has(options.method) && !(options.method === 'GET' && options.allowGetBody);
         this._cannotHaveBody = cannotHaveBody;
@@ -17633,21 +20071,21 @@ class Request extends require$$0__default$2['default'].Duplex {
                 throw new TypeError('The `body`, `json` and `form` options are mutually exclusive');
             }
             if (isBody &&
-                !(options.body instanceof require$$0__default$2['default'].Readable) &&
-                !dist.default.string(options.body) &&
-                !dist.default.buffer(options.body) &&
-                !isFormData.default(options.body)) {
+                !(options.body instanceof require$$0__default$2["default"].Readable) &&
+                !is_1.default.string(options.body) &&
+                !is_1.default.buffer(options.body) &&
+                !is_form_data_1.default(options.body)) {
                 throw new TypeError('The `body` option must be a stream.Readable, string or Buffer');
             }
-            if (isForm && !dist.default.object(options.form)) {
+            if (isForm && !is_1.default.object(options.form)) {
                 throw new TypeError('The `form` option must be an Object');
             }
             {
                 // Serialize body
-                const noContentType = !dist.default.string(headers['content-type']);
+                const noContentType = !is_1.default.string(headers['content-type']);
                 if (isBody) {
                     // Special case for https://github.com/form-data/form-data
-                    if (isFormData.default(options.body) && noContentType) {
+                    if (is_form_data_1.default(options.body) && noContentType) {
                         headers['content-type'] = `multipart/form-data; boundary=${options.body.getBoundary()}`;
                     }
                     this[kBody] = options.body;
@@ -17656,7 +20094,7 @@ class Request extends require$$0__default$2['default'].Duplex {
                     if (noContentType) {
                         headers['content-type'] = 'application/x-www-form-urlencoded';
                     }
-                    this[kBody] = (new url_1__default['default'].URLSearchParams(options.form)).toString();
+                    this[kBody] = (new url_1__default["default"].URLSearchParams(options.form)).toString();
                 }
                 else {
                     if (noContentType) {
@@ -17664,7 +20102,7 @@ class Request extends require$$0__default$2['default'].Duplex {
                     }
                     this[kBody] = options.stringifyJson(options.json);
                 }
-                const uploadBodySize = await getBodySize.default(this[kBody], options.headers);
+                const uploadBodySize = await get_body_size_1.default(this[kBody], options.headers);
                 // See https://tools.ietf.org/html/rfc7230#section-3.3.2
                 // A user agent SHOULD send a Content-Length in a request message when
                 // no Transfer-Encoding is sent and the request method defines a meaning
@@ -17674,8 +20112,8 @@ class Request extends require$$0__default$2['default'].Duplex {
                 // Content-Length header field when the request message does not contain
                 // a payload body and the method semantics do not anticipate such a
                 // body.
-                if (dist.default.undefined(headers['content-length']) && dist.default.undefined(headers['transfer-encoding'])) {
-                    if (!cannotHaveBody && !dist.default.undefined(uploadBodySize)) {
+                if (is_1.default.undefined(headers['content-length']) && is_1.default.undefined(headers['transfer-encoding'])) {
+                    if (!cannotHaveBody && !is_1.default.undefined(uploadBodySize)) {
                         headers['content-length'] = String(uploadBodySize);
                     }
                 }
@@ -17698,7 +20136,7 @@ class Request extends require$$0__default$2['default'].Duplex {
         }
         const statusCode = response.statusCode;
         const typedResponse = response;
-        typedResponse.statusMessage = typedResponse.statusMessage ? typedResponse.statusMessage : http__default['default'].STATUS_CODES[statusCode];
+        typedResponse.statusMessage = typedResponse.statusMessage ? typedResponse.statusMessage : http__default["default"].STATUS_CODES[statusCode];
         typedResponse.url = options.url.toString();
         typedResponse.requestUrl = this.requestUrl;
         typedResponse.redirectUrls = this.redirects;
@@ -17728,7 +20166,7 @@ class Request extends require$$0__default$2['default'].Duplex {
         });
         this.emit('downloadProgress', this.downloadProgress);
         const rawCookies = response.headers['set-cookie'];
-        if (dist.default.object(options.cookieJar) && rawCookies) {
+        if (is_1.default.object(options.cookieJar) && rawCookies) {
             let promises = rawCookies.map(async (rawCookie) => options.cookieJar.setCookie(rawCookie, url.toString()));
             if (options.ignoreInvalidCookies) {
                 promises = promises.map(async (p) => p.catch(() => { }));
@@ -17777,7 +20215,7 @@ class Request extends require$$0__default$2['default'].Duplex {
                 // Do not remove. See https://github.com/sindresorhus/got/pull/214
                 const redirectBuffer = Buffer.from(response.headers.location, 'binary').toString();
                 // Handles invalid URLs. See https://github.com/sindresorhus/got/issues/604
-                const redirectUrl = new url_1__default['default'].URL(redirectBuffer, url);
+                const redirectUrl = new url_1__default["default"].URL(redirectBuffer, url);
                 const redirectString = redirectUrl.toString();
                 decodeURI(redirectString);
                 // Redirecting to a different site, clear sensitive data.
@@ -17815,7 +20253,7 @@ class Request extends require$$0__default$2['default'].Duplex {
             }
             return;
         }
-        if (options.isStream && options.throwHttpErrors && !isResponseOk.isResponseOk(typedResponse)) {
+        if (options.isStream && options.throwHttpErrors && !is_response_ok_1.isResponseOk(typedResponse)) {
             this._beforeError(new HTTPError(typedResponse));
             return;
         }
@@ -17862,7 +20300,7 @@ class Request extends require$$0__default$2['default'].Duplex {
         const { options } = this;
         const { timeout, url } = options;
         source$3.default(request);
-        this[kCancelTimeouts] = timedOut.default(request, timeout, url);
+        this[kCancelTimeouts] = timed_out_1.default(request, timeout, url);
         const responseEventName = options.cache ? 'cacheableResponse' : 'response';
         request.once(responseEventName, (response) => {
             void this._onResponse(response);
@@ -17873,16 +20311,16 @@ class Request extends require$$0__default$2['default'].Duplex {
             request.destroy();
             // Node.js <= 12.18.2 mistakenly emits the response `end` first.
             (_a = request.res) === null || _a === void 0 ? void 0 : _a.removeAllListeners('end');
-            error = error instanceof timedOut.TimeoutError ? new TimeoutError(error, this.timings, this) : new RequestError(error.message, error, this);
+            error = error instanceof timed_out_1.TimeoutError ? new TimeoutError(error, this.timings, this) : new RequestError(error.message, error, this);
             this._beforeError(error);
         });
-        this[kUnproxyEvents] = proxyEvents.default(request, this, proxiedRequestEvents);
+        this[kUnproxyEvents] = proxy_events_1.default(request, this, proxiedRequestEvents);
         this[kRequest] = request;
         this.emit('uploadProgress', this.uploadProgress);
         // Send body
         const body = this[kBody];
         const currentRequest = this.redirects.length === 0 ? this : request;
-        if (dist.default.nodeStream(body)) {
+        if (is_1.default.nodeStream(body)) {
             body.pipe(currentRequest);
             body.once('error', (error) => {
                 this._beforeError(new UploadError(error, this));
@@ -17890,7 +20328,7 @@ class Request extends require$$0__default$2['default'].Duplex {
         }
         else {
             this._unlockWrite();
-            if (!dist.default.undefined(body)) {
+            if (!is_1.default.undefined(body)) {
                 this._writeRequest(body, undefined, () => { });
                 currentRequest.end();
                 this._lockWrite();
@@ -17905,7 +20343,7 @@ class Request extends require$$0__default$2['default'].Duplex {
     async _createCacheableRequest(url, options) {
         return new Promise((resolve, reject) => {
             // TODO: Remove `utils/url-to-options.ts` when `cacheable-request` is fixed
-            Object.assign(options, urlToOptions.default(url));
+            Object.assign(options, url_to_options_1.default(url));
             // `http-cache-semantics` checks this
             // TODO: Fix this ignore.
             // @ts-expect-error
@@ -17934,28 +20372,28 @@ class Request extends require$$0__default$2['default'].Duplex {
         const { options } = this;
         const { headers } = options;
         for (const key in headers) {
-            if (dist.default.undefined(headers[key])) {
+            if (is_1.default.undefined(headers[key])) {
                 // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
                 delete headers[key];
             }
-            else if (dist.default.null_(headers[key])) {
+            else if (is_1.default.null_(headers[key])) {
                 throw new TypeError(`Use \`undefined\` instead of \`null\` to delete the \`${key}\` header`);
             }
         }
-        if (options.decompress && dist.default.undefined(headers['accept-encoding'])) {
+        if (options.decompress && is_1.default.undefined(headers['accept-encoding'])) {
             headers['accept-encoding'] = supportsBrotli ? 'gzip, deflate, br' : 'gzip, deflate';
         }
         // Set cookies
         if (options.cookieJar) {
             const cookieString = await options.cookieJar.getCookieString(options.url.toString());
-            if (dist.default.nonEmptyString(cookieString)) {
+            if (is_1.default.nonEmptyString(cookieString)) {
                 options.headers.cookie = cookieString;
             }
         }
         for (const hook of options.hooks.beforeRequest) {
             // eslint-disable-next-line no-await-in-loop
             const result = await hook(options);
-            if (!dist.default.undefined(result)) {
+            if (!is_1.default.undefined(result)) {
                 // @ts-expect-error Skip the type mismatch to support abstract responses
                 options.request = () => result;
                 break;
@@ -17987,7 +20425,7 @@ class Request extends require$$0__default$2['default'].Duplex {
             fallbackFn = source$1.auto;
         }
         else {
-            fallbackFn = isHttps ? https__default['default'].request : http__default['default'].request;
+            fallbackFn = isHttps ? https__default["default"].request : http__default["default"].request;
         }
         const realFn = (_a = options.request) !== null && _a !== void 0 ? _a : fallbackFn;
         // Cache support
@@ -18010,7 +20448,7 @@ class Request extends require$$0__default$2['default'].Duplex {
         // If `dnsLookupIpVersion` is not present do not override `family`
         if (options.dnsLookupIpVersion !== undefined) {
             try {
-                requestOptions.family = dnsIpVersion.dnsLookupIpVersionToFamily(options.dnsLookupIpVersion);
+                requestOptions.family = dns_ip_version_1.dnsLookupIpVersionToFamily(options.dnsLookupIpVersion);
             }
             catch (_f) {
                 throw new Error('Invalid `dnsLookupIpVersion` option value');
@@ -18042,7 +20480,7 @@ class Request extends require$$0__default$2['default'].Duplex {
         }
         try {
             let requestOrResponse = await fn(url, requestOptions);
-            if (dist.default.undefined(requestOrResponse)) {
+            if (is_1.default.undefined(requestOrResponse)) {
                 requestOrResponse = fallbackFn(url, requestOptions);
             }
             // Restore options
@@ -18125,7 +20563,7 @@ class Request extends require$$0__default$2['default'].Duplex {
             if (response && !response.body) {
                 response.setEncoding(this._readableState.encoding);
                 try {
-                    response.rawBody = await getBuffer_1.default(response);
+                    response.rawBody = await get_buffer_1.default(response);
                     response.body = response.rawBody.toString();
                 }
                 catch (_a) { }
@@ -18151,7 +20589,7 @@ class Request extends require$$0__default$2['default'].Duplex {
                         retryOptions: options.retry,
                         error: typedError,
                         retryAfter,
-                        computedValue: calculateRetryDelay_1.default({
+                        computedValue: calculate_retry_delay_1.default({
                             attemptCount: retryCount,
                             retryOptions: options.retry,
                             error: typedError,
@@ -18288,7 +20726,7 @@ class Request extends require$$0__default$2['default'].Duplex {
                 this[kRequest].destroy();
             }
         }
-        if (error !== null && !dist.default.undefined(error) && !(error instanceof RequestError)) {
+        if (error !== null && !is_1.default.undefined(error) && !(error instanceof RequestError)) {
             error = new RequestError(error.message, error, this);
         }
         callback(error);
@@ -18411,6 +20849,8 @@ class Request extends require$$0__default$2['default'].Duplex {
 exports.default = Request;
 });
 
+var core_1 = core;
+
 var types$1 = createCommonjsModule(function (module, exports) {
 var __createBinding = (commonjsGlobal && commonjsGlobal.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -18429,7 +20869,7 @@ exports.CancelError = exports.ParseError = void 0;
 An error to be thrown when server response code is 2xx, and parsing body fails.
 Includes a `response` property.
 */
-class ParseError extends core.RequestError {
+class ParseError extends core_1.RequestError {
     constructor(error, response) {
         const { options } = response.request;
         super(`${error.message} in "${options.url.toString()}"`, error, response.request);
@@ -18440,7 +20880,7 @@ exports.ParseError = ParseError;
 /**
 An error to be thrown when the request is aborted with `.cancel()`.
 */
-class CancelError extends core.RequestError {
+class CancelError extends core_1.RequestError {
     constructor(request) {
         super('Promise was canceled', {}, request);
         this.name = 'CancelError';
@@ -18450,8 +20890,10 @@ class CancelError extends core.RequestError {
     }
 }
 exports.CancelError = CancelError;
-__exportStar(core, exports);
+__exportStar(core_1, exports);
 });
+
+var types_1 = types$1;
 
 var parseBody_1 = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -18468,17 +20910,19 @@ const parseBody = (response, responseType, parseJson, encoding) => {
         if (responseType === 'buffer') {
             return rawBody;
         }
-        throw new types$1.ParseError({
+        throw new types_1.ParseError({
             message: `Unknown body type '${responseType}'`,
             name: 'Error'
         }, response);
     }
     catch (error) {
-        throw new types$1.ParseError(error, response);
+        throw new types_1.ParseError(error, response);
     }
 };
 exports.default = parseBody;
 });
+
+var parse_body_1 = parseBody_1;
 
 var asPromise_1 = createCommonjsModule(function (module, exports) {
 var __createBinding = (commonjsGlobal && commonjsGlobal.__createBinding) || (Object.create ? (function(o, m, k, k2) {
@@ -18511,15 +20955,15 @@ const proxiedRequestEvents = [
 function asPromise(normalizedOptions) {
     let globalRequest;
     let globalResponse;
-    const emitter = new EventEmitter__default['default'].EventEmitter();
+    const emitter = new EventEmitter__default["default"].EventEmitter();
     const promise = new pCancelable((resolve, reject, onCancel) => {
         const makeRequest = (retryCount) => {
-            const request = new core.default(undefined, normalizedOptions);
+            const request = new core_1.default(undefined, normalizedOptions);
             request.retryCount = retryCount;
             request._noPipe = true;
             onCancel(() => request.destroy());
             onCancel.shouldReject = false;
-            onCancel(() => reject(new types$1.CancelError(request)));
+            onCancel(() => reject(new types_1.CancelError(request)));
             globalRequest = request;
             request.once('response', async (response) => {
                 var _a;
@@ -18531,7 +20975,7 @@ function asPromise(normalizedOptions) {
                 // Download body
                 let rawBody;
                 try {
-                    rawBody = await getBuffer_1.default(request);
+                    rawBody = await get_buffer_1.default(request);
                     response.rawBody = rawBody;
                 }
                 catch (_b) {
@@ -18551,12 +20995,12 @@ function asPromise(normalizedOptions) {
                 }
                 else {
                     try {
-                        response.body = parseBody_1.default(response, options.responseType, options.parseJson, options.encoding);
+                        response.body = parse_body_1.default(response, options.responseType, options.parseJson, options.encoding);
                     }
                     catch (error) {
                         // Fallback to `utf8`
                         response.body = rawBody.toString();
-                        if (isResponseOk.isResponseOk(response)) {
+                        if (is_response_ok_1.isResponseOk(response)) {
                             request._beforeError(error);
                             return;
                         }
@@ -18567,7 +21011,7 @@ function asPromise(normalizedOptions) {
                         // @ts-expect-error TS doesn't notice that CancelableRequest is a Promise
                         // eslint-disable-next-line no-await-in-loop
                         response = await hook(response, async (updatedOptions) => {
-                            const typedOptions = core.default.normalizeArguments(undefined, {
+                            const typedOptions = core_1.default.normalizeArguments(undefined, {
                                 ...updatedOptions,
                                 retry: {
                                     calculateDelay: () => 0
@@ -18592,11 +21036,11 @@ function asPromise(normalizedOptions) {
                     }
                 }
                 catch (error) {
-                    request._beforeError(new types$1.RequestError(error.message, error, request));
+                    request._beforeError(new types_1.RequestError(error.message, error, request));
                     return;
                 }
-                if (!isResponseOk.isResponseOk(response)) {
-                    request._beforeError(new types$1.HTTPError(response));
+                if (!is_response_ok_1.isResponseOk(response)) {
+                    request._beforeError(new types_1.HTTPError(response));
                     return;
                 }
                 globalResponse = response;
@@ -18607,7 +21051,7 @@ function asPromise(normalizedOptions) {
                     return;
                 }
                 const { options } = request;
-                if (error instanceof types$1.HTTPError && !options.throwHttpErrors) {
+                if (error instanceof types_1.HTTPError && !options.throwHttpErrors) {
                     const { response } = error;
                     resolve(request.options.resolveBodyOnly ? response.body : response);
                     return;
@@ -18618,13 +21062,13 @@ function asPromise(normalizedOptions) {
             const previousBody = request.options.body;
             request.once('retry', (newRetryCount, error) => {
                 var _a, _b;
-                if (previousBody === ((_a = error.request) === null || _a === void 0 ? void 0 : _a.options.body) && dist.default.nodeStream((_b = error.request) === null || _b === void 0 ? void 0 : _b.options.body)) {
+                if (previousBody === ((_a = error.request) === null || _a === void 0 ? void 0 : _a.options.body) && is_1.default.nodeStream((_b = error.request) === null || _b === void 0 ? void 0 : _b.options.body)) {
                     onError(error);
                     return;
                 }
                 makeRequest(newRetryCount);
             });
-            proxyEvents.default(request, emitter, proxiedRequestEvents);
+            proxy_events_1.default(request, emitter, proxiedRequestEvents);
         };
         makeRequest(0);
     });
@@ -18637,7 +21081,7 @@ function asPromise(normalizedOptions) {
             // Wait until downloading has ended
             await promise;
             const { options } = globalResponse.request;
-            return parseBody_1.default(globalResponse, responseType, options.parseJson, options.encoding);
+            return parse_body_1.default(globalResponse, responseType, options.parseJson, options.encoding);
         })();
         Object.defineProperties(newPromise, Object.getOwnPropertyDescriptors(promise));
         return newPromise;
@@ -18654,7 +21098,7 @@ function asPromise(normalizedOptions) {
     return promise;
 }
 exports.default = asPromise;
-__exportStar(types$1, exports);
+__exportStar(types_1, exports);
 });
 
 var createRejection_1 = createCommonjsModule(function (module, exports) {
@@ -18662,7 +21106,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 function createRejection(error, ...beforeErrorGroups) {
     const promise = (async () => {
-        if (error instanceof types$1.RequestError) {
+        if (error instanceof types_1.RequestError) {
             try {
                 for (const hooks of beforeErrorGroups) {
                     if (hooks) {
@@ -18694,7 +21138,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 function deepFreeze(object) {
     for (const value of Object.values(object)) {
-        if (dist.default.plainObject(value) || dist.default.array(value)) {
+        if (is_1.default.plainObject(value) || is_1.default.array(value)) {
             deepFreeze(value);
         }
     }
@@ -18707,7 +21151,15 @@ var types = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 });
 
-var create_1 = createCommonjsModule(function (module, exports) {
+var require$$0$1 = asPromise_1;
+
+var create_rejection_1 = createRejection_1;
+
+var deep_freeze_1 = deepFreeze_1;
+
+var require$$0 = types;
+
+var create_1$1 = createCommonjsModule(function (module, exports) {
 var __createBinding = (commonjsGlobal && commonjsGlobal.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -18726,22 +21178,22 @@ exports.defaultHandler = void 0;
 
 
 const errors = {
-    RequestError: asPromise_1.RequestError,
-    CacheError: asPromise_1.CacheError,
-    ReadError: asPromise_1.ReadError,
-    HTTPError: asPromise_1.HTTPError,
-    MaxRedirectsError: asPromise_1.MaxRedirectsError,
-    TimeoutError: asPromise_1.TimeoutError,
-    ParseError: asPromise_1.ParseError,
-    CancelError: asPromise_1.CancelError,
-    UnsupportedProtocolError: asPromise_1.UnsupportedProtocolError,
-    UploadError: asPromise_1.UploadError
+    RequestError: require$$0$1.RequestError,
+    CacheError: require$$0$1.CacheError,
+    ReadError: require$$0$1.ReadError,
+    HTTPError: require$$0$1.HTTPError,
+    MaxRedirectsError: require$$0$1.MaxRedirectsError,
+    TimeoutError: require$$0$1.TimeoutError,
+    ParseError: require$$0$1.ParseError,
+    CancelError: require$$0$1.CancelError,
+    UnsupportedProtocolError: require$$0$1.UnsupportedProtocolError,
+    UploadError: require$$0$1.UploadError
 };
 // The `delay` package weighs 10KB (!)
 const delay = async (ms) => new Promise(resolve => {
     setTimeout(resolve, ms);
 });
-const { normalizeArguments } = core.default;
+const { normalizeArguments } = core_1.default;
 const mergeOptions = (...sources) => {
     let mergedOptions;
     for (const source of sources) {
@@ -18749,7 +21201,7 @@ const mergeOptions = (...sources) => {
     }
     return mergedOptions;
 };
-const getPromiseOrStream = (options) => options.isStream ? new core.default(undefined, options) : asPromise_1.default(options);
+const getPromiseOrStream = (options) => options.isStream ? new core_1.default(undefined, options) : require$$0$1.default(options);
 const isGotInstance = (value) => ('defaults' in value && 'options' in value.defaults);
 const aliases = [
     'get',
@@ -18798,12 +21250,12 @@ const create = (defaults) => {
             return defaults.handlers[iteration++](newOptions, iteration === defaults.handlers.length ? getPromiseOrStream : iterateHandlers);
         };
         // TODO: Remove this in Got 12.
-        if (dist.default.plainObject(url)) {
+        if (is_1.default.plainObject(url)) {
             const mergedOptions = {
                 ...url,
                 ...options
             };
-            core.setNonEnumerableProperties([url, options], mergedOptions);
+            core_1.setNonEnumerableProperties([url, options], mergedOptions);
             options = mergedOptions;
             url = undefined;
         }
@@ -18819,9 +21271,9 @@ const create = (defaults) => {
             }
             // Normalize options & call handlers
             const normalizedOptions = normalizeArguments(url, options, _defaults !== null && _defaults !== void 0 ? _defaults : defaults.options);
-            normalizedOptions[core.kIsNormalizedAlready] = true;
+            normalizedOptions[core_1.kIsNormalizedAlready] = true;
             if (initHookError) {
-                throw new asPromise_1.RequestError(initHookError.message, initHookError, normalizedOptions);
+                throw new require$$0$1.RequestError(initHookError.message, initHookError, normalizedOptions);
             }
             return iterateHandlers(normalizedOptions);
         }
@@ -18830,7 +21282,7 @@ const create = (defaults) => {
                 throw error;
             }
             else {
-                return createRejection_1.default(error, defaults.options.hooks.beforeError, (_b = options.hooks) === null || _b === void 0 ? void 0 : _b.beforeError);
+                return create_rejection_1.default(error, defaults.options.hooks.beforeError, (_b = options.hooks) === null || _b === void 0 ? void 0 : _b.beforeError);
             }
         }
     });
@@ -18870,7 +21322,7 @@ const create = (defaults) => {
         let normalizedOptions = normalizeArguments(url, options, defaults.options);
         normalizedOptions.resolveBodyOnly = false;
         const pagination = normalizedOptions.pagination;
-        if (!dist.default.object(pagination)) {
+        if (!is_1.default.object(pagination)) {
             throw new TypeError('`options.pagination` must be implemented');
         }
         const all = [];
@@ -18937,7 +21389,7 @@ const create = (defaults) => {
     }
     Object.assign(got, errors);
     Object.defineProperty(got, 'defaults', {
-        value: defaults.mutableDefaults ? defaults : deepFreeze_1.default(defaults),
+        value: defaults.mutableDefaults ? defaults : deep_freeze_1.default(defaults),
         writable: defaults.mutableDefaults,
         configurable: defaults.mutableDefaults,
         enumerable: true
@@ -18946,8 +21398,10 @@ const create = (defaults) => {
     return got;
 };
 exports.default = create;
-__exportStar(types, exports);
+__exportStar(require$$0, exports);
 });
+
+var create_1 = create_1$1;
 
 var source = createCommonjsModule(function (module, exports) {
 var __createBinding = (commonjsGlobal && commonjsGlobal.__createBinding) || (Object.create ? (function(o, m, k, k2) {
@@ -19053,7 +21507,7 @@ const defaults = {
                 }
                 if (next) {
                     const options = {
-                        url: new url_1__default['default'].URL(next)
+                        url: new url_1__default["default"].URL(next)
                     };
                     return options;
                 }
@@ -19080,7 +21534,7 @@ module.exports = got;
 module.exports.default = got;
 module.exports.__esModule = true; // Workaround for TS issue: https://github.com/sindresorhus/got/pull/1267
 __exportStar(create_1, exports);
-__exportStar(asPromise_1, exports);
+__exportStar(require$$0$1, exports);
 });
 
 var got = /*@__PURE__*/getDefaultExportFromCjs(source);
@@ -19155,7 +21609,6 @@ class NewTweetModal extends PostTweetModal {
     }
     postTweets() {
         return async () => {
-            console.log("asd");
             const threadContent = this.getThreadContent();
             if (!threadContent)
                 return;
@@ -19297,7 +21750,7 @@ class NoteTweet extends obsidian.Plugin {
             let postedModal = new TweetsPostedModal(this.app, postedTweets, this.twitterHandler);
             await postedModal.waitForClose;
             if (!postedModal.userDeletedTweets && this.settings.postTweetTag) {
-                postedTweets.forEach((tweet) => this.appendPostTweetTag(tweet.text));
+                postedTweets.forEach((tweet) => this.appendPostTweetTag(tweet.data.text));
             }
         }
         catch (e) {
@@ -19320,7 +21773,7 @@ class NoteTweet extends obsidian.Plugin {
                 let postedModal = new TweetsPostedModal(this.app, [tweet], this.twitterHandler);
                 await postedModal.waitForClose;
                 if (!postedModal.userDeletedTweets && this.settings.postTweetTag) {
-                    await this.appendPostTweetTag(tweet.text);
+                    await this.appendPostTweetTag(tweet.data.text);
                 }
             }
             catch (e) {

@@ -14,5 +14,7 @@
   "obsidian-banners",
   "map-of-content",
   "cmenu-plugin",
-  "ai_plugin"
+  "ai_plugin",
+  "ai_llm",
+  "obsidian-hotkeys-for-templates"
 ]

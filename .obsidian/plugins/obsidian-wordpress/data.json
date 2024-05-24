@@ -1,10 +1,29 @@
 {
-  "apiType": "xml-rpc",
-  "endpoint": "https://altiusdaycom.wordpress.com/",
-  "saveUserName": true,
-  "savePassword": true,
+  "lang": "auto",
+  "profiles": [
+    {
+      "name": "Default",
+      "apiType": "xml-rpc",
+      "endpoint": "https://altiusdaycom.wordpress.com/",
+      "saveUsername": false,
+      "savePassword": true,
+      "isDefault": true,
+      "encryptedPassword": {
+        "key": "{\"alg\":\"A256GCM\",\"ext\":true,\"k\":\"RHUIQfgDU3KQA7Wjmia4Wseex6Q5Nt04IlJWdaYzy4c\",\"key_ops\":[\"encrypt\",\"decrypt\"],\"kty\":\"oct\"}",
+        "vector": "/QIbFhQTQCGOShzT",
+        "encrypted": "dDhdJT0vllxahvxZK0CaTfBbupT/+Bl2nylAspFNcA=="
+      }
+    }
+  ],
   "showRibbonIcon": true,
   "defaultPostStatus": "publish",
-  "userName": "artefaktaseu",
-  "password": "Babylon19931109"
+  "defaultCommentStatus": "open",
+  "rememberLastSelectedCategories": true,
+  "showWordPressEditConfirm": false,
+  "mathJaxOutputType": "svg",
+  "commentConvertMode": "ignore",
+  "enableHtml": false,
+  "replaceMediaLinks": true,
+  "version": "2",
+  "defaultPostType": "post"
 }
