@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Page on Obsidian</title>
-    <link>http://localhost:1313/tags/page/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/page/</link>
     <description>Recent content in Page on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Tue, 19 Jul 2022 15:17:07 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jul 2022 15:17:07 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Support</title>
-      <link>http://localhost:1313/page/support/support/</link>
+      <link>https://obsidiannotes.artefaktas.eu/page/support/support/</link>
       <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
       
-      <guid>http://localhost:1313/page/support/support/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/page/support/support/</guid>
       <description>&lt;h1 id=&#34;support-artefaktas-projects&#34;&gt;Support Artefaktas projects&lt;/h1&gt;
 &lt;div style=&#34;width:100%;text-align: center;&#34;&gt;
     &lt;iframe height=&#34;712&#34; id=&#34;kofiframe&#34; src=&#34;https://ko-fi.com/artefaktas/?hidefeed=true&amp;amp;widget=true&amp;amp;embed=true&amp;amp;preview=true&#34; style=&#34;background: #f9f9f9; border: none; padding: 4px; width: 100%;&#34; title=&#34;artefaktas&#34;&gt;&lt;/iframe&gt;

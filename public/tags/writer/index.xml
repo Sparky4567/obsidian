@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writer on Obsidian</title>
-    <link>http://localhost:1313/tags/writer/</link>
+    <link>https://obsidiannotes.artefaktas.eu/tags/writer/</link>
     <description>Recent content in Writer on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Thu, 07 Mar 2024 10:28:39 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/writer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Mar 2024 10:28:39 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/writer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 7</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-7/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-7/</link>
       <pubDate>Thu, 07 Mar 2024 10:28:39 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-7/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-7/</guid>
       <description>&lt;h1 id=&#34;query-get-a-random-quote-about-writing&#34;&gt;Query: Get a random quote about writing&lt;/h1&gt;
 &lt;h1 id=&#34;mar-7&#34;&gt;Mar 7&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -33,10 +33,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 3</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-3/</link>
+      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-3/</link>
       <pubDate>Sun, 03 Mar 2024 19:33:27 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-3/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-3/</guid>
       <description>&lt;h1 id=&#34;mar-3&#34;&gt;Mar 3&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!tldr] Mar 3
