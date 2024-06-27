@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Post on Obsidian</title>
-    <link>https://obsidiannotes.artefaktas.eu/tags/post/</link>
+    <link>http://localhost:1313/tags/post/</link>
     <description>Recent content in Post on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Fri, 10 May 2024 19:19:33 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 May 2024 19:19:33 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>May 10_19_19_33</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-05/may-10_19_19_33/</link>
+      <link>http://localhost:1313/posts/journal/2024-05/may-10_19_19_33/</link>
       <pubDate>Fri, 10 May 2024 19:19:33 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-05/may-10_19_19_33/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-05/may-10_19_19_33/</guid>
       <description>&lt;h1 id=&#34;query-write-a-short-tutorial-on-how-to-create-a-great-blog-post-do-not-use-numbering&#34;&gt;Query: Write a short tutorial on how to create a great blog post, do not use numbering&lt;/h1&gt;
 &lt;h1 id=&#34;may-10_19_19_33&#34;&gt;May 10_19_19_33&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -54,10 +54,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Apr 25</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-25/</link>
+      <link>http://localhost:1313/posts/journal/2024-04/apr-25/</link>
       <pubDate>Thu, 25 Apr 2024 16:50:25 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-25/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-04/apr-25/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-blogger-give-me-a-few-unique-ideas-for-a-new-blog-post&#34;&gt;Prompt: Act as if you were a blogger, give me a few unique ideas for a new blog post&lt;/h1&gt;
 &lt;h1 id=&#34;apr-25&#34;&gt;Apr 25&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -87,10 +87,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Apr 3</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-3/</link>
+      <link>http://localhost:1313/posts/journal/2024-04/apr-3/</link>
       <pubDate>Wed, 03 Apr 2024 11:43:05 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-3/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-04/apr-3/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-tutorial-on-how-to-create-an-awesome-blog-post&#34;&gt;Prompt: Act as if you were a writer, write a tutorial on how to create an awesome blog post&lt;/h1&gt;
 &lt;h1 id=&#34;apr-3&#34;&gt;Apr 3&lt;/h1&gt;
 &lt;blockquote&gt;

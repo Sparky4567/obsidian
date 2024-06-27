@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> By on Obsidian</title>
-    <link>https://obsidiannotes.artefaktas.eu/tags/-by/</link>
+    <link>http://localhost:1313/tags/-by/</link>
     <description>Recent content in  By on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Mon, 04 Mar 2024 16:05:36 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/-by/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Mar 2024 16:05:36 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/-by/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 4</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-4/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-4/</link>
       <pubDate>Mon, 04 Mar 2024 16:05:36 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-4/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-4/</guid>
       <description>&lt;h1 id=&#34;mar-4&#34;&gt;Mar 4&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!tldr] Mar 4
