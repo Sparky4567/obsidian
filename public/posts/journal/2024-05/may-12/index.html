@@ -531,7 +531,7 @@ Text is too short to sumarize</p>
     captchaAuth.captchaScreen()
 </script></div>
   <div>
-<div id="copyright-artefaktas-843261795">
+<div id="copyright-artefaktas-214593876">
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Artefaktas.eu</span> is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0</a></p> 
 </div></div>
   <div>
@@ -614,44 +614,6 @@ ReactDOM.render(<LtBanner />, document.getElementById("bannerlt"));
     js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
-</script>
-  <script src="/jq.js" defer></script>
-  <script defer="defer">
-	window.addEventListener("load",()=>{
-		class imageGallery{
-		constructor(){
-			this.imageSelector = document.querySelectorAll(".posts > img")
-			this.title = `newImage`
-		}
-
-		reconstruct(){
-			this.imageSelector.forEach(element => {
-				console.log(element)
-				if(!String(element.src).includes("svg") && String(element.src).includes("/images/")){
-					if(element.offsetWidth > 200){ 
-				let previousHtml = element.parentNode.innerHTML;
-				let newElement = `<a href="${element.src}" data-lightbox="image-1" data-title="${this.title}"><img src="${element.src}"></a>`;
-				let parentNode = element.parentNode;
-				console.log(previousHtml)
-				console.log(element)
-				let newHtml = String(previousHtml).replace(String(element.outerHTML),newElement)
-			    parentNode.innerHTML = newHtml
-				}
-				}
-				
-			});
-			let s = document.createElement("script");
-			s.defer = "defer";
-			s.src = "/lightbox.js";
-			document.body.appendChild(s);
-		}
-	}
-	if(String(window.location.pathname).includes("/posts/")){
-		let s = new imageGallery();
-		s.reconstruct();
-	}
-	
-	})
 </script>
   </div>
 
