@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Article on Obsidian</title>
-    <link>http://localhost:1313/categories/article/</link>
+    <link>https://obsidiannotes.artefaktas.eu/categories/article/</link>
     <description>Recent content in Article on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Mon, 21 Dec 2020 12:00:00 -0500</lastBuildDate><atom:link href="http://localhost:1313/categories/article/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Dec 2020 12:00:00 -0500</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/categories/article/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apie</title>
-      <link>http://localhost:1313/page/about/about/</link>
+      <link>https://obsidiannotes.artefaktas.eu/page/about/about/</link>
       <pubDate>Mon, 21 Dec 2020 12:00:00 -0500</pubDate>
       
-      <guid>http://localhost:1313/page/about/about/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/page/about/about/</guid>
       <description>&lt;p&gt;Svetainę kūrė ir administruoja artefaktas.eu tinklaraščio savininkas.&lt;/p&gt;
 &lt;p&gt;Sveikinu apsilankius skiltyje &amp;ldquo;Apie&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Turite klausimų? Gal ko nepaminėjau?&lt;/p&gt;
