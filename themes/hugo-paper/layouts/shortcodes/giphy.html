@@ -1,0 +1,14 @@
+<giphy>
+    {{ $gLink := .Get "glink" }}
+    {{ $embedLink := split $gLink "-" }}
+    {{ $len:= len $embedLink }}
+    {{ $len:= sub $len 1 }}
+    {{ $lastEl := index ($embedLink) $len }}
+    <iframe src="https://giphy.com/embed/{{ $lastEl }}" width="100%" height="400" frameBorder="0" class="giphy-embed" allowFullScreen>
+    </iframe>
+    <p>
+    <a href="{{ $gLink }}">via GIPHY</a>
+    </p>
+</giphy>
+
+

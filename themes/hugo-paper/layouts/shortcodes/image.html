@@ -1,0 +1,7 @@
+{{ if .Get "src" }}
+  {{ $baseUrl:= .Site.BaseURL }}
+  {{ $myVariable := .Get "src" }}
+  {{ $combined := printf "%s%s" $baseUrl $myVariable }}
+
+  <img src="{{ $combined | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} />
+{{ end }}

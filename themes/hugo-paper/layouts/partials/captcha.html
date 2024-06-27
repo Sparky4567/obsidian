@@ -1,0 +1,97 @@
+<script>
+    class artefaktasminiCaptcha{
+        constructor() {
+            this.apiUrl = `https://pinauth.artefaktas.eu/captcha`
+        }
+
+        async getCaptcha(){
+            let req = await fetch(this.apiUrl);
+            let data = await req.json();
+            let pin = data.response;
+            return pin;
+        }
+
+        async captchaAuth(passedValue){
+            const init = {
+                headers:{
+                    "User-Agent":"artefaktas-bot",
+                    "captcha":String(passedValue)
+                }
+            }
+            let reqUrl = `https://pinauth.artefaktas.eu/authcaptcha`
+            let req = await fetch(reqUrl,init)
+            let jsonData = await req.json()
+            return jsonData.response;
+        }
+
+        captchaVerification(){
+            Swal.fire({
+                title:"Captcha",
+                iconHtml: '<p style="font-size:4rem;">🛡️</p>',
+                text:"Solve the captcha to enter the site",
+                showCancelButton:"true",
+                customClass: 'swal-wide',
+            }).then((res)=>{
+                if(!res.isConfirmed){
+                    this.captchaScreen()
+                }
+                else{
+                    this.getCaptcha().then((data)=>{
+                        Swal.fire({
+                            title:"Enter the phrase",
+                            text:`Enter phrase that is shown on the screen into an input field: ${data} and click Confirm`,
+                            iconHtml: '<p style="font-size:4rem;">🛡️</p>',
+                            input: "text",
+                            confirmButtonText: `👍️ Confirm !`,
+                            showCancelButton: true,
+                            inputPlaceholder: "Enter the the phrase here",
+                            customClass: 'swal-wide',
+                        }
+                    ).then((res)=>{
+                            if(!res.isConfirmed){
+                                this.captchaScreen()
+                            }
+                            else{
+                                if (res.value) {
+                                    this.captchaAuth(res.value).then((data)=>{
+                                        if(data==="true"){
+                                            localStorage.setItem("captcha_artefaktas", res.value);
+                                        }
+                                        else{
+                                            this.captchaScreen()
+                                        }
+                                    })
+                                }
+                                else{
+                                    this.captchaScreen()
+                                }
+                            }
+                        })
+                    })
+                   
+                }
+            })
+        }
+
+        captchaScreen(){
+            let verified = localStorage.getItem("captcha_artefaktas")
+            let status = String(verified)
+            if(status==="null"){
+                this.captchaVerification()
+            }
+            else if(status!=="null"){
+                this.captchaAuth(status).then((data)=>{
+                    if(data!=="true"){
+                        this.captchaVerification()
+                    }
+                })
+            }
+            
+        }
+    }
+
+    
+    
+    let captchaAuth = new artefaktasminiCaptcha()
+    captchaAuth.captchaScreen()
+</script>

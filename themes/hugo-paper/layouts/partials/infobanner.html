@@ -1,0 +1,44 @@
+<div id="infobanner"></div>
+<script defer type="text/babel">
+class UkBanner extends React.Component {
+	constructor() {
+		super();
+		this.bannerSettings = {
+			maxWidth: 650 + `px`,
+			height: "auto",
+			borderRadius: "10px",
+			marginTop: 2 + "rem",
+			marginBottom: 2 + "rem",
+			display: "block",
+			marginLeft: "auto",
+			marginRight: "auto",
+			textAlign: "center",
+			padding: 1 + `rem`,
+			boxShadow: `rgb(0 0 0 / 20%) 0px 4px 8px 0px`,
+			borderRadius: 8 + `px`,
+		};
+		this.linkStyle = {
+			color: `#000`,
+		};
+	}
+	render() {
+		return (
+			<div>
+				<div style={this.bannerSettings}>
+					<p>Galite paskirti paramą Ukrainos kariams aplankydami blue-yellow puslapį</p>
+					<p>
+						<a
+							style={this.linkStyle}
+							target="_blank"
+							href="https://www.blue-yellow.lt"
+						>
+							https://www.blue-yellow.lt/
+						</a>
+					</p>
+				</div>
+			</div>
+		);
+	}
+}
+ReactDOM.render(<UkBanner />, document.getElementById("infobanner"));
+</script>

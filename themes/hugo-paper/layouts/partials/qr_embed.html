@@ -1,0 +1,2 @@
+{{ $pageurl:= (print "https://qrgen.artefaktas.eu?url=" .Page.Permalink) }}
+<iframe style="border: none;" id="qrembed" src="{{ $pageurl }}" width="100%" height="400px"></iframe>

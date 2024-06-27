@@ -1,0 +1,63 @@
+<style>
+  .bigSwal {
+    width: 100% !important;
+    height: 100vh !important;
+  }
+</style>
+<script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script defer="defer">
+  let configOptions = {
+    prompt:"Are you 18+ years old?",
+    yesAnswer:"Yes",
+    noAnswer:"No",
+  }
+  function returnBackToMain(){
+    window.location.href = "https://www.google.com"
+  }
+
+  function alertAgeConfirmation(passedMessage){
+    let ageConfirm = localStorage.getItem("18?_artefaktas")
+    if(ageConfirm===null){
+      Swal.fire({
+    title:passedMessage,
+    text:"Confirm that you are old enough to visit the site, otherwise you will be redirected to Google search",
+    showCancelButton: true,
+    confirmButtonText:configOptions.yesAnswer,
+    cancelButtonText: configOptions.noAnswer,
+    customClass:"bigSwal"
+    
+  }).then((result)=>{
+    if(result.isConfirmed){
+      if(ageConfirm===null){
+      Swal.fire({
+    title:"Really really?",
+    text:"Confirm that you are old enough to visit the site, otherwise you will be redirected to Google search",
+    showCancelButton: true,
+    confirmButtonText:configOptions.yesAnswer,
+    cancelButtonText: configOptions.noAnswer,
+    customClass:"bigSwal"}).then((result)=>{
+      if(result.isConfirmed){
+        localStorage.setItem("18?_artefaktas",true)
+      alertAgeConfirmation()
+      }
+      else{
+      returnBackToMain()}})}}
+    else{
+      returnBackToMain()
+    }})}
+  }
+   
+
+  setTimeout(() => {
+    alertAgeConfirmation(configOptions.prompt)
+  }, 3000);
+  
+   
+     
+    
+   
+  
+   
+  alertAgeConfirmation(configOptions.prompt)
+  
+</script> 

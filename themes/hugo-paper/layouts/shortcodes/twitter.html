@@ -1,0 +1,54 @@
+<twitter>
+    {{ $twitterLink := .Get "twitterlink" }}
+    {{ $className := split $twitterLink "status/" }}
+    {{ $className := index ($className) 1 }}
+    <div id={{ $className }}></div>
+    <script defer>
+        if(!window.twttr){
+            window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            js.onload=()=>{
+                let tw = {{ $className }};
+                if(window.twttr.widgets){
+                window.twttr.widgets.createTweet(
+                tw,
+                document.getElementById(tw),
+                {
+                    align: 'left'
+                })
+                .then(function (el) {
+                    console.log("Tweet displayed.");
+                });
+             }
+
+            }
+            fjs.parentNode.insertBefore(js, fjs);
+        
+            t._e = [];
+            t.ready = function(f) {
+            t._e.push(f);
+            };
+            return t;
+        }(document, "script", "twitter-wjs"));
+        }
+        else{
+            let tw = {{ $className }};
+            if(window.twttr.widgets){
+            window.twttr.widgets.createTweet(
+            tw,
+            document.getElementById(tw),
+            {
+                align: 'left'
+            })
+            .then(function (el) {
+                console.log("Tweet displayed.");
+            });
+        }
+        }
+    </script>
+    </twitter>
