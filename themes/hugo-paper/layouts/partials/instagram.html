@@ -1,0 +1,101 @@
+<div style="margin-top:1rem;margin-bottom:1rem;height: auto;width: 100%;align-items: top;" class="instagramcontainer"></div>
+<script>
+    class getInsta{
+        constructor() {
+            this.apiUrl = "https://instamedia.artefaktas.eu/api"
+        }
+
+        async getVideos(){
+            const res = await fetch(this.apiUrl)
+            const resp = await res.json();
+            return resp
+        }
+
+        displayVideos(){
+            let contSel = document.querySelector(".instagramcontainer")
+            let title = document.createElement("h2")
+            let text = document.createTextNode("Instagram media")
+            title.appendChild(text)
+            if(contSel){
+                let data=null;
+                contSel.appendChild(title)
+                try{
+                    this.getVideos().then((dat)=>{
+                 
+                 data = dat.response
+                 if(data!==null && data.length && data.length!==0){
+                    data.forEach(element => {
+                     if(element.media_type==="IMAGE"){
+                        if(element.caption){
+                        let el = document.createElement("div")
+                        el.style="font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;font-size:1.4rem;wrap:text-wrap;align-text:left;max-width:300px;height:4rem;display:inline-block;margin-top:2rem;margin-bottom:2rem;height:auto;padding:1rem;border-radius:10px;border:1px solid white;margin-right:1rem;vertical-align:top;min-height:555px;"
+                        el.innerHTML = `<img style='max-width:100%;' src='${element.media_url}'/>
+                        <p>${element.caption}</p>
+                        <a style='max-width:95%;display:block;margin-left:0px;font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emojitext-decoration:none;color:white;background:#404040;padding:0.4rem;border-radius:4px;margin-bottom:1rem;' href='${element.permalink}' target='_blank'>Aplankyti Instagram</a>
+                        `;
+                        contSel.appendChild(el)
+                        }
+                      else{
+                        let el = document.createElement("div")
+                        el.style="font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;font-size:1.4rem;wrap:text-wrap;align-text:left;max-width:300px;height:4rem;display:inline-block;margin-top:2rem;margin-bottom:2rem;height:auto;padding:1rem;border-radius:10px;border:1px solid white;margin-right:1rem;vertical-align:top;min-height:555px;"
+                        el.innerHTML = `<img style='max-width:100%;' src='${element.media_url}'/>
+                        <a style='max-width:95%;display:block;margin-left:0px;font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emojitext-decoration:none;color:white;background:#404040;padding:0.4rem;border-radius:4px;margin-bottom:1rem;' href='${element.permalink}' target='_blank'>Aplankyti Instagram</a>
+                        `;
+                        contSel.appendChild(el)
+                      }
+                     }
+                     else if(element.media_type==="VIDEO"){
+                        if(element.caption){
+                            let el = document.createElement("div")
+                        el.style=`font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;font-size:1.4rem;wrap:text-wrap;align-text:left;max-width:300px;height:4rem;display:inline-block;margin-top:2rem;margin-bottom:2rem;height:auto;padding:1rem;border-radius:10px;border:1px solid white;margin-right:1rem;vertical-align:top;min-height:555px;`
+                        el.innerHTML = `<video style='width:266px;max-height:350px;' height='240' controls>
+                        <source src='${element.media_url}'' type='video/mp4'>
+                        Your browser does not support the video tag.
+                        </video>
+                        <p>${element.caption}</p>
+                        <a style='max-width:95%;display:block;margin-left:0px;font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emojitext-decoration:none;color:white;background:#404040;padding:0.4rem;border-radius:4px;margin-bottom:1rem;' href='${element.permalink}' target='_blank'>Aplankyti Instagram</a>
+                        `;
+                        contSel.appendChild(el)
+                    }
+                    else{
+                        let el = document.createElement("div")
+                        el.style=`font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;font-size:1.4rem;wrap:text-wrap;align-text:left;max-width:300px;height:4rem;display:inline-block;margin-top:2rem;margin-bottom:2rem;height:auto;padding:1rem;border-radius:10px;border:1px solid white;margin-right:1rem;vertical-align:top;min-height:555px;`
+                        el.innerHTML = `<video style='width:266px;max-height:350px;' height='240' controls>
+                        <source src='${element.media_url}'' type='video/mp4'>
+                        Your browser does not support the video tag.
+                        </video>
+                        <a style='max-width:95%;display:block;margin-left:0px;font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emojitext-decoration:none;color:white;background:#404040;padding:0.4rem;border-radius:4px;margin-bottom:1rem;' href='${element.permalink}' target='_blank'>Aplankyti Instagram</a>
+                        `;
+                        contSel.appendChild(el)
+                    }
+                     }
+                    });
+                   
+                 }
+                 else{
+                    let titleNoVideos = document.createElement("h3")
+                        let textNoVideos = document.createTextNode("There is no Instagram media to show at the moment...")
+                        titleNoVideos.appendChild(textNoVideos)
+                        contSel.appendChild(titleNoVideos)
+                 }
+             })
+                    }
+                    catch(e){
+                        let titleNoVideos = document.createElement("h3")
+                        let textNoVideos = document.createTextNode("There was an error while trying to get Instagram media...")
+                        titleNoVideos.appendChild(textNoVideos)
+                        contSel.appendChild(titleNoVideos)
+                    }
+               
+            }
+            else{
+                console.log("instagramcontainer not detected")
+            }
+        }
+
+
+        
+    }
+    let insta = new getInsta()
+    insta.displayVideos()
+</script>

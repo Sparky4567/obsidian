@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Story on Obsidian</title>
-    <link>http://localhost:1313/tags/story/</link>
+    <link>http://localhost:43051/tags/story/</link>
     <description>Recent content in Story on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Sat, 09 Mar 2024 13:11:27 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/story/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Mar 2024 13:11:27 +0300</lastBuildDate><atom:link href="http://localhost:43051/tags/story/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 9</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-9/</link>
+      <link>http://localhost:43051/posts/journal/2024-03/mar-9/</link>
       <pubDate>Sat, 09 Mar 2024 13:11:27 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-9/</guid>
+      <guid>http://localhost:43051/posts/journal/2024-03/mar-9/</guid>
       <description>&lt;h1 id=&#34;query-act-as-if-you-were-a-blog-owner-write-a-short-post-about-your-day&#34;&gt;Query: Act as if you were a blog owner, write a short post about your day&lt;/h1&gt;
 &lt;h1 id=&#34;mar-9&#34;&gt;Mar 9&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -39,10 +39,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 7_10_07_51</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-7_10_07_51/</link>
+      <link>http://localhost:43051/posts/journal/2024-03/mar-7_10_07_51/</link>
       <pubDate>Thu, 07 Mar 2024 11:07:51 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-7_10_07_51/</guid>
+      <guid>http://localhost:43051/posts/journal/2024-03/mar-7_10_07_51/</guid>
       <description>&lt;h1 id=&#34;query-write-a-short-story-about-nature&#34;&gt;Query: Write a short story about nature&lt;/h1&gt;
 &lt;h1 id=&#34;mar-7_10_07_51&#34;&gt;Mar 7_10_07_51&lt;/h1&gt;
 &lt;blockquote&gt;

@@ -1,0 +1,60 @@
+<div class="tiktokcontainer"></div>
+<script>
+    class getTiktokVids{
+        constructor() {
+            this.apiUrl = "https://tokauthdev.artefaktas.eu/videos"
+        }
+
+        async getVideos(){
+            const res = await fetch(this.apiUrl)
+            const resp = await res.json();
+            return resp
+        }
+
+        displayVideos(){
+            let contSel = document.querySelector(".tiktokcontainer")
+            let title = document.createElement("h2")
+            let text = document.createTextNode("TikTok videos")
+            title.appendChild(text)
+            if(contSel){
+                let data=null;
+                contSel.appendChild(title)
+                try{
+                    this.getVideos().then((dat)=>{
+                 
+                 data = dat.response.data.videos
+                 if(data!==null && data.length!==0){
+                    data.forEach(element => {
+                     contSel.innerHTML+=element.embed_html
+                    });
+                    let script = document.createElement("script")
+                    script.src = "https://www.tiktok.com/embed.js"
+                    document.head.append(script)
+                 }
+                 else{
+                    let titleNoVideos = document.createElement("h3")
+                        let textNoVideos = document.createTextNode("There are no TikTok videos to show at the moment...")
+                        titleNoVideos.appendChild(textNoVideos)
+                        contSel.appendChild(titleNoVideos)
+                 }
+             })
+                    }
+                    catch(e){
+                        let titleNoVideos = document.createElement("h3")
+                        let textNoVideos = document.createTextNode("There was an error while trying to get TikTok videos...")
+                        titleNoVideos.appendChild(textNoVideos)
+                        contSel.appendChild(titleNoVideos)
+                    }
+               
+            }
+            else{
+                console.log("tiktokcontainer not detected")
+            }
+        }
+
+
+        
+    }
+    let tiktok = new getTiktokVids()
+    tiktok.displayVideos()
+</script>

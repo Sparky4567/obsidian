@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stay on Obsidian</title>
-    <link>http://localhost:1313/tags/stay/</link>
+    <link>http://localhost:43051/tags/stay/</link>
     <description>Recent content in Stay on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Thu, 28 Mar 2024 12:15:07 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/stay/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Mar 2024 12:15:07 +0300</lastBuildDate><atom:link href="http://localhost:43051/tags/stay/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mar 28</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-28/</link>
+      <link>http://localhost:43051/posts/journal/2024-03/mar-28/</link>
       <pubDate>Thu, 28 Mar 2024 12:15:07 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-28/</guid>
+      <guid>http://localhost:43051/posts/journal/2024-03/mar-28/</guid>
       <description>&lt;h1 id=&#34;prompt-write-a-blog-post-on-how-to-stay-creative&#34;&gt;Prompt: Write a blog post on how to stay creative&lt;/h1&gt;
 &lt;h1 id=&#34;mar-28&#34;&gt;Mar 28&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -58,10 +58,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 26</title>
-      <link>http://localhost:1313/posts/journal/2024-03/mar-26/</link>
+      <link>http://localhost:43051/posts/journal/2024-03/mar-26/</link>
       <pubDate>Tue, 26 Mar 2024 17:14:21 +0300</pubDate>
       
-      <guid>http://localhost:1313/posts/journal/2024-03/mar-26/</guid>
+      <guid>http://localhost:43051/posts/journal/2024-03/mar-26/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-developer-write-a-post-on-how-to-stay-productive-by-using-nowadays-technologies&#34;&gt;Prompt: Act as if you were a developer, write a post on how to stay productive by using nowadays technologies&lt;/h1&gt;
 &lt;h1 id=&#34;mar-26&#34;&gt;Mar 26&lt;/h1&gt;
 &lt;blockquote&gt;

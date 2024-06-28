@@ -39,7 +39,7 @@
   style="--bg: #faf8f1"
   lang="en-us"
 >
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=43051&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -67,14 +67,14 @@
   
   
   
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+  <link rel="preload stylesheet" as="style" href="http://localhost:43051/main.min.css" />
 
   
   
   
   
   
-  <link rel="preload" as="image" href="http://localhost:1313/theme.svg" />
+  <link rel="preload" as="image" href="http://localhost:43051/theme.svg" />
 
   
   
@@ -86,7 +86,7 @@
 
   
   
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  <link rel="preload" as="image" href="http://localhost:43051/github.svg" />
   
   
 
@@ -94,7 +94,7 @@
   
   <script
     defer
-    src="http://localhost:1313/highlight.min.js"
+    src="http://localhost:43051/highlight.min.js"
     onload="hljs.initHighlightingOnLoad();"
   ></script>
   
@@ -104,8 +104,8 @@
   
 
   
-  <link rel="icon" href="http://localhost:1313/favicon.ico" />
-  <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+  <link rel="icon" href="http://localhost:43051/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://localhost:43051/apple-touch-icon.png" />
 
   
   <meta name="generator" content="Hugo 0.128.0">
@@ -120,7 +120,7 @@
   <div class="relative z-50 mr-auto flex items-center">
     <a
       class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
-      href="http://localhost:1313/"
+      href="http://localhost:43051/"
       >Obsidian</a
     >
     <div
@@ -277,7 +277,7 @@
   <div><br/><div class="sharethis-inline-share-buttons"></div><br/>
 </div>
   <div>
-<iframe style="border: none;color: white !important;margin-bottom:2rem;" id="qrembed" src="https://counterframe.artefaktas.eu/?url=http://localhost:1313/posts/journal/2024-05/2024-05-24/" width="100%" height="80px"></iframe></div>
+<iframe style="border: none;color: white !important;margin-bottom:2rem;" id="qrembed" src="https://counterframe.artefaktas.eu/?url=http://localhost:43051/posts/journal/2024-05/2024-05-24/" width="100%" height="80px"></iframe></div>
   <div><style>
   .goog-te-combo{
     width: 80% !important;
@@ -511,12 +511,174 @@
     }, 800);
    
 </script></div>
+  <div><iframe style="width: 100% !important;" src="https://discord.com/widget?id=955065721631674388&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></div>
   <div>
-<div id="copyright-artefaktas-351827694">
+<div id="copyright-artefaktas-685497123">
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Artefaktas.eu</span> is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0</a></p> 
 </div></div>
+  <div><div style="margin-top:1rem;margin-bottom:1rem;height: auto;width: 100%;align-items: top;" class="instagramcontainer"></div>
+<script>
+    class getInsta{
+        constructor() {
+            this.apiUrl = "https://instamedia.artefaktas.eu/api"
+        }
+
+        async getVideos(){
+            const res = await fetch(this.apiUrl)
+            const resp = await res.json();
+            return resp
+        }
+
+        displayVideos(){
+            let contSel = document.querySelector(".instagramcontainer")
+            let title = document.createElement("h2")
+            let text = document.createTextNode("Instagram media")
+            title.appendChild(text)
+            if(contSel){
+                let data=null;
+                contSel.appendChild(title)
+                try{
+                    this.getVideos().then((dat)=>{
+                 
+                 data = dat.response
+                 if(data!==null && data.length && data.length!==0){
+                    data.forEach(element => {
+                     if(element.media_type==="IMAGE"){
+                        if(element.caption){
+                        let el = document.createElement("div")
+                        el.style="font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;font-size:1.4rem;wrap:text-wrap;align-text:left;max-width:300px;height:4rem;display:inline-block;margin-top:2rem;margin-bottom:2rem;height:auto;padding:1rem;border-radius:10px;border:1px solid white;margin-right:1rem;vertical-align:top;min-height:555px;"
+                        el.innerHTML = `<img style='max-width:100%;' src='${element.media_url}'/>
+                        <p>${element.caption}</p>
+                        <a style='max-width:95%;display:block;margin-left:0px;font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emojitext-decoration:none;color:white;background:#404040;padding:0.4rem;border-radius:4px;margin-bottom:1rem;' href='${element.permalink}' target='_blank'>Aplankyti Instagram</a>
+                        `;
+                        contSel.appendChild(el)
+                        }
+                      else{
+                        let el = document.createElement("div")
+                        el.style="font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;font-size:1.4rem;wrap:text-wrap;align-text:left;max-width:300px;height:4rem;display:inline-block;margin-top:2rem;margin-bottom:2rem;height:auto;padding:1rem;border-radius:10px;border:1px solid white;margin-right:1rem;vertical-align:top;min-height:555px;"
+                        el.innerHTML = `<img style='max-width:100%;' src='${element.media_url}'/>
+                        <a style='max-width:95%;display:block;margin-left:0px;font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emojitext-decoration:none;color:white;background:#404040;padding:0.4rem;border-radius:4px;margin-bottom:1rem;' href='${element.permalink}' target='_blank'>Aplankyti Instagram</a>
+                        `;
+                        contSel.appendChild(el)
+                      }
+                     }
+                     else if(element.media_type==="VIDEO"){
+                        if(element.caption){
+                            let el = document.createElement("div")
+                        el.style=`font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;font-size:1.4rem;wrap:text-wrap;align-text:left;max-width:300px;height:4rem;display:inline-block;margin-top:2rem;margin-bottom:2rem;height:auto;padding:1rem;border-radius:10px;border:1px solid white;margin-right:1rem;vertical-align:top;min-height:555px;`
+                        el.innerHTML = `<video style='width:266px;max-height:350px;' height='240' controls>
+                        <source src='${element.media_url}'' type='video/mp4'>
+                        Your browser does not support the video tag.
+                        </video>
+                        <p>${element.caption}</p>
+                        <a style='max-width:95%;display:block;margin-left:0px;font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emojitext-decoration:none;color:white;background:#404040;padding:0.4rem;border-radius:4px;margin-bottom:1rem;' href='${element.permalink}' target='_blank'>Aplankyti Instagram</a>
+                        `;
+                        contSel.appendChild(el)
+                    }
+                    else{
+                        let el = document.createElement("div")
+                        el.style=`font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;font-size:1.4rem;wrap:text-wrap;align-text:left;max-width:300px;height:4rem;display:inline-block;margin-top:2rem;margin-bottom:2rem;height:auto;padding:1rem;border-radius:10px;border:1px solid white;margin-right:1rem;vertical-align:top;min-height:555px;`
+                        el.innerHTML = `<video style='width:266px;max-height:350px;' height='240' controls>
+                        <source src='${element.media_url}'' type='video/mp4'>
+                        Your browser does not support the video tag.
+                        </video>
+                        <a style='max-width:95%;display:block;margin-left:0px;font-family:ui-sans-serif,system-ui,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emojitext-decoration:none;color:white;background:#404040;padding:0.4rem;border-radius:4px;margin-bottom:1rem;' href='${element.permalink}' target='_blank'>Aplankyti Instagram</a>
+                        `;
+                        contSel.appendChild(el)
+                    }
+                     }
+                    });
+                   
+                 }
+                 else{
+                    let titleNoVideos = document.createElement("h3")
+                        let textNoVideos = document.createTextNode("There is no Instagram media to show at the moment...")
+                        titleNoVideos.appendChild(textNoVideos)
+                        contSel.appendChild(titleNoVideos)
+                 }
+             })
+                    }
+                    catch(e){
+                        let titleNoVideos = document.createElement("h3")
+                        let textNoVideos = document.createTextNode("There was an error while trying to get Instagram media...")
+                        titleNoVideos.appendChild(textNoVideos)
+                        contSel.appendChild(titleNoVideos)
+                    }
+               
+            }
+            else{
+                console.log("instagramcontainer not detected")
+            }
+        }
+
+
+        
+    }
+    let insta = new getInsta()
+    insta.displayVideos()
+</script></div>
+  <div><div class="tiktokcontainer"></div>
+<script>
+    class getTiktokVids{
+        constructor() {
+            this.apiUrl = "https://tokauthdev.artefaktas.eu/videos"
+        }
+
+        async getVideos(){
+            const res = await fetch(this.apiUrl)
+            const resp = await res.json();
+            return resp
+        }
+
+        displayVideos(){
+            let contSel = document.querySelector(".tiktokcontainer")
+            let title = document.createElement("h2")
+            let text = document.createTextNode("TikTok videos")
+            title.appendChild(text)
+            if(contSel){
+                let data=null;
+                contSel.appendChild(title)
+                try{
+                    this.getVideos().then((dat)=>{
+                 
+                 data = dat.response.data.videos
+                 if(data!==null && data.length!==0){
+                    data.forEach(element => {
+                     contSel.innerHTML+=element.embed_html
+                    });
+                    let script = document.createElement("script")
+                    script.src = "https://www.tiktok.com/embed.js"
+                    document.head.append(script)
+                 }
+                 else{
+                    let titleNoVideos = document.createElement("h3")
+                        let textNoVideos = document.createTextNode("There are no TikTok videos to show at the moment...")
+                        titleNoVideos.appendChild(textNoVideos)
+                        contSel.appendChild(titleNoVideos)
+                 }
+             })
+                    }
+                    catch(e){
+                        let titleNoVideos = document.createElement("h3")
+                        let textNoVideos = document.createTextNode("There was an error while trying to get TikTok videos...")
+                        titleNoVideos.appendChild(textNoVideos)
+                        contSel.appendChild(titleNoVideos)
+                    }
+               
+            }
+            else{
+                console.log("tiktokcontainer not detected")
+            }
+        }
+
+
+        
+    }
+    let tiktok = new getTiktokVids()
+    tiktok.displayVideos()
+</script></div>
   <div>
-<iframe style="border: none;" id="qrembed" src="https://qrgen.artefaktas.eu?url=http://localhost:1313/posts/journal/2024-05/2024-05-24/" width="100%" height="400px"></iframe></div>
+<iframe style="border: none;" id="qrembed" src="https://qrgen.artefaktas.eu?url=http://localhost:43051/posts/journal/2024-05/2024-05-24/" width="100%" height="400px"></iframe></div>
   <div><div id = "bannerlt"></div>
 <script defer type="text/babel">
 class LtBanner extends React.Component {
@@ -609,7 +771,7 @@ ReactDOM.render(<LtBanner />, document.getElementById("bannerlt"));
     
     <a
       class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="http://localhost:1313/posts/journal/2024-03/mar-3/"
+      href="http://localhost:43051/posts/journal/2024-03/mar-3/"
       ><span class="mr-1.5">←</span><span>Mar 3</span></a
     >
     
@@ -647,7 +809,7 @@ ReactDOM.render(<LtBanner />, document.getElementById("bannerlt"));
 >
   <div class="mr-auto">
     &copy; 2024
-    <a class="link" href="http://localhost:1313/">Obsidian</a>
+    <a class="link" href="http://localhost:43051/">Obsidian</a>
   </div>
 </footer>
 
