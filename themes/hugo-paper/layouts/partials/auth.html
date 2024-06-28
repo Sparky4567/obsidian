@@ -4,9 +4,9 @@
         min-width: 100vw;
     }
 </style>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script>
+<script defer>
     class miniAuth{
         constructor() {
             this.apiUrl = `https://pinauth.artefaktas.eu/api`
@@ -34,7 +34,7 @@
 
         verification(){
             Swal.fire({
-                title:"Test",
+                title:"Age verification",
                 icon:"info",
                 text:"You must approve that you are 18+ years old",
                 showCancelButton:"true",
@@ -64,8 +64,11 @@
                                     this.authCheck(res.value).then((data)=>{
                                         console.log(data)
                                         if(data==="true"){
-                                            console.log(data)
                                             localStorage.setItem("ageVerification_artefaktas", true);
+                                            setTimeout(() => {
+                                                let auth = new miniAuth()
+                                                auth.authScreen()
+                                            }, 800);
                                         }
                                         else{
                                             this.authScreen()
@@ -89,9 +92,16 @@
             if(status==="null" && status!=="true"){
                 this.verification()
             }
+            else{
+        let captchaAuth = new artefaktasminiCaptcha()
+        captchaAuth.captchaScreen()
+            }
             
         }
     }
-    let auth = new miniAuth()
-    auth.authScreen()
+    setTimeout(() => {
+        let auth = new miniAuth()
+        auth.authScreen()
+    }, 800);
+   
 </script>

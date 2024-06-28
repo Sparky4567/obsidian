@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Advice on Obsidian</title>
-    <link>https://obsidiannotes.artefaktas.eu/tags/advice/</link>
+    <link>http://localhost:1313/tags/advice/</link>
     <description>Recent content in Advice on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Fri, 10 May 2024 19:19:33 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/tags/advice/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 May 2024 19:19:33 +0300</lastBuildDate><atom:link href="http://localhost:1313/tags/advice/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>May 10_19_19_33</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-05/may-10_19_19_33/</link>
+      <link>http://localhost:1313/posts/journal/2024-05/may-10_19_19_33/</link>
       <pubDate>Fri, 10 May 2024 19:19:33 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-05/may-10_19_19_33/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-05/may-10_19_19_33/</guid>
       <description>&lt;h1 id=&#34;query-write-a-short-tutorial-on-how-to-create-a-great-blog-post-do-not-use-numbering&#34;&gt;Query: Write a short tutorial on how to create a great blog post, do not use numbering&lt;/h1&gt;
 &lt;h1 id=&#34;may-10_19_19_33&#34;&gt;May 10_19_19_33&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -54,10 +54,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Apr 22</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-22/</link>
+      <link>http://localhost:1313/posts/journal/2024-04/apr-22/</link>
       <pubDate>Mon, 22 Apr 2024 18:08:36 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-04/apr-22/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-04/apr-22/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-marketer-recommend-a-few-ways-to-monetize-my-blog&#34;&gt;Prompt: Act as if you were a marketer, recommend a few ways to monetize my blog&lt;/h1&gt;
 &lt;h1 id=&#34;apr-22&#34;&gt;Apr 22&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -94,10 +94,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 27</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-27/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-27/</link>
       <pubDate>Wed, 27 Mar 2024 11:47:04 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-27/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-27/</guid>
       <description>&lt;h1 id=&#34;prompt-act-as-if-you-were-a-writer-write-a-blog-post-on-how-to-create-good-titles-for-your-journal-entries&#34;&gt;Prompt: Act as if you were a writer, write a blog post on how to create good titles for your journal entries&lt;/h1&gt;
 &lt;h1 id=&#34;mar-27&#34;&gt;Mar 27&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -149,10 +149,10 @@ Text is too short to sumarize&lt;/p&gt;
     
     <item>
       <title>Mar 5</title>
-      <link>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/</link>
+      <link>http://localhost:1313/posts/journal/2024-03/mar-5/</link>
       <pubDate>Tue, 05 Mar 2024 11:23:37 +0300</pubDate>
       
-      <guid>https://obsidiannotes.artefaktas.eu/posts/journal/2024-03/mar-5/</guid>
+      <guid>http://localhost:1313/posts/journal/2024-03/mar-5/</guid>
       <description>&lt;h1 id=&#34;query-what-advice-would-you-give-me-to-optimize-my-current-website-for-a-better-performance&#34;&gt;Query: What advice would you give me to optimize my current website for a better performance&lt;/h1&gt;
 &lt;h1 id=&#34;mar-5&#34;&gt;Mar 5&lt;/h1&gt;
 &lt;blockquote&gt;
