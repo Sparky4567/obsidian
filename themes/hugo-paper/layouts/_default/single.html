@@ -22,6 +22,7 @@
   <p>Reading time: {{ math.Round (div (countwords .Content) 220.0) }} minutes</p>
   <div>{{ partial "inlineshare.html" . }}</div>
   <div>{{ partial "viewcount.html" . }}</div>
+  <div>{{ partial "translate.html" . }}</div>
   <section>
     <div class="posts">
     {{ .Content }}
