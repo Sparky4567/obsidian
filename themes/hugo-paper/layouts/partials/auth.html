@@ -1,107 +1,114 @@
 <style>
-    .swal-wide{
+    .swal-wide {
         min-height: 100vh;
         min-width: 100vw;
     }
 </style>
-<script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script defer src="{{ .Site.BaseURL }}swal.js"></script>
 
 <script defer>
-    class miniAuth{
+    class miniAuth {
         constructor() {
-            this.apiUrl = `https://pinauth.artefaktas.eu/api`
+            this.apiUrl = `https://pinauth.artefaktas.eu/api`;
         }
 
-        async getPin(){
+        async getPin() {
             let req = await fetch(this.apiUrl);
             let data = await req.json();
             let pin = data.response;
             return pin;
         }
 
-        async authCheck(passedValue){
+        async authCheck(passedValue) {
             const init = {
-                headers:{
-                    "User-Agent":"artefaktas-bot",
-                    "pinCode":String(passedValue)
+                headers: {
+                    "User-Agent": "artefaktas-bot",
+                    "pinCode": String(passedValue)
                 }
             }
-            let reqUrl = `https://pinauth.artefaktas.eu/auth`
-            let req = await fetch(reqUrl,init)
-            let jsonData = await req.json()
+            let reqUrl = `https://pinauth.artefaktas.eu/auth`;
+            let req = await fetch(reqUrl, init);
+            let jsonData = await req.json();
             return jsonData.response;
         }
 
-        verification(){
+        verification() {
             Swal.fire({
-                title:"Age verification",
-                icon:"info",
-                text:"You must approve that you are 18+ years old",
-                showCancelButton:"true",
+                title: "Age verification",
+                icon: "info",
+                text: "You must approve that you are 18+ years old",
+                showCancelButton: "true",
                 customClass: 'swal-wide',
-            }).then((res)=>{
-                if(!res.isConfirmed){
-                    this.authScreen()
+            }).then((res) => {
+                if (!res.isConfirmed) {
+                    this.authScreen();
                 }
-                else{
-                    this.getPin().then((data)=>{
+                else {
+                    this.getPin().then((data) => {
                         Swal.fire({
-                            title:"Enter PIN",
-                            text:`Enter PIN that is shown on the screen into an input field: ${data} and click Confirm`,
-                            icon:"info",
+                            title: "Enter PIN",
+                            text: `Enter PIN that is shown on the screen into an input field: ${data} and click Confirm`,
+                            icon: "info",
                             input: "text",
                             confirmButtonText: `👍️ Confirm !`,
                             showCancelButton: true,
                             inputPlaceholder: "Enter the PIN",
                             customClass: 'swal-wide',
                         }
-                    ).then((res)=>{
-                            if(!res.isConfirmed){
-                                this.authScreen()
+                        ).then((res) => {
+                            if (!res.isConfirmed) {
+                                this.authScreen();
                             }
-                            else{
+                            else {
                                 if (res.value) {
-                                    this.authCheck(res.value).then((data)=>{
-                                        console.log(data)
-                                        if(data==="true"){
+                                    this.authCheck(res.value).then((data) => {
+                                        if (data === "true") {
                                             localStorage.setItem("ageVerification_artefaktas", true);
-                                            setTimeout(() => {
-                                                let auth = new miniAuth()
-                                                auth.authScreen()
-                                            }, 800);
+                                            loadAuth();
                                         }
-                                        else{
-                                            this.authScreen()
+                                        else {
+                                            this.authScreen();
                                         }
                                     })
                                 }
-                                else{
-                                    this.authScreen()
+                                else {
+                                    this.authScreen();
                                 }
                             }
                         })
                     })
-                   
+
                 }
             })
         }
 
-        authScreen(){
-            let verified = localStorage.getItem("ageVerification_artefaktas")
-            let status = String(verified)
-            if(status==="null" && status!=="true"){
-                this.verification()
+        authScreen() {
+            let verified = localStorage.getItem("ageVerification_artefaktas");
+            let status = String(verified);
+            if (status === "null" && status !== "true") {
+                this.verification();
             }
-            else{
-        let captchaAuth = new artefaktasminiCaptcha()
-        captchaAuth.captchaScreen()
+            else {
+                let captchaAuth = new artefaktasminiCaptcha();
+                captchaAuth.captchaScreen();
             }
-            
+
         }
     }
-    setTimeout(() => {
-        let auth = new miniAuth()
-        auth.authScreen()
-    }, 800);
-   
+    function loadAuth() {
+
+        if (!!window.Swal === true) {
+            let auth = new miniAuth()
+            auth.authScreen();
+        }
+        else {
+            setTimeout(() => {
+                let auth = new miniAuth();
+                auth.authScreen();
+
+            }, 1000);
+        }
+    }
+    loadAuth()
+
 </script>

@@ -1,93 +1,340 @@
 <script defer>
-    class artefaktasminiCaptcha{
-        constructor() {
-            this.apiUrl = `https://pinauth.artefaktas.eu/captcha`
-        }
-
-        async getCaptcha(){
-            let req = await fetch(this.apiUrl);
-            let data = await req.json();
-            let pin = data.response;
-            return pin;
-        }
-
-        async captchaAuth(passedValue){
-            const init = {
-                headers:{
-                    "User-Agent":"artefaktas-bot",
-                    "captcha":String(passedValue)
-                }
-            }
-            let reqUrl = `https://pinauth.artefaktas.eu/authcaptcha`
-            let req = await fetch(reqUrl,init)
-            let jsonData = await req.json()
-            return jsonData.response;
-        }
-
-        captchaVerification(){
-            Swal.fire({
-                title:"Captcha",
-                iconHtml: '<p style="font-size:4rem;">🛡️</p>',
-                text:"Solve the captcha to enter the site",
-                showCancelButton:"true",
-                customClass: 'swal-wide',
-            }).then((res)=>{
-                if(!res.isConfirmed){
-                    this.captchaScreen()
-                }
-                else{
-                    this.getCaptcha().then((data)=>{
-                        Swal.fire({
-                            title:"Enter the phrase",
-                            text:`Enter phrase that is shown on the screen into an input field: ${data} and click Confirm`,
-                            iconHtml: '<p style="font-size:4rem;">🛡️</p>',
-                            input: "text",
-                            confirmButtonText: `👍️ Confirm !`,
-                            showCancelButton: true,
-                            inputPlaceholder: "Enter the the phrase here",
-                            customClass: 'swal-wide',
-                        }
-                    ).then((res)=>{
-                            if(!res.isConfirmed){
-                                this.captchaScreen()
-                            }
-                            else{
-                                if (res.value) {
-                                    this.captchaAuth(res.value).then((data)=>{
-                                        if(data==="true"){
-                                            localStorage.setItem("captcha_artefaktas", res.value);
-                                        }
-                                        else{
-                                            this.captchaScreen()
-                                        }
-                                    })
-                                }
-                                else{
-                                    this.captchaScreen()
-                                }
-                            }
-                        })
-                    })
-                   
-                }
-            })
-        }
-
-        captchaScreen(){
-            let verified = localStorage.getItem("captcha_artefaktas")
-            let status = String(verified)
-            if(status==="null"){
-                this.captchaVerification()
-            }
-            else if(status!=="null"){
-                this.captchaAuth(status).then((data)=>{
-                    if(data!=="true"){
-                        this.captchaVerification()
-                    }
-                })
-            }
-            
-        }
+  class Auth_Login {
+    constructor() {
+      this.title = "Authentication";
+      this.auth_message = "You must login to access the article";
     }
- 
+
+    getCookieByName(name) {
+      const nameEQ = name + "=";
+      const cookies = document.cookie.split(";");
+      for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i];
+        while (cookie.charAt(0) === " ") {
+          cookie = cookie.substring(1, cookie.length);
+        }
+        if (cookie.indexOf(nameEQ) === 0) {
+          return cookie.substring(nameEQ.length, cookie.length);
+        }
+      }
+      return null;
+    }
+
+    deleteCookie(cookieName, path = '/', domain) {
+      if (domain) {
+        document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=" + path + "; domain=" + domain + ";";
+      } else {
+        document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=" + path + ";";
+      }
+    }
+
+    authWindow() {
+      Swal.fire({
+        title: this.title,
+        text: this.auth_message,
+        iconHtml: '<p style="font-size:4rem;">❗️</p>',
+        customClass: "swal-wide",
+        confirmButtonText: "Login",
+        showCancelButton: true,
+        cancelButtonText: "Register",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+      });
+    }
+
+    redirectLogin() {
+      let url = `https://auth.artefaktas.eu/login`;
+      window.open(url, "_blank").focus();
+      window.location.reload();
+    }
+
+    redirectRegister() {
+      let url = `https://auth.artefaktas.eu/register`;
+      window.open(url, "_blank").focus();
+      window.location.reload();
+    }
+
+    loginRegister() {
+      Swal.fire({
+        customClass: "swal-wide",
+        title: "Authentication",
+        html: '<p style="font-size:4rem;">✅</p><p>Login or register a new account</p>',
+        confirmButtonText: "Login",
+        showCancelButton: true,
+        cancelButtonText: "Register",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+      }).then((res) => {
+        if (!res.isConfirmed) {
+          this.redirectRegister();
+        } else {
+          this.redirectLogin();
+        }
+      });
+    }
+
+    loginWindow() {
+      Swal.fire({
+        title: "Login",
+        text: "Click login or cancel the action",
+        iconHtml: '<p style="font-size:4rem;">❗️</p>',
+        customClass: "swal-wide",
+        confirmButtonText: "Login",
+        showCancelButton: true,
+        cancelButtonText: "Cancel",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+      }).then((res) => {
+        if (!res.isConfirmed) {
+          this.checkLoginStatus();
+        } else {
+          this.loginRegister();
+        }
+      });
+    }
+    checkLoginStatus() {
+      try {
+        let loggedIn = localStorage.getItem("artefaktas_login");
+        let check = String(loggedIn);
+        if (check !== "true") {
+          this.loginWindow();
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    async checkValidity(passedData) {
+      const obj = {
+        data: passedData,
+      };
+      const jsonified = JSON.stringify(obj);
+      const init = {
+        method: "POST",
+        headers: {
+          "User-Agent": "artefaktasbot",
+        },
+        body: jsonified,
+      };
+      const request = await fetch("https://pinauth.artefaktas.eu/validity", init);
+      const jsonData = await request.json()
+      return jsonData.response;
+    }
+
+    async deleteAcc(passedData) {
+      const obj = {
+        data: passedData,
+      };
+      const jsonified = JSON.stringify(obj);
+      const init = {
+        method: "POST",
+        headers: {
+          "User-Agent": "artefaktasbot",
+        },
+        body: jsonified,
+      };
+      const request = await fetch("https://pinauth.artefaktas.eu/delete", init);
+      const jsonData = await request.json()
+      return jsonData.response;
+    }
+  }
+
+
+
+</script>
+<script defer>
+  class artefaktasminiCaptcha {
+    constructor() {
+      this.apiUrl = `https://pinauth.artefaktas.eu/captcha`
+    }
+
+    async getCaptcha() {
+      let req = await fetch(this.apiUrl);
+      let data = await req.json();
+      let pin = data.response;
+      return pin;
+    }
+
+    async captchaAuth(passedValue) {
+      const init = {
+        headers: {
+          "User-Agent": "artefaktas-bot",
+          "captcha": String(passedValue)
+        }
+      }
+      let reqUrl = `https://pinauth.artefaktas.eu/authcaptcha`
+      let req = await fetch(reqUrl, init).catch((e) => {
+        console.log(e)
+      })
+      let jsonData = await req.json();
+      return jsonData.response;
+    }
+
+    loginWall() {
+      const auth = new Auth_Login();
+      let loginWall = document.querySelector("#requireLogin");
+      if (loginWall) {
+        try {
+          const cookie = auth.getCookieByName("artefakas_login_cookie");
+          if (String(cookie) === "null") {
+            auth.checkLoginStatus();
+          } else {
+            console.log("Found artefaktas cookie");
+            let res = auth.checkValidity(cookie).then((data) => {
+              if (data !== true) {
+                auth.checkLoginStatus();
+              } else {
+                const Toast = Swal.mixin({
+                  toast: true,
+                  position: "top-end",
+                  showConfirmButton: false,
+                  timer: 3000,
+                  timerProgressBar: true,
+                  didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                  }
+                });
+                Toast.fire({
+                  icon: "success",
+                  title: "User is logged in"
+                })
+                let setSel = document.querySelector(".useraccount");
+                if (setSel) {
+                  setSel.style.visibility = "visible"
+                  setSel.addEventListener("click", () => {
+                    Swal.fire({
+                      title: "Option window",
+                      text: "You can choose log out or delete your account",
+                      confirmButtonText: "Log out",
+                      showCancelButton: "true",
+                      showDenyButton: "true",
+                      cancelButtonText: "Cancel",
+                      denyButtonText: `Delete`,
+                    }).then((res) => {
+                      if (res.isConfirmed) {
+                        Swal.fire({
+                          title: "Logging out",
+                          text: "Click Ok to approve",
+                        }).then((res) => {
+                          if (res.isConfirmed) {
+                            auth.deleteCookie('artefakas_login_cookie', '/path', '.artefaktas.eu');
+                            window.location.reload();
+                          }
+                        })
+                      }
+                      else if (res.isDenied) {
+                        Swal.fire({
+                          title: "Are you sure?",
+                          text: "Choose wisely",
+                          showDenyButton: "true",
+                          showConfirmButton: "true",
+                          confirmButtonText: "Yes, delete it",
+                          denyButtonText: "Nope, leave it",
+                          showCancelButton: false,
+                        }).then((res) => {
+                          if (res.isConfirmed) {
+                            auth.deleteAcc(cookie).then((data) => {
+                              if (data === true) {
+                                Swal.fire({
+                                  title: "Status",
+                                  text: "Your account has been deleted",
+                                  icon: "success"
+                                });
+                              }
+                              else {
+                                console.log(data);
+                              }
+                            })
+
+                          }
+                        })
+                      }
+
+
+                    })
+                  })
+                }
+
+              }
+            });
+
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    }
+
+    captchaVerification() {
+      const auth = new Auth_Login();
+      Swal.fire({
+        title: "Captcha",
+        iconHtml: '<p style="font-size:4rem;">🛡️</p>',
+        text: "Solve the captcha to enter the site",
+        showCancelButton: "true",
+        customClass: 'swal-wide',
+      }).then((res) => {
+        if (!res.isConfirmed) {
+          this.captchaScreen();
+        }
+        else {
+          this.getCaptcha().then((data) => {
+            Swal.fire({
+              title: "Enter the phrase",
+              text: `Enter phrase that is shown on the screen into an input field: ${data} and click Confirm`,
+              iconHtml: '<p style="font-size:4rem;">🛡️</p>',
+              input: "text",
+              confirmButtonText: `👍️ Confirm !`,
+              showCancelButton: true,
+              inputPlaceholder: "Enter the the phrase here",
+              customClass: 'swal-wide',
+            }
+            ).then((res) => {
+              if (!res.isConfirmed) {
+                this.captchaScreen();
+              }
+              else {
+                if (res.value) {
+                  this.captchaAuth(res.value).then((data) => {
+                    if (data === "true") {
+                      localStorage.setItem("captcha_artefaktas", res.value);
+                      this.loginWall();
+                    }
+                    else {
+                      this.captchaScreen();
+                    }
+                  })
+                }
+                else {
+                  this.captchaScreen();
+                }
+              }
+            })
+          })
+
+        }
+      })
+    }
+
+    captchaScreen() {
+      const authLogin = new Auth_Login();
+      let verified = localStorage.getItem("captcha_artefaktas");
+      let status = String(verified);
+      if (status === "null") {
+        this.captchaVerification();
+      }
+      else if (status !== "null") {
+        this.captchaAuth(status).then((data) => {
+          if (data !== "true") {
+            this.captchaVerification();
+          } else {
+            this.loginWall();
+          }
+        })
+      }
+
+    }
+  }
+
 </script>
