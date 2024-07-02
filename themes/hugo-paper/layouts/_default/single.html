@@ -19,37 +19,33 @@
     {{ end }}
   </header>
   <div>
-  <p>Reading time: {{ math.Round (div (countwords .Content) 220.0) }} minutes</p>
-  <div>{{ partial "inlineshare.html" . }}</div>
-  <div>{{ partial "viewcount.html" . }}</div>
-  <div>{{ partial "translate.html" . }}</div>
-  <section>
-    <div class="posts">
-    {{ .Content }}
-  </div>
-  </section>
-  <!--<div>{{ partial "follow_it.html" . }}</div>-->
-  <div>{{ partial "captcha.html" . }}</div>
-  <div>{{ partial "auth.html" . }}</div>
-  <div>{{ partial "discord.html" . }}</div>
-  <div>{{ partial "license.html" . }}</div>
-  <div>{{ partial "instagram.html" . }}</div>
-  <div>{{ partial "tiktok.html" . }}</div>
-  <div>{{ partial "qr_embed.html" . }}</div>
-  <div>{{ partial "licenseelement.html" . }}</div>
-  {{ partial "sharethis.html" . }}
-  {{ partial "facebook.html" . }}
+    <p>Reading time: {{ math.Round (div (countwords .Content) 220.0) }} minutes</p>
+    <div>{{ partial "inlineshare.html" . }}</div>
+    <div>{{ partial "viewcount.html" . }}</div>
+    <div>{{ partial "translate.html" . }}</div>
+    <section>
+      <div class="posts">
+        {{ .Content }}
+      </div>
+    </section>
+    <!--<div>{{ partial "follow_it.html" . }}</div>-->
+    <div>{{ partial "captcha.html" . }}</div>
+    <div>{{ partial "auth.html" . }}</div>
+    <div>{{ partial "discord.html" . }}</div>
+    <div>{{ partial "license.html" . }}</div>
+    <div>{{ partial "instagram.html" . }}</div>
+    <div>{{ partial "tiktok.html" . }}</div>
+    <div>{{ partial "qr_embed.html" . }}</div>
+    <div>{{ partial "licenseelement.html" . }}</div>
+    {{ partial "sharethis.html" . }}
   </div>
 
   <!-- Post Tags -->
   {{ if .Params.tags }}
   <footer class="mt-12 flex flex-wrap">
     {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }}
-    <a
-      class="mb-1.5 mr-1.5 rounded-lg bg-black/[3%] px-5 py-1.5 no-underline dark:bg-white/[8%]"
-      href="{{ $href }}"
-      >{{ . }}</a
-    >
+    <a class="mb-1.5 mr-1.5 rounded-lg bg-black/[3%] px-5 py-1.5 no-underline dark:bg-white/[8%]" href="{{ $href }}">{{
+      . }}</a>
     {{ end }}
   </footer>
   {{ end }}
@@ -60,18 +56,12 @@
   {{ if and (gt (len $pages) 1) (in $pages . ) }}
   <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
     {{ with $pages.Next . }}
-    <a
-      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="{{ .Permalink }}"
-      ><span class="mr-1.5">←</span><span>{{ .Name }}</span></a
-    >
+    <a class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="{{ .Permalink }}"><span class="mr-1.5">←</span><span>{{ .Name }}</span></a>
     {{ end }}<!---->
     {{ with $pages.Prev . }}
-    <a
-      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
-      href="{{ .Permalink }}"
-      ><span>{{ .Name }}</span><span class="ml-1.5">→</span></a
-    >
+    <a class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="{{ .Permalink }}"><span>{{ .Name }}</span><span class="ml-1.5">→</span></a>
     {{ end }}
   </nav>
   {{ end }}<!---->
@@ -127,11 +117,8 @@
   <!-- giscus comment -->
   {{ if and site.Params.giscus.repo (not (eq .Params.comments false)) }}
   <div class="giscus mt-24"></div>
-  <script
-    src="https://giscus.app/client.js"
-    data-repo="{{ site.Params.giscus.repo }}"
-    data-repo-id="{{ site.Params.giscus.repoId }}"
-    data-category="{{ site.Params.giscus.category }}"
+  <script src="https://giscus.app/client.js" data-repo="{{ site.Params.giscus.repo }}"
+    data-repo-id="{{ site.Params.giscus.repoId }}" data-category="{{ site.Params.giscus.category }}"
     data-category-id="{{ site.Params.giscus.categoryId }}"
     data-mapping="{{ site.Params.giscus.mapping | default (print `pathname`) }}"
     data-strict="{{ site.Params.giscus.strict | default (print `1`) }}"
@@ -140,10 +127,7 @@
     data-input-position="{{ site.Params.giscus.inputPosition | default (print `top`) }}"
     data-theme="{{ site.Params.giscus.theme | default (print `light`) }}"
     data-lang="{{ site.Params.giscus.lang | default (print `en`) }}"
-    data-loading="{{ site.Params.giscus.loading | default (print `lazy`) }}"
-    crossorigin="anonymous"
-    async
-  ></script>
+    data-loading="{{ site.Params.giscus.loading | default (print `lazy`) }}" crossorigin="anonymous" async></script>
   {{ end }}
 </article>
 
