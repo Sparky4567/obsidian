@@ -11,14 +11,12 @@
         constructor() {
             this.apiUrl = `https://pinauth.artefaktas.eu/api`;
         }
-
         async getPin() {
             let req = await fetch(this.apiUrl);
             let data = await req.json();
             let pin = data.response;
             return pin;
         }
-
         async authCheck(passedValue) {
             const init = {
                 headers: {
@@ -95,6 +93,7 @@
 
         }
     }
+
     function loadAuth() {
 
         if (!!window.Swal === true) {
@@ -106,9 +105,12 @@
                 let auth = new miniAuth();
                 auth.authScreen();
 
-            }, 1000);
+            }, 300);
         }
     }
-    loadAuth()
+    document.addEventListener("DOMContentLoaded", () => {
+        loadAuth()
+    })
+
 
 </script>
