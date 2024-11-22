@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Obsidian</title>
-    <link>http://localhost:43051/page/</link>
+    <link>https://obsidiannotes.artefaktas.eu/page/</link>
     <description>Recent content in Pages on Obsidian</description>
     <generator>Hugo -- gohugo.io</generator>
     
-    <lastBuildDate>Tue, 19 Jul 2022 15:17:07 +0300</lastBuildDate><atom:link href="http://localhost:43051/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jul 2022 15:17:07 +0300</lastBuildDate><atom:link href="https://obsidiannotes.artefaktas.eu/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Support</title>
-      <link>http://localhost:43051/page/support/support/</link>
+      <link>https://obsidiannotes.artefaktas.eu/page/support/support/</link>
       <pubDate>Tue, 19 Jul 2022 15:17:07 +0300</pubDate>
       
-      <guid>http://localhost:43051/page/support/support/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/page/support/support/</guid>
       <description>&lt;h1 id=&#34;support-artefaktas-projects&#34;&gt;Support Artefaktas projects&lt;/h1&gt;
 &lt;div style=&#34;width:100%;text-align: center;&#34;&gt;
     &lt;iframe height=&#34;712&#34; id=&#34;kofiframe&#34; src=&#34;https://ko-fi.com/artefaktas/?hidefeed=true&amp;amp;widget=true&amp;amp;embed=true&amp;amp;preview=true&#34; style=&#34;background: #f9f9f9; border: none; padding: 4px; width: 100%;&#34; title=&#34;artefaktas&#34;&gt;&lt;/iframe&gt;
@@ -22,10 +22,10 @@
     
     <item>
       <title>copyright</title>
-      <link>http://localhost:43051/page/copyright/copyright/</link>
+      <link>https://obsidiannotes.artefaktas.eu/page/copyright/copyright/</link>
       <pubDate>Wed, 30 Mar 2022 11:24:05 +0300</pubDate>
       
-      <guid>http://localhost:43051/page/copyright/copyright/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/page/copyright/copyright/</guid>
       <description>&lt;h1 id=&#34;copyright&#34;&gt;Copyright&lt;/h1&gt;
 &lt;p&gt;Copyright Disclaimer:&lt;/p&gt;
 &lt;p&gt;All content included on this website, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of &lt;a href=&#34;https://artefaktas.eu&#34;&gt;https://artefaktas.eu&lt;/a&gt; or its content suppliers and protected by international copyright laws. The compilation of all content on this site is the exclusive property of &lt;a href=&#34;https://artefaktas.eu&#34;&gt;https://artefaktas.eu&lt;/a&gt; and protected by international copyright laws.&lt;/p&gt;
@@ -37,10 +37,10 @@
     
     <item>
       <title>Privacy</title>
-      <link>http://localhost:43051/page/privacy/privacy/</link>
+      <link>https://obsidiannotes.artefaktas.eu/page/privacy/privacy/</link>
       <pubDate>Wed, 30 Mar 2022 11:24:05 +0300</pubDate>
       
-      <guid>http://localhost:43051/page/privacy/privacy/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/page/privacy/privacy/</guid>
       <description>&lt;p&gt;Welcome to our Privacy Policy&lt;/p&gt;
 &lt;p&gt;Your privacy is critically important to us.&lt;/p&gt;
 &lt;p&gt;Artefaktas is located at:&lt;/p&gt;
@@ -79,10 +79,10 @@ A cookie is a string of information that a website stores on a visitor&amp;rsquo
     
     <item>
       <title>Kontaktai</title>
-      <link>http://localhost:43051/page/contact/contact/</link>
+      <link>https://obsidiannotes.artefaktas.eu/page/contact/contact/</link>
       <pubDate>Wed, 23 Dec 2020 18:42:24 +0200</pubDate>
       
-      <guid>http://localhost:43051/page/contact/contact/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/page/contact/contact/</guid>
       <description>&lt;h2 id=&#34;kontaktai-bendradarbiavimui&#34;&gt;Kontaktai bendradarbiavimui&lt;/h2&gt;
 &lt;h3 id=&#34;email&#34;&gt;Email&lt;/h3&gt;
 &lt;h4 id=&#34;adminartefaktaseu&#34;&gt;&lt;a href=&#34;mailto:admin@artefaktas.eu&#34;&gt;admin@artefaktas.eu&lt;/a&gt;&lt;/h4&gt;
@@ -91,10 +91,10 @@ A cookie is a string of information that a website stores on a visitor&amp;rsquo
     
     <item>
       <title>Apie</title>
-      <link>http://localhost:43051/page/about/about/</link>
+      <link>https://obsidiannotes.artefaktas.eu/page/about/about/</link>
       <pubDate>Mon, 21 Dec 2020 12:00:00 -0500</pubDate>
       
-      <guid>http://localhost:43051/page/about/about/</guid>
+      <guid>https://obsidiannotes.artefaktas.eu/page/about/about/</guid>
       <description>&lt;p&gt;Svetainę kūrė ir administruoja artefaktas.eu tinklaraščio savininkas.&lt;/p&gt;
 &lt;p&gt;Sveikinu apsilankius skiltyje &amp;ldquo;Apie&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Turite klausimų? Gal ko nepaminėjau?&lt;/p&gt;
